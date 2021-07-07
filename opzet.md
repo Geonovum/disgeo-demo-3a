@@ -28,7 +28,7 @@ Uit 2 leiden we
 ## RESULTAAT
 Deze hoofdvragen willen we beantwoord zien: 
 
-<aside class="issue">De vragen zijn geordend en zullen tijdens de high 5 in volgorde aan de orde komen. Is de onderstaande volgorde de juiste?</aside>
+**!! ISSUE: De vragen zijn geordend en zullen tijdens de high 5 in volgorde aan de orde komen. Is de onderstaande volgorde de juiste? !!**
 
 1. Object centraal modelleren: Hoe doe je dit waarbij de gegevens van dit object uit verschillende registraties komen met verschillende contexten (definities, historie, …)
 2. Moet het informatiemodel uit (2) een conceptueel of logisch model zijn en waarom? Wat is het verschil tussen de twee? 
@@ -42,7 +42,7 @@ Deze hoofdvragen willen we beantwoord zien:
 10. Zijn er verbeteringen te noemen voor de DisGeo modelleerprincipes (zijn ze houdbaar, zijn ze volledig, etc)?
 11. In welke taal druk je de semantische integratielaag uit als context boven de verschillende registraties, waarin de gegevens zijn zoals ze zijn, en waarvan de integratielaag onafhankelijk is? Is de semantische integratielaag (met data centraal over meerdere registraties) de representatie van de samenhang in gegevenscatalogi?
 
-<aside class="issue">Vraag 7 en vraag 11 nog onduidelijk geformuleerd</aside>
+**!! ISSUE: Vraag 7 en vraag 11 nog onduidelijk geformuleerd !!**
 
 Deze overige vragen zien we als mogelijk relevant, maar ze hoeven niet per sé aan de orde te komen: 
 -	Wat is het verschil (en is er een verschil) tussen de begrippen- en gegevenscatalogus?
