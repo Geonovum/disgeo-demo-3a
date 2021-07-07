@@ -1,21 +1,11 @@
-# Template-ReSpec
+# DisGeo demonstrator 3a
 
-Dit is de ReSpec template voor Geonovum publicaties. 
-Deze template is in beheer bij d.hup@geonovum.nl.
+In deze repository zetten we de geproduceerde resultaten en geleerde lessen van de derde 'demonstrator' die we in het kader van het project Doorontwikkeling in Samenhang (DisGeo) uitvoeren. Het gaat om een High 5 sessie die Geonovum en Kadaster gezamenljik uitvoeren in twee delen: 
 
-Het is een standaard template en kan worden aangepast aan verschillende Documenttypen. 
-Hiervoor moet de config.js worden aangepast. Hoe dat moet, lees je hieronder.
+- Deel a: 
+- Deel b: 
 
-Om gebruik te maken van de het specStatus en specType moeten in config.js de 
-schuine strepen voor het betreffende type worden weggehaald. 
+Deze repository wordt alleen gebruikt voor de resultaten van deel a. 
 
-In het voorbeeld hieronder zijn 
-'specStatus: "GN-WV",                  // Werk Versie' geselecteerd en
-'specType: "BD",                       // Beheer Documentatie'geselecteerd.
-
-Het ReSpec document wordt nu dus als een werk versie van het type Beheer Documentatie vormgegeven.
-
-![image](https://user-images.githubusercontent.com/77289333/112480805-ab07bb00-8d76-11eb-8fc4-ffff9e4cff23.png)
-
-
+... 
 
