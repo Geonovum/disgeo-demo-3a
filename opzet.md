@@ -76,7 +76,7 @@ II.	Of : energieafgiftepunten – concrete casus vanuit …. (check Jan van Geld
 
 III.	Of: energielabels. Gebouwen met energielabels, eventueel aangevuld met energieafgiftepunten [Dick checkt met Jan]
 
-Keuze voorbereiden
+**!! ISSUE: Keuze moet nog gemaakt worden. Dit voorbereiden. !!**
 
 ## WANNEER
 Augustus
