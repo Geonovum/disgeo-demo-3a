@@ -2,8 +2,8 @@
 
 In deze repository zetten we de geproduceerde resultaten en geleerde lessen van de derde 'demonstrator' die we in het kader van het project Doorontwikkeling in Samenhang (DisGeo) uitvoeren. Het gaat om een High 5 sessie die Geonovum en Kadaster gezamenljik uitvoeren in twee delen: 
 
-- Deel a: 
-- Deel b: 
+- Deel a: informatiemodellering
+- Deel b: implementatie informatiemodel
 
 Deze repository wordt alleen gebruikt voor de resultaten van deel a. 
 
