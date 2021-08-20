@@ -45,4 +45,4 @@ Informatie over energielabels:
 - [Swagger spec ep-online API](https://public.ep-online.nl/swagger)
 
 Informatie over energieafgiftepunten: 
-- [Casebeschrijving energieafgiftepunten](https://github.com/Geonovum/disgeo-demo-3a/blob/main/docs/afgiftepunten.md)
+- [Casebeschrijving energieafgiftepunten](https://github.com/Geonovum/disgeo-demo-3a/blob/main/energieafgiftepunten/afgiftepunten.md)
