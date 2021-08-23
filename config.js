@@ -120,13 +120,14 @@ var respecConfig =
   //-- NB: kijk eesrt naar de beschikbare www.specref.org voor verwijziging 
   localBiblio: 
   {
-    "PUB-1":
+    "EMSO":
       {
-        title:      "Titel van Publicatie-1",
-        href:       "https://www.geonovum.nl",
-        status:     "V1.0.1",
-        publisher:  "Publisher-1",
-        company:    "Companynaam",
+        title:      "Eisen aan model samenhangende objectregistratie",
+        href:       "https://docs.geostandaarden.nl/disgeo/emso/",
+        status:     "Definitief",
+        publisher:  "Geonovum",
+        editor:     "Dick Krijtenburg",
+        authors:    ["Sandra Leijten", "Marcel Rietdijk", "Dick Krijtenburg"],
     },
     "PUB-2":
       {
