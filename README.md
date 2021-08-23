@@ -9,6 +9,8 @@ Deze repository wordt alleen gebruikt voor de resultaten van deel a.
 
 De [opzet](opzet.md) beschrijft het initiële plan voor de high 5 sessie.
 
+Draft Lessons Learned document: https://geonovum.github.io/disgeo-demo-3a/
+
 ## input
 
 Informatiemodellering: 
