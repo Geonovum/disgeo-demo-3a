@@ -1,3 +1,5 @@
+## Inhoudelijke punten
+
 Hieronder een overzicht van items om 1 voor 1 op te pakken bij het modelleren van een gebouw of bouwwerk. De lijst is geleverd door Inhoud, een aantal zijn 1 op 1 te gebruiken en een  aantal niet, het gaat ons om de modellering van deze laatste. 
 
 _1 op 1_ 
