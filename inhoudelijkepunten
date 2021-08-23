@@ -1,6 +1,11 @@
 Hieronder een overzicht van items om 1 voor 1 op te pakken bij het modelleren van een gebouw of bouwwerk. De lijst is geleverd door Inhoud, een aantal zijn 1 op 1 te gebruiken en een  aantal niet, het gaat ons om de modellering van deze laatste. 
 
-1 op 1 
+_1 op 1_ 
 
-Niet 1 op 1 
+Gebouw = Pand uit BAG + deel OverigeBouwwerken uit BGT;
+Verblijfsobject blijft grotendeels hetzelfde.
+
+Scheiding tussen fysiek en functie?
+
+_Niet 1 op 1_ 
 
