@@ -74,7 +74,7 @@ var respecConfig =
       companyURL: "https://www.geonovum.nl"
     }, 
     {
-      name:       "Naam Editor-n",
+      name:       "Gabriella Wiersma",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     }, 
@@ -97,7 +97,7 @@ var respecConfig =
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
   shortName: "dll3a",  	              // Wordt gebruikt in de document URL
   //-- pubDomain is verplicht! (komt in de URL: Activeer 1 van de volgende) ------------
-  pubDomain: "dll3a", 	              // Energie transitie
+  pubDomain: "disgeo", 	              // Doorontwikkeling in Samenhang van de basisregistraties
   //pubDomain: "mim", 	            // Metamodel Informatie Modellering
   //pubDomain: "bor", 	            // Beheer Openbare Ruimte
   //pubDomain: "bro", 	            // Basisregistratie Ondergrond
