@@ -82,14 +82,44 @@ var respecConfig =
   //-- de namen van de Author(s) ------------------------------------------------------
   //-- vul in: per Author: name:, company:, companyURL: -------------------------------
   authors: 
-  [
+  [    
     {
-      name:       "Naam Auteur-1",
+      name:       "Marcel Reuvers",
+      company:    "Kadaster",
+      companyURL: "https://www.kadaster.nl"
+    },
+    {
+      name:       "Lennart van Bergen",
+      company:    "Kadaster",
+      companyURL: "https://www.kadaster.nl"
+    },
+    {
+      name:       "Wouter Beek",
+      company:    "Kadaster",
+      companyURL: "https://www.kadaster.nl"
+    },
+    {
+      name:       "Damir Brnobic",
+      company:    "Ministerie van BZK",
+      companyURL: "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"
+    },
+    {
+      name:       "Pano Maria",
+      company:    "Geonovum",
+      companyURL: "https://www.geonovum.nl"
+    },
+    {
+      name:       "Dick Krijtenburg",
+      company:    "Geonovum",
+      companyURL: "https://www.geonovum.nl"
+    },
+    {
+      name:       "Linda van den Brink",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     }, 
     {
-      name:       "Naam Auteur-2",
+      name:       "Gabriella Wiersma",
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     }, 
