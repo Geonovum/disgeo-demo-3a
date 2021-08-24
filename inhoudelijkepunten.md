@@ -12,10 +12,9 @@ _Niet 1 op 1_
 Hieronder vallen gegevens die niet 1 op 1 van een BR over te nemen zijn naar de SOR. Denk hierbij vooral aan afgeleide gegevens of geaggregeerde gegevens of aan gegevens die een betere benaming hebben gekregen. De modelleering hiervan en de specificatie voor de afleiding worden bekeken. 
 
 Naamswijzigingen van objecttypen en attribuutsoorten
-- Status van objecten (hiërarchische lijsten)
+- Status van objecten (hiërarchische lijsten) vertalen naar een geaggregeerde status (zie emso)
 - Gebouwzone op basis van WOZ deelobject en de relatie met BAG/BGT
 - Attribuutsoorten zoals 'type' die meerdere keren voorkomen en dus naamgevingsconflicten kunnen opleveren 
-- Status van objecten (hiërarchische lijsten), en een geaggregeerde status (ie emso)
 
 Kwaliteit van gegevens en metadata, en het bevestigen hiervan door een bronhouder. Het is hierbij niet de bedoeling om kwaliteitscontroles te modelleren, we doen dit alleen als er op inhoud bepaalde regels gelden voor gegevens of een combinatie van gegevens. 
 - Metadata zoals bronverwijzing, in onderzoek, controlemetadata
