@@ -27,6 +27,7 @@ Uitdaging:
 - Anderzijds: hoe de geo-basisregistraties data nu uitleveren maar dan geuniformeerd. D.w.z. dat historie grotendeels wordt bijgehouden/geregistreerd in versies van objecten. Een versie is een setje gegevens over een object, en over die set gegevens wordt de tijdslijn geldigheid en de tijdslijn registratie bijgehouden en uitgeleverd. 
 
 De uit te werken punten zijn:
+
 0) definities van tijdslijn geldigheid en tijdslijn registratie 
 1) Als we het object centraal stellen, hoe gaan we dan om met objecten uit 2+ BR's die we in elkara schuiven, in het bijzonder met de meerdere identificaties
 2) Niet elke geo-BR kent nu beide tijdslijnen. Maar weten wel wanneer gegevens geldig en beschikbaar/geregistreerd zijn. 
