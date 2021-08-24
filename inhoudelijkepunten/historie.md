@@ -15,7 +15,7 @@ Uitgangspunten:
 - SOR afspraak: van alle gegevens moet het bekend zijn wanneer de gegevens geldig zijn en wanneer ze beschikbaar/geregistreerd zijn. 
 - Conform MIM - maar MIM kent nog geen metadata, we volgen de huidige stand van de expertgroep modellering SOR 
 - Conform NEN3610 - zie modellering historie aldaar 
-- Conform de specificatie van ee tijdreis zoals beschreven in de NL API strategie en in bv. de BAG 
+- Conform de specificatie van een tijdreis zoals beschreven in de NL API strategie (en hoe dit bv. in de LVBAG werkt, die deze implementeert).  
 - In lijn met de SOR en met hoe de BR's nu grotendeels werken 
 
 Dit betekent: 
