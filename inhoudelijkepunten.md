@@ -1,6 +1,12 @@
 ## Inhoudelijke punten
 
-Hieronder een overzicht van items om 1 voor 1 op te pakken bij het modelleren van een gebouw of bouwwerk. De lijst is geleverd door Inhoud, een aantal zijn 1 op 1 te gebruiken en een  aantal niet, het gaat ons om de modellering van deze laatste. Het thema is een Gebouw. 
+Hieronder een overzicht van items om 1 voor 1 op te pakken bij het modelleren van een gebouw of bouwwerk. De lijst is geleverd door Inhoud, een aantal zijn 1 op 1 te gebruiken en een  aantal niet, het gaat ons om de modellering van deze laatste. 
+
+Het thema is een Gebouw. 
+
+We houden ons aan wat er op dit moment kan, in ons vermoeden, vanuit de BR's. Andere zaken parkeren we. 
+
+De lijst met kandidaat punten is onderstaand opgesomd. We een aantal uitwerken, maar allemaal lukt niet in 1 high-5. Degene die behandeld zijn, zijn voorzien van een link. 
 
 _Niet 1 op 1_ 
 
@@ -10,6 +16,9 @@ Naamswijzigingen van objecttypen en attribuutsoorten
 - Status van objecten (hiërarchische lijsten) vertalen naar een geaggregeerde status (zie emso)
 - Gebouwzone op basis van WOZ deelobject en de relatie met BAG/BGT
 - Attribuutsoorten zoals 'type' die meerdere keren voorkomen en dus naamgevingsconflicten kunnen opleveren 
+
+Identificaties
+- Op dit moment is er geen DE identificatie van een SOR object. De identificaties van het SOR object als deze niet 1 op 1 in een BR is geregistreerd. De herkomst van een SOR object zijn gegevens van objecten uit BR's met een identificatie. We kunnen niet 3 attributen genaamd identificatie opnemen, zie ook naamswijzigingen maar deze hebben we geisoleerd omdat deze extra speciaal is. Verder speelt de UOI mogelijk een rol.
 
 Kwaliteit van gegevens en metadata, en het bevestigen hiervan door een bronhouder. Het is hierbij niet de bedoeling om kwaliteitscontroles te modelleren, we doen dit alleen als er op inhoud bepaalde regels gelden voor gegevens of een combinatie van gegevens. 
 - Metadata zoals bronverwijzing, in onderzoek, controlemetadata
