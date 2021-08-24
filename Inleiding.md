@@ -66,20 +66,23 @@ Daarnaast zijn in het kader van gebruik twee beleidsthema's geselecteerd die in 
 ### Eerdere DiSGeo-high-5's 
 
 In 2019 en 2020 zijn twee high-5's uitgevoerd. 
-- [DiSGeo Demo 1 - Geodata in samenhang mbv huidige techniek bovenop APIs](https://docs.geostandaarden.nl/disgeo/dll/) (eind 2019). Deze is ontwikkeld door Netage en Geonovum in opdracht van BZK. 
+
+[DiSGeo Demo 1 - Geodata in samenhang mbv huidige techniek bovenop APIs](https://docs.geostandaarden.nl/disgeo/dll/) (eind 2019). Deze is ontwikkeld door Netage en Geonovum in opdracht van BZK. 
     *Uitgangspunt*: Maak een demonstrator over geodata in samenhang mbv huidige techniek bovenop APIs.  
     *Conclusies*: 
-    - Diverse haken en ogen. 
-    - API maturiteit viel tegen; 
-    - APIs zijn de nieuwe silo’s; 
-    - Semantische samenhang daarbovenop realiseren vereist een onderhoudsgevoelige semantische laag; 
-    - Er is governance op het snijvlak nodig.
-- [DiSGeo Demo 2 - Geodata in samenhang waarbij wordt getoond wat linked data voor DiSGeo kan betekenen](https://docs.geostandaarden.nl/disgeo/dll2/) (zomer 2020). Deze is ontwikkeld door Kadaster, Provincie Noord-Holland, Netage, IHW, en Geonovum in opdracht van BZK.  
+    ..- Diverse haken en ogen. 
+    ..- API maturiteit viel tegen; 
+    ..- APIs zijn de nieuwe silo’s; 
+    ..- Semantische samenhang daarbovenop realiseren vereist een onderhoudsgevoelige semantische laag; 
+    ..- Er is governance op het snijvlak nodig.
+
+
+[DiSGeo Demo 2 - Geodata in samenhang waarbij wordt getoond wat linked data voor DiSGeo kan betekenen](https://docs.geostandaarden.nl/disgeo/dll2/) (zomer 2020). Deze is ontwikkeld door Kadaster, Provincie Noord-Holland, Netage, IHW, en Geonovum in opdracht van BZK.  
     *Uitgangspunt*: Maak een demonstrator geodata in samenhang waarbij wordt getoond wat linked data voor DiSGeo kan betekenen.  
     *Conclusies*: 
-    - Linked data is geschikt (onmisbaar) om de DisGeo ambities mbt in samenhang bevragen te realiseren. 
-    - Zowel als directe toegangslaag, en als basis voor APIs en viewers. 
-    - Er zijn geen grote technische belemmeringen gevonden. 
+    ..- Linked data is geschikt (onmisbaar) om de DisGeo ambities mbt in samenhang bevragen te realiseren. 
+    ..- Zowel als directe toegangslaag, en als basis voor APIs en viewers. 
+    ..- Er zijn geen grote technische belemmeringen gevonden. 
 
 ### Leeswijzer
 
