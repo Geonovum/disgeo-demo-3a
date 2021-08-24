@@ -1,1 +1,60 @@
-hoi
+Modelleren van historie 
+
+Pano, Wouter, Lennart. 
+
+Doel: een uniforme manier voor afnemers om te zien wanneer 1) gegevens geldig zijn en beschikbaar/geregistreerd zijn en 2) om een tijdreis vraag te stellen.
+
+Deze tijdreis vragen zijn (ook) los aan de basisregistraties te stellen en te vertalen nara de SOR, maar in deze high-5 wordt de tijdreis vraag 1x gesteld aan het SOR object, en wordt exct dezelfde tijdreis "onder water" aan de BR's gesteld en worden de gegevens van de BR's "in elkaar geschoven". De specificatie voor dit in elkaar schuiven en de uitkomst ervan wordt hieronder beschreven. 
+
+In het geval van de SOR gaat het in deze high-5 ook over het in elkaar schuiven van gegevens van afzonderlijke objecten in de BR's naar een samengesteld object in de SOR.
+
+Historie: 
+Hiermee wordt bedoeld: de tijdslijn geldigheid en de tijdslijn registratie. 
+
+Scope:
+- In scope: tijdslijn geldigheid en tijdslijn registratie, van de gegevens van het object dus (niet van het object zelf)  
+- Buiten scope deze uitwerking: levensduur van het object.  
+
+Uitgangspunten: 
+- SOR afspraak: van alle gegevens moet het bekend zijn wanneer de gegevens geldig zijn en wanneer ze beschikbaar/geregistreerd zijn. 
+- Conform MIM - maar MIM kent nog geen metadata, we volgen de huidige stand van de expertgroep modellering SOR 
+- Conform NEN3610 - zie modellering historie aldaar 
+- Conform de specificatie van ee tijdreis zoals beschreven in de NL API strategie en in bv. de BAG 
+- In lijn met de SOR en met hoe de BR's nu grotendeels werken 
+
+Dit betekent: 
+- We stellen het object centraal - d.w.z. we willen gegevens over het gebouw in de werkelijkheid leveren, en we doen dit door de registratie gegevens over dit object te leveren.
+- We geven de tijdslijnen per set gegevens over een object aan. Dit heet ook we een versie van een object. Niet per attribuut. Dit kan wel afgeleid worden, maar dit is niet de standaard use case. Afnemers willen immers vooral gegevens van/over een object weten.
+
+Uitdaging: 
+Enerzijds: in het geval van de SOR gaat het in deze high-5 ook over het in elkaar schuiven van gegevens van afzonderlijke objecten in de BR's naar een samengesteld object in de SOR.
+Anderzijds: hoe de geo-basisregistraties data nu uitleveren maar dan geuniformeerd. D.w.z. dat historie grotendeels wordt bijgehouden/geregistreerd in versies van objecten. Een versie is een setje gegevens over een object, en over die set gegevens wordt de tijdslijn geldigheid en de tijdslijn registratie bijgehouden en uitgeleverd. 
+
+De uit te werken punten zijn:
+*0* definities van tijdslijn geldigheid en tijdslijn registratie 
+*1* Als we het object centraal stellen, hoe gaan we dan om met objecten uit 2+ BR's die we in elkara schuiven, in het bijzonder met de meerdere identificaties
+*2* Niet elke geo-BR kent nu beide tijdslijnen. Maar weten wel wanneer gegevens geldig en beschikbaar/geregistreerd zijn. 
+*3* Niet elke geo-BR heeft voor de tijdslijn geldigheid hetzelfde dataype, sommige gebruiken een datum, sommige een datumtijd of een timestamp. Hoe gaan we hiermee om? 
+*4* Mutatie verschillen, met name t.a.v. beeindigen van objecten, wat bv. de BGT doet met een einddatum geldigheid en de BAG met een eindstatus. 
+*5* Hoe schuif je versies van objecten uit verschillende BR's in elkaar. Wat is het algoritme. 
+
+--
+
+Ad 1. Een SOR object kan en mag meerdere identificaties hebben. Dit is ook handig, want dan in de link naar de BR ook direct bekend. 
+- Wanneer een SOR object meerdere identificaties heeft, dan betekent dit dat je elk afzonderlijk kan gebruiken als identificatie, en dat de objecten uit de onderliggende BR's over hetzelfde SOR object en hetzelfde object in de werkelijkheid gaat. 
+
+Ad 2. Elke BR weet echt wel wanneer de gegevens geldig zijn, ook al wordt het niet altijd fysiek vastgelegd. Vertaal dus wat er geregistreerd in de BR naar de gevraagde tijdslijnen. 
+- Lever vanuit elke BR de tijdslijnen. 
+- Implementeer de NL AP strategie geldigOp (moment in de tijdslijn geldsigheid) en beschikbaarOp (moment in de tijdslijn registratie) 
+- Lever vanuit elke BR een eindstatus (bekijk of je in de BR deze ook registreerd, of dat je deze afleid) 
+
+Vertaal specificatie tijdslijnen: 
+BAG: kent beide tijdslijnen. 
+WOZ: kent beide tijdslijnen. 
+BGT: kent nog geen tijdslijn geldigheid. Deze is als volgt  af te leiden: 
+     - begin geldigheid = tijdstip registratie 
+     - eind geldigheid = eindRegistratie. Wellicht nog wat logica rondom geconstateerd.    
+
+Ad 3. 
+
+TO BE CONTINUED 
