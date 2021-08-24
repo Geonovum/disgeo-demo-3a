@@ -94,6 +94,11 @@ var respecConfig =
       companyURL: "https://www.kadaster.nl"
     },
     {
+      name:       "Rob Wenneker",
+      company:    "Kadaster",
+      companyURL: "https://www.kadaster.nl"
+    },
+    {
       name:       "Wouter Beek",
       company:    "Kadaster",
       companyURL: "https://www.kadaster.nl"
