@@ -5,11 +5,7 @@ De stapsgewijze ontwikkeling van het informatiemodel wprdt zo opgezet dat de geg
 
 In dit kader is er ook ruimte om in inspirerende onderzoeksweken (High-5's) specifieke onderwerpen te onderzoeken en daaruit lessen te trekken die in het vervolg van de informatiemodellering kunnen worden toegepast.
 
-### Eerdere DiSGeo-high-5's 
 
-In 2019 en 2020 zijn twee high-5's uitgevoerd. 
-- https://docs.geostandaarden.nl/disgeo/dll/ (eind 2019).  Deze is ontwikkeld door Netage en Geonovum in opdracht van BZK.  Uitgangspunt: maak een demonstrator over geodata in samenhang mbv huidige techniek bovenop APIs.  Conclusie: diverse haken en ogen. API maturiteit viel tegen; APIs zijn de  nieuwe silo’s; semantische samenhang daarbovenop realiseren vereist een onderhoudsgevoelige semantische laag; er is governance op het snijvlak nodig.
-- https://docs.geostandaarden.nl/disgeo/dll2/ (zomer 2020)  Ontwikkeld in High 5 setting door Kadaster, Provincie Noord-Holland, Netage, IHW, en Geonovum in opdracht van BZK.  Uitgangspunt: demonstrator geodata in samenhang waarbij wordt getoond wat linked data voor DiSGeo kan betekenen.  Conclusie: Linked data is geschikt (onmisbaar) om de DisGeo ambities mbt in samenhang bevragen te realiseren. Zowel als directe toegangslaag, en als basis voor APIs en viewers. Er zijn geen grote technische belemmeringen gevonden. 
 
 ### Wat is in deze high-5 onderzocht
 
@@ -66,6 +62,12 @@ Daarnaast zijn in het kader van gebruik twee beleidsthema's geselecteerd die in 
 ### Doelgroep
 
 *Beschrijf de doelgroep, wie dat zijn, en hoe ze het rapport kunnen gebruiken*
+
+### Eerdere DiSGeo-high-5's 
+
+In 2019 en 2020 zijn twee high-5's uitgevoerd. 
+- [Geodata in samenhang mbv huidige techniek bovenop APIs](https://docs.geostandaarden.nl/disgeo/dll/) (eind 2019). Deze is ontwikkeld door Netage en Geonovum in opdracht van BZK. *Uitgangspunt*: Maak een demonstrator over geodata in samenhang mbv huidige techniek bovenop APIs.  *Conclusies*: Diverse haken en ogen. API maturiteit viel tegen; APIs zijn de nieuwe silo’s; semantische samenhang daarbovenop realiseren vereist een onderhoudsgevoelige semantische laag; er is governance op het snijvlak nodig.
+- [Godata in samenhang waarbij wordt getoond wat linked data voor DiSGeo kan betekenen](https://docs.geostandaarden.nl/disgeo/dll2/) (zomer 2020). Deze is ontwikkeld door Kadaster, Provincie Noord-Holland, Netage, IHW, en Geonovum in opdracht van BZK.  *Uitgangspunt*: Maak een demonstrator geodata in samenhang waarbij wordt getoond wat linked data voor DiSGeo kan betekenen.  *Conclusies*: Linked data is geschikt (onmisbaar) om de DisGeo ambities mbt in samenhang bevragen te realiseren. Zowel als directe toegangslaag, en als basis voor APIs en viewers. Er zijn geen grote technische belemmeringen gevonden. 
 
 ### Leeswijzer
 
