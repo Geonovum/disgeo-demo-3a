@@ -4,7 +4,7 @@ Subgroep high-5 Pano, Wouter, Lennart.
 
 Doel: een uniforme manier voor afnemers om te zien wanneer 1) gegevens geldig zijn en beschikbaar/geregistreerd zijn en 2) om een tijdreis vraag te stellen.
 
-Deze tijdreis vragen zijn (ook) los aan de basisregistraties te stellen en te vertalen naar de SOR, maar in deze high-5 wordt de tijdreis vraag 1x gesteld aan het SOR object, en wordt exct dezelfde tijdreis "onder water" aan de BR's gesteld en worden de gegevens van de BR's "in elkaar geschoven". De specificatie voor dit in elkaar schuiven en de uitkomst ervan wordt hieronder beschreven. 
+Deze tijdreis vragen zijn (ook) los aan de basisregistraties te stellen en te vertalen naar de SOR, maar in deze high-5 wordt de tijdreis vraag 1x gesteld aan het SOR object, en wordt exact dezelfde tijdreis "onder water" aan de BR's gesteld en worden de gegevens van de BR's "in elkaar geschoven". De specificatie voor dit in elkaar schuiven en de uitkomst ervan wordt hieronder beschreven. 
 
 In het geval van de SOR gaat het in deze high-5 ook over het in elkaar schuiven van gegevens van afzonderlijke objecten in de BR's naar een samengesteld object in de SOR.
 
@@ -20,7 +20,7 @@ Uitgangspunten:
 
 Dit betekent: 
 - We stellen het object centraal - d.w.z. we willen gegevens over het gebouw in de werkelijkheid leveren, en we doen dit door de registratie gegevens over dit object te leveren.
-- We geven de tijdslijnen per set gegevens over een object aan. Dit heet ook we een versie van een object. Niet per attribuut. Dit kan wel afgeleid worden, maar dit is niet de standaard use case. Afnemers willen immers vooral gegevens van/over een object weten.
+- We geven de tijdslijnen per set gegevens over een object aan. Dit heet ook wel een versie van een object. Niet per attribuut. Dit kan wel afgeleid worden, maar dit is niet de standaard use case. Afnemers willen immers vooral gegevens van/over een object weten.
 
 Uitdaging: 
 - Enerzijds: in het geval van de SOR gaat het in deze high-5 ook over het in elkaar schuiven van gegevens van afzonderlijke objecten in de BR's naar een samengesteld object in de SOR.
@@ -87,6 +87,7 @@ Voorbeeld:
 
 BR 1: 
 - versie 1, begin geldigheid t1 - ...
+
 BR 2: 
 - versie 1, begin geldigheid t3 - ...
 
@@ -96,7 +97,8 @@ Stel vraag aan BR 2: geldigOp t4. Antwoord: versie 1. Gebruik deze gegevens voor
 
 Maar hoe doen we het met de tijdslijnen?
 
-Optie 0: lever de losse antwoorden uit de losse BR's ook los door, maar wel technisch in hetelfde antwoord en bij elkaar. 
+Optie 0: lever de losse antwoorden uit de losse BR's ook los door, maar wel technisch in hetzelfde antwoord en bij elkaar.
+
 --> 1 versie in BR 1 en 1 versie in BR 2 = 2 losse versies (niet in elkaar geschoven). 
 
 Optie 1: laat elke BR heel duidelijk terugkomen in het SOR object
@@ -104,9 +106,11 @@ Optie 1: laat elke BR heel duidelijk terugkomen in het SOR object
 - Geef van elk gegevens uit BR 2 aan: herkomst BR2, en de historie metagegevens zijn: begin geldigheid t3 - ... 
 
 Bv. een gegevensgroep voor gegevens uit BR 1 + de metagegevens voor historie uit BR 1 en voor BR 2 analoog. 
+
 --> 1 versie in BR 1 en 1 versie in BR 2 = 1 versie van het SOR object, bestaande uit de delen die elk afzonderlijk tijdslijnen hebben. 
 
-Optie 2: plaats alle kenmerken in het SOR object en bereken voor elk setje gegevens eigen tijdslijnen. 
+Optie 2: plaats alle kenmerken in het SOR object en bereken voor elk setje gegevens eigen tijdslijnen.
+
 nieuwe versies voor elke periode
 --> 1 versie in BR 1 en 1 versie in BR 2 = 2 versies van het SOR object, met elk afzonderlijk tijdslijnen hebben. 
 
@@ -153,32 +157,45 @@ Dus,
 Voorbeeld 1: 
 
 BR 1: 
+
+```
 - versie 1, begin geldigheid t1 - ...
             tijdstip registratie: t1 
-BR 2: 
+```
+
+BR 2:
+```
 - versie 1, begin geldigheid t3 - ...
             tijdstip registratie: t2 
- 
-wordt SOR: 
+```
+
+wordt SOR:
+```
 - versie 1, begin geldigheid t1 - eind geldigheid t3 (berekend) 
             tijdstip registratie: t1 - eind registratie: t2 
-            
 - versie 2, begin geldigheid t3 - ...
             tijdstip registratie: t2 
+```
 
 Voorbeeld 2: 
 
-BR 1: 
+BR 1:
+```
 - versie 1, begin geldigheid t1 - t3
   tijdstip registratie: t1 - eind registratie t4 
             
 - versie 2, begin geldigheid t3 - ... 
   tijdstip registratie: t4
+```
 
-BR 2: versie 1, begin geldigheid t2 - ...
+BR 2: 
+```
+versie 1, begin geldigheid t2 - ...
       tijdstip registratie: t2 
+```
 
-wordt in de SOR:  
+wordt in de SOR:
+```
 - versie 1, begin geldigheid t1 - eind geldigheid t2
             tijdstip registratie: t1 - eind registratie t2 (berekend) 
             
@@ -187,23 +204,7 @@ wordt in de SOR:
              
 - versie 3, begin geldigheid t3 - ..
             tijdstip registratie: t4 - ... 
-            
+```
+
  Er zijn andere voorbeelden te verzinnen, we moeten kijken of we dit kunnen kraken, zoals een voorbeeld met meerdere geldige op 1 dag 
  of met een registratie tijdstip van de begin geldigheid op een latere tijd ligt dan het registratie tijdstip van de eind geldigheid - of dat de vertaal specificatie minder rechttoe rechtaan wordt. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
