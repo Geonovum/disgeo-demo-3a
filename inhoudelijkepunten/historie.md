@@ -86,10 +86,14 @@ Ad 5. Onderstaande een verkenning. Uitgaand van alle genoemde keuzes in de voorl
 Voorbeeld: 
 
 BR 1: 
+```
 - versie 1, begin geldigheid t1 - ...
+```
 
 BR 2: 
+```
 - versie 1, begin geldigheid t3 - ...
+```
 
 SOR: 
 Stel vraag aan BR 1: geldigOp t4. Antwoord: versie 1. Gebruik deze gegevens voor het SOR object. 
@@ -122,42 +126,52 @@ Uitwerking *5* - optie 2.
 
 Voorbeeld 1: 
 
-BR 1: 
+BR 1:
+```
 - versie 1, begin geldigheid t1 - ...
-BR 2: 
+```
+
+BR 2:
+```
 - versie 1, begin geldigheid t3 - ...
+```
 
 wordt SOR: 
+```
 - versie 1, begin geldigheid t1 - eind geldigheid t3 (berekend)
 - versie 2, begin geldigheid t3 - ...
+```
 
 
 Voorbeeld 2: 
 
-BR 1: 
+BR 1:
+```
 - versie 1, begin geldigheid t1 - t2
 - versie 2, begin geldigheid t3 - ... 
+```
+BR 2:
+```
+versie 1, begin geldigheid t2 - ...
+```
 
-BR 2: versie 1, begin geldigheid t2 - ...
-
-wordt in de SOR:  
+wordt in de SOR:
+```
 - versie 1, begin geldigheid t1 - eind geldigheid t2 (berekend) 
 - versie 2, begin geldigheid t2 - t3 (berekend) 
 - versie 3, begin geldigheid t3 - ... 
-
---
+```
 
 Met de tijdslijn registratie erbij:
 
 - tijdstipRegistratie: het moment waarop begin geldigheid is geregistreerd. 
 - eindRegistatie: het moment waarop de eind geldigheid is geregistreerd/bepaald.
 
-Dus, 
+Dus,
 
-Voorbeeld 1: 
+Voorbeeld 1:
 
-BR 1: 
-
+BR 1:
 ```
 - versie 1, begin geldigheid t1 - ...
             tijdstip registratie: t1 
