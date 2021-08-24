@@ -79,8 +79,9 @@ Opm. We willen toegroeien naar dat de tijdslijn geldigheid altijd een datum is. 
 Advies: gezien het groeipad willen we onderzoeken of c) kan. 
 
 Ad 4. Wanneer een object wordt beeindigd en de BR geen eindstatus kent, registreer/oof leidt af, een extra versie met wel een eindstatus. 
+Opm. het is aan de BR om te kiezen of er wel of niet een versie met een eindstatus wordt geregistreerd of dat deze wordt afgeleid. 
 
-Ad 5. Onderstaande een verkenning.
+Ad 5. Onderstaande een verkenning. Uitgaand van alle genoemde keuzes in de voorliggende tekst. 
 
 Voorbeeld: 
 
