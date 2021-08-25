@@ -1,8 +1,8 @@
-# Modelleren van historie en beantwoorden van tijdreis vragen #  
+## Modelleren van historie en beantwoorden van tijdreis vragen 
 
 Subgroep high-5 Pano, Wouter, Lennart. 
 
-## Doel ##
+### Doel
 
 Doel: een uniforme manier voor afnemers om te zien wanneer:
 
@@ -17,7 +17,7 @@ Historie: hiermee wordt bedoeld de tijdslijn geldigheid en de tijdslijn registra
 
 Opm. Buiten scope van deze uitwerking: levensduur van het object.  
 
-## Uitgangspunten ## 
+### Uitgangspunten 
 
 - SOR afspraak: van alle gegevens moet het bekend zijn wanneer de gegevens geldig zijn en wanneer ze beschikbaar/geregistreerd zijn. 
 - Conform MIM - maar MIM kent nog geen metadata, we volgen de huidige stand van de expertgroep modellering SOR 
@@ -29,21 +29,21 @@ Dit betekent:
 - We stellen het object centraal - d.w.z. we willen gegevens over het gebouw in de werkelijkheid leveren, en we doen dit door de registratie gegevens over dit object te leveren.
 - We geven de tijdslijnen per set gegevens over een object aan. Dit heet ook wel een versie van een object. Niet per attribuut. Dit kan wel afgeleid worden, maar dit is niet de standaard use case. Afnemers willen immers vooral gegevens van/over een object weten.
 
-## Uitdaging en bijzondere punten met keuzes/voorstel ## 
+### Uitdaging en bijzondere punten met keuzes/voorstel
 
 - Enerzijds: in het geval van de SOR gaat het in deze high-5 ook over het in elkaar schuiven van gegevens van afzonderlijke objecten in de BR's naar een samengesteld object in de SOR.
 - Anderzijds: hoe de geo-basisregistraties data nu uitleveren maar dan geuniformeerd. D.w.z. dat historie grotendeels wordt bijgehouden/geregistreerd in versies van objecten. Een versie is een setje gegevens over een object, en over die set gegevens wordt de tijdslijn geldigheid en de tijdslijn registratie bijgehouden en uitgeleverd. 
 
 De uit te werken bijzondere punten zijn:
 
-0) definities van tijdslijn geldigheid en tijdslijn registratie 
-1) Als we het object centraal stellen, hoe gaan we dan om met objecten uit 2+ BR's die we in elkara schuiven, in het bijzonder met de meerdere identificaties
-2) Niet elke geo-BR kent nu beide tijdslijnen. Maar weten wel wanneer gegevens geldig en beschikbaar/geregistreerd zijn. 
-3) Niet elke geo-BR heeft voor de tijdslijn geldigheid hetzelfde dataype, sommige gebruiken een datum, sommige een datumtijd of een timestamp. Hoe gaan we hiermee om? 
-4) Mutatie verschillen, met name t.a.v. beeindigen van objecten, wat bv. de BGT doet met een einddatum geldigheid en de BAG met een eindstatus. 
-5) Hoe schuif je versies van objecten uit verschillende BR's in elkaar. Wat is het algoritme. 
+0. definities van tijdslijn geldigheid en tijdslijn registratie 
+1. Als we het object centraal stellen, hoe gaan we dan om met objecten uit 2+ BR's die we in elkaar schuiven, in het bijzonder met de meerdere identificaties
+2. Niet elke geo-BR kent nu beide tijdslijnen. Maar weten wel wanneer gegevens geldig en beschikbaar/geregistreerd zijn. 
+3. Niet elke geo-BR heeft voor de tijdslijn geldigheid hetzelfde dataype, sommige gebruiken een datum, sommige een datumtijd of een timestamp. Hoe gaan we hiermee om? 
+4. Mutatie verschillen, met name t.a.v. beeindigen van objecten, wat bv. de BGT doet met een einddatum geldigheid en de BAG met een eindstatus. 
+5. Hoe schuif je versies van objecten uit verschillende BR's in elkaar. Wat is het algoritme. 
 
-### Ad 0. ### 
+#### Ad 0. definities van tijdslijn geldigheid en tijdslijn registratie 
 
 Zie NEN3610 2021/2022 historie. 
 
@@ -51,12 +51,12 @@ Merk op:
 - Elke Landelijke Voorziening die een verzameling is van een BR heeft een eigen tijdslijn van verwerking in de LV. We onderkennen dus tijdstipRegistratie bij de bronhouder en tijdstipRegistratie bij de LV.
 - Van elk gegeven houden we het registratie tijdstip bij. Dit geldt ook voor wanneer een beginGeldigheid of eindGeldigheid is geregisteerd, in een BR en in een LV. 
 
-### Ad 1. ### 
+#### Ad 1. in elkaar schuiven objecten uit 2+ BR's 
 
 Een SOR object kan en mag meerdere identificaties hebben. Dit is ook handig, want dan in de link naar de BR ook direct bekend. 
 - Wanneer een SOR object meerdere identificaties heeft, dan betekent dit dat je elk afzonderlijk kan gebruiken als identificatie, en dat de objecten uit de onderliggende BR's over hetzelfde SOR object en hetzelfde object in de werkelijkheid gaat. 
 
-### Ad 2. ### 
+#### Ad 2. Niet elke geo-BR kent nu beide tijdslijnen
 
 Elke BR weet echt wel wanneer de gegevens geldig zijn, ook al wordt het niet altijd fysiek vastgelegd. Vertaal dus wat er geregistreerd in de BR naar de gevraagde tijdslijnen. 
 - Lever vanuit elke BR de tijdslijnen. 
@@ -72,7 +72,7 @@ BGT: kent nog geen tijdslijn geldigheid. Deze is als volgt  af te leiden:
 
 VERVOLG NODIG: BGT vertaalspecificatie. 
 
-### Ad 3. ### 
+#### Ad 3. Niet elke geo-BR heeft voor de tijdslijn geldigheid hetzelfde dataype
 
 Er is hier een keuze te maken. 
 
@@ -97,26 +97,26 @@ Advies: gezien het groeipad willen we onderzoeken of c) kan.
 
 KEUZE: C
 
-### Ad 4. ### 
+####  Ad 4. Mutatie verschillen
 
 Wanneer een object wordt beeindigd en de BR geen eindstatus kent, registreer/oof leidt af, een extra versie met wel een eindstatus. 
 Opm. het is aan de BR om te kiezen of er wel of niet een versie met een eindstatus wordt geregistreerd of dat deze wordt afgeleid. 
 
 Ad 5. Onderstaande een verkenning. Uitgaand van alle genoemde keuzes in de voorliggende tekst. 
 
-### Ad. 5 ### 
+#### Ad. 5 Hoe schuif je versies van objecten uit verschillende BR's in elkaar
 
 Uitwerking 5 gedachtenlijn. 
 
 BR 1: 
-```
-- versie 1, begin geldigheid t1 - ...
-```
+
+- versie 1, begin geldigheid t1 -  
+
 
 BR 2: 
-```
-- versie 1, begin geldigheid t3 - ...
-```
+  
+- versie 1, begin geldigheid t3 -  
+  
 
 SOR: 
 Stel vraag aan BR 1: geldigOp t4. Antwoord: versie 1. Gebruik deze gegevens voor het SOR object. 
@@ -129,8 +129,8 @@ Optie 0: lever de losse antwoorden uit de losse BR's ook los door, maar wel tech
 --> 1 versie in BR 1 en 1 versie in BR 2 = 2 losse versies (niet in elkaar geschoven). 
 
 Optie 1: laat elke BR heel duidelijk terugkomen in het SOR object
-- Geef van elk gegevens uit BR 1 aan: herkomst BR1, en de historie metagegevens zijn: begin geldigheid t1 - ... 
-- Geef van elk gegevens uit BR 2 aan: herkomst BR2, en de historie metagegevens zijn: begin geldigheid t3 - ... 
+- Geef van elk gegevens uit BR 1 aan: herkomst BR1, en de historie metagegevens zijn: begin geldigheid t1 -   
+- Geef van elk gegevens uit BR 2 aan: herkomst BR2, en de historie metagegevens zijn: begin geldigheid t3 -   
 
 Bv. een gegevensgroep voor gegevens uit BR 1 + de metagegevens voor historie uit BR 1 en voor BR 2 analoog. 
 
@@ -148,45 +148,45 @@ KEUZE: voor deze exercitie gaan we uit van optie 2, om te kijken of dat goed kan
 De voorbeelden die we gaan uitwerken in de volgende paragrafen zijn hiermee in lijn. 
 
 
-### Illustratieve voorbeelden ###
+#### Illustratieve voorbeelden
 
 Illustratief voorbeeld 1: 
 
 BR 1:
-```
-- versie 1, begin geldigheid t1 - ...
-```
+  
+- versie 1, begin geldigheid t1 -  
+  
 
 BR 2:
-```
-- versie 1, begin geldigheid t3 - ...
-```
+  
+- versie 1, begin geldigheid t3 -  
+  
 
 wordt SOR: 
-```
+  
 - versie 1, begin geldigheid t1 - eind geldigheid t3 (berekend)
-- versie 2, begin geldigheid t3 - ...
-```
+- versie 2, begin geldigheid t3 -  
+  
 
 
 Illustratief Voorbeeld 2: 
 
 BR 1:
-```
+  
 - versie 1, begin geldigheid t1 - t2
-- versie 2, begin geldigheid t3 - ... 
-```
+- versie 2, begin geldigheid t3 -   
+  
 BR 2:
-```
-versie 1, begin geldigheid t2 - ...
-```
+  
+versie 1, begin geldigheid t2 -  
+  
 
 wordt in de SOR:
-```
+  
 - versie 1, begin geldigheid t1 - eind geldigheid t2 (berekend) 
 - versie 2, begin geldigheid t2 - t3 (berekend) 
-- versie 3, begin geldigheid t3 - ... 
-```
+- versie 3, begin geldigheid t3 -   
+  
 
 Met de tijdslijn registratie erbij:
 
@@ -200,45 +200,45 @@ Dus,
 Voorbeeld 1:
 
 BR 1:
-```
-- versie 1, begin geldigheid t1 - ...
+  
+- versie 1, begin geldigheid t1 -  
             tijdstip registratie: t1 
-```
+  
 
 BR 2:
-```
-- versie 1, begin geldigheid t3 - ...
+  
+- versie 1, begin geldigheid t3 -  
             tijdstip registratie: t2 
-```
+  
 
 wordt SOR:
-```
+  
 - versie 1, begin geldigheid t1 - eind geldigheid t3 (berekend) 
             tijdstip registratie: t1 - eind registratie: t2 
-- versie 2, begin geldigheid t3 - ...
+- versie 2, begin geldigheid t3 -  
             tijdstip registratie: t2 
-```
+  
 
 Voorbeeld 2: 
 
 BR 1:
-```
+  
 - versie 1, begin geldigheid t1 - t3
   tijdstip registratie: t1 - eind registratie t4 
             
-- versie 2, begin geldigheid t3 - ... 
+- versie 2, begin geldigheid t3 -   
   tijdstip registratie: t4
-```
+  
 
 BR 2: 
-```
-versie 1, begin geldigheid t2 - ...
+  
+versie 1, begin geldigheid t2 -  
       tijdstip registratie: t2 
-```
+  
 
 wordt in de SOR:
 
-```
+  
 - versie 1, begin geldigheid t1 - eind geldigheid t2
             tijdstip registratie: t1 - eind registratie t2 (berekend) 
             
@@ -246,40 +246,40 @@ wordt in de SOR:
             tijdstip registratie: t2 - eind registratie t4 (berekend)
              
 - versie 3, begin geldigheid t3 - ..
-            tijdstip registratie: t4 - ... 
-```
+            tijdstip registratie: t4 -   
+  
 
 Er zijn andere voorbeelden te verzinnen, we moeten kijken of we dit kunnen kraken, zoals een voorbeeld met meerdere geldige op 1 dag of met een registratie tijdstip van de begin geldigheid op een latere tijd ligt dan het registratie tijdstip van de eind geldigheid - of dat de vertaal specificatie minder rechttoe rechtaan wordt. 
 
-## Modellering van SOR Gebouw met historie ## 
+### Modellering van SOR Gebouw met historie 
 
 @Pano, kan jij diagram hier toevoegen? 
 
 
 
-## Voorbeelden uitgewerkt met tijdreis vragen ## 
+### Voorbeelden uitgewerkt met tijdreis vragen 
 
 Op basis van de keuzes zoals gemaakt in dit hoofdstuk: inhoudelijk punt Historie. 
 
 Fictief complexer voorbeeld uit het BAG historie model, waarin gegevens inactief gemaakt zijn.  
 
-```
+  
 Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	          TI 	                	
 1000 	1 	     A 	     01-01-2018 	03-03-2019 	30-12-2017 	01-03-2019 	           	
 1000 	2 	     B 	     03-03-2019 	01-09-2033 	01-03-2019 	01-04-2019 	01-05-2019 	
 1000 	3 	     H 	     01-09-2033 	               01-04-2019 	               01-05-2019
 1000 	4 	     B 	     03-03-2019 	               01-05-2019 	
-```
+  
 
 Fictief voorbeeld uit de WOZ 
 
-```
+  
 Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	           	          	
 2000 	0 	     200k	     01-01-2019 	01-01-2020 	10-01-2019 	20-02-2020 	           	
 2000 	1 	     220k	     01-01-2020 	               20-02-2020 	
-```
+  
 
-### Insteek: tijdreis antwoorden samenvoegen ### 
+### Insteek: tijdreis antwoorden samenvoegen
 
 _Insteek: doe een tijdreis op de BAG en de WOZ en breng de gegevens samen in een SOR Gebouw._
 
@@ -334,25 +334,25 @@ Opm. Als je de vraag aan de LV-en wilt stellen dan zijn de registratie tijdstipp
 
 --
 
-### Insteek: geldige levenscyclus van 2+ BR's in elkaar schuiven en dan antwoorden ### 
+### Insteek: geldige levenscyclus van 2+ BR's in elkaar schuiven en dan antwoorden
 
 Eerst de tijdlijnen van BAG en WOZ in elkaar schuiven en daarna de tijdreis vraag stellen. 
 
 Nota bene: dus niet een tijdreis naar de gehele levenscyclus van de BAG en de WOZ en die in elkaar schuiven.
 
-```
+  
 Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	          TI 	                	
 1000 	1 	     A 	     01-01-2018 	03-03-2019 	30-12-2017 	01-03-2019 	           	
 1000 	2 	     B 	     03-03-2019 	01-09-2033 	01-03-2019 	01-04-2019 	01-05-2019 	
 1000 	3 	     H 	     01-09-2033 	               01-04-2019 	               01-05-2019
 1000 	4 	     B 	     03-03-2019 	               01-05-2019 	
-```
+  
 
-```
+  
 Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	           	          	
 2000 	0 	     200k	     01-01-2019 	01-01-2020 	10-01-2019 	20-02-2020 	           	
 2000 	1 	     220k	     01-01-2020 	               20-02-2020 	
-```
+  
 
 In elkaar geschoven volgens het algoritme: exclusief inactieve versies. 
 
@@ -365,31 +365,31 @@ _1) Welke gegevens zijn geldig vandaag in 2021 en beschikbaar vandaag in 2021?_
 
 Tussenstap: geldige levenscyclus BAG op beschikbaarOp vandaag 2021
 
-```
+  
 Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	          TI 	                	
 1000 	1 	     A 	     01-01-2018 	03-03-2019 	30-12-2017 	01-03-2019 	           	
 1000 	4 	     B 	     03-03-2019 	               01-05-2019 	
-```
+  
 
 Tussenstap: geldige levenscyclus WOZ op beschikbaarOp vandaag 2021
 
-```
+  
 Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	           	          	
 2000 	0 	     200k	     01-01-2019 	01-01-2020 	10-01-2019 	20-02-2020 	           	
 2000 	1 	     220k	     01-01-2020 	               20-02-2020 	
-```
+  
 
 Tussenstap: levenscyclus SOR Gebouw 
 
 * = berekende datum of datumtijd. 
 
-```
+  
 ID BAG    ID WOZ    BG 	          EG 	          TR 	          ER 	          Waarde BAG   Waarde WOZ  
 1000 	NULL      01-01-2018 B   01-01-2019* W  30-12-2017 B   10-01-2019 W        A            NULL
 1000      2000      01-01-2019 W	03-03-2019* B  10-01-2019 W   01-03-2019 B   	A            200k
 1000      2000 	03-03-2019 B 	01-01-2020* W  01-05-2019 B   20-02-2020 W        B            200k 
 1000      2000 	01-01-2020 W 	               20-02-2020 W                       B            220k 
-```
+  
 Op beschikbaarOp 'vandaag 2021' voor SOR Gebouw is het deze tabel, alleen de geldigOp vraag hoeft nog gesteld te worden. 
 
 Antwoord 1: B en 220k (de tijdreis vraag geeft - gelukkig, moet ook zo zijn - hetzelfde antwoord als bij de eerste insteek). 
@@ -404,32 +404,32 @@ _3) Welke gegevens zijn geldig op 01-01-2020 en beschikbaar op 01-01-2020?_
 
 Tussenstap: geldige levenscyclus BAG op 01-01-2020.
 
-```
+  
 Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	          TI 	                	
 1000 	1 	     A 	     01-01-2018 	03-03-2019 	30-12-2017 	01-03-2019 	           	
 1000 	4 	     B 	     03-03-2019 	               01-05-2019 	
-```
+  
 Dit is, toevallig, hetzelfde als bij de vorige tijdreizen. 
 
 Tussenstap: geldige levenscyclus WOZ op 01-01-2020.
 
-```
+  
 Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	           	          	
 2000 	0 	     200k	     01-01-2019 	 	          10-01-2019 	 	           	
 Opm. versie 1 bestond nog niet en EG en ER waren nog niet gevuld. 
-```
+  
 Deze is wel anders bij deze tijdreis in vergelijking tot de eerdere tijdreizen. 
 
 Tussenstap: levenscyclus SOR Gebouw 
 
 * = berekende datum of datumtijd. 
 
-```
+  
 ID BAG    ID WOZ    BG 	          EG 	          TR 	          ER 	          Waarde BAG   Waarde WOZ  
 1000 	NULL      01-01-2018 B   01-01-2019* W  30-12-2017 B   10-01-2019 W        A            NULL
 1000      2000      01-01-2019 W	03-03-2019* B  10-01-2019 W   01-03-2019 B   	A            200k
 1000      2000 	03-03-2019 B 	               01-05-2019 B                       B            200k 
-```
+  
 
 Op beschikbaarOp '01-01-2021' voor SOR Gebouw is het deze tabel, alleen de geldigOp vraag hoeft nog gesteld te worden. 
 
@@ -443,7 +443,7 @@ Antwoord 4: A en NULL/??  (de tijdreis vraag geeft - gelukkig, moet ook zo zijn 
 
 Beide insteken komen tot hetzelfde antwoord. 
 
-### Vervolg voor 2e high-5 ### 
+### Vervolg voor 2e high-5
 
 Inhoud geeft aan dat een geldige levenscyclus samenstellen inderdaad een vraag is die we moeten kunnen beantwoorden. 
 
