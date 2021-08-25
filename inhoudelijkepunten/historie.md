@@ -253,11 +253,16 @@ wordt in de SOR:
 
 Er zijn andere voorbeelden te verzinnen, we moeten kijken of we dit kunnen kraken, zoals een voorbeeld met meerdere geldige op 1 dag of met een registratie tijdstip van de begin geldigheid op een latere tijd ligt dan het registratie tijdstip van de eind geldigheid - of dat de vertaal specificatie minder rechttoe rechtaan wordt. 
 
-### Modellering van SOR Gebouw met historie 
+### Modellering van historie in de SOR
 
-@Pano, kan jij diagram hier toevoegen? 
+Het informatiemodel gaat uit van het modelleerpatroon van NEN3610 waarbij registratiegegevens over het informatieobject, zoals de tijdlijn geldigheid en tijdlijn registratie in een apart metadata objecttype zit wat 1 op 1 gerelateerd is aan het objecttype waar het informatieobject over gaat. Dit tezamen met de modelleerprincipes van de SOR, zorgt er voor dat het object centraal gehouden kan worden, ofwel, dat het objecttype alleen directe eigenschappen van het object kent.
 
+<figure id="sor-modellering-historie">
+  <img src="media/historie.drawio.png" alt="sor-modellering-historie">
+  <figcaption>Historie van informatieobjecten in de SOR</figcaption>
+</figure>
 
+Het informatiemodel biedt, zoals beschreven in [](#modelleerpatroon-voor-herkomstmetadata), ook de mogelijkheid om de herkomst van een SOR informatieobject uit te drukken. Hierbij kan bij de registratiegegevens via `afgeleidVan` relaties een koppeling gelegd worden met de registratiegegevens van informatieobjecten uit onderliggende registraties. In informatieproducten kan dan gekozen worden om deze herkomstinformatie wel of niet te tonen.
 
 ### Voorbeelden uitgewerkt met tijdreis vragen 
 
