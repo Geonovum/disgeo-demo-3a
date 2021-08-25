@@ -38,9 +38,9 @@ Kwaliteit van gegevens en metadata, en het bevestigen hiervan door een bronhoude
 Gegevens die in samenhang een bepaalde consistentie behoren te hebben. 
 - Functie, gebruiksdoel. Bepaalde functies van een gebouw zijn benoemd in de WOZ - geconstateerde functies - en in de BAG - vergunde functies. Wanneer deze niet in samenspraak met elkaar zijn, is het van belang om dit te weten. Dit is WOZ en BAG kennis, die een afnemer (meestal) niet weet. Wanneer een verblijfsobject als gebruiksdoel kantoorfunctie heeft en de WOZ constateert het gebruikt wordt voor wonen, dan is het feitelijke gebruik niet legitiem. We werken dit uit voor het thema wonen. 
 
-### Modelleren van gegevens over registraties heen
+### Modelleren van gegevens die over registraties hetzelfde moeten zijn (worden)
 
-Modelleren van gegevens over registraties heen standaard/hetzelfde zou moeten zijn, maar dit niet is. We willen dat het gebruik door afnemers niet onnodig complex/genuanceerd wordt en kijken of dit recht te trekken is. 
+Modelleren van gegevens over registraties heen standaard/hetzelfde zou moeten zijn, maar dit nu niet zijn. We willen dat het gebruik door afnemers niet onnodig complex/genuanceerd wordt en kijken of dit recht te trekken is. 
 - zie paragraaf [Historie](#modelleren-van-historie-en-beantwoorden-van-tijdreis-vragen)
 
 
