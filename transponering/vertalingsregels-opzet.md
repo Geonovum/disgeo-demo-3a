@@ -7,18 +7,18 @@ Afleidingsregels zijn nodig om uniformiteit te waarborgen. In gevallen waar het 
 
 Vertalingsregels kunnen betrekking hebben op vertalingen tussen de volgende elementen:
 
-BR waardelijst waarde - SOR waardelijst waarde
-BR objecttype - SOR objecttype
-BR attribuutsoort waarde - SOR attribuutsoort waarde
+- BR waardelijst waarde - SOR waardelijst waarde
+- BR objecttype - SOR objecttype
+- BR attribuutsoort waarde - SOR attribuutsoort waarde
 
-BR waardelijst waarde - SOR objecttype
-BR objecttype - SOR waardelijst waarde
+- BR waardelijst waarde - SOR objecttype
+- BR objecttype - SOR waardelijst waarde
 
-BR waardelijst - SOR attribuutsoort waarde
-BR attribuutsoort waarde - SOR waardelijst waarde
+- BR waardelijst - SOR attribuutsoort waarde
+- BR attribuutsoort waarde - SOR waardelijst waarde
 
-BR objecttype - SOR attribuutsoort waarde 
-BR attribuutsoort waarde - SOR objecttype (bouwlagen)
+- BR objecttype - SOR attribuutsoort waarde 
+- BR attribuutsoort waarde - SOR objecttype (bouwlagen)
 
 
 Transponeringstabellen worden gebruikt om in kaart te brengen welke transformaties waar van toepassing zijn. Voorbeelden hiervan:
