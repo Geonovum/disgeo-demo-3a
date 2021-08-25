@@ -241,6 +241,10 @@ wordt in de SOR:
 
 Er zijn andere voorbeelden te verzinnen, we moeten kijken of we dit kunnen kraken, zoals een voorbeeld met meerdere geldige op 1 dag of met een registratie tijdstip van de begin geldigheid op een latere tijd ligt dan het registratie tijdstip van de eind geldigheid - of dat de vertaal specificatie minder rechttoe rechtaan wordt. 
 
+## Modellering van SOR Gebouw met historie ## 
+
+@Pano, kan jij diagram hier toevoegen? 
+
 ## Voorbeelden uitgewerkt met tijdreis vragen ## 
 
 Op basis van de keuzes zoals gemaakt in dit hoofdstuk: inhoudelijk punt Historie. 
