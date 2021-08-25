@@ -42,15 +42,21 @@ De uit te werken bijzondere punten zijn:
 
 --
 
-Ad 0. Zie NEN3610 2021/2022 historie. 
+### Ad 0. ### 
+
+Zie NEN3610 2021/2022 historie. 
 Merk op:
 - Elke Landelijke Voorziening die een verzameling is van een BR heeft een eigen tijdslijn van verwerking in de LV. We onderkennen dus tijdstipRegistratie bij de bronhouder en tijdstipRegistratie bij de LV.
 - Van elk gegeven houden we het registratie tijdstip bij. Dit geldt ook voor wanneer een beginGeldigheid of eindGeldigheid is geregisteerd, in een BR en in een LV. 
 
-Ad 1. Een SOR object kan en mag meerdere identificaties hebben. Dit is ook handig, want dan in de link naar de BR ook direct bekend. 
+### Ad 1. ### 
+
+Een SOR object kan en mag meerdere identificaties hebben. Dit is ook handig, want dan in de link naar de BR ook direct bekend. 
 - Wanneer een SOR object meerdere identificaties heeft, dan betekent dit dat je elk afzonderlijk kan gebruiken als identificatie, en dat de objecten uit de onderliggende BR's over hetzelfde SOR object en hetzelfde object in de werkelijkheid gaat. 
 
-Ad 2. Elke BR weet echt wel wanneer de gegevens geldig zijn, ook al wordt het niet altijd fysiek vastgelegd. Vertaal dus wat er geregistreerd in de BR naar de gevraagde tijdslijnen. 
+### Ad 2. ### 
+
+Elke BR weet echt wel wanneer de gegevens geldig zijn, ook al wordt het niet altijd fysiek vastgelegd. Vertaal dus wat er geregistreerd in de BR naar de gevraagde tijdslijnen. 
 - Lever vanuit elke BR de tijdslijnen. 
 - Implementeer de NL AP strategie geldigOp (moment in de tijdslijn geldsigheid) en beschikbaarOp (moment in de tijdslijn registratie) 
 - Lever vanuit elke BR een eindstatus (bekijk of je in de BR deze ook registreerd, of dat je deze afleid) 
@@ -62,7 +68,9 @@ BGT: kent nog geen tijdslijn geldigheid. Deze is als volgt  af te leiden:
      - begin geldigheid = tijdstip registratie 
      - eind geldigheid = eindRegistratie. Wellicht nog wat logica rondom geconstateerd.    
 
-Ad 3. Er is hier een keuze te maken. 
+### Ad 3. ### 
+
+Er is hier een keuze te maken. 
 
 Optie a) We gebruiken altijd een DatumTijd voor geldigheid. BR's die alleen een datum kennen, daarvoor gebruiken we die datum en dan 00:00:00 
 - Voor de geldigOp parameter wordt altijd een DatumTijd gebruikt. 
@@ -83,14 +91,16 @@ Opm. We willen toegroeien naar dat de tijdslijn geldigheid altijd een datum is. 
 
 Advies: gezien het groeipad willen we onderzoeken of c) kan. 
 
-Ad 4. Wanneer een object wordt beeindigd en de BR geen eindstatus kent, registreer/oof leidt af, een extra versie met wel een eindstatus. 
+### Ad 4. ### 
+
+Wanneer een object wordt beeindigd en de BR geen eindstatus kent, registreer/oof leidt af, een extra versie met wel een eindstatus. 
 Opm. het is aan de BR om te kiezen of er wel of niet een versie met een eindstatus wordt geregistreerd of dat deze wordt afgeleid. 
 
 Ad 5. Onderstaande een verkenning. Uitgaand van alle genoemde keuzes in de voorliggende tekst. 
 
-## Voorbeelden ## 
+### Ad. 5 ### 
 
-### Illustratief ###
+Uitwerking 5 gedachtenlijn. 
 
 BR 1: 
 ```
@@ -129,7 +139,9 @@ Deze laatste is het meeste in lijn met de intentie van de SOR en met de insteek:
 
 Keuze: voor deze exercitie gaan we uit van optie 2, om te kijken of dat goed kan. 
 
-Uitwerking *5* - optie 2. 
+De voorbeelden die we gaan uitwerken in de volgende paragrafen zijn hiermee in lijn. 
+
+### Illustratieve voorbeelden ###
 
 Illustratief voorbeeld 1: 
 
@@ -229,7 +241,9 @@ wordt in de SOR:
 
 Er zijn andere voorbeelden te verzinnen, we moeten kijken of we dit kunnen kraken, zoals een voorbeeld met meerdere geldige op 1 dag of met een registratie tijdstip van de begin geldigheid op een latere tijd ligt dan het registratie tijdstip van de eind geldigheid - of dat de vertaal specificatie minder rechttoe rechtaan wordt. 
 
-### Echte voorbeelden uitgewerkt met tijdreis vragen ### 
+## Voorbeelden uitgewerkt met tijdreis vragen ## 
+
+Op basis van de keuzes zoals gemaakt in dit hoofdstuk: inhoudelijk punt Historie. 
 
 Fictief complexer voorbeeld uit het BAG historie model, waarin gegevens inactief gemaakt zijn.  
 
@@ -249,6 +263,8 @@ Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER
 2000 	1 	     220k	     01-01-2020 	               20-02-2020 	
 ```
 
+### Insteek: tijdreis antwoorden samenvoegen ### 
+
 _Insteek: doe een tijdreis op de BAG en de WOZ en breng de gegevens samen in een SOR Gebouw._
 
 Lange formulering: welke gegevens zijn geldig voor dit gebouw op 'datum', met de kennis/data die vanuit de informatievoorziening beschikbaar is/was op 'datumtijd'. De eerste datum wordt gebruikt voor de tijdreis parameter geldigOp en de tweede voor beschikbaarOp. De tijdsreis wordt beantwoord door eerst alle gegevens weg te filteren die na beschikbaarOp in de registatie zijn geregistreerd (inclusief einddatum geldigheid en eind registratie). Van de gegevens die overblijven wordt de geldigOp vraag gesteld. Deze vragen worden "onder water" aan de BAG gesteld en aan de WOZ. 
@@ -263,40 +279,50 @@ Tijdslijnen berekenen:
 - Eind     Registratie:    je krijgt er 2, 1 van BAG, 1 van WOZ, kies de ER die hoort bij de geselecteerde EG. 
 
 _1) Welke gegevens zijn geldig vandaag in 2021 en beschikbaar vandaag in 2021?_ 
+
 Antwoord 1: B en 220k                     (versie 4 van de BAG en versie 1 van de WOZ)  
-BG: BAG 03-03-2019 of BG WOZ 01-01-2020 --> 01-01-2020 (WOZ)
-EG: BAG leeg of WOZ leeg                --> leeg       (WOZ)
-TR: BAG 01-05-2019 of WOZ 10-01-2019    --> 10-01-2019 (WOZ) 
-ER: BAG leeg of WOZ leeg                --> leeg       (WOZ)
+
+- BG: BAG 03-03-2019 of BG WOZ 01-01-2020 --> 01-01-2020 (WOZ)
+- EG: BAG leeg of WOZ leeg                --> leeg       (WOZ)
+- TR: BAG 01-05-2019 of WOZ 10-01-2019    --> 10-01-2019 (WOZ) 
+- ER: BAG leeg of WOZ leeg                --> leeg       (WOZ)
 
 _2) Welke gegevens zijn geldig op 01-01-2019 en beschikbaar vandaag in 2021?_ 
+
 Antwoord 2: A en 200k                     (versie 1 van de BAG en versie 0 van de WOZ)  
-BG: BAG 01-01-2018 of BG WOZ 01-01-2019 --> 01-01-2019 (WOZ)
-EG: BAG 03-03-2019 of WOZ 01-01-2020    --> 03-03-2019 (BAG)
-TR: BAG 30-12-2017 of WOZ 10-01-2019    --> 10-01-2019 (WOZ)
-ER: BAG 01-03-2019 of WOZ 20-02-2020    --> 01-03-2019 (BAG)
+
+- BG: BAG 01-01-2018 of BG WOZ 01-01-2019 --> 01-01-2019 (WOZ)
+- EG: BAG 03-03-2019 of WOZ 01-01-2020    --> 03-03-2019 (BAG)
+- TR: BAG 30-12-2017 of WOZ 10-01-2019    --> 10-01-2019 (WOZ)
+- ER: BAG 01-03-2019 of WOZ 20-02-2020    --> 01-03-2019 (BAG)
 
 _3) Welke gegevens zijn geldig op 01-01-2020 en beschikbaar op 01-01-2020?_  
-Antwoord 3: B en 200k                     (versie 4 van de BAG en versie 0 van de WOZ, versie 1 is immers pas per 20-02-2020 geregistreerd)   
-BG: BAG 03-03-2019 of BG WOZ 01-01-2019 --> 01-01-2019 (WOZ)
-EG: BAG leeg of WOZ leeg                --> leeg       (WOZ) Opm. EG van versie 0 is pas per 20-02-2020 geregistreerd, op 01-01-2020 nog leeg.
-TR: BAG 01-05-2019 of WOZ 10-01-2019    --> 10-01-2019 (WOZ) Opm. dus niet, de laatste TR, maar de TR die hoort bij BG. 
-ER: BAG leeg of WOZ 20-02-2020          --> leeg       (WOZ) Opm. ER van versie 0 is pas per 20-02-2020 geregistreerd, op 01-01-2020 nog leeg.  
+
+Antwoord 3: B en 200k                     (versie 4 van de BAG en versie 0 van de WOZ, versie 1 is immers pas per 20-02-2020 geregistreerd)  
+
+- BG: BAG 03-03-2019 of BG WOZ 01-01-2019 --> 01-01-2019 (WOZ)
+- EG: BAG leeg of WOZ leeg                --> leeg       (WOZ) Opm. EG van versie 0 is pas per 20-02-2020 geregistreerd, op 01-01-2020 nog leeg.
+- TR: BAG 01-05-2019 of WOZ 10-01-2019    --> 10-01-2019 (WOZ) Opm. dus niet, de laatste TR, maar de TR die hoort bij BG. 
+- ER: BAG leeg of WOZ 20-02-2020          --> leeg       (WOZ) Opm. ER van versie 0 is pas per 20-02-2020 geregistreerd, op 01-01-2020 nog leeg.  
 
 _4) Welke gegevens zijn geldig op 01-01-2018 en beschikbaar vandaag in 2021?_ 
+
 Antwoord 4: A en ??                       (versie 1 van de BAG en GEEN versie van de WOZ, immers WOZ heeft pas geldige gegevens vanaf 01-01-2019)
-BG: BAG 01-01-2018 of BG WOZ n.v.t.     --> 01-01-2020 (BAG)
-EG: BAG leeg of WOZ n.v.t.              --> leeg       (BAG)
-TR: BAG 30-12-2017 of WOZ n.v.t.        --> 30-12-2017 (BAG)
-ER: BAG leeg of WOZ n.v.t.              --> leeg       (BAG) 
+
+- BG: BAG 01-01-2018 of BG WOZ n.v.t.     --> 01-01-2020 (BAG)
+- EG: BAG leeg of WOZ n.v.t.              --> leeg       (BAG)
+- TR: BAG 30-12-2017 of WOZ n.v.t.        --> 30-12-2017 (BAG)
+- ER: BAG leeg of WOZ n.v.t.              --> leeg       (BAG) 
 
 Opm. Als je de vraag aan de LV-en wilt stellen dan zijn de registratie tijdstippen van de verwerking van deze data in LV-en van belang voor beschikbaarOp. Voeg dan een TR-LV, EG-LV en IA-LV toe.   
 
 --
 
-Insteek: eerst de tijdlijnen van BAG en WOZ in elkaar schuiven en daarna de tijdreis vraag stellen. 
+### Insteek: geldige levenscyclus van 2+ BR's in elkaar schuiven en dan antwoorden ### 
 
+Eerst de tijdlijnen van BAG en WOZ in elkaar schuiven en daarna de tijdreis vraag stellen. 
 
+Nota bene: dus niet een tijdreis naar de gehele levenscyclus van de BAG en de WOZ en die in elkaar schuiven.
 
 ```
 Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	          TI 	                	
@@ -312,13 +338,12 @@ Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER
 2000 	1 	     220k	     01-01-2020 	               20-02-2020 	
 ```
 
-In elkaar geschoven volgens het algortime: exclusief inactieve versies. 
+In elkaar geschoven volgens het algoritme: exclusief inactieve versies. 
 
-Doe een tijdreis naar de geldige levenscyclus van de BAG, zoals beschikbaar op een bepaalde datum. 
-Doe een tijdreis naar de geldige levenscyclus van de WOZ, zoals beschikbaar op een bepaalde datum. 
-Schuif deze in elkaar. 
+- Doe een tijdreis naar de geldige levenscyclus van de BAG, zoals beschikbaar op een bepaalde datum. 
+- Doe een tijdreis naar de geldige levenscyclus van de WOZ, zoals beschikbaar op een bepaalde datum. 
 
-Nota bene: dus niet een tijdreis naar de gehele levenscyclus van de BAG en de WOZ en die in elkaar schuiven. 
+--> Schuif deze in elkaar. 
 
 _1) Welke gegevens zijn geldig vandaag in 2021 en beschikbaar vandaag in 2021?_ 
 
@@ -389,6 +414,7 @@ ID BAG    ID WOZ    BG 	          EG 	          TR 	          ER 	          Waar
 1000      2000      01-01-2019 W	03-03-2019* B  10-01-2019 W   01-03-2019 B   	A            200k
 1000      2000 	03-03-2019 B 	               01-05-2019 B                       B            200k 
 ```
+
 Op beschikbaarOp '01-01-2021' voor SOR Gebouw is het deze tabel, alleen de geldigOp vraag hoeft nog gesteld te worden. 
 
 Antwoord 3: B en 200k (de tijdreis vraag geeft - gelukkig, moet ook zo zijn - hetzelfde antwoord als bij de eerste insteek).
@@ -401,6 +427,11 @@ Antwoord 4: A en NULL/??  (de tijdreis vraag geeft - gelukkig, moet ook zo zijn 
 
 Beide insteken komen tot hetzelfde antwoord. 
 
+### Vervolg voor 2e high-5 ### 
+
+Inhoud geeft aan dat een geldige levenscyclus samenstellen inderdaad een vraag is die we moeten kunnen beantwoorden. 
+
+Het advies aan de 2e high-5 is daarom om de insteek 'geldige levenscyclus van 2+ BR's in elkaar schuiven en dan antwoorden' te gebruiken. 
 
 
 
