@@ -1,10 +1,10 @@
-## Transponering van gebouwzones
+### Transponering van gebouwzones
 
 Het SOR objecttype Gebouwzone is gebaseerd op het WOZ deelobject. Het WOZ deelobject kan in eenvoudige situaties een heel woonhuis zijn, maar er kunnen ook meerdere deelobjecten voor één huis zijn: bijvoorbeeld de woning zelf, een garage en een serre. De indeling in deelobjecten wordt gemaakt op basis van wat voor de waardebepaling van het object van belang is (bijvoorbeeld op basis van mate van isolatie), en niet puur op gegevens zoals het bouwjaar. De bronhouders doen veel marktanalyse en gebruiken hierbij bijvoorbeeld informatie uit verkoopplatforms zoals Funda. Daarnaast wordt de WOZ gevoed met informatie uit de BAG over wijzigingen aan objecten zoals verbouwingen.
 
 Om een idee te krijgen van de data kunnen we kijken in het [WOZ waardeloket](https://www.wozwaardeloket.nl/). Hierin staan alleen de WOZ waarden per WOZ object, maar de contouren van WOZ deelobjecten zijn waar er een directe relatie met de BAG in de data zit, wel gevisualiseerd.
 
-### Gebouwzone transponeringstabel
+#### Gebouwzone transponeringstabel
 
 De onderstaande tabel beschrijft voor de gegevens die bij SOR Gebouwzone zijn gespecificeerd, of en hoe deze uit de brondata gehaald kan worden. 
 
@@ -27,14 +27,14 @@ ligt op bouwlaag         | WOZ      | Dit zit in de WOZ als eigenschap van WOZ d
 <figcaption>Tabel met omrekenfactor woningvolume naar oppervlakte (<a href="https://docplayer.nl/23780541-Oppervlakte-verdiepingsdocument-voor-gemeenten.html">bron</a>)</figcaption>
 </figure>
 
-### Transponering van waardelijst `type`
+#### Transponering van waardelijst `type`
 De transponeringstabel voor het gegeven `type` van `Gebouwzone` staat hieronder. Deze tabel is nog niet ingevuld, omdat we eerst navraag doen of deze mapping al eens is gedaan. 
 
 SOR Gebouwzone type | transponering
 --------------------| -------------
 ...                 | ...
 
-### Transponering van waardelijst `status`
+#### Transponering van waardelijst `status`
 
 De status (levenscyclus fase) van WOZ deelobjecten wordt bijgehouden als percentage, waarbij 0% betekent dat de bouw van een object in voorbereiding is, en 100% dat het een bestaand object is waarvan de bouw gereed is. De WOZ is niet geinteresseerd in de voorfase (ontwerp, planning), alleen in gerealiseerde objecten; maar wel vanaf start bouw. Als de fundering ligt mogen ze al 20% van de uiteindelijke waarde aanslaan. 
 
