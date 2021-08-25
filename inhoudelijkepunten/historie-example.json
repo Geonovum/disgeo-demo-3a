@@ -1,0 +1,40 @@
+{
+  "geregistreerdMet": {
+    "beginGeldigheid": "2019-09-10" ,
+    "tijdstipRegistratie": "2019-09-19T00:00:00Z",
+    "afgeleidVan" : [
+      {
+        "versie": "1",
+        "beginGeldigheid": "2019-09-10" ,
+        "tijdstipRegistratie": "2019-09-19T00:00:00Z",
+        "dataset": "BAG",
+        "betreftObjecttype": "Pand",
+        "beschrijft": {
+          "identificatie": "0200100000085932",
+          "domein": "http://bag.basisregistraties.overheid.nl/id/pand/"
+        }
+      },
+      {
+        "versie": "4",
+        "beginGeldigheid": "2019-08-10" ,
+        "tijdstipRegistratie": "2019-08-10T00:00:00Z",
+        "dataset": "BGT",
+        "betreftObjecttype": "Pand",
+        "beschrijft": {
+          "identificatie": "00016712f55b4b90874036fda00b7ab0",
+          "domein": "http://bag.basisregistraties.overheid.nl/id/pand/"
+        }
+      }
+    ]
+  },
+  "identificatie": "0200100000085932",
+  "domein": "http://sor.basisregistraties.overheid.nl/id/gebouw/",
+  "oorspronkelijkBouwjaar": "1980",
+  "status": "Pand in gebruik",
+  "nummeraanduidingreeks": [
+    {
+      "identificatieBAGVBOLaagsteHuisnummer": "0200010000130331" ,
+      "identificatieBAGVBOHoogsteHuisnummer": "0200010000130339"
+    }
+  ]
+}
