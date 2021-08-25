@@ -19,24 +19,18 @@ Deze variant maakt gebruik van:
 1. Data Cube observaties (<a href="">standaard</a>)
 2. In Data Cube vastgelegde "dimensions" en "measures"
 
-<figure>
-  <img src="../media/historie-model-datacube.png" width="600">
-  <figcaption>
+![historie-model-datacube](media/historie-model-datacube.png)
+
     Figuur 2 ― Historie opslag op basis van Data Cube.
-  </figcaption>
-</figure>
 
 ### Variant 3: Graaf
 
 Deze variant maakt gebruik van:
 1. RDF graaf namen (<a href="">standaard</a>)
 
-<figure>
-  <img src="../media/historie-model-graaf.png" width="600">
-  <figcaption>
-    Figure 3 ― Historie opslag op basis van graphs.
-  </figcaption>
-</figure>
+![historie-model-graaf](media/historie-model-graaf.png)
+
+    Figuur 3 ― Historie opslag op basis van graphs.
 
 ### Variant 4: Graaf+Uitspraak
 
@@ -44,18 +38,15 @@ Deze variant maakt gebruik van:
 1. RDF graaf namen (<a href="">standaard</a>)
 2. RDF uispraken (<a href="">standaard</a>)
 
-<figure>
-  <img src="../media/historie-model-graaf-uitspraak.png" width="600">
-  <figcaption>
-    Figure 4 ― Historie opslag op basis van graphs.
-  </figcaption>
-</figure>
+![historie-model-graaf-uitspraak](media/historie-model-graaf-uitspraak.png)
+
+
+    Figuur 4 ― Historie opslag op basis van graphs.
+
 
 ### Implementatie kwadranten
 
-<figure>
-  <img src="../media/historie-model-implementatie.png" width="400">
-  <figcaption>
-    Figure 6 ― De vier implementatie kwadranten.
-  </figcaption>
-</figure>
+![historie-model-implementatie](media/historie-model-implementatie.png)
+
+    Figuur 5 ― De vier implementatie kwadranten.
+
