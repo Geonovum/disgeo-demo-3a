@@ -8,12 +8,10 @@ Deze variant maakt gebruik van:
 1. RDF uitspraken (<a href="">standaard</a>)
 2. Registratie objecten (SOR-specifieke 'set')
 
-<figure>
-  <img src="../media/historie-model-uitspraak.png" width="600">
-  <figcaption>
+![historie-model-uitspraak](media/historie-model-uitspraak.png)
+
     Figuur 1 ― Historie opslag op basis van uitspraken.
-  </figcaption>
-</figure>
+
 
 ### Variant 2: Data Cube
 
