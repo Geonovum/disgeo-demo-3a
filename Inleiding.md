@@ -35,21 +35,23 @@ Uit 2 leiden we in de 1e high5 ten behoeve van de 2e High5 af:
 
 ### Hoofdvragen
 
-1.  Wat bedoelen we met een semantische laag?
-2. “Object centraal modelleren”: Hoe doe je dit waarbij de gegevens van dit object uit verschillende registraties komen met verschillende contexten (definities, historie, …)
-3. In welke taal druk je de semantische integratielaag uit als context boven de verschillende registraties, waarin de gegevens zijn zoals ze zijn, en waarvan de integratielaag onafhankelijk is? Is de semantische integratielaag (met data centraal over meerdere registraties) de representatie van de samenhang in gegevenscatalogi?
+
+1. “Object centraal modelleren”: Hoe doe je dit waarbij de gegevens van dit object uit verschillende registraties komen met verschillende contexten (definities, historie, …)
+2. In welke taal druk je de semantische integratielaag uit als context boven de verschillende registraties, waarin de gegevens zijn zoals ze zijn, en waarvan de integratielaag onafhankelijk is? Is de semantische integratielaag (met data centraal over meerdere registraties) de representatie van de samenhang in gegevenscatalogi?
+3. Wat bedoelen we met een semantische laag?
 
 ### Verdiepende vragen
 
-1. Hoe kunnen we het informatiemodel relateren aan het begrippenkader? Wat is de relatie tussen die twee? En wat wordt de relatie tussen informatiemodel, begrippenkader en de data zelf?
+1. **[niet aan toe gekomen?]** Hoe kunnen we het informatiemodel relateren aan het begrippenkader? Wat is de relatie tussen die twee? En wat wordt de relatie tussen informatiemodel, begrippenkader en de data zelf?
 2. Hoe kunnen we de verschillende producten (SKOS begrippenkader, UML informatiemodel, RDF model) publiceren?
 3. Lukt het om een RDF model geautomatiseerd af te leiden uit het UML model, conform MIM 1.1?
+9. Zijn er handmatige stappen nodig om het afgeleide RDF model ‘goed’ te maken? (zoals bedoeld in het [NEN 3610 Linked Data profiel](https://docs.geostandaarden.nl/nen3610/nldp/#basisprincipes-normalisatie). 
 4. Moet het informatiemodel een conceptueel of logisch model zijn en waarom? Wat is het verschil tussen de twee?
 5. Op welke wijze zorgen we voor semantiek bij de bron? Hoe borgen we de MDA? M.a.w. hoe richten we de informatie-architectuur in?
 6. Op welke manieren drukken we de relaties tussen objecten (en/of informatieobjecten) uit? Drukken we de samenhang uit met URI’s? Waar ontstaan ze en hoe houden we ze bij?
-7. Wat voor afspraken zijn er te maken rondom URI patroon en het gebruik van URIs voor begrippen, ontologie, en data? (hierbij aandacht voor URI’s in NL API strategie)
+7.  **[niet aan toe gekomen?]**Wat voor afspraken zijn er te maken rondom URI patroon en het gebruik van URIs voor begrippen, ontologie, en data? (hierbij aandacht voor URI’s in NL API strategie)
 8. Zijn er verbeteringen te noemen voor de [DisGeo modelleerprincipes](https://geonovum.github.io/disgeo-imsor/modelleerprincipes/) (zijn ze houdbaar, zijn ze volledig, etc)?
-9. Zijn er handmatige stappen nodig om het afgeleide RDF model ‘goed’ te maken? (zoals bedoeld in het [NEN 3610 Linked Data profiel](https://docs.geostandaarden.nl/nen3610/nldp/#basisprincipes-normalisatie). 
+
 
 
 ### Onderzoeksgebied: Gebouwen
