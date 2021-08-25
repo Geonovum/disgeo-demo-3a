@@ -4,13 +4,7 @@ Het SOR objecttype Gebouwzone is gebaseerd op het WOZ deelobject. Het WOZ deelob
 
 Om een idee te krijgen van de data kunnen we kijken in het [WOZ waardeloket](https://www.wozwaardeloket.nl/). Hierin staan alleen de WOZ waarden per WOZ object, maar de contouren van WOZ deelobjecten zijn waar er een directe relatie met de BAG in de data zit, wel gevisualiseerd.
 
-<<<<<<< HEAD
 #### Gebouwzone transponeringstabel
-=======
-Bij de transponering hebben we gebruik gemaakt van de kennis van Damir (deelnemer High 5 vanuit BZK) en van de laatste werkversie van de [IMWOZ documentatie](https://imvertor-tst.armatiek.nl/modellen/IMWOZ/IMWOZ.html) (de versie voor bespreking in de Klankbordgroep Berichtenverkeer WOZ op 24 september 2021). 
-
-### Gebouwzone transponeringstabel
->>>>>>> d4d7812e5a83e21e8ae3deee0f839f000793c364
 
 De onderstaande tabel beschrijft voor de gegevens die bij SOR Gebouwzone zijn gespecificeerd, of en hoe deze uit de brondata gehaald kan worden. 
 
