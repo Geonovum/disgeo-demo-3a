@@ -8,9 +8,13 @@ We houden ons aan wat er op dit moment kan, in ons vermoeden, vanuit de BR's. An
 
 De lijst met kandidaat punten is onderstaand opgesomd. We een aantal uitwerken, maar allemaal lukt niet in 1 high-5. Degene die behandeld zijn, zijn voorzien van een link. 
 
-### Niet 1 op 1
+_Niet 1 op 1_
 
 Hieronder vallen gegevens die niet 1 op 1 van een BR over te nemen zijn naar de SOR. Denk hierbij vooral aan afgeleide gegevens of geaggregeerde gegevens of aan gegevens die een betere benaming hebben gekregen. De modelleering hiervan en de specificatie voor de afleiding worden bekeken. 
+
+_Wel 1 op 1_ 
+
+De gegevens die wel rechttoe rechtaan 1 op 1 te mappen zijn hebben we niet meegenomen in deze high-5. 
 
 ### Naamswijzigingen
 
