@@ -37,7 +37,7 @@ Gegevens die in samenhang een bepaalde consistentie behoren te hebben.
 ### Modelleren van gegevens over registraties heen
 
 Modelleren van gegevens over registraties heen standaard/hetzelfde zou moeten zijn, maar dit niet is. We willen dat het gebruik door afnemers niet onnodig complex/genuanceerd wordt en kijken of dit recht te trekken is. 
-- [Historie](#modelleren_van_historie_en_beantwoorden_van_tijdreis_vragen)
+- [Historie](#Modelleren_van_historie_en_beantwoorden_van_tijdreis_vragen)
 
 
 ### afleiden van relaties tussen objecten
