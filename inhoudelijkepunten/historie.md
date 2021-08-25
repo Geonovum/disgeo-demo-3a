@@ -1,4 +1,4 @@
-# Modelleren van historie #  
+# Modelleren van historie en beantwoorden van tijdreis vragen #  
 
 Subgroep high-5 Pano, Wouter, Lennart. 
 
