@@ -131,40 +131,40 @@ Uitwerking *5* - optie 2.
 Voorbeeld 1: 
 
 BR 1:
-```
+***
 - versie 1, begin geldigheid t1 - ...
-```
+***
 
 BR 2:
-```
+***
 - versie 1, begin geldigheid t3 - ...
-```
+***
 
 wordt SOR: 
-```
+***
 - versie 1, begin geldigheid t1 - eind geldigheid t3 (berekend)
 - versie 2, begin geldigheid t3 - ...
-```
+***
 
 
 Voorbeeld 2: 
 
 BR 1:
-```
+***
 - versie 1, begin geldigheid t1 - t2
 - versie 2, begin geldigheid t3 - ... 
-```
+***
 BR 2:
-```
+***
 versie 1, begin geldigheid t2 - ...
-```
+***
 
 wordt in de SOR:
-```
+***
 - versie 1, begin geldigheid t1 - eind geldigheid t2 (berekend) 
 - versie 2, begin geldigheid t2 - t3 (berekend) 
 - versie 3, begin geldigheid t3 - ... 
-```
+***
 
 Met de tijdslijn registratie erbij:
 
@@ -176,44 +176,44 @@ Dus,
 Voorbeeld 1:
 
 BR 1:
-```
+***
 - versie 1, begin geldigheid t1 - ...
             tijdstip registratie: t1 
-```
+***
 
 BR 2:
-```
+***
 - versie 1, begin geldigheid t3 - ...
             tijdstip registratie: t2 
-```
+***
 
 wordt SOR:
-```
+***
 - versie 1, begin geldigheid t1 - eind geldigheid t3 (berekend) 
             tijdstip registratie: t1 - eind registratie: t2 
 - versie 2, begin geldigheid t3 - ...
             tijdstip registratie: t2 
-```
+***
 
 Voorbeeld 2: 
 
 BR 1:
-```
+***
 - versie 1, begin geldigheid t1 - t3
   tijdstip registratie: t1 - eind registratie t4 
             
 - versie 2, begin geldigheid t3 - ... 
   tijdstip registratie: t4
-```
+***
 
 BR 2: 
-```
+***
 versie 1, begin geldigheid t2 - ...
       tijdstip registratie: t2 
-```
+***
 
 wordt in de SOR:
-```
+***
 - versie 1, begin geldigheid t1 - eind geldigheid t2
             tijdstip registratie: t1 - eind registratie t2 (berekend) 
             
@@ -222,7 +222,7 @@ wordt in de SOR:
              
 - versie 3, begin geldigheid t3 - ..
             tijdstip registratie: t4 - ... 
-```
+***
 
  Er zijn andere voorbeelden te verzinnen, we moeten kijken of we dit kunnen kraken, zoals een voorbeeld met meerdere geldige op 1 dag 
  of met een registratie tijdstip van de begin geldigheid op een latere tijd ligt dan het registratie tijdstip van de eind geldigheid - of dat de vertaal specificatie minder rechttoe rechtaan wordt. 
