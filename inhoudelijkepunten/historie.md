@@ -445,13 +445,17 @@ Beide insteken komen tot hetzelfde antwoord.
 
 ### Vervolg voor 2e high-5
 
-Inhoud geeft aan dat een geldige levenscyclus samenstellen inderdaad een vraag is die we moeten kunnen beantwoorden. 
+Inhoud geeft aan dat een geldige levenscyclus samenstellen inderdaad een vraag is die we moeten kunnen beantwoorden. Zie insteek B (excl. antwoord). 
 
-Het advies aan de 2e high-5 is daarom om de insteek 'geldige levenscyclus van 2+ BR's in elkaar schuiven en dan antwoorden' te gebruiken. 
+Advies aan 2e high-5. 
 
+- Gebruik insteek A voor tijdreis vragen op een SOR Gebouw conform de NL API strategie 
+- Gebruik insteek B om de voor geldige levenscyclus van een SOR Gebouw te kunnen leveren
 
+(en en gebruik niet insteek B om vervolgens de tijdreisvraag te beantwoorden want deze laaste insteek performed een stuk slechter. Het is wel nuttig om te doen om te testen of beide routes dezelfde antwoorden geven, om te bewijzen dat de implemenaties kloppen).
 
-
+ACTIE: elke BR levert een API voor tijdreizen (t.b.v. insteek A) en een API om een geldige levenscyclus mee op te vragen (t.b.v. insteek B). 
+--> uitzetten bij LV of BR. 
 
 
 
