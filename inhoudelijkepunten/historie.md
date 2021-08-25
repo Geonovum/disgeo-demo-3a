@@ -150,6 +150,8 @@ De voorbeelden die we gaan uitwerken in de volgende paragrafen zijn hiermee in l
 
 #### Illustratieve voorbeelden
 
+Gedachtelijn bij de uitwerking, uitgedrukt als voorbeelden van objecten met tijdslijnen. 
+
 **Illustratief voorbeeld 1**
 
 BR 1:
