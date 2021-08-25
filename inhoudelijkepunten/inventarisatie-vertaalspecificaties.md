@@ -29,6 +29,9 @@ Er is wel een mogelijkheid om aan te geven dat een property van een class `deriv
 
 Imvertor legt/gebruikt wel een soort mapping relaties tussen conceptuele en logische modellen. Tracing dacht ik. Meer lezen: https://support.ptc.com/help/modeler/r9.1/en/index.html#page/Integrity_Modeler/umlprofile/UML_Trace.html
 
+### QTV
+https://en.wikipedia.org/wiki/QVT
+
 ### XSLT
 Een declaratatieve transformatietaal waarin je kunt uitdrukken wat de transformatieregels zijn om van een bronformaat naar een doelformaat te komen. Dit is echter een uitdrukkingsvorm op technisch implementatie-niveau en werkt alleen met XML input. 
 
