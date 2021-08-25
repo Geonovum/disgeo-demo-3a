@@ -3,6 +3,7 @@
 Subgroep high-5 Pano, Wouter, Lennart. 
 
 ## Doel ##
+
 Doel: een uniforme manier voor afnemers om te zien wanneer:
 
 1) gegevens geldig zijn en beschikbaar/geregistreerd zijn
@@ -17,6 +18,7 @@ Historie: hiermee wordt bedoeld de tijdslijn geldigheid en de tijdslijn registra
 Opm. Buiten scope van deze uitwerking: levensduur van het object.  
 
 ## Uitgangspunten ## 
+
 - SOR afspraak: van alle gegevens moet het bekend zijn wanneer de gegevens geldig zijn en wanneer ze beschikbaar/geregistreerd zijn. 
 - Conform MIM - maar MIM kent nog geen metadata, we volgen de huidige stand van de expertgroep modellering SOR 
 - Conform NEN3610 - zie modellering historie aldaar 
@@ -28,6 +30,7 @@ Dit betekent:
 - We geven de tijdslijnen per set gegevens over een object aan. Dit heet ook wel een versie van een object. Niet per attribuut. Dit kan wel afgeleid worden, maar dit is niet de standaard use case. Afnemers willen immers vooral gegevens van/over een object weten.
 
 ## Uitdaging en bijzondere punten met keuzes/voorstel ## 
+
 - Enerzijds: in het geval van de SOR gaat het in deze high-5 ook over het in elkaar schuiven van gegevens van afzonderlijke objecten in de BR's naar een samengesteld object in de SOR.
 - Anderzijds: hoe de geo-basisregistraties data nu uitleveren maar dan geuniformeerd. D.w.z. dat historie grotendeels wordt bijgehouden/geregistreerd in versies van objecten. Een versie is een setje gegevens over een object, en over die set gegevens wordt de tijdslijn geldigheid en de tijdslijn registratie bijgehouden en uitgeleverd. 
 
@@ -40,11 +43,10 @@ De uit te werken bijzondere punten zijn:
 4) Mutatie verschillen, met name t.a.v. beeindigen van objecten, wat bv. de BGT doet met een einddatum geldigheid en de BAG met een eindstatus. 
 5) Hoe schuif je versies van objecten uit verschillende BR's in elkaar. Wat is het algoritme. 
 
---
-
 ### Ad 0. ### 
 
 Zie NEN3610 2021/2022 historie. 
+
 Merk op:
 - Elke Landelijke Voorziening die een verzameling is van een BR heeft een eigen tijdslijn van verwerking in de LV. We onderkennen dus tijdstipRegistratie bij de bronhouder en tijdstipRegistratie bij de LV.
 - Van elk gegeven houden we het registratie tijdstip bij. Dit geldt ook voor wanneer een beginGeldigheid of eindGeldigheid is geregisteerd, in een BR en in een LV. 
@@ -68,6 +70,8 @@ BGT: kent nog geen tijdslijn geldigheid. Deze is als volgt  af te leiden:
      - begin geldigheid = tijdstip registratie 
      - eind geldigheid = eindRegistratie. Wellicht nog wat logica rondom geconstateerd.    
 
+VERVOLG NODIG: BGT vertaalspecificatie. 
+
 ### Ad 3. ### 
 
 Er is hier een keuze te maken. 
@@ -90,6 +94,8 @@ Opm. We willen toegroeien naar dat de tijdslijn geldigheid altijd een datum is. 
 - Bij meerdere versies van een object op een dag vinden we bij deze geldigOp altijd de laatste de meest actuele voor die dag. 
 
 Advies: gezien het groeipad willen we onderzoeken of c) kan. 
+
+KEUZE: C
 
 ### Ad 4. ### 
 
@@ -137,9 +143,10 @@ nieuwe versies voor elke periode
 
 Deze laatste is het meeste in lijn met de intentie van de SOR en met de insteek: bepaal van elke setje gegevens wanneer dit setje geldig is. 
 
-Keuze: voor deze exercitie gaan we uit van optie 2, om te kijken of dat goed kan. 
+KEUZE: voor deze exercitie gaan we uit van optie 2, om te kijken of dat goed kan. 
 
 De voorbeelden die we gaan uitwerken in de volgende paragrafen zijn hiermee in lijn. 
+
 
 ### Illustratieve voorbeelden ###
 
@@ -186,6 +193,8 @@ Met de tijdslijn registratie erbij:
 - tijdstipRegistratie: het moment waarop begin geldigheid is geregistreerd. 
 - eindRegistatie: het moment waarop de eind geldigheid is geregistreerd/bepaald.
 
+KEUZE Dit is een regel die voor de BAG en de BRK geldt. Deze is toegepast. Dit past binnen NEN3610. 
+
 Dus,
 
 Voorbeeld 1:
@@ -228,6 +237,7 @@ versie 1, begin geldigheid t2 - ...
 ```
 
 wordt in de SOR:
+
 ```
 - versie 1, begin geldigheid t1 - eind geldigheid t2
             tijdstip registratie: t1 - eind registratie t2 (berekend) 
@@ -244,6 +254,8 @@ Er zijn andere voorbeelden te verzinnen, we moeten kijken of we dit kunnen krake
 ## Modellering van SOR Gebouw met historie ## 
 
 @Pano, kan jij diagram hier toevoegen? 
+
+
 
 ## Voorbeelden uitgewerkt met tijdreis vragen ## 
 
