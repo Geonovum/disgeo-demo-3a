@@ -1,11 +1,11 @@
-Modelleren van historie 
+## Modelleren van historie 
 
 Subgroep high-5 Pano, Wouter, Lennart. 
 
 Doel: een uniforme manier voor afnemers om te zien wanneer:
 
-1) gegevens geldig zijn en beschikbaar/geregistreerd zijn
-2) om een tijdreis vraag te stellen.
+1. gegevens geldig zijn en beschikbaar/geregistreerd zijn
+2. om een tijdreis vraag te stellen.
 
 Deze tijdreis vragen zijn (ook) los aan de basisregistraties te stellen en te vertalen naar de SOR, maar in deze high-5 wordt de tijdreis vraag 1x gesteld aan het SOR object, en wordt exact dezelfde tijdreis "onder water" aan de BR's gesteld en worden de gegevens van de BR's "in elkaar geschoven". De specificatie voor dit in elkaar schuiven en de uitkomst ervan wordt hieronder beschreven. 
 
@@ -15,7 +15,7 @@ Historie: hiermee wordt bedoeld de tijdslijn geldigheid en de tijdslijn registra
 
 Opm. Buiten scope van deze uitwerking: levensduur van het object.  
 
-Uitgangspunten: 
+### Uitgangspunten 
 - SOR afspraak: van alle gegevens moet het bekend zijn wanneer de gegevens geldig zijn en wanneer ze beschikbaar/geregistreerd zijn. 
 - Conform MIM - maar MIM kent nog geen metadata, we volgen de huidige stand van de expertgroep modellering SOR 
 - Conform NEN3610 - zie modellering historie aldaar 
@@ -30,7 +30,7 @@ Uitdaging:
 - Enerzijds: in het geval van de SOR gaat het in deze high-5 ook over het in elkaar schuiven van gegevens van afzonderlijke objecten in de BR's naar een samengesteld object in de SOR.
 - Anderzijds: hoe de geo-basisregistraties data nu uitleveren maar dan geuniformeerd. D.w.z. dat historie grotendeels wordt bijgehouden/geregistreerd in versies van objecten. Een versie is een setje gegevens over een object, en over die set gegevens wordt de tijdslijn geldigheid en de tijdslijn registratie bijgehouden en uitgeleverd. 
 
-De uit te werken punten zijn:
+### De uit te werken punten zijn:
 
 0) definities van tijdslijn geldigheid en tijdslijn registratie 
 1) Als we het object centraal stellen, hoe gaan we dan om met objecten uit 2+ BR's die we in elkara schuiven, in het bijzonder met de meerdere identificaties
