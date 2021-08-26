@@ -1,10 +1,29 @@
-### Transponering van gebouwzones
+## Transponering van gebouwen
+
+### Gebouw transponeringstabel
+
+op basis van de huidige objecten in de basisregistraties, is nader onderzoek nodig. Alle BAG/BGT panden kunnen worden omgezet naar SOR Gebouw; dit geldt ook voor enkele typen BGt OverigBouwwerk. Maar de juiste WOZ data erbij vinden is lastiger. De relatie tussen de typering van gebouwen in de SOR en de gebruikesdoelen / functies / typen van gebouwen in de BAG, WOZ en de BRT blijkt complex te zijn. Dat betekent ook dat het mogelijk nog heel lastig wordt om de geharmoniseerde SOR gebouwen, met name wat betreft de WOZ data, te vormen op basis van de huidige BRs. In ieder geval is hiervoor veel inhoudelijke kennis van het WOZ informatiemodel en de WOZ data nodig.
+
+Gegeven in SOR|Herkomst|Transponering
+--------------|--------|-------------
+Identificatie|BAG|[BAG pand identificatie](https://bag.basisregistraties.overheid.nl/begripdetail?subject=http://bag.basisregistraties.overheid.nl/id/begrip/Identificatiecode_Pand), en [BGT OverigBouwwerk identificatie](https://definities.geostandaarden.nl/imgeo-resource?subject=https://definities.geostandaarden.nl/imgeo/id/begrip/Identificatie) wanneer SOR-gebouw.type = vestingsgebouw OF bijgebouw OF schuur.
+Geometrie|BAG en BGT|In het geval dat het SOR gebouw niet een vestingsgebouw, bijgebouw of schuur is, zullen er in principe twee geometrieen aanwezig zijn: van de BAG en van de BGT. Wanneer het wel om een van de eerder genoemde typeringen gaat, zal er alleen een BGT geometrie aanwezig zijn. 
+Type|Nieuw / BRT / WOZ|Dit is een nieuw attribuut, de 'hoofdtyperingen' die hier worden geintroduceerd zijn niet aanwezig in de huidige modellen, met uitzondering van 'Toren' - deze is aanwezig in de BRT. Alle nadere typeringen in de waardelijst komen zowel uit de BRT (https://brt.basisregistraties.overheid.nl/begripdetail?subject=http://brt.basisregistraties.overheid.nl/id/begrip/TypeGebouw) als uit de WOZ (source?). Vaak is het 1:1 overgenomen (waarbij het om soortgelijke begrippen kan gaan, maar ook nadere typeringen - zie ook de lijst met voorbeelden van vertalingsregels), soms zijn de termen/begrippen anders beschreven - om deze reden is het belangrijk na te gaan in hoeverre deze termen en begrippen daadwerkelijk overeenkomen in betekenis. 
+Aard|Nieuw / WOZ|Het attribuut zelf is nieuw ten opzichte van de registraties, de waardes niet. Voor 'Repeterend' heeft de WOZ een attribuut 'aanduiding repeterend'. De transponering voor de waardes 'Heterogeen' en 'Vrijstaand' is minder expliciet. 'Vrijstaand' komt vaak terug in de typeringen van SOR Verblijfsobjecten (de waardes in deze lijst, waarbij 'vrijstaand' in voorkomt, zijn afkomstig van de waardelijst type voor WOZ-objecten). De herkomst van 'Heterogeen' is onduidelijk. 
+Oorspronkelijk bouwjaar|BAG|Direct uit de BAG te halen, bij bouwjaar (https://bag.basisregistraties.overheid.nl/begripdetail?subject=http://bag.basisregistraties.overheid.nl/id/begrip/Bouwjaar). Let wel op dat WOZ deelobjecten (vaak SOR gebouwzones) ook een bouwjaar bevaten. In principe zou het oudste bouwjaar binnen deelobjecten overeen moeten komen met het BAG bouwjaar. Wanneer dit niet het geval is, kan er sprake zijn van incorrecte data. 
+Naam|?|Herkomst onduidelijk, mogelijk BRT? (navragen)
+Status|?| Nog niet aan toegekomen
+Relatie (vanuit bouwlaag): Bouwlaag ligt in Gebouw|?| Nog niet aan toegekomen
+Relatie (vanuit gebouwcomponent): Gebouwcomponent hoort bij Gebouw|?| Nog niet aan toegekomen
+Relatie (vanuit gebouwcomponent): Gebouwcomponent hoort bij 2 (loopbrug) Gebouw|?| Nog niet aan toegekomen
+Relatie (vanuit toegangsdeur): Toegangsdeur hoort bij Gebouw|?| Nog niet aan toegekomen
+Relatie (vanuit installatie): Installatie hoort bij Gebouw|?| Nog niet aan toegekomen
+
+### Gebouwzone transponeringstabel
 
 Het SOR objecttype Gebouwzone is gebaseerd op het WOZ deelobject. Het WOZ deelobject kan in eenvoudige situaties een heel woonhuis zijn, maar er kunnen ook meerdere deelobjecten voor één huis zijn: bijvoorbeeld de woning zelf, een garage en een serre. De indeling in deelobjecten wordt gemaakt op basis van wat voor de waardebepaling van het object van belang is (bijvoorbeeld op basis van mate van isolatie), en niet puur op gegevens zoals het bouwjaar. De bronhouders doen veel marktanalyse en gebruiken hierbij bijvoorbeeld informatie uit verkoopplatforms zoals Funda. Daarnaast wordt de WOZ gevoed met informatie uit de BAG over wijzigingen aan objecten zoals verbouwingen.
 
 Om een idee te krijgen van de data kunnen we kijken in het [WOZ waardeloket](https://www.wozwaardeloket.nl/). Hierin staan alleen de WOZ waarden per WOZ object, maar de contouren van WOZ deelobjecten zijn waar er een directe relatie met de BAG in de data zit, wel gevisualiseerd.
-
-#### Gebouwzone transponeringstabel
 
 De onderstaande tabel beschrijft voor de gegevens die bij SOR Gebouwzone zijn gespecificeerd, of en hoe deze uit de brondata gehaald kan worden. 
 
@@ -27,7 +46,7 @@ ligt op bouwlaag         | WOZ      | Dit zit in de WOZ als eigenschap van WOZ d
 <figcaption>Tabel met omrekenfactor woningvolume naar oppervlakte (<a href="https://docplayer.nl/23780541-Oppervlakte-verdiepingsdocument-voor-gemeenten.html">bron</a>)</figcaption>
 </figure>
 
-#### Transponering van waardelijst `type`
+### Transponering van waardelijst `type`
 De transponeringstabel voor het gegeven `type` van `Gebouwzone` staat hieronder. Deze tabel is nog niet ingevuld, omdat we eerst navraag doen of deze mapping al eens is gedaan. 
 
 SOR Gebouwzone type | transponering
