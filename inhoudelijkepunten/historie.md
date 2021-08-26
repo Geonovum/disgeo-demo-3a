@@ -463,17 +463,17 @@ Nota bene: dus niet een tijdreis naar de gehele levenscyclus van de BAG en de WO
 
 | Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         | TI         |
 |---------|--------|--------|------------|------------|------------|------------|------------|
-| 1000 	 | 1 	   |  A     | 01-01-2018 | 03-03-2019 |	30-12-2017 | 01-03-2019 |	     |      	
-| 1000 	 | 2 	   |  B     | 03-03-2019 | 01-09-2033 |	01-03-2019 | 01-04-2019 | 01-05-2019 |	
-| 1000 	 | 3 	   |  H     | 01-09-2033 |	      |            | 01-04-2019 | 01-05-2019 |
-| 1000 	 | 4 	   |  B     | 03-03-2019 |	      |            |            | 01-05-2019 |	
+| 1000 	| 1 	    |  A     | 01-01-2018 | 03-03-2019 | 30-12-2017 | 01-03-2019 |	        |      	
+| 1000 	| 2 	    |  B     | 03-03-2019 | 01-09-2033 | 01-03-2019 | 01-04-2019 | 01-05-2019 |	
+| 1000 	| 3 	    |  H     | 01-09-2033 |	         |            | 01-04-2019 | 01-05-2019 |
+| 1000 	| 4 	    |  B     | 03-03-2019 |	         | 01-05-2019 |            |            | 	
   
 TI staat voor tijdstip inactief. Deze gegevens waren geldig tot 01-05-2019 maar zijn dit hierna niet meer. 
 
 | Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         | 
 |---------|--------|--------|------------|------------|------------|------------|
-| 2000 	  | 0 	   | 200k   | 01-01-2019 | 01-01-2020 | 10-01-2019 | 20-02-2020	|           	
-| 2000 	  | 1 	   | 220k   | 01-01-2020 |            |	           | 20-02-2020 |
+| 2000    | 0 	    | 200k   | 01-01-2019 | 01-01-2020 | 10-01-2019 | 20-02-2020	|           	
+| 2000 	| 1 	    | 220k   | 01-01-2020 |            | 20-02-2020 |            |
 
 **Vertaal specificatie**
 
@@ -511,28 +511,27 @@ _Tussenstap_: geldige levenscyclus BAG op beschikbaarOp vandaag 2021
 
 | Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         | TI         |
 |---------|--------|--------|------------|------------|------------|------------|------------| 
-| 1000 	  | 1      | A 	    | 01-01-2018 | 03-03-2019 | 30-12-2017 | 01-03-2019 |            |           	
-| 1000 	  | 4 	   | B 	    |            | 03-03-2019 |            |            | 01-05-2019 |	
+| 1000 	| 1      | A 	   | 01-01-2018 | 03-03-2019 | 30-12-2017 | 01-03-2019 |            |           	
+| 1000 	| 4 	    | B 	   | 03-03-2019 |            | 01-05-2019 |            | 	        | 
   
 _Tussenstap_: geldige levenscyclus WOZ op beschikbaarOp vandaag 2021
-
   
 | Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         | 
 |---------|--------|--------|------------|------------|------------|------------|	           	          	
-| 2000    | 0 	   | 200k   | 01-01-2019 | 01-01-2020 |	10-01-2019 | 20-02-2020	|          	
-| 2000 	  | 1 	   | 220k   | 01-01-2020 |            |            | 20-02-2020 |	
+| 2000    | 0 	    | 200k   | 01-01-2019 | 01-01-2020 | 10-01-2019 | 20-02-2020	|          	
+| 2000 	| 1 	    | 220k   | 01-01-2020 |            | 20-02-2020 |            | 	
   
 
 _Tussenstap_: levenscyclus SOR Gebouw 
 
 * = berekende datum of datumtijd. 
 
-| ID BAG  | ID WOZ |  BG         | EG             | TR           | ER           |  Waarde BAG  | Waarde WOZ |
-|---------|--------|-------------|----------------|--------------|--------------|--------------|------------| 
-| 1000 	  | NULL   | 01-01-2018 B | 01-01-2019* W | 30-12-2017 B | 10-01-2019 W |  A           |  NULL      |
-| 1000    | 2000   | 01-01-2019 W | 03-03-2019* B | 10-01-2019 W | 01-03-2019 B |  A           |  200k      |      
-| 1000    | 2000   | 03-03-2019 B | 01-01-2020* W | 01-05-2019 B | 20-02-2020 W |  B           |  200k      |       
-| 1000    | 2000   | 01-01-2020 W | 	          |              | 20-02-2020 W |  B           |  220k      |            
+| ID BAG  | ID WOZ |  BG          | EG             | TR           | ER           |  Waarde BAG  | Waarde WOZ |
+|---------|--------|--------------|----------------|--------------|--------------|--------------|------------| 
+| 1000 	| NULL   | 01-01-2018 B | 01-01-2019* W  | 30-12-2017 B | 10-01-2019 W |  A           |  NULL      |
+| 1000    | 2000   | 01-01-2019 W | 03-03-2019* B  | 10-01-2019 W | 01-03-2019 B |  A           |  200k      |      
+| 1000    | 2000   | 03-03-2019 B | 01-01-2020* W  | 01-05-2019 B | 20-02-2020 W |  B           |  200k      |       
+| 1000    | 2000   | 01-01-2020 W | 	           | 20-02-2020 W |              |   B          |  220k      |            
   
 Op beschikbaarOp 'vandaag 2021' voor SOR Gebouw is het deze tabel, alleen de geldigOp vraag hoeft nog gesteld te worden. 
 
@@ -554,29 +553,33 @@ Antwoord: A en 200k (de tijdreis vraag geeft - gelukkig, moet ook zo zijn - hetz
 <div class='note'>
 Tussenstap: geldige levenscyclus BAG op 01-01-2020.
 
-  
-Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	          TI 	                	
-1000 	1 	     A 	     01-01-2018 	03-03-2019 	30-12-2017 	01-03-2019 	           	
-1000 	4 	     B 	     03-03-2019 	               01-05-2019 	
+| Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         | TI         |
+|---------|--------|--------|------------|------------|------------|------------|------------| 
+| 1000 	| 1 	    |  A 	   | 01-01-2018 | 03-03-2019 | 30-12-2017 | 01-03-2019 |            | 	           	
+| 1000 	| 4 	    | B 	   | 03-03-2019 | 	         | 01-05-2019 |            |            | 	
   
 Dit is, toevallig, hetzelfde als bij de vorige tijdreizen. 
 
 Tussenstap: geldige levenscyclus WOZ op 01-01-2020.
-
-  
-Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	           	          	
-2000 	0 	     200k	     01-01-2019 	 	          10-01-2019 	 	           	
-Opm. versie 1 bestond nog niet en EG en ER waren nog niet gevuld. 
+       
+| Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         | 
+|---------|--------|--------|------------|------------|------------|------------|	           	          	
+| 2000    | 0 	    | 200k   | 01-01-2019 |            | 10-01-2019 | 	          |          	
+     
+Opm. versie 1 bestond nog niet en van versie 0 waren EG en ER nog niet gevuld. 
   
 Deze is wel anders bij deze tijdreis in vergelijking tot de eerdere tijdreizen. 
 
 Tussenstap: levenscyclus SOR Gebouw 
-  
-ID BAG    ID WOZ    BG 	          EG 	          TR 	          ER 	          Waarde BAG   Waarde WOZ  
-1000 	NULL      01-01-2018 B   01-01-2019 W  30-12-2017 B   10-01-2019 W        A            NULL
-1000      2000      01-01-2019 W	03-03-2019 B  10-01-2019 W   01-03-2019 B   	     A            200k
-1000      2000 	03-03-2019 B 	               01-05-2019 B                       B            200k 
-  
+       
+| ID BAG  | ID WOZ |  BG          | EG             | TR           | ER           |  Waarde BAG  | Waarde WOZ |
+|---------|--------|--------------|----------------|--------------|--------------|--------------|------------| 
+| 1000    | NULL   | 01-01-2018 B | 01-01-2019 W   | 30-12-2017 B | 10-01-2019 W |     A        |    NULL    |
+| 1000    | 2000   | 01-01-2019 W | 03-03-2019 B   | 10-01-2019 W | 01-03-2019 B |     A        |    200k    | 
+| 1000    | 2000   | 03-03-2019 B | 	           | 01-05-2019 B |              |     B        |    200k    |
+
+Opm. versie 1 van de WOZ zit er niet in. 
+     
 Op beschikbaarOp '01-01-2021' voor SOR Gebouw is het deze tabel, alleen de geldigOp vraag hoeft nog gesteld te worden. 
 
 _Antwoord: B en 200k (de tijdreis vraag geeft - gelukkig, moet ook zo zijn - hetzelfde antwoord als bij de eerste insteek).
