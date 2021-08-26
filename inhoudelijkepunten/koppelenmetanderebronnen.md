@@ -54,9 +54,13 @@ Implicaties:
 - de verantwoordelijk van het meeleveren van gegevens komt bij de SOR te liggen (in overleg uiteraard) 
 - de eisen aan gegevens voor BR's gaan ook gelden voor de informatievoorziening die de energie gegevens levert, zoals de beschrijving en de standaarden die hiervoor gelden, de historie tijdslijnen en tijdreis mogelijkheden) 
 
+_Optie 3: extend het SOR object en voeg je eigen gegevens toe_ 
+
+Je legt dan geen koppeling, maar je extend het SOR object. Dit kan alleen als je echt gegevens wilt toevoegen aan SOR Gebouw, zonder eigen objecttype te introduceren. In de implementatie zal dit, vanwegen het bijhouden van historie, toch lijken op 1 van de 2 eerder genoemde manieren van koppelen. 
+
 _Andere gedachtes_
 
-Genoemde opties kennen nadelen en voordelen. Als we op zoek gaan naar best of both worlds zou je kunnen denken aan: 
+De genoemde opties kennen eigen nadelen en voordelen. Als we op zoek gaan naar best of both worlds zou je kunnen denken aan: 
 
 - Modelleer het SOR object met alleen SOR gegevens, en maak het mogelijk om subtypes hiervan te modelleren met daarin extra gegevens. 
 
