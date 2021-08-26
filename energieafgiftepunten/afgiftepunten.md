@@ -27,24 +27,37 @@ _Hieronder wat kennis hierover, opgetekend in een gesprek met Jan van Gelder (Ge
 
 Een gebouw is een plek waar iemand woont, of waar een bedrijf is gevestigd etcetera en hierbij is sprake van een energiebehoefte, die gelevert wordt  via een energie afgifte punt. Energie afgifte punten worden administratief gekoppeld aan een gebouw c.q. een BAG Pand, of aan een deel van een gebouw c.q. een BAG verblijfsobject. Dit noemen we de EAN koppeling. 
 
-_Informatiebehoefte rondom een SOR Gebouw op het gebied van energie_ 
+_Informatie die te koppelen zou zijn in theorie_ 
 
-De informatie waar o.a. behoefte aan is: 
+Een SOR Gebouw met: 
 - verwachte jaargebruik van gas 
 - verwachte jaargebruik van gas 
 - energiesoorten die geleverd worden: waardelijst met o.a. gas, elecktra
 - meterstand gas
 - meterstand elektra 
 
-Er zijn vele meer gegevens die interessant zijn, we beperken ons tot deze. 
+Het informatiemodel waar deze informatie te vinden is het informatiemodel van het centrale aansluitregister (CAR) waar ook de energieafgiftepunten en de EAN koppeling in staan.
 
-Het informatiemodel waar deze informatie te vinden is: TODO link. 
-
-## Energie gegevens koppelen met een SOR Gebouw via de EAN koppeling  
+## Gegevens koppelen tussen een SOR Gebouw en een andere informatiebron  
 
 De bronnen die onder de SOR liggen zijn andere bronnen dan waar de energiegegevens worden bijgehouden. Wat in ieder geval niet de bedoeling is om de data uit deze bronnen over te nemen en op te slaan. De bedoeling is om de verschillende bronnen te bevragen en de data uit deze bronnen in samenhang te kunnen leveren aan afnemers. In dit geval gaat het niet om het samenhang aanbrengen van data van de BR's onder de SOR, maar van het aanbrengen van samenhang van data uit ook andere bronnen met de data van de SOR.  
 
 We noemen de niet-SOR bronnen in onderstaande tekst: andere bronnen. 
+
+De belangrijkste stap is om eerst een betrouwbare koppeling te leggen van een andere bron naar de SOR, al dan nite via de BAG, de BGT, de WOZ. Dit is op zichzelf niet eenvoudig. je kan hierbij denken aan een koppeling met een matching op basis van adres, geometrie, of beide. 
+
+Voorbeelden van deze koppelingen zijn: 
+- De BRK-BAG koppeling
+- De EAN-BAG koppeling 
+
+Nadat de koppeling is gelegd, moet deze ook beheerd worden. Maar zodra de koppeling er is, kunnen gegevens uit de SOR en uit de "andere" bron bij elkaar gebracht worden. 
+- De koppeling loopt in principe altijd van een "andere" bron naar de SOR. 
+- Binnen de SOR zelf zijn er koppelingen tussen de BAG en de BGT, de BAG en de WOZ, maar deze zijn voor de gebruikers van de SOR verborgen. 
+- Van de SOR naar een andere bron zal er geen koppeling zijn (in theorie wel mogelijk) 
+- Een koppeling kan ook gelegd worden ales deze zuiver geometrisch kan orden bepaald. 
+ 
+Nadat de koppeling is gelegd, moet deze ook beheerd worden. Maar zodra de koppeling er is, kunnen gegevens uit de SOR en uit de "andere" bron bij elkaar gebracht worden. 
+Hier zijn een aantal opties denkbaar. 
 
 _Optie 1: andere bronnen koppelen met de SOR, en niet andersom_ 
 
