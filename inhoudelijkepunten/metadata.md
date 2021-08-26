@@ -53,7 +53,7 @@ In dit patroon nemen we `Registratiegegevens` als aanknopingspunt voor opname va
 
 Vervolgens introduceren we de mogelijkheid om verschillende soorten `Bronentiteit` te definieren die als `primaireBron` opgenomen kunnen worden voor een informatieobject. Hierbij maken we gebruik van een standaard [[PROV-DM]] modelleerpatroon ([primary source](https://www.w3.org/TR/prov-dm/#term-primary-source)). Hiermee maken we het bijvoorbeeld mogelijk om een brondocument, of andere bronnen zoals luchtfoto's op een standaard manier op te nemen als bron van een informatieobject. Daarnaast kunnen we zowel deze bronentiteiten, als het informatieobject zelf, toeschrijven aan een verantwoordelijke partij. In het geval van de SOR informatieobject is dat een overheidsorganisatie, maar een bronentiteit zou best van een niet-overheidspartij afkomstig kunnen zijn.
 
-Een voorbeel hoe een informatieobject er in een concrete serialisatie conform dit modelleerpatroon uit zou kunnen zien is:
+Een voorbeeld hoe een informatieobject er in een concrete serialisatie conform dit modelleerpatroon uit zou kunnen zien is:
 
 ```json
 {
@@ -62,9 +62,6 @@ Een voorbeel hoe een informatieobject er in een concrete serialisatie conform di
     "oorspronkelijkBouwjaar": "1980",
     "status": "In gebruik",
     "geregistreerdMet": {
-        "versie": "2",
-        "beginGeldigheid": "2020-10-05",
-        "tijdstipRegistratie": "2020-10-05T00:00:00Z",
         "primaireBron": {
             "documentnummer": "GB1487",
             "documentdatum": "2020-09-28"
@@ -81,5 +78,57 @@ Een voorbeel hoe een informatieobject er in een concrete serialisatie conform di
   In deze uitwerking is nog vastgehouden aan standaard PROV relaties als `pimaireBron`, `toegeschrevenAan`, maar deze zouden ook gespecialiseerd kunnen worden indien dat voordelen biedt.
 </aside>
 
-#### Modelleerpatroon voor afleiding van SOR informatieobjecten
+#### Modelleerpatroon voor de beschrijving van de afleiding van SOR-informatieobjecten
 
+De implementatie van de SOR zal gefaseerd aangepakt gaan worden. Tijdens deze High 5 verkennen we hoe we in de eerste fase de SOR kunnen neerzetten als een ontsluitingslaag over de verschillende registraties heen. Daarbij zal een SOR-informatieobject dus afgeleid worden kunnen worden uit één of meer informatieobjecten uit onderliggende basisregistraties.
+
+Het is dan ook belangrijk om te kunnen duiden uit welke informatieobjecten een SOR informatieobject is samengesteld, ofwel wat de herkomst van een SOR informatieobject is.
+
+Voor dit doeleinde kunnen we wederom gebruikmaken van het PROV raamwerk voor het opstellen van een modelleerpatroon. 
+
+
+<figure id="metadata-herkomst-afleiding">
+  <img src="media/metadata-herkomst-afleiding.drawio.png" alt="metadata-herkomst-afleiding">
+  <figcaption>Toepassing van W3C PROV en NEN 3610 (2021 ontwerp) de beschrijving van de afleiding van SOR-informatieobject</figcaption>
+</figure>
+
+Hierbij maken we gebruik van een standaard [[PROV-DM]] modelleerpatroon ([derivation](https://www.w3.org/TR/prov-dm/#term-Derivation)), waarbij een entiteit wordt afgeleid uit één of meerdere andere entiteiten. Op deze manier kan een `Registratiegegevens` uit de SOR, gekoppeld worden met een `Registratiegegevens` uit de onderliggende basisregsitraties, waarmee we uitdrukken uit welke informatieobjecten een SOR-informatieobject is samengesteld.
+
+<aside class="note">
+  We verkiezen hier om dit heel simpel weer te geven, maar het is ook mogelijk om de precieze activiteit en mogelijk gebruikte algoritmes ook als eigenschappen van de afleiding op te nemen. In dat geval wordt er van de relatie een relatieklasse `Afleiding` gemaakt, waaraan deze informatie gekoppeld kan worden.
+</aside>
+
+Een voorbeeld hoe een informatieobject er in een concrete serialisatie conform dit modelleerpatroon uit zou kunnen zien is:
+
+```json
+{
+    "identificatie": "0200100000085932",
+    "domein": "NL.SOR.Gebouw",
+    "oorspronkelijkBouwjaar": "1980",
+    "status": "Pand in gebruik",
+    "nummeraanduidingreeks": [
+        {
+            "identificatieBAGVBOLaagsteHuisnummer": "0200010000130331" ,
+            "identificatieBAGVBOHoogsteHuisnummer": "0200010000130339"
+        }
+    ],
+    "geregistreerdMet": {
+        "afgeleidVan" : [
+            {
+                "versie": "1"
+                "beschrijft": {
+                    "identificatie": "0200100000085932",
+                    "domein": "NL.IMBAG.Pand"
+                }
+            },
+            {
+                "versie": "4",
+                "beschrijft": {
+                    "identificatie": "00016712f55b4b90874036fda00b7ab0",
+                    "domein": "NL.BGT.Pand"
+                }
+            }
+        ]
+    }
+}
+```
