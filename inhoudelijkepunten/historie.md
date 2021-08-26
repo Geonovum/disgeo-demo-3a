@@ -591,7 +591,7 @@ _Antwoord: B en 200k (de tijdreis vraag geeft - gelukkig, moet ook zo zijn - het
 
 De geldige levenscyclus van BAG en WOZ zijn vandaag op 2021 hetzelfde als bij de eerste berekening en in elkaar geschoven dus ook. 
 
-<div class='note'>_
+<div class='note'>
 _Antwoord 4_: A en NULL/??  (de tijdreis vraag geeft - gelukkig, moet ook zo zijn - hetzelfde antwoord als bij de eerste insteek).
 
 </div>
