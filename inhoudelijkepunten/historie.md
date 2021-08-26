@@ -302,10 +302,10 @@ Fictief complexer voorbeeld uit het BAG historie model, waarin gegevens inactief
 
 Fictief voorbeeld uit de WOZ 
 
-  
-Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	           	          	
-2000 	0 	     200k	     01-01-2019 	01-01-2020 	10-01-2019 	20-02-2020 	           	
-2000 	1 	     220k	     01-01-2020 	               20-02-2020 	
+| Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         |
+|---------|--------|--------|------------|------------|------------|------------|
+| 2000 	  | 0 	   |  200k  | 01-01-2019 | 01-01-2020 | 10-01-2019 | 20-02-2020 |
+| 2000 	  | 1 	   |  220k  |            | 01-01-2020 |            | 20-02-2020 |	
   
 
 ### Insteek 'versies': stel de tijdreis vraag aan elke BR en voeg de antwoorden samen
@@ -340,33 +340,33 @@ Nota bene. Ad. 3. Als een BR de data niet kan leveren zoals bedoeld in de voorga
 
 **Tijdreisvragen**
 
-_Vraag 1._ Welke gegevens zijn geldig vandaag in 2021 en beschikbaar vandaag in 2021?_ 
+*Vraag 1.* Welke gegevens zijn geldig vandaag in 2021 en beschikbaar vandaag in 2021?
 
-_Antwoord 1_: B en 220k                     (versie 4 van de BAG en versie 1 van de WOZ)  
+<div class='note'>
+Antwoord: B en 220k                     (versie 4 van de BAG en versie 1 van de WOZ)  
 
-```
 - BG: BAG 03-03-2019 of BG WOZ 01-01-2020 --> 01-01-2020 (WOZ)
 - EG: BAG leeg of WOZ leeg                --> leeg       (WOZ)
 - TR: BAG 01-05-2019 of WOZ 10-01-2019    --> 10-01-2019 (WOZ) 
 - ER: BAG leeg of WOZ leeg                --> leeg       (WOZ)
-```
+</div>
 
-_Vraag 2._ Welke gegevens zijn geldig op 01-01-2019 en beschikbaar vandaag in 2021?_ 
+*Vraag 2.* Welke gegevens zijn geldig op 01-01-2019 en beschikbaar vandaag in 2021?_ 
 
-_Antwoord 2_: A en 200k                     (versie 1 van de BAG en versie 0 van de WOZ)  
+<div class='note'>
+Antwoord* : A en 200k                     (versie 1 van de BAG en versie 0 van de WOZ)  
 
-```
 - BG: BAG 01-01-2018 of BG WOZ 01-01-2019 --> 01-01-2019 (WOZ)
 - EG: BAG 03-03-2019 of WOZ 01-01-2020    --> 03-03-2019 (BAG)
 - TR: BAG 30-12-2017 of WOZ 10-01-2019    --> 10-01-2019 (WOZ)
 - ER: BAG 01-03-2019 of WOZ 20-02-2020    --> 01-03-2019 (BAG)
-```
+</div>
 
-_Vraag 3_. Welke gegevens zijn geldig op 01-01-2020 en beschikbaar op 01-01-2020?_  
+*Vraag 3.* Welke gegevens zijn geldig op 01-01-2020 en beschikbaar op 01-01-2020?
 
-_Antwoord 3_: B en 200k                     (versie 4 van de BAG en versie 0 van de WOZ, versie 1 is immers pas per 20-02-2020 geregistreerd)  
+<div class='note'>_
+Antwoord: B en 200k                     (versie 4 van de BAG en versie 0 van de WOZ, versie 1 is immers pas per 20-02-2020 geregistreerd)  
 
-```
 - BG: BAG 03-03-2019 of BG WOZ 01-01-2019 --> 01-01-2019 (WOZ)
 - EG: BAG leeg of WOZ leeg                --> leeg       (WOZ) 
         Opm. EG van versie 0 is pas per 20-02-2020 geregistreerd, op 01-01-2020 nog leeg.
@@ -374,18 +374,19 @@ _Antwoord 3_: B en 200k                     (versie 4 van de BAG en versie 0 van
         Opm. dus niet, de laatste TR, maar de TR die hoort bij BG. 
 - ER: BAG leeg of WOZ 20-02-2020          --> leeg       (WOZ) 
         Opm. ER van versie 0 is pas per 20-02-2020 geregistreerd, op 01-01-2020 nog leeg.
-```
+</div>
 
-_Vraag 4_. Welke gegevens zijn geldig op 01-01-2018 en beschikbaar vandaag in 2021?_ 
+*Vraag 4*. Welke gegevens zijn geldig op 01-01-2018 en beschikbaar vandaag in 2021?_ 
 
-_Antwoord 4_: A en ??                       (versie 1 van de BAG en GEEN versie van de WOZ, immers WOZ heeft pas geldige gegevens vanaf 01-01-2019)
+<div class='note'>_
+Antwoord: A en ??                       (versie 1 van de BAG en GEEN versie van de WOZ, immers WOZ heeft pas geldige gegevens vanaf 01-01-2019)
 
-```
+
 - BG: BAG 01-01-2018 of BG WOZ n.v.t.     --> 01-01-2020 (BAG)
 - EG: BAG leeg of WOZ n.v.t.              --> leeg       (BAG)
 - TR: BAG 30-12-2017 of WOZ n.v.t.        --> 30-12-2017 (BAG)
 - ER: BAG leeg of WOZ n.v.t.              --> leeg       (BAG) 
-```
+</div>
 
 Opm. Als je de vraag aan de LV-en wilt stellen dan zijn de registratie tijdstippen van de verwerking van deze data in LV-en van belang voor beschikbaarOp. Voeg dan een `TR-LV`, `EG-LV` en `IA-LV` toe.   
 
@@ -398,18 +399,20 @@ Een andere insteek is om de levenscyclus van de BAG op te vragen en die van de W
 Nota bene: dus niet een tijdreis naar de gehele levenscyclus van de BAG en de WOZ en die in elkaar schuiven.
 
 **Uitgangssituatie**
-  
-Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	          TI 	                	
-1000 	1 	     A 	     01-01-2018 	03-03-2019 	30-12-2017 	01-03-2019 	           	
-1000 	2 	     B 	     03-03-2019 	01-09-2033 	01-03-2019 	01-04-2019 	01-05-2019 	
-1000 	3 	     H 	     01-09-2033 	               01-04-2019 	               01-05-2019
-1000 	4 	     B 	     03-03-2019 	               01-05-2019 	
+
+| Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         | TI         |
+|---------|--------|--------|------------|------------|------------|------------|------------|
+| 1000 	 | 1 	   |  A     | 01-01-2018 | 03-03-2019 |	30-12-2017 | 01-03-2019 |	     |      	
+| 1000 	 | 2 	   |  B     | 03-03-2019 | 01-09-2033 |	01-03-2019 | 01-04-2019 | 01-05-2019 |	
+| 1000 	 | 3 	   |  H     | 01-09-2033 |	      |            | 01-04-2019 | 01-05-2019 |
+| 1000 	 | 4 	   |  B     | 03-03-2019 |	      |            |            | 01-05-2019 |	
   
 TI staat voor tijdstip inactief. Deze gegevens waren geldig tot 01-05-2019 maar zijn dit hierna niet meer. 
-  
-Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	           	          	
-2000 	0 	     200k	     01-01-2019 	01-01-2020 	10-01-2019 	20-02-2020 	           	
-2000 	1 	     220k	     01-01-2020 	               20-02-2020 	
+
+| Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         | 
+|---------|--------|--------|------------|------------|------------|------------|
+| 2000 	  | 0 	   | 200k   | 01-01-2019 | 01-01-2020 | 10-01-2019 | 20-02-2020	|           	
+| 2000 	  | 1 	   | 220k   | 01-01-2020 |            |	           | 20-02-2020 |
 
 **Vertaal specificatie**
 
