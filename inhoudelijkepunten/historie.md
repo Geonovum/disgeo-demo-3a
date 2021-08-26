@@ -277,13 +277,67 @@ Er zijn andere voorbeelden te verzinnen, we moeten kijken of we dit kunnen krake
 
 ### Modellering van historie in de SOR
 
-Het informatiemodel gaat uit van het modelleerpatroon van NEN3610 waarbij registratiegegevens over het informatieobject, zoals de tijdlijn geldigheid en tijdlijn registratie in een apart metadata objecttype zit wat 1 op 1 gerelateerd is aan het objecttype waar het informatieobject over gaat. Dit tezamen met de modelleerprincipes van de SOR, zorgt er voor dat het object centraal gehouden kan worden, ofwel, dat het objecttype alleen directe eigenschappen van het object kent.
+Het informatiemodel gaat uit van het modelleerpatroon van [[NEN3610-2021-ontw]] waarbij `Registratiegegevens` over het informatieobject, zoals de tijdlijn geldigheid en tijdlijn registratie in een apart metadata objecttype zit wat 1 op 1 gerelateerd is aan het objecttype waar het informatieobject over gaat. Dit tezamen met de modelleerprincipes van de SOR, zorgt er voor dat het object centraal gehouden kan worden, ofwel, dat het objecttype alleen directe eigenschappen van het object kent.
 
-![historie van informatieobjecten in dse SOR](media/historie.drawio.png)
+<figure id="sor-modellering-historie">
+  <img src="media/historie.drawio.png" alt="sor-modellering-historie">
+  <figcaption>Historie van informatieobjecten in de SOR</figcaption>
+</figure>
 
-figuur Historie van informatieobjecten in de SO
+Het informatiemodel biedt, zoals beschreven in [](#modelleerpatroon-voor-de-beschrijving-van-de-afleiding-van-sor-informatieobjecten), ook de mogelijkheid om de herkomst van een SOR informatieobject uit te drukken. Hierbij kan bij de registratiegegevens via `afgeleidVan` relaties een koppeling gelegd worden met de registratiegegevens van informatieobjecten uit onderliggende registraties. In informatieproducten kan dan gekozen worden om deze herkomstinformatie wel of niet te tonen.
 
-Het informatiemodel biedt, zoals beschreven in de paragraaf [modelleerpatroon voor hwrkomstmetadata](#modelleerpatroon-voor-herkomstmetadata), ook de mogelijkheid om de herkomst van een SOR informatieobject uit te drukken. Hierbij kan bij de registratiegegevens via `afgeleidVan` relaties een koppeling gelegd worden met de registratiegegevens van informatieobjecten uit onderliggende registraties. In informatieproducten kan dan gekozen worden om deze herkomstinformatie wel of niet te tonen.
+<aside class="note">
+  Bij het SOR-informatieobject nemen we in deze fase geen attribuut `versie` op. Dit omdat de waarde van versie niet gemakkelijk dynamisch berekend kan worden in de eerste fase van de SOR, waarin het als bevragingslaag over bestaande registraties zal fungeren.
+</aside>
+
+<aside class="note">
+In de toekomst zal een SOR object waarschijnlijk een eigen identificatie krijgen. Voorlopig is de SOR een dynamische laag over verschillende registraties heen. Toch is het handig om een SOR identificatie te bepalen, m.n. voor het goed kunnen functioneren van informatie-services. Hiervoor zal een afleidingsregel gespecificeerd moeten worden op basis van de relevante bronregistraties voor een specifiek object. Dit moet nader onderzocht worden.
+
+Mogelijke opties (open lijst):
+- de objectidentificaties met de oudste `beginGeldigheid` uit de onderliggende BR informatieobjecten
+- per objecttype een prio-lijst met registraties vanuit welke de identificatie overgenomen kan worden.
+</aside>
+
+Een voorbeeld hoe een informatieobject er in een concrete serialisatie conform dit modelleerpatroon uit zou kunnen zien is:
+
+```json
+{
+    "identificatie": "0200100000085932",
+    "domein": "NL.SOR.Gebouw",
+    "oorspronkelijkBouwjaar": "1980",
+    "status": "In gebruik",
+    "nummeraanduidingreeks": [
+        {
+            "identificatieBAGVBOLaagsteHuisnummer": "0200010000130331" ,
+            "identificatieBAGVBOHoogsteHuisnummer": "0200010000130339"
+        }
+    ],
+    "geregistreerdMet": {
+        "beginGeldigheid": "2019-09-10" ,
+        "tijdstipRegistratie": "2019-09-19T00:00:00Z",
+        "afgeleidVan" : [
+            {
+                "versie": "1",
+                "beginGeldigheid": "2019-09-10" ,
+                "tijdstipRegistratie": "2019-09-19T00:00:00Z",
+                "beschrijft": {
+                    "identificatie": "0200100000085932",
+                    "domein": "NL.IMBAG.Pand"
+                }
+            },
+            {
+                "versie": "4",
+                "beginGeldigheid": "2019-08-10" ,
+                "tijdstipRegistratie": "2019-08-10T00:00:00Z",
+                "beschrijft": {
+                    "identificatie": "00016712f55b4b90874036fda00b7ab0",
+                    "domein": "NL.BGT.Pand"
+                }
+            }
+        ]
+    }
+}
+```
 
 ### Voorbeelden uitgewerkt met tijdreis vragen 
 
