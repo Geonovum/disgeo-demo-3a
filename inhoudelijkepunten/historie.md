@@ -421,15 +421,15 @@ TI staat voor tijdstip inactief. Deze gegevens waren geldig tot 01-05-2019 maar 
 
 --> Schuif deze in elkaar. 
 
-1) Controleer of elke levenscyclus alleen geldige gegevens bevat. 
+1. Controleer of elke levenscyclus alleen geldige gegevens bevat. 
    BAG: geen gegevens met bv. tijdstipNietBAG of tijdstip inactief. 
    WOZ: ... 
    
-2) Zet alle BG datums op een rij, en hou per BG de TR en de versie en de BR bij. Dit is het aantal versies die we gaan maken. 
+2. Zet alle BG datums op een rij, en hou per BG de TR en de versie en de BR bij. Dit is het aantal versies die we gaan maken. 
 
-3) Zet alle EG datums op een tijd en hou bij elke EG bij welke ER erbij hoort. 
+3. Zet alle EG datums op een tijd en hou bij elke EG bij welke ER erbij hoort. 
 
-3) Maak een (1e) versie met de 1e begindatum en bijbehorende TR 
+4. Maak een (1e) versie met de 1e begindatum en bijbehorende TR 
    en de 1e einddatum geldigheid en bijbehorende ER
    en de functionele data die in de versie staat die bij de BG hoort, beperkt tot de functionele data die nodig is voor het SOR object     
    
@@ -442,48 +442,56 @@ TI staat voor tijdstip inactief. Deze gegevens waren geldig tot 01-05-2019 maar 
 
 **Tijdreis vragen**
 
-_Vraag 1._ Welke gegevens zijn geldig vandaag in 2021 en beschikbaar vandaag in 2021?_ 
+*Vraag 1.* Welke gegevens zijn geldig vandaag in 2021 en beschikbaar vandaag in 2021?_ 
+
+<div class='note'>_
 
 _Tussenstap_: geldige levenscyclus BAG op beschikbaarOp vandaag 2021
 
+| Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         | TI         |
+|---------|--------|--------|------------|------------|------------|------------|------------| 
+| 1000 	  | 1      | A 	    | 01-01-2018 | 03-03-2019 | 30-12-2017 | 01-03-2019 |            |           	
+| 1000 	  | 4 	   | B 	    |            | 03-03-2019 |            |            | 01-05-2019 |	
   
-Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	          TI 	                	
-1000 	1 	     A 	     01-01-2018 	03-03-2019 	30-12-2017 	01-03-2019 	           	
-1000 	4 	     B 	     03-03-2019 	               01-05-2019 	
-  
-
 _Tussenstap_: geldige levenscyclus WOZ op beschikbaarOp vandaag 2021
 
   
-Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	           	          	
-2000 	0 	     200k	     01-01-2019 	01-01-2020 	10-01-2019 	20-02-2020 	           	
-2000 	1 	     220k	     01-01-2020 	               20-02-2020 	
+| Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         | 
+|---------|--------|--------|------------|------------|------------|------------|	           	          	
+| 2000    | 0 	   | 200k   | 01-01-2019 | 01-01-2020 |	10-01-2019 | 20-02-2020	|          	
+| 2000 	  | 1 	   | 220k   | 01-01-2020 |            |            | 20-02-2020 |	
   
 
 _Tussenstap_: levenscyclus SOR Gebouw 
 
 * = berekende datum of datumtijd. 
 
-  
-ID BAG    ID WOZ    BG 	          EG 	          TR 	          ER 	          Waarde BAG   Waarde WOZ  
-1000 	NULL      01-01-2018 B   01-01-2019* W  30-12-2017 B   10-01-2019 W        A            NULL
-1000      2000      01-01-2019 W	03-03-2019* B  10-01-2019 W   01-03-2019 B   	A            200k
-1000      2000 	03-03-2019 B 	01-01-2020* W  01-05-2019 B   20-02-2020 W        B            200k 
-1000      2000 	01-01-2020 W 	               20-02-2020 W                       B            220k 
+| ID BAG  | ID WOZ |  BG         | EG             | TR           | ER           |  Waarde BAG  | Waarde WOZ |
+|---------|--------|-------------|----------------|--------------|--------------|--------------|------------| 
+| 1000 	  | NULL   | 01-01-2018 B | 01-01-2019* W | 30-12-2017 B | 10-01-2019 W |  A           |  NULL      |
+| 1000    | 2000   | 01-01-2019 W | 03-03-2019* B | 10-01-2019 W | 01-03-2019 B |  A           |  200k      |      
+| 1000    | 2000   | 03-03-2019 B | 01-01-2020* W | 01-05-2019 B | 20-02-2020 W |  B           |  200k      |       
+| 1000    | 2000   | 01-01-2020 W | 	          |              | 20-02-2020 W |  B           |  220k      |            
   
 Op beschikbaarOp 'vandaag 2021' voor SOR Gebouw is het deze tabel, alleen de geldigOp vraag hoeft nog gesteld te worden. 
 
 _Antwoord 1_: B en 220k (de tijdreis vraag geeft - gelukkig, moet ook zo zijn - hetzelfde antwoord als bij de eerste insteek). 
 
-_Vraag 2._ Welke gegevens zijn geldig op 01-01-2019 en beschikbaar vandaag in 2021?_ 
+</div>
+
+*Vraag 2.* Welke gegevens zijn geldig op 01-01-2019 en beschikbaar vandaag in 2021?_ 
 
 De geldige levenscyclus van BAG en WOZ zijn vandaag op 2021 hetzelfde als bij de vorige berekening en in elkaar geschoven dus ook. 
 
-_Antwoord 2_: A en 200k (de tijdreis vraag geeft - gelukkig, moet ook zo zijn - hetzelfde antwoord als bij de eerste insteek). 
+<div class='note'>
+Antwoord: A en 200k (de tijdreis vraag geeft - gelukkig, moet ook zo zijn - hetzelfde antwoord als bij de eerste insteek). 
 
-_Vraag 3_. Welke gegevens zijn geldig op 01-01-2020 en beschikbaar op 01-01-2020?_  
+</div>
 
-_Tussenstap_: geldige levenscyclus BAG op 01-01-2020.
+*Vraag 3*. Welke gegevens zijn geldig op 01-01-2020 en beschikbaar op 01-01-2020?_  
+
+<div class='note'>
+Tussenstap: geldige levenscyclus BAG op 01-01-2020.
 
   
 Obj. ID 	Versie 	Waarde 	BG 	          EG 	          TR 	          ER 	          TI 	                	
@@ -510,13 +518,17 @@ ID BAG    ID WOZ    BG 	          EG 	          TR 	          ER 	          Waar
   
 Op beschikbaarOp '01-01-2021' voor SOR Gebouw is het deze tabel, alleen de geldigOp vraag hoeft nog gesteld te worden. 
 
-_Antwoord 3_: B en 200k (de tijdreis vraag geeft - gelukkig, moet ook zo zijn - hetzelfde antwoord als bij de eerste insteek).
+_Antwoord: B en 200k (de tijdreis vraag geeft - gelukkig, moet ook zo zijn - hetzelfde antwoord als bij de eerste insteek).
+</div>
 
-_Vraag 4._  Welke gegevens zijn geldig op 01-01-2018 en beschikbaar vandaag in 2021?_ 
+*Vraag 4.*  Welke gegevens zijn geldig op 01-01-2018 en beschikbaar vandaag in 2021?_ 
 
 De geldige levenscyclus van BAG en WOZ zijn vandaag op 2021 hetzelfde als bij de eerste berekening en in elkaar geschoven dus ook. 
 
+<div class='note'>_
 _Antwoord 4_: A en NULL/??  (de tijdreis vraag geeft - gelukkig, moet ook zo zijn - hetzelfde antwoord als bij de eerste insteek).
+
+</div>
 
 Beide insteken komen tot hetzelfde antwoord. 
 
