@@ -46,7 +46,7 @@ ligt op bouwlaag         | WOZ      | Dit zit in de WOZ als eigenschap van WOZ d
 <figcaption>Tabel met omrekenfactor woningvolume naar oppervlakte (<a href="https://docplayer.nl/23780541-Oppervlakte-verdiepingsdocument-voor-gemeenten.html">bron</a>)</figcaption>
 </figure>
 
-### Transponering van waardelijst `type`
+#### Transponering van waardelijst `type`
 De transponeringstabel voor het gegeven `type` van `Gebouwzone` staat hieronder. Deze tabel is nog niet ingevuld, omdat we eerst navraag doen of deze mapping al eens is gedaan. 
 
 SOR Gebouwzone type | transponering

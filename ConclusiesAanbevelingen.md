@@ -17,12 +17,11 @@ Deze High-5 heeft een  aantal inzichten opgeleverd die hier worden samengevat:
 *Beschrijf hier de belangrijkste aanbevelingen:* 
 
 #### Algemene aanbevelingen
-1. 
-2.  
-3.  
-4.  
-5.  
 
+##### Aanbeveling met betrekking tot gebouwen
+Om te komen tot een geharmoniseerd / geconsolideerd Gebouw in de SOR, op basis van de huidige objecten in de basisregistraties, is nader onderzoek nodig. Alle BAG/BGT panden kunnen worden omgezet naar SOR Gebouw; dit geldt ook voor enkele typen BGt OverigBouwwerk. Maar de juiste WOZ data erbij vinden is lastiger. De relatie tussen de typering van gebouwen in de SOR en de gebruikesdoelen / functies / typen van gebouwen in de BAG, WOZ en de BRT blijkt complex te zijn. Dat betekent ook dat het mogelijk nog heel lastig wordt om de geharmoniseerde SOR gebouwen, met name wat betreft de WOZ data, te vormen op basis van de huidige BRs. In ieder geval is hiervoor veel inhoudelijke kennis van het WOZ informatiemodel en de WOZ data nodig.
+
+Aanbeveling: Begin met BAG + BGT harmonisatie. Voor het harmoniseren van WOZ gebouwdata in de SOR moet, indien dat binnen scope is, iemand met veel WOZ kennis bij de volgende high 5 aanwezig zijn om de vertaal en afleidregels scherper te maken. 
 
 
 #### Aanbevelingen voor het vervolg van de High-5
@@ -42,7 +41,3 @@ ACTIE: vertaal specficatie van A en B laten reviewen door team van 2e high-5.
 3. Elke GEO-BR levert een API voor tijdreizen (t.b.v. insteek A) en een API om een geldige levenscyclus mee op te vragen (t.b.v. insteek B). 
 ACTIE --> uitzetten bij LV of BR. 
 
-### Aanbeveling met betrekking tot gebouwen
-Om te komen tot een geharmoniseerd / geconsolideerd Gebouw in de SOR, op basis van de huidige objecten in de basisregistraties, is nader onderzoek nodig. Alle BAG/BGT panden kunnen worden omgezet naar SOR Gebouw; dit geldt ook voor enkele typen BGt OverigBouwwerk. Maar de juiste WOZ data erbij vinden is lastiger. De relatie tussen de typering van gebouwen in de SOR en de gebruikesdoelen / functies / typen van gebouwen in de BAG, WOZ en de BRT blijkt complex te zijn. Dat betekent ook dat het mogelijk nog heel lastig wordt om de geharmoniseerde SOR gebouwen, met name wat betreft de WOZ data, te vormen op basis van de huidige BRs. In ieder geval is hiervoor veel inhoudelijke kennis van het WOZ informatiemodel en de WOZ data nodig.
-
-Aanbeveling: Begin met BAG + BGT harmonisatie. Voor het harmoniseren van WOZ gebouwdata in de SOR moet, indien dat binnen scope is, iemand met veel WOZ kennis bij de volgende high 5 aanwezig zijn om de vertaal en afleidregels scherper te maken. 
