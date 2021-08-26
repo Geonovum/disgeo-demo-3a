@@ -9,9 +9,10 @@ In dit kader is er ook ruimte om in inspirerende onderzoeksweken (High-5's) spec
 
 ### Wat is in deze high-5 onderzocht
 
-Het doel wat te beproeven of het mogelijk is de basisregistraties in samenhang te bevragen, waarbij deze samenhang nog niet in de data (in de vorm van relaties tussen instanties) aanwezig is, en zonder de onderliggende registraties of de data die daarin staan aan te passen. De samenhang wordt gerealiseerd door een samenhangende, integrale semantische laag die ervoor zorgt dat vragen over registraties heen kunnen worden gesteld en beantwoord.
+Het doel:
+te beproeven of het mogelijk is de basisregistraties in samenhang te bevragen, waarbij deze samenhang nog niet in de data (in de vorm van relaties tussen instanties) aanwezig is, en zonder de onderliggende registraties of de data die daarin staan aan te passen. De samenhang wordt gerealiseerd door een samenhangende, integrale semantische laag die ervoor zorgt dat vragen over registraties heen kunnen worden gesteld en beantwoord.
 
-Een interessante invalshoek is een mogelijke samenhang met het IGO traject van DisGeo. Het IGO-traject kijkt naar integraal gebruik op basis van de beschikbare bronnen. In het kader van de SOR kijken wij primair gebruiksgericht en van daar uit naar de databronnen.
+Een interessante invalshoek is een mogelijke samenhang met het [IGO traject van DisGeo](https://labs.kadaster.nl/cases/integralegebruiksoplossing). Het IGO-traject kijkt naar integraal gebruik op basis van de beschikbare bronnen. In het kader van de SOR kijken wij primair gebruiksgericht en van daar uit naar de databronnen.
 
 In deze High-5 hebben we ons puur gericht op het maken van een semantisch model. 
 Deze High-5 krijgt in het najaar van 2021 een vervolg waarin we dit model implementeren in een proefomgeving
