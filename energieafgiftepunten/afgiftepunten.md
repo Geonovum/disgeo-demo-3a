@@ -85,10 +85,7 @@ Genoemde opties kennen nadelen en voordelen. Als we op zoek gaan naar best of bo
 
 Bij aansluitvoorwaarden kan je denken aan: dat de SOR en andere bronnen aan dezelfde standaarden voldoen wat betreft modellering, historie en tijdreizen en andere standaarden die nodig zijn om te komen tot een samenhangend stelsel van BR en niet-Br bronnen, waarin afnemers het ook ervaren als een samenhangend stelsel.   
 
+## Uitwerking 
 
-
-
-
-
-
+Status: dit onderwerp is gestart en verkend, maar is maar tot halverwege gekomen. De mogelijkheiden op het eind van dit hoofdstuk zinn verkend en opgesomd, maar zijn niet verder verwerkt naar een informatiemodel. 
 
