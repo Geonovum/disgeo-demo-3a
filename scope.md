@@ -41,36 +41,36 @@ Startpunt:
 
 *Informatiemodel BAG*
 
-[Gegevenscatalogus BAG](https://www.geobasisregistraties.nl/documenten/publicatie/2018/03/12/catalogus-2018)
-[Datamodel BAG](https://bag.basisregistraties.overheid.nl/datamodel)
-[Begrippenkader BAG](https://bag.basisregistraties.overheid.nl/resource?subject=https://bag.basisregistraties.overheid.nl/doc/begrippenkader/bag)
+- [Gegevenscatalogus BAG](https://www.geobasisregistraties.nl/documenten/publicatie/2018/03/12/catalogus-2018)
+- [Datamodel BAG](https://bag.basisregistraties.overheid.nl/datamodel)
+- [Begrippenkader BAG](https://bag.basisregistraties.overheid.nl/resource?subject=https://bag.basisregistraties.overheid.nl/doc/begrippenkader/bag)
 
 *Informatiemodel BGT*
 
-[Gegevenscatalogus BGT](https://docs.geostandaarden.nl/imgeo/catalogus/bgt/)
-[Informatiemodel IMGeo EAP en XMI](https://register.geostandaarden.nl/informatiemodel/imgeo/2.2/)
-[Begrippenkader IMGeo](https://definities.geostandaarden.nl/imgeo)
+- [Gegevenscatalogus BGT](https://docs.geostandaarden.nl/imgeo/catalogus/bgt/)
+- [Informatiemodel IMGeo EAP en XMI](https://register.geostandaarden.nl/informatiemodel/imgeo/2.2/)
+- [Begrippenkader IMGeo](https://definities.geostandaarden.nl/imgeo)
 
 *Informatiemodel BRT*
 
-[Gegevenscatalogus BRT](https://www.kadaster.nl/-/brt-catalogus-productspecificaties)
-[Datamodel BRT](https://brt.basisregistraties.overheid.nl/datamodel)
-[Informatiemodel BRT EAP en XMI](https://register.geostandaarden.nl/informatiemodel/imbrt/1.2.3/)
-[Begrippenkader BRT](https://brt.basisregistraties.overheid.nl/resource?subject=https://brt.basisregistraties.overheid.nl/doc/begrippenkader/top10nl)
+- [Gegevenscatalogus BRT](https://www.kadaster.nl/-/brt-catalogus-productspecificaties)
+- [Datamodel BRT](https://brt.basisregistraties.overheid.nl/datamodel)
+- [Informatiemodel BRT EAP en XMI](https://register.geostandaarden.nl/informatiemodel/imbrt/1.2.3/)
+- [Begrippenkader BRT](https://brt.basisregistraties.overheid.nl/resource?subject=https://brt.basisregistraties.overheid.nl/doc/begrippenkader/top10nl)
 
 *Informatiemodel WOZ*
 
-[Documentatie IMWOZ, bespreekversie 6-8-2021](https://imvertor-tst.armatiek.nl/modellen/IMWOZ/IMWOZ.html)
+- [Documentatie IMWOZ, bespreekversie 6-8-2021](https://imvertor-tst.armatiek.nl/modellen/IMWOZ/IMWOZ.html)
 
 
 *Informatie over energielabels*
 
-[Informatiepagina RVO](https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/gebouwen/hulpmiddelen-tools-en-inspiratie-gebouwen/ep-online)
+- [Informatiepagina RVO](https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/gebouwen/hulpmiddelen-tools-en-inspiratie-gebouwen/ep-online)
 
 
 *Informatie over energieafgiftepunten*
 
-[Casebeschrijving energieafgiftepunten](https://github.com/Geonovum/disgeo-demo-3a/blob/main/energieafgiftepunten/afgiftepunten.md)
+- [Casebeschrijving energieafgiftepunten](https://github.com/Geonovum/disgeo-demo-3a/blob/main/energieafgiftepunten/afgiftepunten.md)
 
 
 
