@@ -57,8 +57,6 @@ Vervolgens introduceren we de mogelijkheid om verschillende soorten `Bronentitei
 Een voorbeeld hoe een informatieobject er in een concrete serialisatie conform dit modelleerpatroon uit zou kunnen zien is:
 
 ```
-
-json
 {
     "identificatie": "12345",
     "domein": "NL.SOR.Gebouw",
@@ -102,9 +100,11 @@ Hierbij maken we gebruik van een standaard [[PROV-DM]] modelleerpatroon ([deriva
   We verkiezen hier om dit heel simpel weer te geven, maar het is ook mogelijk om de precieze activiteit en mogelijk gebruikte algoritmes ook als eigenschappen van de afleiding op te nemen. In dat geval wordt er van de relatie een relatieklasse `Afleiding` gemaakt, waaraan deze informatie gekoppeld kan worden.
 </aside>
 
+<aside class='example'>
+
 Een voorbeeld hoe een informatieobject er in een concrete serialisatie conform dit modelleerpatroon uit zou kunnen zien is:
 
-```json
+```
 {
     "identificatie": "0200100000085932",
     "domein": "NL.SOR.Gebouw",
@@ -135,4 +135,7 @@ Een voorbeeld hoe een informatieobject er in een concrete serialisatie conform d
         ]
     }
 }
+
 ```
+
+</aside>

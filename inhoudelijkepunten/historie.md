@@ -305,8 +305,6 @@ Mogelijke opties (open lijst):
 Een voorbeeld hoe een informatieobject er in een concrete serialisatie conform dit modelleerpatroon uit zou kunnen zien is:
 
 ```
-
-json
 {
     "identificatie": "0200100000085932",
     "domein": "NL.SOR.Gebouw",
