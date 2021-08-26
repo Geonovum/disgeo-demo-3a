@@ -55,6 +55,24 @@ Wat is de relatie van energielabels met de SOR?
 - Is het energielabel een object of is het een eigenschap van een verblijfsobject? 
 - Energielabel is typisch een gegeven van buiten de SOR; het moet mogelijk zijn voor een externe partij om dit te koppelen aan een SOR object. Dus wel in scope van deze high 5, mooie case om externe gegevens aan de SOR te koppelen.
 
+### Gebouw in de huidige registraties
+
+In de huidige basis- en sectorregistraties zijn er veel gegevens te vinden over een "gebouw". Als de scope van deze high5 hebben we de de informatiemodellen van deze registraties genomen:
+* BAG
+* BGT
+* WOZ
+* EPBD - Energielabels
+* EAN - Energie afgiftepunten
+
+ In onderstaand plaatje hebben we getracht om deze te combineren tot één informatiemodel, zonder scherp te kijken naar de specifieke definitie van gebouw, noch kijkende naar de betekenis van eigenschappen.
+
+<figure id="gebouw-huidige-registraties">
+  <img src="media/gebouw-gegevens.drawio.png" alt="gebouw-huidige-registraties">
+  <figcaption>Gebouw en aanverwante gegevens in huidige registraties</figcaption>
+</figure>
+
+Dit plaatje gebruiken we als startpunt voor de ontwikkeling van een logisch SOR-informatiemodel voor gebouwen.
+
 ### Gebouw in Eisen aan SOR
 
 Het [[EMSO]] document beschrijft de inhoudelijke eisen aan de SOR. Het bevat een hoofdstuk over [Gebouwen](https://docs.geostandaarden.nl/disgeo/emso/#gebouw), dat deze objecttypen definieert: 
