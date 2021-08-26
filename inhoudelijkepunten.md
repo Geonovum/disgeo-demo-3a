@@ -1,12 +1,8 @@
 ## Inhoudelijke punten
 
-Hieronder een overzicht van items om 1 voor 1 op te pakken bij het modelleren van een gebouw of bouwwerk. De lijst is geleverd door Inhoud, een aantal zijn 1 op 1 te gebruiken en een  aantal niet, het gaat ons om de modellering van deze laatste. 
+Hieronder staat een overzicht van inhoudelijke puntwn die tijdens de High-5 in meer of mindere mate aan de orde zijn geweest. Sommige punten worden in de navolgende hoofdstukken uitgewerkt.
 
-Het thema is een Gebouw. 
-
-We houden ons aan wat er op dit moment kan, in ons vermoeden, vanuit de BR's. Andere zaken parkeren we. 
-
-De lijst met kandidaat punten is onderstaand opgesomd. We een aantal uitwerken, maar allemaal lukt niet in 1 high-5. Degene die behandeld zijn, zijn voorzien van een link. 
+### Transponering
 
 _Niet 1 op 1_
 

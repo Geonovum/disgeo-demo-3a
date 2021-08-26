@@ -8,7 +8,7 @@ Deze variant maakt gebruik van:
 1. RDF uitspraken (<a href="">standaard</a>)
 2. Registratie objecten (SOR-specifieke 'set')
 
-![historie-model-uitspraak](../media/historie-model-uitspraak.png)
+![historie-model-uitspraak](media/historie-model-uitspraak.png)
 
     Figuur 1 ― Historie opslag op basis van uitspraken.
 
@@ -19,7 +19,7 @@ Deze variant maakt gebruik van:
 1. Data Cube observaties (<a href="">standaard</a>)
 2. In Data Cube vastgelegde "dimensions" en "measures"
 
-![historie-model-datacube](../media/historie-model-datacube.png)
+![historie-model-datacube](media/historie-model-datacube.png)
 
     Figuur 2 ― Historie opslag op basis van Data Cube.
 
@@ -28,7 +28,7 @@ Deze variant maakt gebruik van:
 Deze variant maakt gebruik van:
 1. RDF graaf namen (<a href="">standaard</a>)
 
-![historie-model-graaf](../media/historie-model-graaf.png)
+![historie-model-graaf](media/historie-model-graaf.png)
 
     Figuur 3 ― Historie opslag op basis van graphs.
 
@@ -38,7 +38,7 @@ Deze variant maakt gebruik van:
 1. RDF graaf namen (<a href="">standaard</a>)
 2. RDF uispraken (<a href="">standaard</a>)
 
-![historie-model-graaf-uitspraak](../media/historie-model-graaf-uitspraak.png)
+![historie-model-graaf-uitspraak](media/historie-model-graaf-uitspraak.png)
 
 
     Figuur 4 ― Historie opslag op basis van graphs.
@@ -46,7 +46,7 @@ Deze variant maakt gebruik van:
 
 ### Implementatie kwadranten
 
-![historie-model-implementatie](../media/historie-model-implementatie.png)
+![historie-model-implementatie](media/historie-model-implementatie.png)
 
     Figuur 5 ― De vier implementatie kwadranten.
 
