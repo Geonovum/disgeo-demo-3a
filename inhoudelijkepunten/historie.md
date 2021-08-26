@@ -279,12 +279,11 @@ Er zijn andere voorbeelden te verzinnen, we moeten kijken of we dit kunnen krake
 
 Het informatiemodel gaat uit van het modelleerpatroon van NEN3610 waarbij registratiegegevens over het informatieobject, zoals de tijdlijn geldigheid en tijdlijn registratie in een apart metadata objecttype zit wat 1 op 1 gerelateerd is aan het objecttype waar het informatieobject over gaat. Dit tezamen met de modelleerprincipes van de SOR, zorgt er voor dat het object centraal gehouden kan worden, ofwel, dat het objecttype alleen directe eigenschappen van het object kent.
 
-<figure id="sor-modellering-historie">
-  <img src="media/historie.drawio.png" alt="sor-modellering-historie">
-  <figcaption>Historie van informatieobjecten in de SOR</figcaption>
-</figure>
+![historie van informatieobjecten in dse SOR](media/historie.drawio.png)
 
-Het informatiemodel biedt, zoals beschreven in [](#modelleerpatroon-voor-herkomstmetadata), ook de mogelijkheid om de herkomst van een SOR informatieobject uit te drukken. Hierbij kan bij de registratiegegevens via `afgeleidVan` relaties een koppeling gelegd worden met de registratiegegevens van informatieobjecten uit onderliggende registraties. In informatieproducten kan dan gekozen worden om deze herkomstinformatie wel of niet te tonen.
+figuur Historie van informatieobjecten in de SO
+
+Het informatiemodel biedt, zoals beschreven in de paragraaf [modelleerpatroon voor hwrkomstmetadata](#modelleerpatroon-voor-herkomstmetadata), ook de mogelijkheid om de herkomst van een SOR informatieobject uit te drukken. Hierbij kan bij de registratiegegevens via `afgeleidVan` relaties een koppeling gelegd worden met de registratiegegevens van informatieobjecten uit onderliggende registraties. In informatieproducten kan dan gekozen worden om deze herkomstinformatie wel of niet te tonen.
 
 ### Voorbeelden uitgewerkt met tijdreis vragen 
 
@@ -520,18 +519,7 @@ Beide insteken komen tot hetzelfde antwoord.
 
 ### Aanbevelingen voor vervolg (2e high-5)
 
-1) Inhoud geeft aan dat een geldige levenscyclus samenstellen inderdaad een vraag is die we moeten kunnen beantwoorden. Zie insteek B (excl. antwoord). 
-
-2) De implementatie maakt gebruik van een vertaalspecificatie om historie uit verschillende bronnen in elkaar te schuiven. 
-- Gebruik insteek A voor tijdreis vragen op een SOR Gebouw conform de NL API strategie 
-- Gebruik insteek B om de voor geldige levenscyclus van een SOR Gebouw te kunnen leveren
-
-(en en gebruik niet insteek B om vervolgens de tijdreisvraag te beantwoorden want deze laaste insteek performed een stuk slechter. Het is wel nuttig om te doen om te testen of beide routes dezelfde antwoorden geven, om te bewijzen dat de implemenaties kloppen).
-
-ACTIE: vertaal specficatie van A en B laten reviewen door team van 2e high-5. 
-
-3) Elke GEO-BR levert een API voor tijdreizen (t.b.v. insteek A) en een API om een geldige levenscyclus mee op te vragen (t.b.v. insteek B). 
-ACTIE --> uitzetten bij LV of BR. 
+Voor de aanbevelingen wordt verwezen naar paragraaf [Aanbevelingen met betrekking tot historie](#aanbevelingen-met-betrekking-tot-historie)
 
 
 
