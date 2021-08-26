@@ -1,6 +1,8 @@
 # Energieafgiftepunten
 
-Een mogelijk leuke, aan de energietransitie gerelateerde use case om tijdens deze en volgende high 5 sessies op in te zoomen, gaat over zogenaamde energieafgiftepunten. Hieronder wat kennis hierover, opgetekend in een gesprek met Jan van Gelder (Geonovum, ex-Alliander). 
+Een mogelijk leuke, aan de energietransitie gerelateerde use case om tijdens deze en volgende high 5 sessies op in te zoomen, gaat over zogenaamde energieafgiftepunten. 
+
+_Hieronder wat kennis hierover, opgetekend in een gesprek met Jan van Gelder (Geonovum, ex-Alliander)_ 
 
 - Energieafgiftepunten zijn onderdeel van netwerkdata. Met behulp van netwerkdata kun je bijvoorbeeld  traces uitvoeren, aggregeren tot verzorgingsgebieden, etc.
 - Samengevat heb je binnen het energienetwerkmodel een distributienet, waarmee je de hogere spanningen aan elkaar knoopt, en een aansluitnet, die naar de huizen gaat. In de meterkast zit de meter en daar zit een schroef en dat is feitelijk het fysieke afgiftepunt. Daar begint je eigen netwerk als consument. 
@@ -21,7 +23,7 @@ Een mogelijk leuke, aan de energietransitie gerelateerde use case om tijdens dez
 - TNO heeft een vrij eenvoudig, overzichtelijk informatiemodel bedacht voor dit soort data https://www.tno.nl/nl/aandachtsgebieden/informatie-communicatie-technologie/expertisegroepen/monitoring-control-services/grip-op-de-energietransitie-met-esdl/ Zie ook github repo link onderaan dit artikel. Jan vond dit een handig model.
 - Als we deze case doen kunnen we ook ontdekken waar de standaardisatievraagstukken en mogelijkheden voor data-optimalisatie zitten. 
 
-## EAN koppeling 
+## EAN koppeling toelichting 
 
 Een gebouw is een plek waar iemand woont, of waar een bedrijf is gevestigd etcetera en hierbij is sprake van een energiebehoefte, die gelevert wordt  via een energie afgifte punt. Energie afgifte punten worden administratief gekoppeld aan een gebouw c.q. een BAG Pand, of aan een deel van een gebouw c.q. een BAG verblijfsobject. Dit noemen we de EAN koppeling. 
 
@@ -38,7 +40,7 @@ Er zijn vele meer gegevens die interessant zijn, we beperken ons tot deze.
 
 Het informatiemodel waar deze informatie te vinden is: TODO link. 
 
-_EAN gegevens koppelen met een SOR Gebouw_ 
+## Energie gegevens koppelen met een SOR Gebouw via de EAN koppeling  
 
 De bronnen die onder de SOR liggen zijn andere bronnen dan waar de energiegegevens worden bijgehouden. Wat in ieder geval niet de bedoeling is om de data uit deze bronnen over te nemen en op te slaan. De bedoeling is om de verschillende bronnen te bevragen en de data uit deze bronnen in samenhang te kunnen leveren aan afnemers. In dit geval gaat het niet om het samenhang aanbrengen van data van de BR's onder de SOR, maar van het aanbrengen van samenhang van data uit ook andere bronnen met de data van de SOR.  
 
