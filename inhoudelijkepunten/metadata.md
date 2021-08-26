@@ -56,7 +56,9 @@ Vervolgens introduceren we de mogelijkheid om verschillende soorten `Bronentitei
 <aside class='example'>
 Een voorbeeld hoe een informatieobject er in een concrete serialisatie conform dit modelleerpatroon uit zou kunnen zien is:
 
-```json
+```
+
+json
 {
     "identificatie": "12345",
     "domein": "NL.SOR.Gebouw",
