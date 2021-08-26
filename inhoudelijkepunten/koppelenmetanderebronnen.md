@@ -6,9 +6,13 @@ We noemen de niet-SOR bronnen in onderstaande tekst: andere bronnen.
 
 De belangrijkste stap is om eerst een betrouwbare koppeling te leggen van een andere bron naar de SOR, al dan nite via de BAG, de BGT, de WOZ. Dit is op zichzelf niet eenvoudig. je kan hierbij denken aan een koppeling met een matching op basis van adres, geometrie, of beide. 
 
+Manieren van koppelen: 
+- Deze koppeling zou een beheerde relatie kunnen zijn vanuit een bron object naar een SOR object. 
+- Deze koppeling zou een bron object met een SOR object kunnen koppelen, die het SOR object niet verandert en het eigen bronobject niet verandert. Je zou dit een koppelklasse kunnen noemen. 
+
 Voorbeelden van deze koppelingen zijn: 
-- De BRK-BAG koppeling
-- De EAN-BAG koppeling 
+- De EAN-BAG koppeling (beheerde relatie)  
+- De BRK-BAG koppeling (koppelklasse die beide bronnen niet aanpast) 
 
 Nadat de koppeling is gelegd, moet deze ook beheerd worden. Maar zodra de koppeling er is, kunnen gegevens uit de SOR en uit de "andere" bron bij elkaar gebracht worden. 
 - De koppeling loopt in principe altijd van een "andere" bron naar de SOR. 
