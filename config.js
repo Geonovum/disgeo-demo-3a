@@ -164,21 +164,19 @@ var respecConfig =
         editor:     "Dick Krijtenburg",
         authors:    ["Sandra Leijten", "Marcel Rietdijk", "Dick Krijtenburg"],
     },
-    "PUB-2":
-      {
-        title:      "Titel van Publicatie-2",
-        href:       "https://www.geonovum.nl",
-        status:     "V1.0.1",
-        publisher:  "Publisher-2",
-        company:    "Companynaam",
+    "MPSOR": 
+    {
+        title:      "Modelleerprincipes samenhangende objectenregistratie",
+        href:       "https://geonovum.github.io/disgeo-imsor/modelleerprincipes/",
+        status:     "Werkversie 12 augustus 2021",
+        publisher:  "Geonovum"
     },
-    "PUB-3":
-      {
-        title:      "Titel van Publicatie-3",
-        href:       "https://www.geonovum.nl",
-        status:     "V1.0.1",
-        publisher:  "Publisher-3",
-        company:    "Companynaam",
+    "NEN3610-2021-ontw":
+    {
+      title:      "NEN-3610 Basismodel geo-informatie",
+      status:     "Ontwerp",
+      date:       "2021",
+      publisher:  "NEN",
     },
     "PUB-4":
       {
