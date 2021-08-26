@@ -28,7 +28,7 @@ objecttype | objecttype | BAG Pand = SOR Gebouw
 attribuutsoort waarde | attribuutsoort waarde | BAG Pand `oorspronkelijk bouwjaar` = SOR Gebouw `oorsponkelijk bouwjaar`
 waardelijst waarde | objecttype | BGT-BegroeidTerreindeel.fysiekvoorkomen `heide` = SOR objecttype `Heide`
 objecttype | waardelijst waarde | nog niet gevonden
-waardelijst | attribuutsoort waarde | nog niet gevonden
+waardelijst waarde | attribuutsoort waarde | nog niet gevonden
 attribuutsoort waarde | waardelijst waarde | WOZ-object.aanduiding_repeterend `ja` = SOR-Gebouw.aard `repeterend`
 objecttype | attribuutsoort waarde | nog niet gevonden
 attribuutsoort waarde | objecttype | WOZ `bouwlaag` attribuut met getalswaarde wordt in SOR objecttype `Bouwlaag` met eigen 2.5D geometrie. NB hierbij moet de geometrie afgeleid worden.
