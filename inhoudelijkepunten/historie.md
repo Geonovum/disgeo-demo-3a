@@ -1,6 +1,5 @@
 ## Modelleren van historie en beantwoorden van tijdreis vragen 
 
-Subgroep high-5 Pano, Wouter, Lennart. 
 
 ### Doel
 
@@ -9,13 +8,13 @@ Doel: een uniforme manier voor afnemers om te zien wanneer:
 1) gegevens geldig zijn en beschikbaar/geregistreerd zijn
 2) om een tijdreis vraag te stellen.
 
-Deze tijdreis vragen zijn (ook) los aan de basisregistraties te stellen en te vertalen naar de SOR, maar in deze high-5 wordt de tijdreis vraag 1x gesteld aan het SOR object, en wordt exact dezelfde tijdreis "onder water" aan de BR's gesteld en worden de gegevens van de BR's "in elkaar geschoven". De specificatie voor dit in elkaar schuiven en de uitkomst ervan wordt hieronder beschreven. 
+Deze tijdreisvragen zijn (ook) los aan de basisregistraties te stellen en te vertalen naar de SOR, maar in deze high-5 wordt de tijdreis vraag 1x gesteld aan het SOR object, en wordt exact dezelfde tijdreis "onder water" aan de BR's gesteld en worden de gegevens van de BR's "in elkaar geschoven". De specificatie voor dit in elkaar schuiven en de uitkomst ervan wordt hieronder beschreven. 
 
 In het geval van de SOR gaat het in deze high-5 ook over het in elkaar schuiven van gegevens van afzonderlijke objecten in de BR's naar een samengesteld object in de SOR.
 
 Historie: hiermee wordt bedoeld de tijdslijn geldigheid en de tijdslijn registratie. 
 
-Opm. Buiten scope van deze uitwerking: levensduur van het object.  
+Opmerking: Buiten scope van deze uitwerking: levensduur van het object.  
 
 ### Uitgangspunten 
 
