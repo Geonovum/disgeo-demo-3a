@@ -297,9 +297,11 @@ Mogelijke opties (open lijst):
 - per objecttype een prio-lijst met registraties vanuit welke de identificatie overgenomen kan worden.
 </aside>
 
+
+<aside class='example'>
 Een voorbeeld hoe een informatieobject er in een concrete serialisatie conform dit modelleerpatroon uit zou kunnen zien is:
 
-```json
+json
 {
     "identificatie": "0200100000085932",
     "domein": "NL.SOR.Gebouw",
@@ -336,9 +338,11 @@ Een voorbeeld hoe een informatieobject er in een concrete serialisatie conform d
         ]
     }
 }
-```
 
-### Voorbeelden uitgewerkt met tijdreis vragen 
+
+</aside>
+
+### Voorbeelden uitgewerkt met tijdreisvragen 
 
 Op basis van de keuzes zoals gemaakt in dit hoofdstuk: inhoudelijk punt Historie. 
 
