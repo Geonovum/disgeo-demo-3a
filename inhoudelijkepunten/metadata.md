@@ -53,6 +53,7 @@ In dit patroon nemen we `Registratiegegevens` als aanknopingspunt voor opname va
 
 Vervolgens introduceren we de mogelijkheid om verschillende soorten `Bronentiteit` te definieren die als `primaireBron` opgenomen kunnen worden voor een informatieobject. Hierbij maken we gebruik van een standaard [[PROV-DM]] modelleerpatroon ([primary source](https://www.w3.org/TR/prov-dm/#term-primary-source)). Hiermee maken we het bijvoorbeeld mogelijk om een brondocument, of andere bronnen zoals luchtfoto's op een standaard manier op te nemen als bron van een informatieobject. Daarnaast kunnen we zowel deze bronentiteiten, als het informatieobject zelf, toeschrijven aan een verantwoordelijke partij. In het geval van de SOR informatieobject is dat een overheidsorganisatie, maar een bronentiteit zou best van een niet-overheidspartij afkomstig kunnen zijn.
 
+<aside class='example'>
 Een voorbeeld hoe een informatieobject er in een concrete serialisatie conform dit modelleerpatroon uit zou kunnen zien is:
 
 ```json
@@ -73,6 +74,7 @@ Een voorbeeld hoe een informatieobject er in een concrete serialisatie conform d
     }
 }
 ```
+</aside>
 
 <aside class="note">
   In deze uitwerking is nog vastgehouden aan standaard PROV relaties als `pimaireBron`, `toegeschrevenAan`, maar deze zouden ook gespecialiseerd kunnen worden indien dat voordelen biedt.
