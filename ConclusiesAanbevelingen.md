@@ -2,7 +2,13 @@
 
 ### Conclusies
 
-*Beschrijf hier de belangrijkste conclusies:* 
+Deze High-5 heeft een  aantal inzichten opgeleverd die hier worden samengevat:
+
+1. 
+2.  
+3.  
+4.  
+5.  
 
 
 
@@ -11,14 +17,21 @@
 *Beschrijf hier de belangrijkste aanbevelingen:* 
 
 #### Algemene aanbevelingen
+1. 
+2.  
+3.  
+4.  
+5.  
+
+
 
 #### Aanbevelingen voor het vervolg van de High-5
 
 ##### Aanbevelingen met betrekking tot historie
 
-1) Inhoud geeft aan dat een geldige levenscyclus samenstellen inderdaad een vraag is die we moeten kunnen beantwoorden. Zie insteek B (excl. antwoord). 
+1. Inhoud geeft aan dat een geldige levenscyclus samenstellen inderdaad een vraag is die we moeten kunnen beantwoorden. Zie insteek B (excl. antwoord). 
 
-2) De implementatie maakt gebruik van een vertaalspecificatie om historie uit verschillende bronnen in elkaar te schuiven. 
+2.  De implementatie maakt gebruik van een vertaalspecificatie om historie uit verschillende bronnen in elkaar te schuiven. 
 - Gebruik insteek A voor tijdreis vragen op een SOR Gebouw conform de NL API strategie 
 - Gebruik insteek B om de voor geldige levenscyclus van een SOR Gebouw te kunnen leveren
 
@@ -26,5 +39,5 @@
 
 ACTIE: vertaal specficatie van A en B laten reviewen door team van 2e high-5. 
 
-3) Elke GEO-BR levert een API voor tijdreizen (t.b.v. insteek A) en een API om een geldige levenscyclus mee op te vragen (t.b.v. insteek B). 
+3.  Elke GEO-BR levert een API voor tijdreizen (t.b.v. insteek A) en een API om een geldige levenscyclus mee op te vragen (t.b.v. insteek B). 
 ACTIE --> uitzetten bij LV of BR. 
