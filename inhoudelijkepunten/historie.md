@@ -522,16 +522,16 @@ _Tussenstap_: geldige levenscyclus WOZ op beschikbaarOp vandaag 2021
 | 2000 	| 1 	    | 220k   | 01-01-2020 |            | 20-02-2020 |            | 	
   
 
-_Tussenstap_: levenscyclus SOR Gebouw 
+_Tussenstap_: geldige levenscyclus SOR Gebouw op beschikbaarOp vandaag 2021
 
-* = berekende datum of datumtijd. 
-
-| ID BAG  | ID WOZ |  BG          | EG             | TR           | ER           |  Waarde BAG  | Waarde WOZ |
-|---------|--------|--------------|----------------|--------------|--------------|--------------|------------| 
-| 1000 	| NULL   | 01-01-2018 B | 01-01-2019* W  | 30-12-2017 B | 10-01-2019 W |  A           |  NULL      |
-| 1000    | 2000   | 01-01-2019 W | 03-03-2019* B  | 10-01-2019 W | 01-03-2019 B |  A           |  200k      |      
-| 1000    | 2000   | 03-03-2019 B | 01-01-2020* W  | 01-05-2019 B | 20-02-2020 W |  B           |  200k      |       
-| 1000    | 2000   | 01-01-2020 W | 	           | 20-02-2020 W |              |   B          |  220k      |            
+Berekend. 
+     
+| ID BAG  | ID WOZ |  BG          | EG             | TR           | ER             |  Waarde BAG  | Waarde WOZ |
+|---------|--------|--------------|----------------|--------------|----------------|--------------|------------| 
+| 1000 	| NULL   | 01-01-2018 B | 01-01-2019 WOZ | 30-12-2017 B | 10-01-2019 WOZ |  A           |  NULL      |
+| 1000    | 2000   | 01-01-2019 W | 03-03-2019 BAG | 10-01-2019 W | 01-03-2019 BAG |  A           |  200k      |      
+| 1000    | 2000   | 03-03-2019 B | 01-01-2020 WOZ | 01-05-2019 B | 20-02-2020 WOZ |  B           |  200k      |       
+| 1000    | 2000   | 01-01-2020 W | 	           | 20-02-2020 W |                |  B           |  220k      |            
   
 Op beschikbaarOp 'vandaag 2021' voor SOR Gebouw is het deze tabel, alleen de geldigOp vraag hoeft nog gesteld te worden. 
 
@@ -570,7 +570,9 @@ Opm. versie 1 bestond nog niet en van versie 0 waren EG en ER nog niet gevuld.
   
 Deze is wel anders bij deze tijdreis in vergelijking tot de eerdere tijdreizen. 
 
-Tussenstap: levenscyclus SOR Gebouw 
+Tussenstap: geldige levenscyclus SOR Gebouw op 01-01-2020.
+     
+Berekend.
        
 | ID BAG  | ID WOZ |  BG          | EG             | TR           | ER           |  Waarde BAG  | Waarde WOZ |
 |---------|--------|--------------|----------------|--------------|--------------|--------------|------------| 
