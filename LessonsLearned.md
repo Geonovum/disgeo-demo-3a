@@ -1,4 +1,4 @@
-## Conclusies en aanbevelingen
+## LessonsLearned
 
 ### Conclusies
 
@@ -13,8 +13,6 @@ Deze High-5 heeft een  aantal inzichten opgeleverd die hier worden samengevat:
 
 
 ### Aanbevelingen
-
-*Beschrijf hier de belangrijkste aanbevelingen:* 
 
 #### Algemene aanbevelingen
 
