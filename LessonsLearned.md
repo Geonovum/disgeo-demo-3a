@@ -1,6 +1,6 @@
 ## LessonsLearned
 
-### Conclusies
+### Inzichten
 
 Deze High-5 heeft een  aantal inzichten opgeleverd die hier worden samengevat:
 
