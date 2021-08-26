@@ -3,16 +3,14 @@
 
 ### Doel
 
-Doel: een uniforme manier voor afnemers om te zien wanneer:
+Een uniforme manier voor afnemers om te zien:
 
-1) gegevens geldig zijn en beschikbaar/geregistreerd zijn
-2) om een tijdreis vraag te stellen.
+1) wanneer gegevens geldig zijn en wanneer deze gegevens geregistreerd/beschikbaar zijn
+2) om een tijdreis vraag te stellen
 
-Deze tijdreisvragen zijn (ook) los aan de basisregistraties te stellen en te vertalen naar de SOR, maar in deze high-5 wordt de tijdreis vraag 1x gesteld aan het SOR object, en wordt exact dezelfde tijdreis "onder water" aan de BR's gesteld en worden de gegevens van de BR's "in elkaar geschoven". De specificatie voor dit in elkaar schuiven en de uitkomst ervan wordt hieronder beschreven. 
+Deze tijdreisvragen zijn (ook) los aan de basisregistraties te stellen. In deze high-5 echter wordt de tijdreis vraag "door een afnemer" 1x gesteld aan de SOR c.q. het SOR object Gebouw, en wordt deze tijdreis "onder water" aan de BR's gesteld. Hierna worden de gegevens van de BR's over een Gebouw die op de gevraagde datums geldig en beschikbaar zijn "in elkaar geschoven". De specificatie voor dit in elkaar schuiven en de uitkomst ervan wordt hieronder beschreven. 
 
-In het geval van de SOR gaat het in deze high-5 ook over het in elkaar schuiven van gegevens van afzonderlijke objecten in de BR's naar een samengesteld object in de SOR.
-
-Historie: hiermee wordt bedoeld de tijdslijn geldigheid en de tijdslijn registratie. 
+Historie: hiermee wordt bedoeld de tijdslijn geldigheid en de tijdslijn registratie (t.b.v. zie 1 en 2).  
 
 Opmerking: Buiten scope van deze uitwerking: levensduur van het object.  
 
@@ -24,19 +22,18 @@ Opmerking: Buiten scope van deze uitwerking: levensduur van het object.
 - Conform de specificatie van een tijdreis zoals beschreven in de NL API strategie (en hoe dit bv. in de LVBAG werkt, die deze implementeert).  
 - In lijn met de SOR en met hoe de BR's nu grotendeels werken 
 
-Dit betekent: 
+Dit betekent voor dit inhoudelijke punt: 
 - We stellen het object centraal - d.w.z. we willen gegevens over het gebouw in de werkelijkheid leveren, en we doen dit door de registratie gegevens over dit object te leveren.
-- We geven de tijdslijnen per set gegevens over een object aan. Dit heet ook wel een versie van een object. Niet per attribuut. Dit kan wel afgeleid worden, maar dit is niet de standaard use case. Afnemers willen immers vooral gegevens van/over een object weten.
+- We geven de tijdslijnen per set gegevens over een object aan. Dit heet ook wel een versie van een object. Afnemers willen gegevens van/over een object weten en wanneer deze, dit setje, geldig is en beschikaar is gekomen zodat ze het (hadden kunnen) weten. 
 
 ### Uitdaging en bijzondere punten met keuzes/voorstel
 
-- Enerzijds: in het geval van de SOR gaat het in deze high-5 ook over het in elkaar schuiven van gegevens van afzonderlijke objecten in de BR's naar een samengesteld object in de SOR.
-- Anderzijds: hoe de geo-basisregistraties data nu uitleveren maar dan geuniformeerd. D.w.z. dat historie grotendeels wordt bijgehouden/geregistreerd in versies van objecten. Een versie is een setje gegevens over een object, en over die set gegevens wordt de tijdslijn geldigheid en de tijdslijn registratie bijgehouden en uitgeleverd. 
+De uitdaging is om data uit de onderliggende BR's uit te leveren maar dan geuniformeerd. D.w.z. dat historie wordt bijgehouden in of over versies van objecten. Een versie is een setje gegevens over een object, zoals deze gedurende een bepaalde periode onveranderd zijn, en over die set gegevens wordt de tijdslijn geldigheid en de tijdslijn registratie bijgehouden en uitgeleverd. 
 
-De uit te werken bijzondere punten zijn:
+De uit te werken bijzondere punten voor historie en tijdreizen zijn:
 
-0. definities van tijdslijn geldigheid en tijdslijn registratie 
-1. Als we het object centraal stellen, hoe gaan we dan om met objecten uit 2+ BR's die we in elkaar schuiven, in het bijzonder met de meerdere identificaties
+0. Definities van de tijdslijn geldigheid en de tijdslijn registratie.
+1. Als we het object centraal stellen, hoe gaan we dan om met objecten uit 2+ BR's die we in elkaar schuiven, in het bijzonder met de meerdere identificaties.
 2. Niet elke geo-BR kent nu beide tijdslijnen. Maar weten wel wanneer gegevens geldig en beschikbaar/geregistreerd zijn. 
 3. Niet elke geo-BR heeft voor de tijdslijn geldigheid hetzelfde dataype, sommige gebruiken een datum, sommige een datumtijd of een timestamp. Hoe gaan we hiermee om? 
 4. Mutatie verschillen, met name t.a.v. beeindigen van objecten, wat bv. de BGT doet met een einddatum geldigheid en de BAG met een eindstatus. 
@@ -46,34 +43,40 @@ De uit te werken bijzondere punten zijn:
 
 Zie NEN3610 2021/2022 historie. 
 
-Merk op:
+Merk op: 
 - Elke Landelijke Voorziening die een verzameling is van een BR heeft een eigen tijdslijn van verwerking in de LV. We onderkennen dus tijdstipRegistratie bij de bronhouder en tijdstipRegistratie bij de LV.
-- Van elk gegeven houden we het registratie tijdstip bij. Dit geldt ook voor wanneer een beginGeldigheid of eindGeldigheid is geregisteerd, in een BR en in een LV. 
+- Van elk gegeven houden we het registratie tijdstip bij. Dit geldt ook voor wanneer een beginGeldigheid of eindGeldigheid is geregisteerd, in een BR en in een LV. Elke versie van een object heeft een begin geldigheid, en het tijdstip van de registratie van een versie van een object geeft (ook) aan wanneer deze begin geldigheid is geregistreerd. Evenzo geldt dit voor de einde geldigheid, het tijdstip waarop eind geldigheid geregistreerd wordt moet bekend zijn en eind registratie geeft (ook) aan wanneer deze eind geldigheid is geregistreerd. 
 
-#### Ad 1. in elkaar schuiven objecten uit 2+ BR's 
+#### Ad 1. in elkaar schuiven van versies van objecten uit meerdere BR's of bronnen
 
 Een SOR object kan en mag meerdere identificaties hebben. Dit is ook handig, want dan in de link naar de BR ook direct bekend. 
 - Wanneer een SOR object meerdere identificaties heeft, dan betekent dit dat je elk afzonderlijk kan gebruiken als identificatie, en dat de objecten uit de onderliggende BR's over hetzelfde SOR object en hetzelfde object in de werkelijkheid gaat. 
 
-#### Ad 2. Niet elke geo-BR kent nu beide tijdslijnen
+#### Ad 2. niet elke geo-BR kent nu beide tijdslijnen  
 
-Elke BR weet echt wel wanneer de gegevens geldig zijn, ook al wordt het niet altijd fysiek vastgelegd. Vertaal dus wat er geregistreerd in de BR naar de gevraagde tijdslijnen. 
-- Lever vanuit elke BR de tijdslijnen. 
+Om de geldigOp tijdreis vraag te kunnen stellen moet een bron weten wanneer de gegevens geldig zijn. Elke BR hoort te weten wanneer de gegevens die erin geregistreerd zijn geldig zijn. Deze tijdslijn geldigheid wordt echter niet altijd fysiek vastgelegd. Als dit niet zo is, dan is het nodig om deze af te leiden. Vertaal dan wat er geregistreerd in de BR naar de gevraagde tijdslijnen. 
+
+Elke BR die aansluit op de SOR moet kunnen: 
+- De tijdslijn geldigheid en de tijdslijn registratie leveren (dit kan zijn via een interne afleiding intern in de BR). 
 - Implementeer de NL AP strategie geldigOp (moment in de tijdslijn geldsigheid) en beschikbaarOp (moment in de tijdslijn registratie) 
 - Lever vanuit elke BR een eindstatus (bekijk of je in de BR deze ook registreerd, of dat je deze afleid) 
 
 Vertaal specificatie tijdslijnen: 
-BAG: kent beide tijdslijnen. 
-WOZ: kent beide tijdslijnen. 
-BGT: kent nog geen tijdslijn geldigheid. Deze is als volgt  af te leiden: 
+BAG: kent beide tijdslijnen. Geen vertaling nodig. 
+WOZ: kent beide tijdslijnen. Geen vertaling nodig. 
+BGT: kent nog geen tijdslijn geldigheid. 
+
+VERVOLG NODIG: BGT vertaalspecificatie naar de tijdslijn geldigheid. De BGT kan dit het beste zelf aangeven. Denk bv. aan:  
      - begin geldigheid = tijdstip registratie 
      - eind geldigheid = eindRegistratie. Wellicht nog wat logica rondom geconstateerd.    
 
-VERVOLG NODIG: BGT vertaalspecificatie. 
+Aanname is dat de BGT dit kan en doet. 
 
 #### Ad 3. Niet elke geo-BR heeft voor de tijdslijn geldigheid hetzelfde dataype
 
-Er is hier een keuze te maken. 
+Vertrekpunt van de SOR is dat een afnemer een vraag stelt: welke gegevens zijn er geldig op een bepaalde datum, veelal vandaag. Een gewone afnemer gaat niet zo snel een timestamp opgeven in deze vraag. Voor basisregistraties worden besluiten ook genomen op dagbasis. Het is wel zo dat als er twee versies van een object op dezelfde dag geldig zijn/worden dat de laatste van de twee het antwoord op de vraag: wat is er vandaag geldig, is. 
+
+Voor wat betreft de keuze: welk datatype gebruiken we voor geldig op en welk datatype gebruiken we in de SOR voor begin en einde geldigheid, is hier een keuze te maken. 
 
 Optie a) We gebruiken altijd een DatumTijd voor geldigheid. BR's die alleen een datum kennen, daarvoor gebruiken we die datum en dan 00:00:00 
 - Voor de geldigOp parameter wordt altijd een DatumTijd gebruikt. 
@@ -87,10 +90,11 @@ Optie b) We volgen bij de tijdslijn geldigheid definitie van de BR. Daarom: gebr
 
 Opm. mits die verantwoord kan bij elke BR. Dit kan als de betekenis van meerdere versies op een dag is, de laatste is vigerend vanaf het moment dat ie er is.  
 
-Optie c) We gebruiken altijd een Datum. Immers, besluiten voor BR's gaan in op een datum/
+Optie c) We gebruiken altijd een Datum. Immers, besluiten voor BR's gaan in op een datum.
 Opm. We willen toegroeien naar dat de tijdslijn geldigheid altijd een datum is. Dit is nu al te implementeren, mits ofwel de BR ofwel de SOR view erop goed omgaat met meerdere versies op 1 dag. 
 - Voor de geldigOp parameter wordt altijd een datum gebruikt. 
 - Bij meerdere versies van een object op een dag vinden we bij deze geldigOp altijd de laatste de meest actuele voor die dag. 
+- De implicatie van deze is dat een BR om moet kunnen gaan met wanneer er meerdere versies op 1 dag geldig zijn en deze kan herkennen van elkaar. 
 
 Advies: gezien het groeipad willen we onderzoeken of c) kan. 
 
@@ -101,9 +105,9 @@ KEUZE: C
 Wanneer een object wordt beeindigd en de BR geen eindstatus kent, registreer/oof leidt af, een extra versie met wel een eindstatus. 
 Opm. het is aan de BR om te kiezen of er wel of niet een versie met een eindstatus wordt geregistreerd of dat deze wordt afgeleid. 
 
-Ad 5. Onderstaande een verkenning. Uitgaand van alle genoemde keuzes in de voorliggende tekst. 
-
 #### Ad. 5 Hoe schuif je versies van objecten uit verschillende BR's in elkaar
+
+Onderstaande een verkenning. Uitgaand van alle genoemde keuzes in de voorliggende tekst. 
 
 Uitwerking 5 gedachtenlijn. 
 
@@ -159,8 +163,7 @@ KEUZE: voor deze exercitie gaan we uit van optie 2, om te kijken of dat goed kan
 
 De voorbeelden die we gaan uitwerken in de volgende paragrafen zijn hiermee in lijn. 
 
-
-#### Illustratieve voorbeelden
+_Illustratieve voorbeelden_
 
 Gedachtelijn bij de uitwerking, uitgedrukt als voorbeelden van objecten met tijdslijnen. 
 
@@ -344,13 +347,14 @@ json
 
 </aside>
 
-### Voorbeelden uitgewerkt met tijdreisvragen 
+### Uitwerking: voorbeelden uitgewerkt met tijdreisvragen 
 
 Op basis van de keuzes zoals gemaakt in dit hoofdstuk: inhoudelijk punt Historie. 
 
 Fictief complexer voorbeeld uit het BAG historie model, waarin gegevens inactief gemaakt zijn.  
 
-  
+**Uitgangssituatie** 
+
 | Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         | TI         |
 |---------|--------|--------|------------|------------|------------|------------|------------|
 | 1000    | 1      | A      | 01-01-2018 | 03-03-2019 | 30-12-2017 | 01-03-2019 |            |
@@ -363,15 +367,15 @@ Fictief voorbeeld uit de WOZ
 
 | Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         |
 |---------|--------|--------|------------|------------|------------|------------|
-| 2000 	  | 0 	   |  200k  | 01-01-2019 | 01-01-2020 | 10-01-2019 | 20-02-2020 |
-| 2000 	  | 1 	   |  220k  |            | 01-01-2020 |            | 20-02-2020 |	
+| 2000 	| 0 	    |  200k  | 01-01-2019 | 01-01-2020 | 10-01-2019 | 20-02-2020 |
+| 2000 	| 1 	    |  220k  | 01-01-2020 |            | 20-02-2020 |            |	
   
 
-### Insteek 'versies': stel de tijdreis vraag aan elke BR en voeg de antwoorden samen
+#### Insteek 'versies': stel de tijdreis vraag aan elke BR en voeg de antwoorden samen
 
-De tijdreis aan een SOR Gebouw kent maar 1 geldigOp en 1 beschikbaarOp. Stel deze tijdreis aan de BR's die gebruikt worden om SOR Gebouw samen te stellen. Elk BR zal als antwoord 1 versie van een object opleveren - met een setje gegevens erin - en deze versie kent een tijdslijn geldigheid en een tijdslijn registratie. De tijdslijn van registatie komt doorgaans overeen met het moment van beschikbaarstelling en als dit zo is, dan kan de data, maar ook de tijdslijnen, samengevoegd worden.   
+De tijdreis aan een SOR Gebouw kent maar 1 geldigOp en 1 beschikbaarOp. Stel deze tijdreis aan de BR's die gebruikt worden om SOR Gebouw samen te stellen. Elk BR zal als antwoord 1 versie van een object opleveren - met een setje gegevens erin - en deze versie kent een tijdslijn geldigheid en een tijdslijn registratie. De tijdslijn van registratie komt doorgaans overeen met het moment van beschikbaarstelling en als dit zo is, dan kan de data, maar ook de tijdslijnen, samengevoegd worden.   
 
-**Insteek**: _doe een tijdreis op de BAG en de WOZ en breng de gegevens samen in een SOR Gebouw._
+Oftewel, doe een tijdreis op de BAG en de WOZ en breng de gegevens samen in een SOR Gebouw.
 
 Lange formulering: welke gegevens zijn geldig voor dit gebouw op 'datum', met de kennis/data die vanuit de informatievoorziening beschikbaar is/was op 'datumtijd'. De eerste datum wordt gebruikt voor de tijdreis parameter geldigOp en de tweede voor beschikbaarOp. De tijdsreis wordt beantwoord door eerst alle gegevens weg te filteren die na beschikbaarOp in de registatie zijn geregistreerd (inclusief einddatum geldigheid en eind registratie). Van de gegevens die overblijven wordt de geldigOp vraag gesteld. Deze vragen worden "onder water" aan de BAG gesteld en aan de WOZ. 
 
@@ -449,15 +453,13 @@ Antwoord: A en ??                       (versie 1 van de BAG en GEEN versie van 
 
 Opm. Als je de vraag aan de LV-en wilt stellen dan zijn de registratie tijdstippen van de verwerking van deze data in LV-en van belang voor beschikbaarOp. Voeg dan een `TR-LV`, `EG-LV` en `IA-LV` toe.   
 
-
-
-### Insteek 'levenscycli': vraag de geldige levenscycli op met een tijdreis en voeg deze samen
+#### Insteek 'levenscycli': vraag de geldige levenscycli op met een tijdreis en voeg deze samen
 
 Een andere insteek is om de levenscyclus van de BAG op te vragen en die van de WOZ ook en om op basis hiervan de gegevens samen te voeren. Dit is ook nodig als een afnemer de levenscyclus van een SOR gebouw opvraagt. Voor tijdreizen is het altijd zo dat een afnemer naar geldige gegevens vraagt, met de kennis die de informatievoorziening had over de objecten. Het is dus niet nodig opm de hele levenscyclus op te vragen. Het volstaat om de geldige levenscyclus op te vragen op de aangegeven beschikbaarOp. Nadat edze in elkaar geschoven zijn kan aan het resultaat - de geldige levenscyclus van het SOR Gebouw - gevraagd worden wat de geldige gegevens zijn op de aangegeveven geldigOp. 
 
 Nota bene: dus niet een tijdreis naar de gehele levenscyclus van de BAG en de WOZ en die in elkaar schuiven.
 
-**Uitgangssituatie**
+**Uitgangssituatie** (gelijk aan eerder genoemde) 
 
 | Obj. ID | Versie | Waarde | BG         | EG         | TR         | ER         | TI         |
 |---------|--------|--------|------------|------------|------------|------------|------------|
