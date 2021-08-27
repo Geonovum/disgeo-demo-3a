@@ -26,7 +26,7 @@ Aanbeveling: Begin met BAG + BGT harmonisatie. Voor het harmoniseren van WOZ geb
 
 ##### Aanbevelingen met betrekking tot historie
 
-1. Inhoud geeft aan dat een geldige levenscyclus samenstellen inderdaad een vraag is die we moeten kunnen beantwoorden. Zie insteek B (excl. antwoord). 
+1. Inhoud geeft aan dat een geldige levenscyclus samenstellen inderdaad een vraag is die we moeten kunnen beantwoorden. Zie hoofdstuk Historie - insteek B (onderin). 
 
 2.  De implementatie maakt gebruik van een vertaalspecificatie om historie uit verschillende bronnen in elkaar te schuiven. 
 - Gebruik insteek A voor tijdreis vragen op een SOR Gebouw conform de NL API strategie 
