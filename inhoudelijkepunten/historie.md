@@ -40,7 +40,7 @@ De uit te werken bijzondere punten voor historie en tijdreizen zijn:
 4. Mutatie verschillen, met name t.a.v. beeindigen van objecten, wat bv. de BGT doet met een einddatum geldigheid en de BAG met een eindstatus. 
 5. Hoe schuif je versies van objecten uit verschillende BR's in elkaar. Wat is het algoritme. 
 
-#### Ad 0. definities van tijdslijn geldigheid en tijdslijn registratie 
+**Ad 0. definities van tijdslijn geldigheid en tijdslijn registratie** 
 
 Zie NEN3610 2021/2022 historie. 
 
@@ -48,12 +48,12 @@ Merk op:
 - Elke Landelijke Voorziening die een verzameling is van een BR heeft een eigen tijdslijn van verwerking in de LV. We onderkennen dus tijdstipRegistratie bij de bronhouder en tijdstipRegistratie bij de LV.
 - Van elk gegeven houden we het registratie tijdstip bij. Dit geldt ook voor wanneer een beginGeldigheid of eindGeldigheid is geregisteerd, in een BR en in een LV. Elke versie van een object heeft een begin geldigheid, en het tijdstip van de registratie van een versie van een object geeft (ook) aan wanneer deze begin geldigheid is geregistreerd. Evenzo geldt dit voor de einde geldigheid, het tijdstip waarop eind geldigheid geregistreerd wordt moet bekend zijn en eind registratie geeft (ook) aan wanneer deze eind geldigheid is geregistreerd. 
 
-#### Ad 1. in elkaar schuiven van versies van objecten uit meerdere BR's of bronnen
+**Ad 1. in elkaar schuiven van versies van objecten uit meerdere BR's of bronnen**
 
 Een SOR object kan en mag meerdere identificaties hebben. Dit is ook handig, want dan in de link naar de BR ook direct bekend. 
 - Wanneer een SOR object meerdere identificaties heeft, dan betekent dit dat je elk afzonderlijk kan gebruiken als identificatie, en dat de objecten uit de onderliggende BR's over hetzelfde SOR object en hetzelfde object in de werkelijkheid gaat. 
 
-#### Ad 2. niet elke geo-BR kent nu beide tijdslijnen  
+**Ad 2. niet elke geo-BR kent nu beide tijdslijnen**  
 
 Om de geldigOp tijdreis vraag te kunnen stellen moet een bron weten wanneer de gegevens geldig zijn. Elke BR hoort te weten wanneer de gegevens die erin geregistreerd zijn geldig zijn. Deze tijdslijn geldigheid wordt echter niet altijd fysiek vastgelegd. Als dit niet zo is, dan is het nodig om deze af te leiden. Vertaal dan wat er geregistreerd in de BR naar de gevraagde tijdslijnen. 
 
@@ -73,7 +73,7 @@ VERVOLG NODIG: BGT vertaalspecificatie naar de tijdslijn geldigheid. De BGT kan 
 
 Aanname is dat de BGT dit kan en doet. 
 
-#### Ad 3. Niet elke geo-BR heeft voor de tijdslijn geldigheid hetzelfde dataype
+**Ad 3. Niet elke geo-BR heeft voor de tijdslijn geldigheid hetzelfde dataype**
 
 Vertrekpunt van de SOR is dat een afnemer een vraag stelt: welke gegevens zijn er geldig op een bepaalde datum, veelal vandaag. Een gewone afnemer gaat niet zo snel een timestamp opgeven in deze vraag. Voor basisregistraties worden besluiten ook genomen op dagbasis. Het is wel zo dat als er twee versies van een object op dezelfde dag geldig zijn/worden dat de laatste van de twee het antwoord op de vraag: wat is er vandaag geldig, is. 
 
@@ -101,12 +101,12 @@ Advies: gezien het groeipad willen we onderzoeken of c) kan.
 
 KEUZE: C
 
-####  Ad 4. Mutatie verschillen
+**Ad 4. Mutatie verschillen**
 
 Wanneer een object wordt beeindigd en de BR geen eindstatus kent, registreer/oof leidt af, een extra versie met wel een eindstatus. 
 Opm. het is aan de BR om te kiezen of er wel of niet een versie met een eindstatus wordt geregistreerd of dat deze wordt afgeleid. 
 
-#### Ad. 5 Hoe schuif je versies van objecten uit verschillende BR's in elkaar
+**Ad. 5 Hoe schuif je versies van objecten uit verschillende BR's in elkaar**
 
 Onderstaande een verkenning. Uitgaand van alle genoemde keuzes in de voorliggende tekst. 
 
