@@ -23,12 +23,14 @@ Vertalingsregels kunnen betrekking hebben op vertalingen tussen de volgende elem
 
 In basisregistratie | In SOR | Voorbeeld
 --------------------|--------|----------
-waardelijst waarde | waardelijst waarde | Simpel geval: BRT-Gebouw.typeGebouw `Toren` = SOR-Gebouw.type `Toren`. Het komt ook voor dat de waarde in de bronregistratie een nauwer begrip is dan in de SOR.
+waardelijst waarde | waardelijst waarde | Simpel geval: BRT-Gebouw.typeGebouw `Toren` = SOR-Gebouw.type `Toren`. Het komt ook voor dat de waarde in de bronregistratie een nauwer begrip lijkt te zijn van een waarde in de SOR, bijvoorbeeld: BRT-Gebouw.typeGebouw `Boortoren` < (specifieker dan) SOR-Gebouw.type `Toren`\*. Soms lijkt er een relatie te zijn tussen de waardes van lijsten die behoren tot verschillende objecttypes. In deze gevallen is extra aandacht nodig voor het mappen en afleiden van attributen/relaties. 
 objecttype | objecttype | BAG Pand = SOR Gebouw
-attribuutsoort waarde | attribuutsoort waarde | BAG Pand `oorspronkelijk bouwjaar` = SOR Gebouw `oorsponkelijk bouwjaar`
-waardelijst waarde | objecttype | BGT-BegroeidTerreindeel.fysiekvoorkomen `heide` = SOR objecttype `Heide`
+attribuutsoort waarde | attribuutsoort waarde | BAG-Pand.oorspronkelijk bouwjaar `<waarde>` = SOR-Gebouw.oorsponkelijk bouwjaar `<waarde>`
+waardelijst waarde | objecttype | BGT-BegroeidTerreindeel.fysiekvoorkomen `heide` = SOR-Heide. 
 objecttype | waardelijst waarde | nog niet gevonden
 waardelijst waarde | attribuutsoort waarde | nog niet gevonden
 attribuutsoort waarde | waardelijst waarde | WOZ-object.aanduiding_repeterend `ja` = SOR-Gebouw.aard `repeterend`
 objecttype | attribuutsoort waarde | nog niet gevonden
 attribuutsoort waarde | objecttype | WOZ `bouwlaag` attribuut met getalswaarde wordt in SOR objecttype `Bouwlaag` met eigen 2.5D geometrie. NB hierbij moet de geometrie afgeleid worden.
+
+\*Idealiter zou deze nadere relatie al in de context van de registratie worden gespecificeerd, echter zijn zulke hierarchische lijsten niet beschikbaar. Bij bevragingen vanuit de SOR is dit wel belangrijk, vooral wanneer er vanuit de SOR nadere relaties bestaan met waardes/concepten uit verschillende registraties - gebruikers hebben deze vastlegging nodig wanneer ze niet bekend zijn met de inhoud van alle onderliggende registraties. 
