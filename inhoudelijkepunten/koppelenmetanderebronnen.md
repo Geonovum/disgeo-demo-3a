@@ -11,7 +11,7 @@ Manieren van koppelen:
 - Deze koppeling zou een bron object met een SOR object kunnen koppelen, die het SOR object niet verandert en het eigen bronobject niet verandert. Je zou dit een koppelklasse kunnen noemen. 
 
 Voorbeelden van deze koppelingen zijn: 
-- De EAN-BAG koppeling (beheerde relatie)  
+- De EAN-BAG koppeling (beheerde relatie vanuit een eigen object uit de eigen bron naar een BR/SOR object)  
 - De BRK-BAG koppeling (koppelklasse die beide bronnen niet aanpast) 
 
 Nadat de koppeling is gelegd, moet deze ook beheerd worden. Maar zodra de koppeling er is, kunnen gegevens uit de SOR en uit de "andere" bron bij elkaar gebracht worden. 
@@ -28,7 +28,7 @@ _Optie 1: andere bronnen koppelen met de SOR, en niet andersom_
 Een SOR object heeft een identificatie en andere bronnen koppelen hiermee. Wanneer er informatieproducten worden gemaakt, kan dit product putten uit alle bronnen, waar de SOR er een van is. 
 
 Voordelen: 
-- Er is geen impact op de SOR 
+- Er is geen impact op de SOR, maar het koppelt wel beide bronnen aan elkaar
 - Er ontstaat een eco-systeem waarmee informatie uit bronnen gekoppeld kan worden met de SOR en de BR's 
 
 Implicaties: 
@@ -41,30 +41,47 @@ Nadeel: deze aanpak standaardiseert niet sterk.
 
 _Optie 2: modelleer de gegevens mee in een SOR Gebouw_ 
 
-Een SOR object krijgt extra gegevens erbij. 
+Een SOR object krijgt extra gegevens erbij. Dit is vooral geschikt wanneer er een informatieproduct gemaakt wordt die twee bronnen combineert (zoals de SOR zelf ook doet door meerdere BR's met elkaar te combineren). Een product leverancier zou dit kunnen doen of de partij die de andere bron(nen) ontsluit.
 
 Voorwaarden: 
-- maak duidelijk wat de herkomst van het gegeven is uit het energie domein (en niet uit een BR) 
-- de informatievoorziening die de energie gegevens levert moet te bevragen zijn door de SOR 
+- Maak goed duidelijk wat de herkomst van het gegeven is qua bron - uit de SOR of uit het energie domein 
+- In de implementatie zal dit, vanwegen het bijhouden van historie, nodig zijn om in je eigen object historie bij te houden op dezelfde manier zoals de SOR dit doe.t 
 
 Voordeel: 
-- het volstaat voor afnemers om een SOR Gebouw op te vragen. 
+- het volstaat voor afnemers om het informatieproduct op te vragen
+- een afnemer hoeft niet de bronnen apart af te lopen en zelf de software te ontwikkelen 
+- de bron beheerder en de SOR beheerder kunnen er samen voor zorgen dat het informatieproduct functioneel helemaal goed/juist is, afnemers hoeven dit niet te doen 
 
 Implicaties: 
-- de verantwoordelijk van het meeleveren van gegevens komt bij de SOR te liggen (in overleg uiteraard) 
-- de eisen aan gegevens voor BR's gaan ook gelden voor de informatievoorziening die de energie gegevens levert, zoals de beschrijving en de standaarden die hiervoor gelden, de historie tijdslijnen en tijdreis mogelijkheden) 
+- de verantwoordelijkheid van het meeleveren van gegevens komt bij de informatieproduct leverancier te liggen (in overleg met de SOR) 
+- de eisen aan gegevens voor BR's gaan ook gelden voor de informatievoorziening die het informatieprodcut levert levert, zoals de beschrijving en de standaarden die hiervoor gelden, de historie tijdslijnen en tijdreis mogelijkheden). 
+
+Aandachtspunt: het is voor afnemers wat lastiger om te zien welke gegevens van de SOR zijn en welke van een andere bron. Spendeer dus extra aandacht aan het goed beschrijven van de inhoud van het product en aan de (semantische) correctheid van het combineren van de gegevens. 
+
+Deze aanpak standaardiseert goed.  
 
 _Optie 3: extend het SOR object en voeg je eigen gegevens toe_ 
 
-Je legt dan geen koppeling, maar je extend het SOR object. Dit kan alleen als je echt gegevens wilt toevoegen aan SOR Gebouw, zonder eigen objecttype te introduceren. In de implementatie zal dit, vanwegen het bijhouden van historie, toch lijken op 1 van de 2 eerder genoemde manieren van koppelen. 
+Je legt dan geen relatie, maar je extend het SOR object. 
 
-_Andere gedachtes_
+Voorwaarde: 
+- Dit kan alleen als je echt objecttype ook overeenkomt met wat er in de SOR onder een Gebouw wordt verstaan, maar als dat zo is dan is dit semantisch direct goed geregeld. 
+- In de implementatie zal dit, vanwegen het bijhouden van historie, nodig zijn om in je eigen object historie bij te houden op dezelfde manier zoals de SOR dit doe.t 
 
-De genoemde opties kennen eigen nadelen en voordelen. Als we op zoek gaan naar best of both worlds zou je kunnen denken aan: 
+Voordeel; 
+- Het is direct duidelijk dat alle definities en afbakeningen van de SOR ook gelden voor de extensie (de specialisatie is je eigen object, het SOR Gebouw is de generalisatie)
 
-- Modelleer het SOR object met alleen SOR gegevens, en maak het mogelijk om subtypes hiervan te modelleren met daarin extra gegevens. 
+Deze aanpak standaardiseert goed.  
 
-- Modelleer het SOR object met alleen SOR gegevens, en links op naar andere bronnen die aangesloten zijn/worden op de SOR en stel hiervoor aansluitvoorwaarden. 
+_Optie 4: koppelklasse_
 
-Bij aansluitvoorwaarden kan je denken aan: dat de SOR en andere bronnen aan dezelfde standaarden voldoen wat betreft modellering, historie en tijdreizen en andere standaarden die nodig zijn om te komen tot een samenhangend stelsel van BR en niet-Br bronnen, waarin afnemers het ook ervaren als een samenhangend stelsel.   
+Maak een nieuw objecttype en noem deze: KoppelingSORMyObject. Leg een relatie naar een SOR object en naar je eigen MyObject. 
+
+Voordelen: 
+- de SOR en je eigen objecten worden niet geraakt, op geen enkele manier, maar er is wel een koppeling. 
+- je kan de historie van de koppeling los beheren 
+
+_Algemeen aandachtspunt_
+
+Om standaardisatie goed voor elkaar te krijgen zouden we kunnen denken aan aansluitvoorwaarden. Bij aansluitvoorwaarden kan je denken aan: dat de SOR en andere bronnen aan dezelfde standaarden voldoen wat betreft modellering, historie en tijdreizen en andere standaarden die nodig zijn om te komen tot een samenhangend stelsel van BR en niet-Br bronnen, waarin afnemers het ook ervaren als een samenhangend stelsel.   
 
