@@ -7,6 +7,7 @@ Bij dit inhoudelijk punt wordt gekeken hoe gegevens uit verschillende onderligge
 Een uniforme manier voor afnemers om te zien:
 
 1) wanneer gegevens geldig zijn en wanneer deze gegevens geregistreerd/beschikbaar zijn
+
 2) om een tijdreis vraag te stellen
 
 Deze tijdreisvragen zijn (ook) los aan de basisregistraties te stellen. In deze high-5 echter wordt de tijdreis vraag "door een afnemer" 1x gesteld aan de SOR c.q. het SOR object Gebouw, en wordt deze tijdreis "onder water" aan de BR's gesteld. Hierna worden de gegevens van de BR's over een Gebouw die op de gevraagde datums geldig en beschikbaar zijn "in elkaar geschoven". De specificatie voor dit in elkaar schuiven en de uitkomst ervan wordt hieronder beschreven. 
