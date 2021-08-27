@@ -14,7 +14,7 @@ Deze tijdreisvragen zijn (ook) los aan de basisregistraties te stellen. In deze 
 
 Historie: hiermee wordt bedoeld de tijdslijn geldigheid en de tijdslijn registratie (t.b.v. zie 1 en 2).  
 
-Opmerking: Buiten scope van deze uitwerking: levensduur van het object.  
+Opmerking: In scope zijn versies van objecten en de geldige levenscyclus van een object. Buiten scope van deze uitwerking: levensduur van het object.  
 
 ### Uitgangspunten 
 
