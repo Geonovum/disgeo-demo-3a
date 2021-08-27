@@ -523,7 +523,7 @@ _Tussenstap_: geldige levenscyclus WOZ op beschikbaarOp vandaag 2021
 
 _Tussenstap_: geldige levenscyclus SOR Gebouw op beschikbaarOp vandaag 2021
 
-Berekend. 
+Berekend: 
      
 | ID BAG  | ID WOZ |  BG          | EG             | TR           | ER             |  Waarde BAG  | Waarde WOZ |
 |---------|--------|--------------|----------------|--------------|----------------|--------------|------------| 
@@ -571,7 +571,7 @@ Deze is wel anders bij deze tijdreis in vergelijking tot de eerdere tijdreizen.
 
 Tussenstap: geldige levenscyclus SOR Gebouw op 01-01-2020.
      
-Berekend.
+Berekend:
        
 | ID BAG  | ID WOZ |  BG          | EG             | TR           | ER           |  Waarde BAG  | Waarde WOZ |
 |---------|--------|--------------|----------------|--------------|--------------|--------------|------------| 
