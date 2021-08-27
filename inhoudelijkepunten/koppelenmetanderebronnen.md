@@ -6,7 +6,7 @@ We noemen de niet-SOR bronnen in onderstaande tekst: andere bronnen.
 
 De belangrijkste stap is om eerst een betrouwbare koppeling te leggen van een andere bron naar de SOR, al dan niet via de BAG, de BGT, de WOZ. Dit is op zichzelf niet eenvoudig. je kan hierbij denken aan een koppeling met een matching op basis van adres, geometrie, of beide. 
 
-### Manieren van koppelen: 
+### Manieren van koppelen 
 
 - Deze koppeling zou een beheerde relatie kunnen zijn vanuit een bron object naar een SOR object. 
 - Deze koppeling zou een bron object met een SOR object kunnen koppelen, die het SOR object niet verandert en het eigen bronobject niet verandert. Je zou dit een koppelklasse kunnen noemen. 
@@ -88,6 +88,13 @@ Voordelen:
 
 Nadeel: deze aanpak standaardiseert niet sterk. 
 
-_Algemeen aandachtspunt_
+### Aanbeveling 
 
-Om standaardisatie goed voor elkaar te krijgen zouden we kunnen denken aan aansluitvoorwaarden. Bij aansluitvoorwaarden kan je denken aan: dat de SOR en andere bronnen aan dezelfde standaarden voldoen wat betreft modellering, historie en tijdreizen en andere standaarden die nodig zijn om te komen tot een samenhangend stelsel van BR en niet-BR bronnen, waarin afnemers het ook ervaren als een samenhangend stelsel.   
+Voor afnemers is het van belang dat gegevens en modellering er hetzelfde uitziet. Dit is voor de SOR gestandaardiseerd, maar voor andere bronnen nog niet. 
+
+Om standaardisatie t.b.v. afnemers goed voor elkaar te krijgen zouden we kunnen denken aan aansluitvoorwaarden. Bij aansluitvoorwaarden kan je denken aan dat de SOR en andere bronnen aan dezelfde standaarden voldoen wat betreft:
+- modellering
+- historie (ontsluiten) en tijdreizen 
+- andere standaarden die nodig zijn om te komen tot een samenhangend stelsel van BR en niet-BR bronne
+
+Zodat afnemers het geheel ook ervaren als een samenhangend stelsel. Het is de vraag of dergelijke aansluitvoorwaarden afgesproken kunnen worden, maar dit lijkt wel wenselijk. 
