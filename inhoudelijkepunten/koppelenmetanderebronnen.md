@@ -81,7 +81,8 @@ Voordelen:
 - de SOR en je eigen objecten worden niet geraakt, op geen enkele manier, maar er is wel een koppeling. 
 - je kan de historie van de koppeling los beheren 
 
+Nadeel: deze aanpak standaardiseert niet sterk. 
+
 _Algemeen aandachtspunt_
 
-Om standaardisatie goed voor elkaar te krijgen zouden we kunnen denken aan aansluitvoorwaarden. Bij aansluitvoorwaarden kan je denken aan: dat de SOR en andere bronnen aan dezelfde standaarden voldoen wat betreft modellering, historie en tijdreizen en andere standaarden die nodig zijn om te komen tot een samenhangend stelsel van BR en niet-Br bronnen, waarin afnemers het ook ervaren als een samenhangend stelsel.   
-
+Om standaardisatie goed voor elkaar te krijgen zouden we kunnen denken aan aansluitvoorwaarden. Bij aansluitvoorwaarden kan je denken aan: dat de SOR en andere bronnen aan dezelfde standaarden voldoen wat betreft modellering, historie en tijdreizen en andere standaarden die nodig zijn om te komen tot een samenhangend stelsel van BR en niet-BR bronnen, waarin afnemers het ook ervaren als een samenhangend stelsel.   
