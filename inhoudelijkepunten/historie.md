@@ -4,9 +4,9 @@ Bij dit inhoudelijk punt wordt gekeken hoe gegevens uit verschillende onderligge
 
 ### Doel
 
-Een uniforme manier voor afnemers om te zien:
+Een uniforme manier voor afnemers om:
 
-1) wanneer gegevens geldig zijn en wanneer deze gegevens geregistreerd/beschikbaar zijn
+1) om te zien wanneer gegevens geldig zijn en wanneer deze gegevens geregistreerd/beschikbaar zijn
 
 2) om een tijdreis vraag te stellen
 
