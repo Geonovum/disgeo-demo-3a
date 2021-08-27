@@ -1,5 +1,6 @@
 ## Modelleren van historie en beantwoorden van tijdreis vragen 
 
+Bij dit inhoudelijk punt wordt gekeken hoe gegevens uit verschillende onderliggende bronnen te combineren zijn, in het bijzonder voor aspecten die te maken hebben met de historie van gegevens en tijdreizen. De punten waarop gelet moet worden zijn benoemd en er is een vertaal specificatie gemaakt om historie "in elkaar te schuiven". 
 
 ### Doel
 
