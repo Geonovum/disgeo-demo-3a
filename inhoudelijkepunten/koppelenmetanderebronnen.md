@@ -4,7 +4,7 @@ De bronnen die onder de SOR liggen zijn andere bronnen dan waar de energiegegeve
 
 We noemen de niet-SOR bronnen in onderstaande tekst: andere bronnen. 
 
-De belangrijkste stap is om eerst een betrouwbare koppeling te leggen van een andere bron naar de SOR, al dan nite via de BAG, de BGT, de WOZ. Dit is op zichzelf niet eenvoudig. je kan hierbij denken aan een koppeling met een matching op basis van adres, geometrie, of beide. 
+De belangrijkste stap is om eerst een betrouwbare koppeling te leggen van een andere bron naar de SOR, al dan niet via de BAG, de BGT, de WOZ. Dit is op zichzelf niet eenvoudig. je kan hierbij denken aan een koppeling met een matching op basis van adres, geometrie, of beide. 
 
 Manieren van koppelen: 
 - Deze koppeling zou een beheerde relatie kunnen zijn vanuit een bron object naar een SOR object. 
