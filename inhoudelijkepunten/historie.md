@@ -22,7 +22,7 @@ Opmerking: In scope zijn versies van objecten en de geldige levenscyclus van een
 - Conform MIM - maar MIM kent nog geen metadata, we volgen de huidige stand van de expertgroep modellering SOR 
 - Conform NEN3610 - zie modellering historie aldaar 
 - Conform de specificatie van een tijdreis zoals beschreven in de NL API strategie (en hoe dit bv. in de LVBAG werkt, die deze implementeert).  
-- In lijn met de SOR en met hoe de BR's nu grotendeels werken 
+- In lijn met de SOR en met hoe de BR's nu werken (de data die beschikbaar is of gebschikbaar gemaakt zou kunnen worden)
 
 Dit betekent voor dit inhoudelijke punt: 
 - We stellen het object centraal - d.w.z. we willen gegevens over het gebouw in de werkelijkheid leveren, en we doen dit door de registratie gegevens over dit object te leveren.
