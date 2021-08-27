@@ -2,8 +2,6 @@
 
 Hieronder staat een overzicht van inhoudelijke puntwn die tijdens de High-5 in meer of mindere mate aan de orde zijn geweest. Sommige punten worden in de navolgende hoofdstukken uitgewerkt.
 
-### Transponering
-
 _Wel 1 op 1_ 
 
 De gegevens die wel rechttoe rechtaan 1 op 1 te mappen zijn hebben we niet meegenomen in deze high-5. 
@@ -11,6 +9,9 @@ De gegevens die wel rechttoe rechtaan 1 op 1 te mappen zijn hebben we niet meege
 _Niet 1 op 1_
 
 Hieronder vallen gegevens die niet 1 op 1 van een BR over te nemen zijn naar de SOR. Denk hierbij vooral aan afgeleide gegevens of geaggregeerde gegevens of aan gegevens die een betere benaming hebben gekregen. De modelleering hiervan en de specificatie voor de afleiding worden bekeken. 
+
+Dit wordt in dit document ook wel transponering genoemd, deze term wordt ook gebruikt in EMSO door SOR Inhoud. 
+
 
 ### Naamswijzigingen
 
