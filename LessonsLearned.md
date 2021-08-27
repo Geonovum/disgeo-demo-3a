@@ -1,5 +1,7 @@
 ## LessonsLearned
 
+Aan deze wordt nog gewerkt. 
+
 ### Inzichten
 
 Deze High-5 heeft een  aantal inzichten opgeleverd die hier worden samengevat:
