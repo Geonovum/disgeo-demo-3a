@@ -482,24 +482,59 @@ TI staat voor tijdstip inactief. Deze gegevens waren geldig tot 01-05-2019 maar 
 
 --> Schuif deze in elkaar. 
 
-1. Controleer of elke levenscyclus alleen geldige gegevens bevat. 
+1. Controleer of elke levenscyclus alleen geldige gegevens/versies bevat. 
    BAG: geen gegevens met bv. tijdstipNietBAG of tijdstip inactief. 
    WOZ: ... 
    
-2. Zet alle BG datums op een rij, en hou per BG de TR en de versie en de BR bij. Dit is het aantal versies die we gaan maken. 
-
-3. Zet alle EG datums op een tijd en hou bij elke EG bij welke ER erbij hoort. 
-
-4. Maak een (1e) versie met de 1e begindatum en bijbehorende TR 
-   en de 1e einddatum geldigheid en bijbehorende ER
-   en de functionele data die in de versie staat die bij de BG hoort, beperkt tot de functionele data die nodig is voor het SOR object     
+2. Zet alle bron-versies van bron 1 en bron 2 in een lijst op begin datum, en hou per versie de BG de TR (er) bij. 
+   Als twee versies dezelfde BG hebben, sorteer ze op TR (oudste eerst). 
+   We hebben nu een bron-versie-lijst.
    
-   Maak een (2e) versie met de 2e begindatum en bijbehorende TR 
-   en de 2e einddatum geldigheid en bijbehorende ER
-   en de functionele data die in de versie staat die bij de BG hoort, beperkt tot de functionele data die nodig is voor het SOR object 
-   controleer of de BG overeenkomt met de EG van de vorige versie 
+   Per BG-TR combinatie gaan we 1 versie maken, oftewel als uit bron 1: X versies komen en uit bron 2: Y versies dan maken we X + Y versies.  
+      
+3. De einddatums van deze versies moeten nog bepaald worden. Zet alle EG datums op een rij in een bronnen-EG-lijst en hou bij elke EG bij welke ER erbij hoort.   
+
+4. Doorloop de bron-versie-lijst. 
+
+   Neem de 1e versie uit de bron-versielijst: maak een 1e SOR versie met deze BG en bijbehorende TR en plaats deze in de SOR-versie lijst.  
+     
+   Neem de 2e versie uit de bron-versielijst: maak een 2e SOR versie met deze BG en bijbehorende TR en plaats deze in ed SOR-versie lijst.  
+
+   Enz. 
    
-   Enz.       
+ 5. Bepaal de EG van de SOR-versies in de SOR-versielijst. 
+
+    Geef de 1e SOR versie als EG de datum die voorkomt als BG in de 2e versie. 
+
+    Geef de 2e SOR versie als EG de datum die voorkomt als BG in de 3e versie. 
+ 
+    Enz. 
+
+ 6. Bepaal de ER van de SOR-versies in de SOR-versielijst. 
+
+    Doorloop voor elke SOR-versie de bron-EG/ER lijst.     
+    
+    Als een SOR-versie een EG heeft: 
+    - Zoek de 1e EG op in de bronnen-EG-lijst die overeenkomt met de EG van de SOR-versie. 
+    - Bij een match: neem de bijbehorende ER over naar de SOR-versie 
+    - Bij geen match: neem als TR de TR die hoort bij de BG van de volgende SOR-versie. 
+
+  7. Controleer dat de tijdslijn geldigheid tussen de SOR versies netjes op elkaar aansluiten. 
+     1e SOR-versie EG = 2e SOR versie BG. 
+     2e SOR-versie EG = 3e SOR versie BG. 
+     laatste SOR-versie EG = leeg en heeft een eindstatus.   
+
+  8. Bepaal de functionele gegevens van de SOR-versie.  
+   
+     Bepaal voor elke SOR-versie: 
+     - is er overlap op de periode BG-EG van de SOR-versie met een geldige versie van bron 1? Zo ja, voeg de gegevens van deze bron-versie toe aan de SOR-versie. 
+     - is er overlap op de periode BG-EG van de SOR-versie met een geldige versie van bron 2? Zo ja, voeg de gegevens van deze bron-versie toe aan de SOR-versie. 
+      
+     Enz. 
+
+     Bij meerdere SOR-versies op 1 dag: TODO.    
+  
+Wellicht zijn er betere algoritmes denkbaar. Dat kan uiteraard besproken worden.   
 
 **Tijdreis vragen**
 
