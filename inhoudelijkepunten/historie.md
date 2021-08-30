@@ -516,7 +516,7 @@ TI staat voor tijdstip inactief. Deze gegevens waren geldig tot 01-05-2019 maar 
     
     Als een SOR-versie een EG heeft: 
     - Zoek de 1e EG op in de bronnen-EG-lijst die overeenkomt met de EG van de SOR-versie. 
-    - Bij een match: neem de bijbehorende ER over naar de SOR-versie 
+    - Bij een match: neem de bijbehorende ER over naar de SOR-versie. Verwijder deze EG/ER entry uit de bronnen-EG-lijst 
     - Bij geen match: neem als TR de TR die hoort bij de BG van de volgende SOR-versie. 
 
   7. Controleer dat de tijdslijn geldigheid tussen de SOR versies netjes op elkaar aansluiten. 
