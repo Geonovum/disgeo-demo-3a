@@ -1,5 +1,8 @@
 ## Gegevens koppelen tussen een SOR Gebouw en een andere informatiebron  
 
+
+![voorbeeld-informatie](media/voorbeeld-informatie.png)
+
 De bronnen die onder de SOR liggen zijn andere bronnen dan waar de energiegegevens worden bijgehouden. Wat in ieder geval niet de bedoeling is om de data uit deze bronnen over te nemen en op te slaan. De bedoeling is om de verschillende bronnen te bevragen en de data uit deze bronnen in samenhang te kunnen leveren aan afnemers. In dit geval gaat het niet om het samenhang aanbrengen van data van de BR's onder de SOR, maar van het aanbrengen van samenhang van data uit ook andere bronnen met de data van de SOR.  
 
 We noemen de niet-SOR bronnen in onderstaande tekst: andere bronnen. 
