@@ -90,11 +90,4 @@ Nadeel: deze aanpak standaardiseert niet sterk.
 
 ### Aanbeveling 
 
-Voor afnemers is het van belang dat gegevens en modellering er hetzelfde uitziet. Dit is voor de SOR gestandaardiseerd, maar voor andere bronnen nog niet. 
-
-Om standaardisatie t.b.v. afnemers goed voor elkaar te krijgen zouden we kunnen denken aan aansluitvoorwaarden. Bij aansluitvoorwaarden kan je denken aan dat de SOR en andere bronnen aan dezelfde standaarden voldoen wat betreft:
-- modellering
-- historie (ontsluiten) en tijdreizen 
-- andere standaarden die nodig zijn om te komen tot een samenhangend stelsel van BR en niet-BR bronne
-
-Zodat afnemers het geheel ook ervaren als een samenhangend stelsel. Het is de vraag of dergelijke aansluitvoorwaarden afgesproken kunnen worden, maar dit lijkt wel wenselijk. 
+Voor de aanbevelingen wordt verwezen naar paragraaf [Aanbevelingen met betrekking tot koppelen](#aanbevelingen-met-betrekking-tot-koppelen)

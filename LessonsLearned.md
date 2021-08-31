@@ -24,6 +24,17 @@ Om te komen tot een geharmoniseerd / geconsolideerd Gebouw in de SOR, op basis v
 
 Aanbeveling: Begin met BAG + BGT harmonisatie. Voor het harmoniseren van WOZ gebouwdata in de SOR moet, indien dat binnen scope is, iemand met veel WOZ kennis bij de volgende high 5 aanwezig zijn om de vertaal en afleidregels scherper te maken. 
 
+##### Aanbevelingen met betrekking tot koppelen
+
+Voor afnemers is het van belang dat gegevens en modellering er hetzelfde uitziet. Dit is voor de SOR gestandaardiseerd, maar voor andere bronnen nog niet. 
+
+Om standaardisatie t.b.v. afnemers goed voor elkaar te krijgen zouden we kunnen denken aan aansluitvoorwaarden. Bij aansluitvoorwaarden kan je denken aan dat de SOR en andere bronnen aan dezelfde standaarden voldoen wat betreft:
+- modellering
+- historie (ontsluiten) en tijdreizen 
+- andere standaarden die nodig zijn om te komen tot een samenhangend stelsel van BR en niet-BR bronne
+
+Zodat afnemers het geheel ook ervaren als een samenhangend stelsel. Het is de vraag of dergelijke aansluitvoorwaarden afgesproken kunnen worden, maar dit lijkt wel wenselijk. 
+
 
 #### Aanbevelingen voor het vervolg van de High-5
 
