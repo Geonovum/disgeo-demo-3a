@@ -36,7 +36,7 @@ https://en.wikipedia.org/wiki/QVT
 Een declaratatieve transformatietaal waarin je kunt uitdrukken wat de transformatieregels zijn om van een bronformaat naar een doelformaat te komen. Dit is echter een uitdrukkingsvorm op technisch implementatie-niveau en werkt alleen met XML input. 
 
 ### PROV
-Met PROV ([[PROV-DM]] en [[PROV-O]]) kun je vast leggen hoe gegevens van elkaar zijn afgeleid. Dit is vergelijkbaar met [hoe je dat doet voor informatieobjecten](#modelleerpatroon-voor-de-beschrijving-van-de-afleiding-van-sor-informatieobjecten).
+Met PROV ([[PROV-DM]] en [[PROV-O]]) kun je vastleggen hoe gegevens van elkaar zijn afgeleid. Dit is vergelijkbaar met [hoe je dat doet voor informatieobjecten](#modelleerpatroon-voor-de-beschrijving-van-de-afleiding-van-sor-informatieobjecten).
 
 Voor het vastleggen van de herkomst van een gegeven, moeten we het gegeven als `PROV Entiteit` modelleren. Dit betekent dat we een individueel gegeven als object moeten kunnen beschrijven, zodat we deze kunnen voorzien van extra eigenschappen. Hoe je dit het beste kunt doen moet verder onderzocht worden.
 
