@@ -35,20 +35,24 @@ https://en.wikipedia.org/wiki/QVT
 ### XSLT
 Een declaratatieve transformatietaal waarin je kunt uitdrukken wat de transformatieregels zijn om van een bronformaat naar een doelformaat te komen. Dit is echter een uitdrukkingsvorm op technisch implementatie-niveau en werkt alleen met XML input. 
 
-### PROV-O
-Heeft een manier om vast te leggen hoe gegevens van elkaar zijn afgeleid.
+### PROV
+Met PROV ([[PROV-DM]] en [[PROV-O]]) kun je vast leggen hoe gegevens van elkaar zijn afgeleid. Dit is vergelijkbaar met [hoe je dat doet voor informatieobjecten](#modelleerpatroon-voor-de-beschrijving-van-de-afleiding-van-sor-informatieobjecten).
 
-[Pano ...]
+Voor het vastleggen van de herkomst van een gegeven, moeten we het gegeven als `PROV Entiteit` modelleren. Dit betekent dat we een individueel gegeven als object moeten kunnen beschrijven, zodat we deze kunnen voorzien van extra eigenschappen. Hoe je dit het beste kunt doen moet verder onderzocht worden.
 
 ### SHACL Rules
-(oa RWS gebruikt dit)
-[...]
+Met [SHACL Rules](https://www.w3.org/TR/shacl-af/#rules) ([[SHACL-AF]]) is het mogelijk om op basis van "shapes" in bestaande in RDF uitgrdrukte gegevens, in combinatie met generatieregels, nieuwe gegevens af te leiden.
 
 ### GraphQL
 In GraphQL specificeer je een standaardschema (schema van de brondata) en een schema hoe je het zou willen hebben. Dat druk je uit in GraphQL queries. Interessant om te verkennen in de volgende high 5. 
 
 Net als XSLT zit dit wel op technisch niveau. Maar je kan verschillende soorten datastores aanspreken. 
 
-### RML
+### RML-achtig
 
-[...]
+Met [RML](https://rml.io/) (RDF Mapping Languague) kun je willekeurige gestructureerde data transformeren naar een doelmodel in RDF. De ingredienten voor een mapping zijn:
+* een manier om data te verkrijgen
+* een manier om over een deel van de data te itereren
+* een mapping naar het doelmodel
+
+Een vergelijkbare mapping-opzet zou ook opgezet kunnen worden voor het transponeren van gegevens. Hiervoor zouden bouwblokken uit RML hergebruikt kunnen worden. RML heeft bijvoorbeeld een rijke mogelijkheid om transformatiefuncties mee te nemen in een mapping op een declaratieve manier.
