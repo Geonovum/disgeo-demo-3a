@@ -1,58 +1,53 @@
-## Inhoudelijke punten
+## Verkenning van inhoudelijke punten
+Tijdens de High-5 is gezamenlijk verkend welke inhoudelijke punten, betreffende het realiseren van de SOR inhoud op basis van de inhoud van de huidige basisregistraties, relevant zijn. Niet al deze punten zijn uitgebreid aan de orde geweest. We beschrijven hieronder de besproken punten en geven aan welke nader zijn uitgewerkt in de volgende hoofdstukken. 
 
-Hieronder staat een overzicht van inhoudelijke puntwn die tijdens de High-5 in meer of mindere mate aan de orde zijn geweest. Sommige punten worden in de navolgende hoofdstukken uitgewerkt.
+### Transponering
 
-_Wel 1 op 1_ 
+Transponering is het omzetten van gegevens uit de huidige basisregistraties naar SOR gegevens. In deze omzetting zijn allerlei gradaties waar te nemen. Soms gaat het om gegevens die rechttoe rechtaan 1 op 1 te mappen zijn. Hieraan hebben we in deze High-5 geen speciale aandacht verleend. Er zijn ook gegevens die niet 1 op 1 van een basisregistratie over te nemen zijn naar de SOR. Denk hierbij vooral aan afgeleide gegevens, geaggregeerde gegevens of aan gegevens die een betere benaming hebben gekregen. Al deze vormen van omzetten van gegevens bij elkaar worden in dit document ook wel transponering genoemd. deze term wordt ook gebruikt in [[EMSO]]. 
 
-De gegevens die wel rechttoe rechtaan 1 op 1 te mappen zijn hebben we niet meegenomen in deze high-5. 
+Een eenvoudige vorm van transponering is het wijzigen van de naam van objecttypen, attribuutsoorten en andere modelelementen. Hierbij bestaan complicerende factoren zoals: 
+- Het samenvoegen van waardelijsten, zoals bijvoorbeeld in de SOR gebeurt met de waardelijsten die de mogelijke statussen van objecten opsommen. Hierbij kan het gaan om hiërarchische lijsten die moeten worden vertaald naar een geaggregeerde status (zie [[EMSO]]).
+- Attribuutsoorten zoals 'type' die meerdere keren voorkomen en dus naamgevingsconflicten kunnen opleveren.
 
-_Niet 1 op 1_
-
-Hieronder vallen gegevens die niet 1 op 1 van een BR over te nemen zijn naar de SOR. Denk hierbij vooral aan afgeleide gegevens of geaggregeerde gegevens of aan gegevens die een betere benaming hebben gekregen. De modelleering hiervan en de specificatie voor de afleiding worden bekeken. 
-
-Dit wordt in dit document ook wel transponering genoemd, deze term wordt ook gebruikt in EMSO door SOR Inhoud. 
-
-
-### Naamswijzigingen
-
-Naamswijzigingen van objecttypen en attribuutsoorten
-- Status van objecten (hiërarchische lijsten) vertalen naar een geaggregeerde status (zie emso)
-- Gebouwzone op basis van WOZ deelobject en de relatie met BAG/BGT
-- Attribuutsoorten zoals 'type' die meerdere keren voorkomen en dus naamgevingsconflicten kunnen opleveren 
+De verschillende aspecten van transponering zijn tijdens deze High-5 bekeken. Zie hiervoor: 
+- [](#vertalingsregels-en-afleidingsregels)
+- [](#inventarisatie-van-manieren-om-vertaalspecificaties-vast-te-leggen)
+- [](#modelleerpatroon-voor-de-beschrijving-van-de-afleiding-van-sor-informatieobjecten)
 
 ### Identificaties
 
-- Op dit moment is er geen DE identificatie van een SOR object. De identificaties van het SOR object als deze niet 1 op 1 in een BR is geregistreerd. De herkomst van een SOR object zijn gegevens van objecten uit BR's met een identificatie. We kunnen niet 3 attributen genaamd identificatie opnemen, zie ook naamswijzigingen maar deze hebben we geisoleerd omdat deze extra speciaal is. Verder speelt de UOI mogelijk een rol.
+Op dit moment is er geen eenduidige identificatie van een SOR object. Als het SOR object niet één op één in een basisregistratie is geregistreerd, heeft het in elke basisregistratie waar het voorkomt een eigen identificatie. Een SOR Gebouw heeft bijvoorbeerd een BAG identificatie, een BGT identificatie en een BRT identificatie. Deze identificaties zijn van belang omdat ze de herkomst van het object duiden. We kunnen echter niet drie attributen genaamd `identificatie` opnemen, dan zou er een naamgevingsconflict ontstaan. Naast deze bronidentificaties is het wellicht ook van belang om een SOR identificatie in te voeren. Hierbij  speelt de UOI mogelijk een rol.
+
+Identificatie van objecten speelt een rol bij de behandeling van historie en tijdreizen, waar we uitgebreider op ingaan in [](#modelleren-van-historie-en-beantwoorden-van-tijdreis-vragen). 
 
 ### Kwaliteit 
 
-Kwaliteit van gegevens en metadata, en het bevestigen hiervan door een bronhouder. Het is hierbij niet de bedoeling om kwaliteitscontroles te modelleren, we doen dit alleen als er op inhoud bepaalde regels gelden voor gegevens of een combinatie van gegevens. 
-- Metadata zoals bronverwijzing, in onderzoek, controlemetadata
+Een ander groot onderwerp dat aandacht vraagt binnen de SOR is de kwaliteit van gegevens, en het bevestigen hiervan door een bronhouder. Het is hierbij niet de bedoeling om kwaliteitscontroles te modelleren, we doen dit alleen als er op inhoud bepaalde regels gelden voor gegevens of een combinatie van gegevens. Het gaat onder andere om metadata die iets over kwaliteit van gegevens zegt, zoals bronverwijzing, in onderzoek, en controlegegevens.
 
-### Consistentie
+Als gegevens in samenhang een bepaalde consistentie behoren te hebben, kunnen er regels worden opgesteld die gaan over een bepaalde combinatie van gegevens. Dit geldt bijvoorbeeld bij functie en gebruiksdoel van een gebouw. Bepaalde functies van een gebouw zijn benoemd in de WOZ - geconstateerde functies - en in de BAG - vergunde functies. Wanneer deze niet in samenspraak met elkaar zijn, is het van belang om dit te weten. Dit is WOZ en BAG kennis, die een afnemer (meestal) niet heeft. Wanneer een verblijfsobject als gebruiksdoel kantoorfunctie heeft en de WOZ constateert dat het gebruikt wordt voor wonen, dan is het feitelijke gebruik niet legitiem. Dit zou bijvoorbeeld kunnen worden uitgewerkt voor het thema wonen. 
 
-Gegevens die in samenhang een bepaalde consistentie behoren te hebben. 
-- Functie, gebruiksdoel. Bepaalde functies van een gebouw zijn benoemd in de WOZ - geconstateerde functies - en in de BAG - vergunde functies. Wanneer deze niet in samenspraak met elkaar zijn, is het van belang om dit te weten. Dit is WOZ en BAG kennis, die een afnemer (meestal) niet weet. Wanneer een verblijfsobject als gebruiksdoel kantoorfunctie heeft en de WOZ constateert het gebruikt wordt voor wonen, dan is het feitelijke gebruik niet legitiem. We werken dit uit voor het thema wonen. 
+Dit onderwerp is niet in zijn totaliteit uitgebreid aan de orde geweest, maar zou voor de volgende High-5, als we met gegevens gaan werken, wellicht geschikt zijn. Deeluitwerkingen zijn hier beschreven: 
+- [](#modelleerpatronen-voor-metadata)
 
 ### Modelleren van gegevens die over registraties hetzelfde moeten zijn (worden)
 
-Modelleren van gegevens over registraties heen standaard/hetzelfde zou moeten zijn, maar dit nu niet zijn. We willen dat het gebruik door afnemers niet onnodig complex/genuanceerd wordt en kijken of dit recht te trekken is. 
-- zie paragraaf [Historie](#modelleren-van-historie-en-beantwoorden-van-tijdreis-vragen)
+Bepaalde generieke gegevens zoals gegevens over historie, levensloop, herkomst, enzovoort zouden over registraties heen gestandaardiseerd moeten zijn, maar zijn dit nu niet. Bij het gebruiken van de basisregistraties in samenhang is dit een belemmering. We willen dat het gebruik door afnemers niet onnodig complex/genuanceerd wordt en kijken of dit recht te trekken is. We hebben daarom in deze High-5 onderzocht hoe je dit soort generieke gegevens zou kunnen modelleren zodat gebruik in samenhang mogelijk is. Dit hebben we uitgewerkt voor het onderwerp historie. 
+
+Zie hiervoor [](#modelleren-van-historie-en-beantwoorden-van-tijdreis-vragen).
 
 
-### afleiden van relaties tussen objecten
+### Afleiden van relaties tussen objecten
 
-Het afleiden van relaties tussen objecten, die geometrisch af te leiden zijn zodat ze (ook) administratief te leggen zijn: 
+De inhoudelijke eisen aan de SOR [[EMSO]] vragen in sommige gevallen om het afleiden van relaties tussen objecten, die nu in de bronregistraties niet aanwezig zijn. Deze relaties zijn (voor een deel) geometrisch af te leiden. Het afleiden van deze relaties en het vervolgens administratief uitdrukken van deze relaties heeft als voordeel dat gebruikers, die in deze relaties geïnteresseerd zijn, dit niet opnieuw hoeven doen. 
+
+Het gaat bijvoorbeeld om:
 - Relateren van gebouwcomponent aan gebouw
 - Relateren van BRT gebouw aan gebouwblok (geometrisch afleiden) 
+
+Dit onderwerp is niet uitgebreid aan de orde geweest, maar zou voor de volgende High-5, als we met gegevens gaan werken, wellicht geschikt zijn.
  
-### beantwoorden van fuctionele vragen van gegevens uit andere bronnen
+### Gegevens uit andere bronnen
 
-Het beantwoorden van fuctionele vragen van gegevens uit andere bronnen dan een BR aan gegevens in een BR. 
-- Energielabels (vaak te koppelen aan BAG, maar niet rechtstreeks aan VBO; aan groep van VBO's)
+Met de SOR willen we ook het stellen van functionele vragen op basis van gegevens uit andere bronnen dan een basisregistratie faciliteren. Daarom moet het mogelijk zijn om externe gegevens te koppelen aan gegevens in een basisregistratie. Dit is niet altijd zo eenvoudig. Een voorbeeld hiervan zijn de energielabels. Deze zijn te koppelen aan BAG, maar niet altijd rechtstreeks aan een verblijfsobject. Regelmatig is er een relatie tussen één energielabel en een hele groep van verblijfsobjecten. 
 
-### Algemene zaken 
-
-- Toepassen SOR modelleerprincipes 
-- De BAG identificatie in de BGT is een relatie, maar is gemodelleerd als een attribuut. 
- 
+Het koppelen van externe gegevens is nader beschreven in [](#gegevens-koppelen-tussen-een-sor-gebouw-en-een-andere-informatiebron).
