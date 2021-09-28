@@ -19,7 +19,7 @@ Deze variant maakt gebruikt van:
 
 ### Variant 2: Graaf reïficatie
 
-In deze variant wordt de historie weergegeven binnen en buiten de graaf structuur.  De graaf structuur bevat de uitspraken over objecten.  De registratieve gegevens over die uitspraken worden toegekend aan de totale graaf waarin de uitspraken over objecten zich bevinden.  Een visuele weergave hiervan is te vinden in Figuur 2.
+In deze variant wordt de historie weergegeven buiten de graaf structuur.  De graaf structuur bevat de uitspraken over objecten.  De registratieve gegevens over die uitspraken worden toegekend aan de totale graaf waarin de uitspraken over objecten zich bevinden.  Een visuele weergave hiervan is te vinden in Figuur 2.
 
 Het afzonderlijk representeren van grafen als op zichzelfstaande entiteiten wordt in linked data “graaf reïficatie” genoemd.
 
@@ -33,7 +33,7 @@ Deze variant maakt gebruik van:
 
 ### Variant 3: Graaf reïficatie + uitspraak reïficatie
 
-In deze variant wordt de historie weergegeven binnen en buiten de graaf.  Binnen de graaf bevinden zich zowel uitspraken over objecten, alsook sommige registratieve gegevens over die uitspraken.  Hiervoor wordt binnen de graaf gebruik gemaakt van uitspraak reïficatie.  Naast de registratieve gegevens binnen de graaf zijn er ook registratie gegevens die over de graaf zelf gaan.  Hiervoor wordt graaf reïficatie toegepast.  Een visuele weergave hiervan is te vinden in Figuur 3.
+In deze variant wordt de historie weergegeven binnen en buiten de graaf.  Binnen de graaf bevinden zich zowel uitspraken over objecten, alsook sommige registratieve gegevens over die uitspraken.  Hiervoor wordt binnen de graaf gebruik gemaakt van uitspraak reïficatie.  Naast de registratieve gegevens binnen de graaf zijn er ook registratiegegevens die over de graaf zelf gaan.  Hiervoor wordt graaf reïficatie toegepast.  Een visuele weergave hiervan is te vinden in Figuur 3.
 
 Deze variant maakt gebruik van:
 1. Standaard RDF triples.
@@ -59,7 +59,7 @@ Deze variant maakt gebruikt van:
 
 ### Variant 5: Ontkoppeling + Data Cube
 
-Deze variant lijkt op variant 4, maar maakt gebruik van de [Data Cube](https://www.w3.org/TR/vocab-data-cube/) standaard om de uitspraken over observaties op een gestandaardideerde manier vast te leggen.  Een visuele weergave hiervan is te vinden in Figuur 5.
+Deze variant lijkt op variant 4, maar maakt gebruik van de [Data Cube](https://www.w3.org/TR/vocab-data-cube/) standaard om de uitspraken over observaties op een gestandaardiseerde manier vast te leggen.  Een visuele weergave hiervan is te vinden in Figuur 5.
 
 ![](../media/historie-soc-data-cube.png)
 
@@ -67,8 +67,10 @@ Deze variant lijkt op variant 4, maar maakt gebruik van de [Data Cube](https://w
 
 ## Vergelijkingstabel
 
-<figure>
   <table>
+    <caption>
+      Tabel 1 ― Vergelijking tussen de voor- en nadelen van de verschillende varianten voor historie representatie in linked data.
+    </caption>
     <thead>
       <tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr>
     </thead>
@@ -80,7 +82,4 @@ Deze variant lijkt op variant 4, maar maakt gebruik van de [Data Cube](https://w
       <tr><th>technische haalbaarheid: reïficatie</th><td>-</td><td>+</td><td>-</td><td>+</td><td>+</td></tr>
     </tbody>
   </table>
-  <figcaption>
-    Tabel 1 ― Vergelijking tussen de voor- en nadelen van de verschillende varianten voor historie representatie in linked data.
-  </figcaption>
-</figure>
+
