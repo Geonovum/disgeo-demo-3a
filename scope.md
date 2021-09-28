@@ -1,43 +1,46 @@
-## Scope van de high 5
+## Scope van de High-5
 
+Tijdens de eerste uren van de High-5 hebben we gezamenlijk de scope besproken aan de hand van enkele scope-bepalende vragen. 
 
-### Scope-bepalende vragen
+### Wat is ons startpunt?
+Het inhoudelijke startpunt voor ons modelleerwerk is het DiS Geo: Eisen aan model samenhangende objectenregistratie document [[EMSO]]. De laatste inzichten van de DisGeo werkgroep Inhoud - Gebouwen zijn daarin beschreven. Voor ons van belang in dat document is ook het hoofdstuk Transitie / transponering, waarin beschreven is wat de relatie is tussen SOR inhoud en de huidige registraties. Hoewel de informatiemodellen van de huidige basisregistraties niet ons startpunt zijn, kijken we er wel naar, om te zien hoe deze zich verhouden tot het gewenste SOR model en wat er aan eventuele afleidingsregels nodig is.
 
+### Hoe zit het met 3D representaties van objecten?
+Voor deze High-5 is 3D buiten scope. We gaan uit van wat je uit de huidige basisregistraties kan halen, eventueel via afleiding. 3D representaties zitten nu niet in een basisregistratie. De 3D basisvoorziening bevat al wel 3D representaties van BAG/BGT objecten en ook de relatie met deze objecten is vastgelegd; het is dus mogelijk om het 3D model bij een object op te vragen. 
 
-Startpunt:
-- Het eisen aan SOR document [[EMSO]]. Dat is de laatste stand van zaken. De laatste inzichten van de DisGeo werkgroep Inhoud - Gebouwen is daarin terechtgekomen. 
-- Zie in dat document vooral ook het hoofdstuk Transitie / transponering. Daar staat de relatie met de huidige registraties. 
-- Dus we nemen niet de informatiemodellen van de huidige BRs als uitgangspunt. Maar we kijken er wel naar, om te zien hoe deze zich verhouden tot het gewenste SOR model en wat er aan eventuele afleidingsregels nodig is.
+### Is de BRT in scope?
+We hebben besloten de BRT te parkeren voor deze High-5. De BRT valt wel binnen de scope van de SOR; maar de relatie met BGT en BAG is niet eenvoudig te leggen. In het IGO traject is een analyse gedaan van de verhouding tussen BRT objecten en functies met andere basisregistraties. Zij hebben onder andere  gevonden dat er een n op n relatie is tussen BRT en BAG/BGT. Er staan ook gebouwen in de BRT die niet in de BAG/BGT staan. De BRT transponering staat bovendien niet in [[EMSO]] beschreven.
 
+Hoewel niet eenvoudig, is het wel zeer interessant om in een latere fase naar de BRT te kijken in de context van SOR gebouwen. Je zou aan de hand van het object Gebouw kunnen onderzoeken hoe generalisatie in de semantische laag kan worden gedefinieerd. BRT is tevens interessant omdat het rijk is aan functies, ook voor gebouwen. In de SOR zijn deze BRT gebouwfuncties in samenhang gebracht met de functiebeschrijvingen in de WOZ. Dit heeft geresulteerd in de type lijst bij SOR Gebouw. Gekeken moet worden hoe deze informatie kan worden afgeleid uit de BRT en de WOZ. 
 
+### Wat is de relatie van energielabels met de SOR?
+Het energielabel is typisch een gegeven van buiten de SOR; het moet mogelijk zijn voor een externe partij om dit te koppelen aan een SOR object. Daarmee is het energielabel in scope van deze High-5. Het is een mooie use case om externe gegevens aan de SOR te koppelen.
 
+Er is geen informatiemodel energielabels; we baseren ons in deze High-5 op een proza beschrijving. 
 
-*Hoe zit het met 3D representaties van objecten?*
-- Deze zitten nu niet in een basisregistratie. Maar de 3D basisvoorziening bevat al wel 3D representaties van BAG/BGT objecten en ook de relatie met deze objecten is vastgelegd. Je kan dus het 3D model bij een object opvragen. 
-- LOD: 1.3, in de toekomst wordt dit 2.1. 
-- De 3D modellen zijn met een bepaalde methode afgeleid uit de basisdata.
-- We gaan nu uit van wat je uit de basisregistraties kan halen plus kan berekenen. 
-
-*BRT in scope?*
-- Het is in scope van de SOR dus in eerste instantie ook van deze high 5. 
-- Hier zijn wel kanttekeningen bij te plaatsen omdat relatie met BGT/BAG lastig is. 
-- Wel een reden om ze in scope te plaatsen, is dat je zou kunnen onderzoeken hoe generalisatie in de semantische laag kan worden gedefinieerd. 
-- BRT is ook interessant omdat het rijk is aan functies, ook voor gebouwen. Maar je hebt ook functies in de WOZ. In het EMSO is een combinatie gemaakt van gebouwfuncties en WOZ functies, dit is de type lijst bij SOR Gebouw geworden.
-- IGO heeft een analyse gedaan van de verhouding tussen BRT objecten en functies met andere basisregistraties. Zij hebben oa gevonden dat er een n op n relatie is tussen BRT en BAG/BGT. 
-- Er staan ook wel wat gebouwen in de BRT die niet in de BAG/BGT staan. 
-- BRT transponering staat niet in EMSO beschreven. 
-- BRT parkeren voor deze high 5, misschien komt het aan bod maar in eerste instantie nog niet.
-
-
-*Wat is de relatie van energielabels met de SOR?*
-- Energielabels kunnen aan een deel van een gebouw of aan een verblijfsobject hangen. Wat is dit 'deel van gebouw'? Energielabels hangen soms aan een ruimtelijke 'koker' binnen een flatbebouw; daar lijkt een soort gebouwzone handig voor, maar in de huidige definitie past dat niet, want een gebouwzone moet zich binnen een verdieping bevinden. Je zou hiervoor iets als de CityGML `BuildingUnit` moeten hebben.
-- Er is geen informatiemodel energielabels, er is alleen een proza beschrijving. 
+Van energielabels weten we het volgende: 
 - Je kan altijd van een verblijfsobject het energielabel vinden, maar een energielabel kan aan verschillende verblijfsobjecten hangen. 
-- Is het energielabel een object of is het een eigenschap van een verblijfsobject? 
-- Energielabel is typisch een gegeven van buiten de SOR; het moet mogelijk zijn voor een externe partij om dit te koppelen aan een SOR object. Dus wel in scope van deze high 5, mooie case om externe gegevens aan de SOR te koppelen.
+- Energielabels kunnen gerelateerd zijn aan een deel van een gebouw of aan een verblijfsobject. Wat dit 'deel van gebouw' is, is nog onduidelijk. Soms is dit een ruimtelijke 'koker' binnen een flatbebouw; daar lijkt een soort gebouwzone handig voor, maar in de huidige [[EMSO]] definitie past dat niet, want een gebouwzone moet zich volgens die definitie binnen een verdieping bevinden. Je zou hiervoor iets als de CityGML `BuildingUnit` moeten hebben.
 
-### Verwijzingen naar informatiemodellen
+### Gebouw in de huidige registraties
 
+In de huidige basis- en sectorregistraties zijn er veel gegevens te vinden over een "gebouw". Als input voor deze High-5 hebben we de informatiemodellen van deze registraties genomen:
+* BAG
+* BGT
+* WOZ
+* EPBD - Energielabels
+* EAN - Energie afgiftepunten
+
+ In onderstaand plaatje hebben we getracht om deze te combineren tot één informatiemodel, zonder scherp te kijken naar de specifieke definitie van gebouw, noch kijkende naar de betekenis van eigenschappen.
+
+<figure id="gebouw-huidige-registraties">
+  <img src="media/gebouw-gegevens.drawio.png" alt="gebouw-huidige-registraties">
+  <figcaption>Gebouw en aanverwante gegevens in huidige registraties</figcaption>
+</figure>
+
+Dit plaatje gebruiken we als startpunt voor de ontwikkeling tijdens de high-5 van een logisch SOR-informatiemodel voor gebouwen.
+
+De volgende achtergrondinformatie stond bij de modellering tot onze beschikking:
 
 *Informatiemodel BAG*
 
@@ -62,35 +65,10 @@ Startpunt:
 
 - [Documentatie IMWOZ, bespreekversie 6-8-2021](https://imvertor-tst.armatiek.nl/modellen/IMWOZ/IMWOZ.html)
 
-
 *Informatie over energielabels*
 
 - [Informatiepagina RVO](https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/gebouwen/hulpmiddelen-tools-en-inspiratie-gebouwen/ep-online)
 
-
 *Informatie over energieafgiftepunten*
 
 - [Casebeschrijving energieafgiftepunten](https://github.com/Geonovum/disgeo-demo-3a/blob/main/energieafgiftepunten/afgiftepunten.md)
-
-
-
-
-
-### Gebouw in de huidige registraties
-
-In de huidige basis- en sectorregistraties zijn er veel gegevens te vinden over een "gebouw". Als de scope van deze high5 hebben we de de informatiemodellen van deze registraties genomen:
-* BAG
-* BGT
-* WOZ
-* EPBD - Energielabels
-* EAN - Energie afgiftepunten
-
- In onderstaand plaatje hebben we getracht om deze te combineren tot één informatiemodel, zonder scherp te kijken naar de specifieke definitie van gebouw, noch kijkende naar de betekenis van eigenschappen.
-
-<figure id="gebouw-huidige-registraties">
-  <img src="media/gebouw-gegevens.drawio.png" alt="gebouw-huidige-registraties">
-  <figcaption>Gebouw en aanverwante gegevens in huidige registraties</figcaption>
-</figure>
-
-Dit plaatje gebruiken we als startpunt voor de ontwikkeling tijdens de high-5 van een logisch SOR-informatiemodel voor gebouwen.
-
