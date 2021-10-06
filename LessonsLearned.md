@@ -54,7 +54,7 @@ Voor afnemers is het van belang dat gegevens en modellering er hetzelfde uitziet
 
 Om standaardisatie t.b.v. afnemers goed voor elkaar te krijgen zouden we kunnen denken aan aansluitvoorwaarden. Bij aansluitvoorwaarden kan je er bijvoorbeeld aan denken dat de SOR en andere bronnen aan dezelfde standaarden voldoen wat betreft:
 - Modellering;
-- Identificatie
+- Identificatie;
 - Historie (ontsluiten) en tijdreizen;
 - Andere standaarden die nodig zijn om te komen tot een samenhangend stelsel van gegevens uit basisregistraties en niet-basisregistraties.
 
