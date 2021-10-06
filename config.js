@@ -186,6 +186,13 @@ var respecConfig =
         publisher:  "Publisher-4",
         company:    "Companynaam",
     },
+    MIM: {
+      title: "MIM - Metamodel Informatie Modellering",
+      href: "https://docs.geostandaarden.nl/mim/mim/",
+      status: "Definitief",
+      publisher: "Geonovum",
+      date: "2020-10-23"
+    },
   },
   postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
 
