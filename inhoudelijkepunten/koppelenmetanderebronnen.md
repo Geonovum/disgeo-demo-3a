@@ -3,19 +3,23 @@
 
 ![voorbeeld-informatie](media/voorbeeld-informatie.png)
 
-De bronnen waaruit de SOR wordt samengesteld zijn andere bronnen dan waar de energiegegevens worden bijgehouden. Wat in ieder geval niet de bedoeling is, is het overnemen en opslaan van de data uit deze bronnen in de SOR. In plaats daarvan beogen we een federatief stelsel, waarin de verschillende bronnen worden bevraagd en de data uit deze bronnen in samenhang geleverd kunnen worden aan afnemers. 
+Dit betreft use cases waarin een informatiebron (niet de SOR zelf) wilt koppelen met een object in de SOR, zoals een informatiebron met energiegegevens.  
 
-In dit geval gaat het niet om het aanbrengen van samenhang tussen gegevens van de basisregistraties onder de SOR, maar van het aanbrengen van samenhang tussen gegevens *uit andere bronnen* met de data van de SOR.  
+De bronnen waaruit de SOR wordt samengesteld zijn andere bronnen dan waar de energiegegevens worden bijgehouden. Wat in ieder geval niet de bedoeling is, is het overnemen en opslaan van de data uit deze bronnen naar de SOR. In plaats daarvan beogen we een federatief stelsel, waarin de verschillende bronnen worden bevraagd en de data uit deze bronnen in samenhang geleverd kunnen worden aan afnemers. De informatiebron met energiegegevens kan gecombineerd worden met de informatiebron SOR (of een basisregistratie). 
+
+In dit geval gaat het niet om het aanbrengen van samenhang tussen gegevens van de basisregistraties onder de SOR, maar van het aanbrengen van samenhang tussen gegevens *uit andere bronnen* met de data van de SOR. Anders gezegd, de SOR kent de energiegegevens niet, maar de energiegegevens kent wel een SOR object (of basisregistratie object) en door een koppeling hiertussen te leggen zijn beide informatiebronnen integraal te bevragen en kunnen gegevens bij elkaar gebracht worden. 
 
 We noemen de niet-SOR bronnen in onderstaande tekst: andere bronnen. 
 
-De belangrijkste stap is om eerst een betrouwbare koppeling te leggen van een andere bron naar de SOR, al dan niet via de BAG, de BGT, de WOZ, enz. Dit is op zichzelf niet eenvoudig. je kan hierbij denken aan een koppeling op basis van een automatische matching op basis van adres, geometrie, of beide. 
+De belangrijkste stap is voor een andere bron om eerst een betrouwbare koppeling te leggen van een andere bron naar de SOR, al dan niet via de BAG, de BGT, de WOZ, enz. Dit is op zichzelf niet eenvoudig. je kan hierbij denken aan een koppeling op basis van een automatische matching op basis van adres, geometrie, of beide. 
 
 ### Manieren van koppelen 
 
-- Deze koppeling zou een beheerde relatie kunnen zijn vanuit een andere bron object naar een SOR object. 
-- Deze koppeling zou een andere bron object met een SOR object kunnen koppelen, die het SOR object niet verandert en het eigen bronobject niet verandert. Je zou dit een koppelklasse kunnen noemen.
-- Deze koppeling zou een uitbreiding of aanvulling kunnen zijn van een bestaand SOR objecttype.
+Bij het leggen van een koppeling zijn in theorie verschillende manieren denkbaar. We kijken naar elk van deze en naar de voors en tegens ervan. 
+
+- optie 1: Deze koppeling zou een beheerde relatie kunnen zijn vanuit een bestaand object uit een andere bron naar een SOR object. 
+- optie 2: Deze koppeling zou een nieuw "koppeling" object kunnen zijn, een geobjectiveerde relatie, die een bestaand object uit een andere bron met een SOR object koppelt. Deze verandert het SOR object niet en verandert het eigen bronobject niet. Je zou dit een koppelklasse kunnen noemen.
+- optie 3: Deze koppeling zou een uitbreiding of aanvulling kunnen zijn van een bestaand SOR objecttype.
 
 Voorbeelden van deze koppelingen zijn: 
 - De EAN-BAG koppeling (beheerde relatie vanuit een eigen object, het energieafgiftepunt, uit een andere bron naar een BR/SOR object)  
@@ -28,7 +32,8 @@ Voorbeelden van deze koppelingen zijn:
   
 Voordelen: 
   - Er is geen impact op de SOR, maar het koppelt wel beide bronnen aan elkaar;
-  - Er ontstaat een eco-systeem waarmee informatie uit bronnen gekoppeld kan worden met de SOR en de basisregistraties.
+  - Er ontstaat een eco-systeem waarmee informatie uit bronnen gekoppeld kan worden met de SOR en de basisregistraties. 
+  - Via deze koppelingen zijn andere bronnen ook met elkaar te koppelen. Als een bron A met object A1 een koppeling heeft met SOR object S1 en een andere bron B met object B1 heeft deze koppeling ook, dan zijn ook A1 en B1 ook (indirect) gekoppeld. Afhankelijk van de semantiek van de koppelingen naar S kan deze indirecte koppeling zelfs verder gebruikt worden. 
 
 Implicaties:
   - Andere bronnen (moeten) gaan koppelen met de SOR (koppelingen naar basisregistraties worden vervangen door koppelingen naar de SOR);
@@ -76,9 +81,11 @@ Voor het duiden van deze verschillende modelelerwijzes gebruiken we de voorbeeld
 
 Deze koppeling zou een beheerde relatie kunnen zijn vanuit een andere bron object naar een SOR object. Dit kan op verschillende manieren:
 
-###### a: Meegemodelleerd in dataset
+###### a: Meegemodelleerd in dataset als relatie 
 
-Je kunt een relatie meemodelleren in een dataset door vanuit die dataset een relatie op te nemen naar een SOR-object. Om aan te duiden dat deze relatie verwijst naar een extern informatiemodel gebruiken we het stereotype [«Externe koppeling»](https://docs.geostandaarden.nl/mim/mim/#externe-koppeling) uit [[MIM]]. Merk op dat we in het externe informatiemodel verwijzen naar objecttype `Gebouw` uit de SOR. Het doel hiervan is het kunnen verwijzen naar een SOR Gebouw d.m.v. de identificatie van de SOR. Het is, in de representatie als data, belangrijk om niet alleen een directe referentie naar de identificatie op te nemen, maar om daadwerkelijk een objectstructuur van het gerefereerde object op te nemen. Dit laatste maakt het gemakkelijk om datastructuren als het ware over elkaar heen te leggen (zie datavoorbeelden in JSON).
+Je kunt een relatie meemodelleren in een dataset door vanuit die dataset een relatie op te nemen naar een SOR-object. De relatie wordt een (nieuwe) eigenschap van een al bestaand object uit de eigen/andere bron. 
+
+Om aan te duiden dat deze relatie verwijst naar een extern informatiemodel gebruiken we het stereotype [«Externe koppeling»](https://docs.geostandaarden.nl/mim/mim/#externe-koppeling) uit [[MIM]]. Merk op dat we in het externe informatiemodel verwijzen naar objecttype `Gebouw` uit de SOR. Het doel hiervan is het kunnen verwijzen naar een SOR Gebouw d.m.v. de identificatie van de SOR. Het is, in de representatie als data, belangrijk om niet alleen een directe referentie naar de identificatie op te nemen, maar om daadwerkelijk een objectstructuur van het gerefereerde object op te nemen. Dit laatste maakt het gemakkelijk om datastructuren als het ware over elkaar heen te leggen (zie datavoorbeelden in JSON).
 
 <figure id="koppelen-relateren-meegemodelleerd">
   <img src="media/koppelen-relateren-meegemodelleerd.drawio.png" alt="koppelen-relateren-meegemodelleerd">
@@ -137,7 +144,10 @@ Je kunt een relatie meemodelleren in een dataset door vanuit die dataset een rel
 
 ###### b: Apart beheerde "linkset"
 
-Wanneer je een objecttype bestaande dataset wilt koppelen aan de SOR, zonder het objecttype, of de dataset, zelf aan te passen is het mogelijk om een aparte "linkset" op te stellen. Een linkset is niets meer dan een set van relaties tussen instanties van twee objecttypen.
+Wanneer je een objecttype uit een bestaande dataset wilt koppelen aan de SOR, zonder het objecttype, of de dataset, zelf aan te passen is het mogelijk om een aparte "linkset" op te stellen. De link van het object A1 naar het SOR object S1 wordt dan buiten het bestaande object beheert, als link. De link bevat alleen de identificatie van A1 en van S1. De link is een aanvulling op het bestaande object, maar wordt wel los beheerd. 
+
+Een linkset is niets meer dan een set van relaties tussen instanties van twee objecttypen, van het bestaande object naar het SOR object. 
+
 Deze linkset kan onderdeel zijn van dezelfde dataset die je wilt koppelen aan de SOR, maar kan ook een losse dataset zijn met verschillend beheer.
 
 <figure id="koppelen-relateren-linkset">
@@ -210,15 +220,22 @@ Ook hier maken we gebruik van objectstructuur plus identificatie om informatie "
 **Implicaties:**
 - De SOR en je eigen objecten worden niet geraakt, op geen enkele manier, maar er is wel een relatie gelegd. 
 - Je kan de historie van de relatie los beheren.
+- De link en het bestaande object hebben elk eigen historie. 
 
 ##### Optie 2: Apart beheerde koppelinstanties
 
-Een andere optie is het toepassen van een "koppelinstantie", ofwel een instantie van een "Koppelklasse". Een Koppelklasse is een speciaal construct waarmee twee objecttypes aan elkaar gekoppeld kunnen worden met uitgaande relatiesoorten vanuit de Koppelklasse naar de Objecttype die met elkaar gekoppeld worden. Semantisch gezien is dit gelijk aan het relateren van twee objecten.
+Een andere optie is het definieren van een nieuw objecttype, die de koppeling vertegenwoordig tussen objecten van objecttype A uit bron A en objecttype S uit de SOR. We noemen dit een koppelklasse. Een Koppelklasse is een speciaal construct waarmee twee objecttypes aan elkaar gekoppeld kunnen worden met uitgaande relatiesoorten vanuit de Koppelklasse naar de Objecttypes die met elkaar gekoppeld worden. Semantisch gezien is dit gelijk aan het relateren van twee objecten. 
+
+Bv. het objecttype AS-koppeling. Koppelingen komen te liggen tussen individuele objecten/instanties van A en individuele objecten/instantie van S, door middel van AS-objecten, die verwijzingen hebben naar A en S. Bv. een koppeling AS1 tussen A1 en S1 of AS2 tussen A21 en S35 enz. 
 
 Het beheer van de koppeling zit dan in principe op het niveau van de koppelklasse.
 
 <aside class="note">
-Bij het gebruik van een koppelklasse is het niet mogelijk om informatie "over elkaar heen te leggen" voor gebruik in samenhang, zoals bij dat optie 1 kan. Het is noodzakelijk zijn om ergens te beschrijven hoe de relatie tussen de twee objecttypes die verbonden worden door de koppelklasse geconstrueerd moet worden.
+De koppelklasse en de koppelinstanties/koppelobjecten staan los van de objecten die gekoppeld worden. De objecten die gekoppeld worden, worden niet geraakt en de koppelklasse heeft eigen historie. De koppelklasse ondersteund navigatie over de relaties van beide kanten, van A naar S en van S naar A. Aanvullend kunnen gegevens zoals de koppelingswijze of andere extra informatie opgenomen worden in de koppelklasse. 
+</aside>
+
+<aside class="note">
+Bij het gebruik van een koppelklasse is het niet mogelijk om informatie "over elkaar heen te leggen" voor gebruik in samenhang, zoals bij dat optie 1 kan. A kent de koppelklasse AS niet en S kent de koppelklasse AS ook niet. A en S zijn in deze zin volledig ontkoppelt. Alleen AS heeft weet van A en S en de koppeling ertussen. Het is noodzakelijk zijn om ergens te beschrijven hoe gegevens uit de gekoppelde objecten, via de relatie tussen de twee objecttypes die verbonden worden door de koppelklasse, in samenhang bij elkaar gebracht moeten worden. 
 </aside>
 
 <figure id="koppelen-relateren-koppelklasse">
@@ -292,7 +309,6 @@ Bij het gebruik van een koppelklasse is het niet mogelijk om informatie "over el
 - Je moet afleidingsregels specificeren om de semantische relatie tussen de gekoppelde objecten te manifesteren.
 
 #### Uitbreiden van een bestaand objecttype
-
 
 **Voorwaarde**: 
 - Dit kan alleen als je eigen objecttype echt overeenkomt met wat er in de SOR onder een Gebouw wordt verstaan. Als dat zo is dan is dit semantisch direct goed geregeld. 
