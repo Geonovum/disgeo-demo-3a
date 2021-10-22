@@ -20,7 +20,7 @@ Relatie (vanuit gebouwcomponent): Gebouwcomponent hoort bij Gebouw|-|De relatie 
 Relatie (vanuit toegangsdeur): Toegangsdeur hoort bij Gebouw|?| Nog niet aan toegekomen.
 Relatie (vanuit installatie): Installatie hoort bij Gebouw|?| Nog niet aan toegekomen.
 
-### Gebouwzone transponeringstabel
+### Gebouwzone vertaalspecificatie
 
 Het SOR objecttype `Gebouwzone` is gebaseerd op het WOZ `Deelobject`. Op basis van de huidige WOZ kun je vermoedelijk wel voor een groot deel de SOR gebouwzones afleiden. Het WOZ deelobject kan in eenvoudige situaties een heel woonhuis zijn, maar er kunnen ook meerdere deelobjecten voor één huis zijn: bijvoorbeeld de woning zelf, een garage en een serre. De indeling in deelobjecten wordt gemaakt op basis van wat voor de waardebepaling van het object van belang is (bijvoorbeeld op basis van mate van isolatie), en niet puur op gegevens zoals het bouwjaar. De bronhouders doen veel marktanalyse en gebruiken hierbij bijvoorbeeld informatie uit verkoopplatforms zoals Funda. Daarnaast wordt de WOZ gevoed met informatie uit de BAG over wijzigingen aan objecten zoals verbouwingen.
 

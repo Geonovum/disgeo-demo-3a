@@ -1,4 +1,4 @@
-## Historie implementatie aspecten
+## Implementatieaspecten van historie
 
 Er zijn verschillende manieren waarop historie in linked data gerepresenteerd kan worden.  Deze manieren hebben verschillende voor- en nadelen die we hier inzichtelijk maken.
 

@@ -1,4 +1,4 @@
-## LessonsLearned
+## Lessons Learned
 
 ### Inzichten: samenvatting
 
@@ -6,10 +6,10 @@ Deze High-5 heeft een  aantal inzichten opgeleverd die hier worden samengevat:
 
 1. Om de geo-basisregistraties in samenhang te kunnen gebruiken, moeten we gegevens uit de huidge basisregistraties combineren. Dit lijkt vaak eenvoudiger dan het is. Zelfs wanneer dezelfde terminologie wordt gebruikt bij het specificeren van modelelementen, zijn er vaak nog **subtiele verschillen in de definities** hiervan. Begrippen zijn soms anders afgebakend – dit geldt dus ook voor data die hierop gebaseerd is. Om deze reden kunnen informatieobjecten/gegevens afkomstig van verschillende registraties niet zomaar over elkaar gelegd worden, ook al worden ze beschreven door dezelfde termen. 
 2. Hoewel het samenvoegen van de registratiemodellen niet direct tot een samenhangend geheel zal leiden, kan hiernaartoe gewerkt worden middels een aantal modelleerprincipes. Deze principes vertalen zich in **modelleerpatronen** voor object centraal modelleren. Verschillende patronen kunnen worden toegepast om vanuit andere registraties naar de SOR te koppelen – hiermee wordt het een stuk gemakkelijker om objecten aan elkaar te relateren. 
-3. We hebben **vertaalspecificaties** nodig op conceptueel niveau, zodat deze in verschillende technische talen kunnen worden uitgedrukt. Dit draagt bij aan de ontkoppeling tussen de duiding van gegevens en de ontsluiting van gegevens. 
+3. We hebben **vertaalspecificaties** nodig op conceptueel niveau, zodat deze in verschillende technische talen kunnen worden uitgedrukt. Dit draagt bij aan de ontkoppeling tussen de duiding van gegevens en de ontsluiting van gegevens. Vertaling van de huidige bronnen naar de SOR zal op onderdelen lastig zijn. 
 4. We moeten niet naar de SOR kijken als een volledig model, maar als **een groeimodel**. Hierbij is het belangrijk om korte en lange termijn doelen te stellen. Op de korte termijn is het streven naar een SOR MVP (minimal viable product) realistischer. Vanuit een inhoudelijk perspectief wordt in de SOR MVP vooral gekeken naar de samenhang van gegevens waarbij redelijk simpele vertalingsregels aan bod komen – dus geen complexere afleidingsregels. Ook is het belangrijk rekening te houden met huidige technologie. Door een SOR MVP in de praktijk te toetsen kunnen inzichten worden opgedaan die de standaardisatie van het volledige SOR model ten goede komen.  
 5. Bij het opstellen van de vertalingsspecificaties voor historie en tijdslijn is onderkend dat **bepaalde attributen buiten scope** zijn voor de modellering van SOR informatieobjecten in de huidige fase. Hier kunnen verschillende redenen voor zijn, dit zal moeten worden gedocumenteerd en teruggekoppeld aan de relevante partijen. Als voorbeeld: het attribuut *versie* kan momenteel niet gemakkelijk dynamisch worden berekend. Daarnaast is het belangrijker om te weten wanneer gegevens geldig zijn, dan om welke versie het gaat. Daarom wordt dit attribuut voorlopig niet opgenomen. 
-
+6. Met betrekking tot het **koppelen van objecten uit andere informatiebronnen met objecten uit de SOR** is er nog geen aanbeveling. Er wordt nog nagedacht over welke koppelmethode de voorkeur heeft van dit high-5 team. 
 
 #### SOR model en modelleerpatronen
 
@@ -49,6 +49,7 @@ Om te komen tot een geharmoniseerd / geconsolideerd Gebouw in de SOR, op basis v
 Aanbeveling: Begin met BAG + BGT harmonisatie. Voor het harmoniseren van WOZ gebouwdata in de SOR moet, indien dat binnen scope is, iemand met veel WOZ kennis bij de volgende high 5 aanwezig zijn om de vertaal- en afleidregels scherper te maken. 
 
 ##### Aanbevelingen met betrekking tot koppelen
+Er wordt nog nagedacht over welke optie of opties uit [](#aanbeveling), waarin een aantal koppelmethoden beschreven worden, de voorkeur heeft van dit high-5 team. 
 
 Voor afnemers is het van belang dat gegevens en modellering er hetzelfde uitziet, zodat afnemers het geheel ook ervaren als een samenhangend stelsel. Dit wordt voor de SOR gestandaardiseerd, maar voor andere bronnen nog niet. 
 

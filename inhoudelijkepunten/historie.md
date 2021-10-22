@@ -1,4 +1,4 @@
-## Modelleren van historie en beantwoorden van tijdreis vragen 
+## Modelleren van historie en beantwoorden van tijdreisvragen 
 
 Bij dit inhoudelijke punt wordt gekeken hoe gegevens uit verschillende onderliggende basisregistratieonnen te combineren zijn, in het bijzonder voor aspecten die te maken hebben met de historie van gegevens en tijdreizen. De punten waarop gelet moet worden zijn benoemd en er is een vertaalspecificatie gemaakt om historie "in elkaar te schuiven". 
 
@@ -29,7 +29,7 @@ Dit betekent voor dit inhoudelijke punt:
 - We stellen het object centraal - d.w.z. we willen gegevens over het gebouw in de werkelijkheid leveren, en we doen dit door de registratiegegevens over dit object te leveren.
 - We geven de tijdslijnen per set gegevens over een object aan. Dit heet ook wel een versie van een object. Afnemers willen gegevens van/over een object weten en wanneer deze, dit setje, geldig is en beschikaar is gekomen zodat ze het (hadden kunnen) weten. 
 
-### Uitdaging en bijzondere punten met keuzes/voorstel
+### Uitdaging en bijzondere punten
 
 De uitdaging is om data uit de onderliggende basisregistraties uit te leveren maar dan geuniformeerd. D.w.z. dat historie wordt bijgehouden in of over versies van objecten. Een versie is een setje gegevens over een object, zoals deze gedurende een bepaalde periode onveranderd zijn, en over die set gegevens wordt de tijdslijn geldigheid en de tijdslijn registratie bijgehouden en uitgeleverd. 
 

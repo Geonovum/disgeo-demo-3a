@@ -29,7 +29,7 @@ Als gegevens in samenhang een bepaalde consistentie behoren te hebben, kunnen er
 Dit onderwerp is niet in zijn totaliteit uitgebreid aan de orde geweest, maar zou voor de volgende High-5, als we met gegevens gaan werken, wellicht geschikt zijn. Deeluitwerkingen zijn hier beschreven: 
 - [](#modelleerpatronen-voor-metadata)
 
-### Modelleren van gegevens die over registraties hetzelfde moeten zijn (worden)
+### Op gelijke wijze modelleren van generieke gegevens
 
 Bepaalde generieke gegevens zoals gegevens over historie, levensloop, herkomst, enzovoort zouden over registraties heen gestandaardiseerd moeten zijn, maar zijn dit nu niet. Bij het gebruiken van de basisregistraties in samenhang is dit een belemmering. We willen dat het gebruik door afnemers niet onnodig complex/genuanceerd wordt en kijken of dit recht te trekken is. We hebben daarom in deze High-5 onderzocht hoe je dit soort generieke gegevens zou kunnen modelleren zodat gebruik in samenhang mogelijk is. Dit hebben we uitgewerkt voor het onderwerp historie. 
 
