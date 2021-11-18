@@ -1,0 +1,32 @@
+Dit hoofdstuk beschrijft een opsomming van de benodigheden om API's te maken. 
+
+We onderscheiden voor de high-5's de volgende API's: 
+
+* API volgens de NL API strategie
+* API volgens de OGC API Feature part 1
+* API volgens Linked Data
+* Verder kent de iGO omgeving een user-interface om analyse vragen te kunnen stellen om de data. 
+
+De input die hiervoor gebruikt kan worden: 
+
+1. Informatiemodel in re-spec (html), te vinden hier TODO 
+2. Informatiemodel in een mim-export formaat (in wording, nog niet officieel), in XML, te vinden hier TODO 
+3. Informatiemodel in een RDF formaat (RDFS/OWL/SHACL), te vinden hier TODO 
+4. JSON schema van het informatimodel - voor 1 en 2, te vinden hier TODO 
+
+--
+
+Verder is er een integratie component voorzien die de data uit de BAG en de BGT (en ...) samenvoegt volgens vertaalregels. 
+Deze component heeft nodig: 
+
+* Een van bovenstaande 4 items (vermoedelijk b)
+* Vertaalregels: TODO. 
+
+en maakt hier een GraphQL schema van t.b.v. een (interne) API.
+
+Deze interne API kan gebruikt worden voor de hierboven genoemde API's. 
+
+
+
+
+
