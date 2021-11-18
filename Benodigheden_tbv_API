@@ -29,6 +29,7 @@ Deze component heeft nodig:
 * Vertaalregels, deze bestaan uit: 
          * Directe eigenschappen, te vinden hier TODO Linda  
          * Historie BAG, te vinden hier TODO Lennart
+         * Historie BGT, te vinden hier TODO wie?
          * Metadata, te vinden hier TODO wie? 
 
 Hiervan wordt een GraphQL schema gemaakt t.b.v. een (interne) API.
