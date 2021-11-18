@@ -13,6 +13,11 @@ We hebben besloten de BRT te parkeren voor deze High-5. De BRT valt wel binnen d
 
 Hoewel niet eenvoudig, is het wel zeer interessant om in een latere fase naar de BRT te kijken in de context van SOR gebouwen. Je zou aan de hand van het object Gebouw kunnen onderzoeken hoe generalisatie in de semantische laag kan worden gedefinieerd. BRT is tevens interessant omdat het rijk is aan functies, ook voor gebouwen. In de SOR zijn deze BRT gebouwfuncties in samenhang gebracht met de functiebeschrijvingen in de WOZ. Dit heeft geresulteerd in de type lijst bij SOR Gebouw. Gekeken moet worden hoe deze informatie kan worden afgeleid uit de BRT en de WOZ. 
 
+### Is de WOZ in scope? 
+We hebben de WOZ in de eerste dagen van deze High-5 wel meegenomen. Op basis van onze bevindingen hebben we echter besloten om de WOZ voorlopig, in de hierop volgende implementatie-High-5, buiten scope te plaatsen. Het  informatiemodel SOR-Gebouw dat we hebben geproduceerd bevat dan ook geen objecttypen en kenmerken die uit de WOZ moeten worden afgeleid. 
+
+Uit onze eerste exercities om een transponering op te stellen voor SOR gebouw in relatie tot BAG, BGT en WOZ, bleek met name de WOZ relatie een lastige te zijn. Meer hierover staat met name in [](#gebouw-vertaalspecificatie) en [](#gebouwzone-vertaalspecificatie).
+
 ### Wat is de relatie van energielabels met de SOR?
 Het energielabel is typisch een gegeven van buiten de SOR; het moet mogelijk zijn voor een externe partij om dit te koppelen aan een SOR object. Daarmee is het energielabel in scope van deze High-5. Het is een mooie use case om externe gegevens aan de SOR te koppelen.
 
@@ -38,7 +43,7 @@ In de huidige basis- en sectorregistraties zijn er veel gegevens te vinden over 
   <figcaption>Gebouw en aanverwante gegevens in huidige registraties</figcaption>
 </figure>
 
-Dit plaatje gebruiken we als startpunt voor de ontwikkeling tijdens de high-5 van een logisch SOR-informatiemodel voor gebouwen.
+Dit plaatje gebruiken we als startpunt voor de ontwikkeling tijdens de high-5 van een logisch SOR-informatiemodel voor gebouwen. In de loop van de High-5 hebben we, zoals eerder in dit hoofdstuk beschreven, de scope vernauwd door eerst de BRT en later ook de WOZ erbuiten te plaatsen. 
 
 De volgende achtergrondinformatie stond bij de modellering tot onze beschikking:
 
