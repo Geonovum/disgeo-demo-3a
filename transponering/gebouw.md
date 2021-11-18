@@ -72,3 +72,32 @@ Bestaand                      | WOZ deelobject met statuspercentage = `100%` | 0
 Onbruikbaar                   | WOZ deelobject met staat van onderhoud = `vervallen` (dit zou erin moeten zitten, maar is mogelijk wel lastig af te leiden) | 8 (beëindigd)
 Opgeheven                     | ? | 8 (beëindigd)
 Afgevoerd                     | niet in WOZ (deze objecten komen naar verwachting nooit vanuit de BAG in de WOZ) | 9 (ten onrechte opgevoerd)
+
+### Benodigde BAG en BGT objecten
+
+In scope voor deze High5 zijn de SOR objecttypen uit [[EMSO]] [paragraaf 5.3](https://docs.geostandaarden.nl/disgeo/emso/#gebouw), voor zover deze te vormen zijn uit alleen BAG en BGT data. Bovendien is het objecttype `Installatie` in scope vanwege de koppeling met energiegegevens. De lijst met gebruikte SOR objecttypen is:
+- `Gebouw`
+- `Gebouwcomponent`
+- `Open bouwwerk`
+- `Installatie`
+
+Niet in scope uit EMSO 5.3:
+- `Bouwlaag`, dit is een nieuw objecttype
+- `Ruimte`, dit is een nieuw objecttype
+- `Toegangsdeur`? Dit is een grotendeels nieuw objecttype
+
+De volgende objecttypen uit de BAG en BGT zijn nodig voor de transponering van bron naar deze SOR objecttypen: 
+
+**TODO aanvullen**
+
+BAG: 
+- Pand
+- Verblijfsobject
+- ...
+
+BGT: 
+- Pand
+- OverigBouwwerk type=Bunker|Schuur
+- Kunstwerkdeel type=...
+
+De volledige set transponeringsregels staat in paragraaf **TODO**. 
