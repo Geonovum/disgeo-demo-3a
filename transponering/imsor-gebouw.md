@@ -1,14 +1,4 @@
 ## IMSOR Gebouw
 
-Hieronder zijn de tijdens de High-5 gemaakte diagrammen afgebeeld die het IMSOR Gebouw model weergeven.
-
-<figure id="imsor-gebouw">
-  <img src="media/imsor-gebouw.drawio.png" alt="imsor-gebouw">
-  <figcaption>IMSOR Gebouw</figcaption>
-</figure>
-
-
-<figure id="imsor-gebouw-sector">
-  <img src="media/imsor-gebouw-sector.drawio.png" alt="imsor-gebouw-sector">
-  <figcaption>IMSOR Gebouw inclusief semantische koppeling van registraties</figcaption>
-</figure>
+De gegevenscatalogus van het tijdens de High-5 geproduceerde IMSOR Gebouw informatiemodel, inclusief diagram(men), is hier te vinden: 
+- [IMSOR Samenhangend gebouw informatiemodel](https://geonovum.github.io/disgeo-demo-3b/) (ReSpec document)
