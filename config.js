@@ -128,6 +128,21 @@ var respecConfig =
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl"
     }, 
+    {
+      name:       "Silvy Horbag",
+      company:    "Geonovum",
+      companyURL: "https://www.geonovum.nl"
+    }, 
+    {
+      name:       "Arnoud de Boer",
+      company:    "Geonovum",
+      companyURL: "https://www.geonovum.nl"
+    }, 
+    {
+      name:       "Bart-Jan de Leuw",
+      company:    "CGI",
+      companyURL: "https://www.cgi.com"
+    }, 
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
   shortName: "dll3a",  	              // Wordt gebruikt in de document URL
