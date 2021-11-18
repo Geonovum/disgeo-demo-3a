@@ -1,0 +1,106 @@
+subschemas:
+  bag:
+    endpoint: https://data.kadaster.nl/lookup/bag
+  bgt:
+    endpoint: https://data.kadaster.nl/lookup/bag
+
+queryMappings:
+  gebouw:
+    objecttype: Gebouw
+    context:
+      sourceQueries:
+        bag: pand
+        bgt: pand
+  
+  gebouwCollectie:
+    objecttype: Gebouw
+    context:
+      sourceQueries:
+        bag: pandCollectie
+        bgt: pandCollectie
+  
+  verblijfsobject:
+    objecttype: Verblijfsobject
+    context:
+      sourceQueries:
+        bag: verblijfsobject
+  
+  verblijfsobjectCollectie:
+    objecttype: Verblijfsobject
+    context:
+      sourceQueries:
+        bag: verblijfsobjectCollectie
+
+objecttypeMappings:
+
+  Registratiegegevens:
+    primaireBron:
+      resolver: RelatieResolver
+      params: 
+        objecttype: Brondocument
+
+  Brondocument:
+    documentnummer:
+      resolver: RefResolver
+      params:
+        ref:
+          bag: documentnummer
+    documentdatum: 
+      resolver: RefResolver
+      params:
+        ref:
+          bag: documentnummer
+  
+  Gebouw:
+    identificatie:
+      resolver: IdResolver
+      params:
+        id: 
+          this: identificatie
+        resolveMain: 
+          bag: identificatie
+        resolveOther:
+          - other: 
+              bgt: identificatie
+            join:
+              eq: 
+                main: identificatie
+                other: pandIdentificatie
+    bouwjaar:
+      resolver: RefResolver
+      params:
+        ref: 
+          bag: oorspronkelijkBouwjaar
+    status:
+      resolver: WaardelijstResolver
+      params:
+        waarde: 
+          this: status
+        resolveWith:
+          bag: status
+          bgt: status
+        waardelijst: 
+          name: StatusGebouw
+          location: https://definities.geostandaarden.nl/..../StatusGebouw
+    geregistreerdMet:
+      resolver: RelatieResolver
+      params:
+        objecttype: Registratiegegevens
+        context:
+          bag: .
+
+  Verblijfsobject:
+    oppervlakte:
+      resolver: RefResolver
+      params:
+        ref:
+          bag: oppervlakte
+    # shorthand     
+    # oppervlakte:
+    #   bag: oppervlakte
+    hoortBij:
+      resolver: RelatieResolver
+      params:
+        objecttype: Gebouw
+        context:
+          bag: maaktDeelUitVan
