@@ -34,8 +34,10 @@ Deze component heeft nodig:
 
 Hiervan wordt een GraphQL schema gemaakt t.b.v. een (interne) API.
 
-Deze interne API kan gebruikt worden voor de hierboven genoemde API's 1, 2, 3 en 4. 
+### Gebruik van de interne API door de externe API's 
 
-Vraag: hoe precies is een onderdeel van de 'implementatie' high-5.  
+De interne GraphQL API kan gebruikt worden voor de hierboven genoemde API's 1, 2, 3 en 4. 
+
+Vraag: hoe precies de GraphQL gebruikt kan worden t.b.v. API 1 t/m 4 is een onderdeel van de 'implementatie' high-5.  
 
 Vraag: voor de LD API, gebruiken we dan de interne GraphQL API of gebruiken we daarvoor de database die onder iGO ligt (voor de high-5). 
