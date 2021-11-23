@@ -15,17 +15,15 @@ Niet in scope uit EMSO 5.3:
 
 De volgende objecttypen uit de BAG en BGT zijn nodig voor de transponering van bron naar deze SOR objecttypen: 
 
-**TODO aanvullen**
-
 BAG: 
 - `Pand`
 - `Verblijfsobject`
 
 BGT: 
 - `Pand`
-- `OverigBouwwerk` type=`Bunker`|`Schuur`
-- `Gebouwinstallatie`
-- `Installatie`
+- `OverigBouwwerk` type=`Bunker`|`Schuur`|`open loods`|`overkapping`
+- `Gebouwinstallatie`type=`Bordes`|`Luifel`|`Toegangstrap`
+- `Kunstwerkdeel` type=`perron`
 
 De volledige set transponeringsregels staat in de paragrafen hieronder **TODO**. 
 
