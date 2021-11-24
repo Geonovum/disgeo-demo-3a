@@ -1,4 +1,4 @@
-## Benodigdheden ten brehoeve van API's
+## Benodigdheden ten behoeve van API's
 
 Dit hoofdstuk beschrijft een opsomming van de benodigheden om API's te maken. 
 
@@ -13,7 +13,7 @@ We onderscheiden voor de high-5's de volgende externe API's:
 
 De input die hiervoor gebruikt kan worden: 
 
-1. Informatiemodel in re-spec (html), te vinden hier TODO Linda/Arnoud? 
+1. Informatiemodel in re-spec (html), te vinden in [](#imsor-gebouw-0). 
 2. Informatiemodel in een mim-export formaat (in wording, nog niet officieel), in XML, te vinden hier TODO Lennart 
 3. Informatiemodel in een RDF formaat (RDFS/OWL/SHACL), te vinden hier TODO Pano 
 4. JSON schema van het informatimodel - voor 1 en 2, te vinden hier TODO Lennart 
@@ -27,12 +27,12 @@ We willen vooral leren hoe dit werkt, of dit werkt, wat dit betekent voor API sp
 
 Deze component heeft nodig: 
 
-* Een van bovenstaande 4 items (vermoedelijk b)
-* Vertaalregels, deze bestaan uit: 
-         * Directe eigenschappen, te vinden hier TODO Linda  
-         * Historie BAG, te vinden hier TODO Lennart
-         * Historie BGT, te vinden hier TODO wie?
-         * Metadata, te vinden hier TODO wie? 
+ * Een van bovenstaande 4 items (vermoedelijk b)
+ * Vertaalregels, deze bestaan uit: 
+   * Directe eigenschappen, te vinden in [](#gebouwen-van-bron-naar-sor)
+   * Historie BAG, te vinden hier TODO Lennart
+   * Historie BGT, te vinden hier TODO wie?
+   * Metadata, te vinden hier TODO wie? 
 
 Hiervan wordt een GraphQL schema gemaakt t.b.v. een (interne) API.
 
