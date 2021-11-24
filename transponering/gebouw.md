@@ -6,7 +6,8 @@ In scope voor deze High5 zijn de SOR objecttypen uit [[EMSO]] [paragraaf 5.3](ht
 - `Gebouw`
 - `Gebouwcomponent`
 - `Open bouwwerk`
-- `Installatie`
+- `Installatie` (niet zeker)
+- `Verblijfsobject`
 
 Niet in scope uit EMSO 5.3:
 - `Bouwlaag`, dit is een nieuw objecttype
@@ -21,15 +22,15 @@ BAG:
 
 BGT: 
 - `Pand`
-- `OverigBouwwerk` type=`Bunker`|`Schuur`|`open loods`|`overkapping`
+- `OverigBouwwerk` type=`Bunker`|`Schuur`|`Open loods`|`Overkapping`
 - `Gebouwinstallatie`type=`Bordes`|`Luifel`|`Toegangstrap`
-- `Kunstwerkdeel` type=`perron`
+- `Kunstwerkdeel` type=`Perron`
 
 De volledige set transponeringsregels staat in de paragrafen hieronder **TODO**. 
 
 ### Gebouw vertaalspecificatie
 
-In het [[EMSO]] document, dat de inhoudelijke eisen aan de SOR beschrijft, is geen sprake meer van 'panden'; in plaats daarvan wordt het objecttype `Gebouw` geïntroduceerd. Alle BAG/BGT panden kunnen één op één worden omgezet naar SOR Gebouw. Daarnaast kan een aantal typen BGT `OverigBouwwerk` gemapt worden naar SOR `Gebouw`. 
+In het [[EMSO]] document, dat de inhoudelijke eisen aan de SOR beschrijft, is geen sprake meer van 'panden'; in plaats daarvan wordt het objecttype `Gebouw` geïntroduceerd. Meeste BAG/BGT panden kunnen één op één worden omgezet naar SOR Gebouw. In een aantal gevallen zullen BAG/BGT panden worden omgezet naar SOR Open bouwwerken. Daarnaast kan een aantal typen BGT `OverigBouwwerk` gemapt worden naar SOR `Gebouw`(typen `Bunker` of `Schuur`) en naar SOR `Open bouwwerk` (typen `Open loods` of `Overkapping`). Andere typen BGT `OverigBouwwerk` zijn ook weer terug te vinden in SOR `Installatie`. In de tabbelen die hier volgen worden de mappings tussen de objecttypes op hoofdlijnen beschreven. Een volledig overzicht van de verhouding tussen objecttypen en eigenschappen in de bronregistraties en de SOR kan [hier](https://github.com/Geonovum/disgeo-demo-3a/blob/main/transponering/mapping-deel-Gebouw-en-VBO.xlsx) gevonden worden. 
 
 De juiste WOZ data bij het juiste gebouw vinden is lastiger. De relatie tussen de typering van gebouwen in de SOR en de gebruiksdoelen, functies en typen van gebouwen in de BAG, WOZ en de BRT blijkt complex te zijn. Dat betekent ook dat het mogelijk nog heel lastig wordt om de geharmoniseerde SOR gebouwen, met name wat betreft de WOZ data, te vormen op basis van de huidige basisregistraties. In ieder geval is voor het maken van de juiste vertaalspecificaties veel inhoudelijke kennis van het WOZ informatiemodel en de WOZ data nodig.
 
