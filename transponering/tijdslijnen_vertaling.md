@@ -34,8 +34,8 @@ Leerpunt nog te bepalen. BAG: date time, BGT date.
 | tijdstip registratie LV     | tijdstip registratie in de LVBAG (datum tijd)  | tijdstip registratie        | 
 | eind registratie LV         | eind registratie in de LVBAG (datum tijd)      | eind registratie            | 
 
-Beeindigde objecten: BAG heeft altijd een versie/voorkomen, ook als een object beeindigt is. Een voorkomen heeft dan een eindstatus.
-https://imbag.github.io/praktijkhandleiding/artikelen/wat-is-het-verschil-tussen-actieve-voorkomens-actuele-voorkomens-en-huidige-voorkomens
+Beeindigde objecten: BAG heeft altijd een versie/voorkomen, ook als een object beeindigt is. Een voorkomen heeft dan een eindstatus, zie vertaal specificatie 'status'
+(en https://imbag.github.io/praktijkhandleiding/artikelen/wat-is-het-verschil-tussen-actieve-voorkomens-actuele-voorkomens-en-huidige-voorkomens ) 
 
 Versies van objecten met bijzondere tijdstippen erin:
 
