@@ -16,7 +16,12 @@ In deze high-5 de LVBGT en de LVBAG. Dus beschikbaarOp mapped op de registratie 
 
 IM Gebouw - registratie gegevens: in de definitie van tijdstipRegistratie en eindRegistratie van de versie van een object staat: “Tijdstip waarop deze versie van het informatieobject beschikbaar was via deze dienst.” - dit komt in dit geval overeen met tijdstip registratie in de LV. 
 
-Vanwege de vertaal specificatie moet beginGeldigheid en eindGeldigheid een date time zijn. Meestal is dit een date. 
+Vanwege de vertaal specificatie van de BAG en BGT samen moet in IM Gebouw de beginGeldigheid en eindGeldigheid een date time zijn of een datatype keuze. 
+Leerpunt nog te bepalen. BAG: date, BGT date time. 
+
+Vanwege de vertaal specificatie van de BAG en BGT samen moet in IM Gebouw de tijdstipRegistratie en eindRegistratie een date time zijn. 
+Leerpunt nog te bepalen. BAG: date time, BGT date. 
+
 
 #### Historie in BAG 
 
