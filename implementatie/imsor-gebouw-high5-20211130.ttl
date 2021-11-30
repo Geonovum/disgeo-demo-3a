@@ -1,0 +1,1178 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix gml: <http://www.opengis.net/ont/gml#> .
+@prefix sor: <http://definities.geostandaarden.nl/def/sor#> .
+@prefix mim: <http://bp4mc2.org/def/mim#> .
+@prefix sor-sh: <http://definities.geostandaarden.nl/sor/id/shape/> .
+
+<http://definities.geostandaarden.nl/def/sor> a owl:Ontology;
+  owl:imports <http://definities.geostandaarden.nl/def/sor/Informatieproduct%20Gebouw> .
+
+sor-sh:Geometry a sh:NodeShape;
+  sh:property [
+      sh:minCount 1;
+      sh:path gsp:asWKT;
+      sh:nodeKind sh:Literal;
+      sh:datatype gsp:wktLiteral;
+      sh:maxCount 1
+    ];
+  sh:targetClass gsp:Geometry .
+
+sor:domein a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "domein" .
+
+sor:isOnderdeelVan a owl:ObjectProperty, rdf:Property;
+  rdfs:label "isOnderdeelVan" .
+
+sor-sh:TypeInstallatie a sh:NodeShape;
+  mim:equivalent mim:Referentielijst;
+  sh:targetClass sor:TypeInstallatie .
+
+sor:geregistreerdMet a owl:ObjectProperty, rdf:Property;
+  rdfs:label "geregistreerdMet" .
+
+sor-sh:Brondocument a sh:NodeShape;
+  sh:name "Brondocument";
+  sh:targetClass sor:Brondocument;
+  mim:herkomstDefinitie "BAG";
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  rdfs:comment "Elke wijziging van de gegevens in de BAG is gebaseerd op een brondocument. Ook bij constatering van een object of de correctie van gegevens is de bronhouder verplicht een brondocument op te stellen. Een vergunning wordt alleen als brondocument in de BAG geregistreerd als de inhoud ervan leidt tot wijzigingen in de registratie.";
+  mim:datumOpname "20040201";
+  rdfs:label "Brondocument";
+  sh:property [
+      sh:minCount 1;
+      mim:identificerend "false";
+      skos:altLabel "documentnummer";
+      dcterms:subject <http://bag.basisregistraties.overheid.nl/id/begrip/Documentnummer>;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:string;
+      mim:herkomstDefinitie "BAG";
+      sh:path sor:documentnummer;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20040201";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "documentnummer";
+      rdfs:label "documentnummer";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "De unieke aanduiding van het brondocument op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een woonplaats heef plaatsgevonden binnen een gemeente.";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/"
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      skos:altLabel "documentdatum";
+      dcterms:subject <http://bag.basisregistraties.overheid.nl/id/begrip/Documentdatum>;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:date;
+      mim:herkomstDefinitie "BAG";
+      sh:path sor:documentdatum;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20040201";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "documentdatum";
+      rdfs:label "documentdatum";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "De datum waarop het brondocument is vastgesteld op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een object heeft plaatsgevonden.";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/"
+    ] .
+
+sor:Geo-object a owl:Class, rdfs:Class;
+  rdfs:comment "Een onderdeel van de (tastbare of denkbare) werkelijkheid.";
+  dcterms:subject <https://begrippen.geostandaarden.nl/sor-high5/nl/page/object>;
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  mim:populatie "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.";
+  mim:herkomst "NEN3610:2022";
+  mim:herkomstDefinitie "Gebaseerd op de definitie in MIM 1.1 en in de Nederlandse Conceptenbibliotheek";
+  mim:datumOpname "20210115";
+  rdfs:label "Geo-object";
+  rdfs:isDefinedBy <http://definities.geostandaarden.nl/def/sor/Informatieproduct%20Gebouw> .
+
+sor-sh:Indicatie a sh:NodeShape;
+  rdfs:comment "Lijst met waarden voor Indicatie.";
+  sh:targetClass sor:Indicatie;
+  rdfs:label "Indicatie";
+  sh:name "Indicatie";
+  sh:property [
+      sh:hasValue <http://definities.geostandaarden.nl/sor/id/scheme/Indicatie>;
+      sh:path skos:inScheme;
+      sh:name "Indicatie"
+    ], [
+      sh:path skos:notation;
+      sh:name "Indicatie"
+    ], [
+      sh:path rdf:type;
+      sh:name "Indicatie";
+      sh:hasValue sor:Indicatie
+    ], [
+      sh:name "Indicatie";
+      sh:path skos:definition
+    ], [
+      sh:path rdfs:label;
+      sh:name "Indicatie"
+    ] .
+
+sor:TypeInstallatie a owl:Class, rdfs:Class .
+
+sor-sh:Begrip a sh:NodeShape;
+  mim:equivalent mim:Referentielijst;
+  sh:targetClass sor:Begrip;
+  sh:property [
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      mim:identificerend "false";
+      sh:name "code";
+      rdfs:label "code";
+      sh:minCount 1;
+      sh:path sor:code;
+      sh:maxCount 1;
+      mim:patroon "De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben oftewel het waardenbereik, uitgedrukt in een specifieke structuur.";
+      sh:datatype xsd:string
+    ], [
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      mim:identificerend "true";
+      sh:name "identificatie";
+      rdfs:label "identificatie";
+      sh:minCount 1;
+      sh:path sor:identificatie;
+      sh:maxCount 1;
+      mim:patroon "De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben oftewel het waardenbereik, uitgedrukt in een specifieke structuur."
+    ] .
+
+sor:Brondocument a owl:Class, rdfs:Class;
+  rdfs:comment "Elke wijziging van de gegevens in de BAG is gebaseerd op een brondocument. Ook bij constatering van een object of de correctie van gegevens is de bronhouder verplicht een brondocument op te stellen. Een vergunning wordt alleen als brondocument in de BAG geregistreerd als de inhoud ervan leidt tot wijzigingen in de registratie.";
+  mim:datumOpname "20040201";
+  mim:herkomstDefinitie "BAG";
+  rdfs:label "Brondocument";
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element." .
+
+sor-sh:Geo-object a sh:NodeShape;
+  dcterms:subject <https://begrippen.geostandaarden.nl/sor-high5/nl/page/object>;
+  mim:datumOpname "20210115";
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  sh:targetClass sor:Geo-object;
+  sh:property [
+      sh:name "indicatie abstract constraint";
+      sh:minCount 2;
+      sh:path rdf:type
+    ], [
+      skos:altLabel "registratiegegevens";
+      sh:name "geregistreerdMet";
+      mim:datumOpname "20211118";
+      sh:path sor:geregistreerdMet;
+      mim:herkomst "NEN3610:2022";
+      mim:toelichting "Een inhoudelijke toelichting op de gegevensgroep.";
+      sh:maxCount 1;
+      rdfs:label "geregistreerdMet";
+      sh:nodeKind sh:BlankNode;
+      rdfs:comment "Attribuut voor herkomst en tijdlijn van de gegevens in de registratie.";
+      mim:indicatieMaterieleHistorie false;
+      sh:minCount 1;
+      sh:class sor:Registratiegegevens
+    ], [
+      sh:minCount 1;
+      mim:identificerend "true";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:string;
+      mim:herkomstDefinitie "NEN3610";
+      sh:path sor:identificatie;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20210901";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "identificatie";
+      rdfs:label "identificatie";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "De functionele identificatie van een Geo-object, zoals bedoeld in NEN3610.";
+      mim:herkomst "NEN3610:2022"
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:string;
+      mim:herkomstDefinitie "NEN3610";
+      sh:path sor:domein;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20210901";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "domein";
+      rdfs:label "domein";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Unieke verwijzing naar een registratie van objecten.";
+      mim:herkomst "NEN3610:2022"
+    ];
+  mim:herkomstDefinitie "Gebaseerd op de definitie in MIM 1.1 en in de Nederlandse Conceptenbibliotheek";
+  rdfs:comment "Een onderdeel van de (tastbare of denkbare) werkelijkheid.";
+  sh:name "Geo-object";
+  mim:indicatieAbstractObject true;
+  mim:equivalent mim:Objecttype;
+  mim:herkomst "NEN3610:2022";
+  mim:populatie "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.";
+  rdfs:label "Geo-object" .
+
+sor:Installatie a owl:Class, rdfs:Class;
+  rdfs:isDefinedBy <http://definities.geostandaarden.nl/def/sor/Informatieproduct%20Gebouw>;
+  rdfs:comment "Constructie die een technisch samenhangend systeem betreft dat een bepaald doel dient.";
+  dcterms:subject <https://begrippen.geostandaarden.nl/sor-high5/nl/page/installatie>;
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  mim:populatie "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.";
+  mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+  mim:herkomstDefinitie "Gebaseerd op installatie in IMGeo 2.2";
+  mim:datumOpname "20211118";
+  rdfs:label "Installatie";
+  rdfs:subClassOf sor:Geo-object .
+
+sor:OpenBouwwerk a owl:Class, rdfs:Class;
+  rdfs:isDefinedBy <http://definities.geostandaarden.nl/def/sor/Informatieproduct%20Gebouw>;
+  rdfs:comment "Afzonderlijk staande overdekking rustend op een constructie met kolommen met één of meerdere open gevels bedoeld voor het beschutten of stallen van mensen, dieren, objecten en/of voer- en vaartuigen";
+  dcterms:subject <https://begrippen.geostandaarden.nl/sor-high5/nl/page/openbouwwerk>;
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  mim:populatie "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.";
+  mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+  mim:herkomstDefinitie "Gebaseerd op definities “open loods” en “overkapping” uit de gegevenscatalogus BGT";
+  mim:datumOpname "20211118";
+  rdfs:label "Open bouwwerk";
+  rdfs:subClassOf sor:Geo-object .
+
+sor:Gebouwcomponent a owl:Class, rdfs:Class;
+  rdfs:isDefinedBy <http://definities.geostandaarden.nl/def/sor/Informatieproduct%20Gebouw>;
+  rdfs:comment "Component aan de buitenzijde van een gebouw, die het aanzicht van het gebouw mede bepaalt";
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  mim:populatie "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.";
+  mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+  mim:herkomstDefinitie "IMGeo 2.2";
+  mim:datumOpname "20211118";
+  rdfs:label "Gebouwcomponent";
+  rdfs:subClassOf sor:Geo-object .
+
+sor:Verblijfsobject a owl:Class, rdfs:Class;
+  rdfs:isDefinedBy <http://definities.geostandaarden.nl/def/sor/Informatieproduct%20Gebouw>;
+  rdfs:comment "Kleinste binnen één of meer gebouwen gelegen eenheid van gebruik die ontsloten wordt via een eigen afsluitbare toegang vanaf de openbare weg, een erf of een gedeelde verkeersruimte, en die onderwerp kan zijn van goederenrechtelijke rechtshandelingen en in functioneel opzicht zelfstandig is.";
+  dcterms:subject <https://begrippen.geostandaarden.nl/sor-high5/nl/page/verblijfsobject>;
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  mim:populatie "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.";
+  mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+  mim:herkomstDefinitie "Artikel 1 Wet basisregistratie adressen en gebouwen.";
+  mim:datumOpname "20201201";
+  rdfs:label "Verblijfsobject";
+  rdfs:subClassOf sor:Geo-object .
+
+sor:Gebouw a owl:Class, rdfs:Class;
+  rdfs:isDefinedBy <http://definities.geostandaarden.nl/def/sor/Informatieproduct%20Gebouw>;
+  rdfs:comment "Overdekte en geheel of grotendeels met wanden omsloten constructief zelfstandige eenheid bedoeld voor het in een afgeschermde omgeving onderbrengen van mensen, dieren of voorwerpen of voor de productie van goederen.";
+  dcterms:subject <https://begrippen.geostandaarden.nl/sor-high5/nl/page/gebouw>;
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  mim:populatie "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.";
+  mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+  mim:herkomstDefinitie "Gebaseerd op definitie “pand” in artikel 1 Wet basisregistratie adressen en gebouwen en de INSPIRE richtlijn";
+  mim:datumOpname "20211117";
+  rdfs:label "Gebouw";
+  skos:altLabel "Gebouw";
+  rdfs:subClassOf sor:Geo-object .
+
+<http://definities.geostandaarden.nl/def/sor/Informatieproduct%20Gebouw> a owl:Ontology .
+
+sor:Begrip a owl:Class, rdfs:Class .
+
+sor:code a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "code" .
+
+sor-sh:Overheidsorganisatie a sh:NodeShape;
+  sh:name "Overheidsorganisatie";
+  sh:targetClass sor:Overheidsorganisatie;
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  rdfs:label "Overheidsorganisatie";
+  sh:property [
+      mim:identificerend "false";
+      skos:altLabel "oin";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:string;
+      sh:path sor:oin;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211117";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "oin";
+      rdfs:label "oin";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Een uniek nummer dat Logius kan toekennen aan organisaties om zich te kunnen identificeren, authentiseren en of autoriseren bij digitaal berichtenverkeer binnen en met de overheid."
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      skos:altLabel "code";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:string;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:code;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211117";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "code";
+      rdfs:label "code";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Unieke aanduiding van een Overheidsorganisatie.";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/"
+    ] .
+
+sor-sh:TypeOpenBouwwerk a sh:NodeShape;
+  mim:equivalent mim:Referentielijst;
+  sh:targetClass sor:TypeOpenBouwwerk .
+
+sor:beschrijft a owl:ObjectProperty, rdf:Property;
+  rdfs:label "beschrijft" .
+
+sor:Indicatie a owl:Class, rdfs:Class;
+  rdfs:subClassOf skos:Concept;
+  rdfs:label "Indicatie";
+  rdfs:comment "Lijst met waarden voor Indicatie." .
+
+sor:TypeOpenBouwwerk a owl:Class, rdfs:Class;
+  rdfs:subClassOf sor:Begrip .
+
+sor:Overheidsorganisatie a owl:Class, rdfs:Class;
+  rdfs:label "Overheidsorganisatie";
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element." .
+
+<http://definities.geostandaarden.nl/id/begrip/Nee> a sor:Indicatie;
+  skos:inScheme <http://definities.geostandaarden.nl/sor/id/scheme/Indicatie> .
+
+<http://definities.geostandaarden.nl/id/begrip/Ja> a sor:Indicatie;
+  skos:inScheme <http://definities.geostandaarden.nl/sor/id/scheme/Indicatie> .
+
+sor-sh:StatusFunctioneel a sh:NodeShape;
+  mim:equivalent mim:Referentielijst;
+  sh:targetClass sor:StatusFunctioneel .
+
+sor-sh:RegistratiegegevensObjectBasisregistratie a sh:NodeShape;
+  sh:name "RegistratiegegevensObjectBasisregistratie";
+  sh:targetClass sor:RegistratiegegevensObjectBasisregistratie;
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  rdfs:comment "Eigenschappen over herkomst en tijdlijn van de gegevens uit de basisregistratie op basis waarvan een SOR informatieobject tot stand is gekomen.";
+  rdfs:label "RegistratiegegevensObjectBasisregistratie";
+  sh:property [
+      sh:name "beschrijft";
+      sh:path sor:beschrijft;
+      mim:toelichting "Een inhoudelijke toelichting op de gegevensgroep.";
+      sh:maxCount 1;
+      rdfs:label "beschrijft";
+      sh:nodeKind sh:BlankNode;
+      mim:indicatieMaterieleHistorie false;
+      sh:minCount 1;
+      sh:class sor:ObjectBasisregistratie
+    ], [
+      skos:altLabel "brondocument";
+      sh:name "brondocument";
+      sh:path sor:brondocument;
+      mim:toelichting "Een inhoudelijke toelichting op de gegevensgroep.";
+      sh:maxCount 1;
+      rdfs:label "brondocument";
+      sh:nodeKind sh:BlankNode;
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      sh:class sor:Brondocument
+    ], [
+      skos:altLabel "bronhouder";
+      sh:name "bronhouder";
+      sh:path sor:bronhouder;
+      mim:toelichting "Een inhoudelijke toelichting op de gegevensgroep.";
+      sh:maxCount 1;
+      rdfs:label "bronhouder";
+      sh:nodeKind sh:BlankNode;
+      rdfs:comment "Verwijzing naar de bronhouder ten tijde van het muteren van het informatieobject.";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      sh:class sor:Overheidsorganisatie
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      skos:altLabel "tijdstipRegistratie";
+      dcterms:subject <http://definities.geostandaarden.nl/nen3610/id/begrip/TijdstipRegistratie>;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:dateTime;
+      mim:herkomstDefinitie "NEN3610:2022";
+      sh:path sor:tijdstipRegistratie;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211117";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "tijdstipRegistratie";
+      rdfs:label "tijdstipRegistratie";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.";
+      mim:herkomst "NEN3610:2022"
+    ], [
+      mim:identificerend "false";
+      skos:altLabel "eindRegistratie";
+      dcterms:subject <http://definities.geostandaarden.nl/nen3610/id/begrip/EindRegistratie>;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:dateTime;
+      mim:herkomstDefinitie "NEN3610:2022";
+      sh:path sor:eindRegistratie;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211117";
+      sh:maxCount 1;
+      mim:toelichting "De periode is tot aan dit tijdstip. Wanneer deze waarde niet is ingevuld is de versie nog geldig.";
+      sh:name "eindRegistratie";
+      rdfs:label "eindRegistratie";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Eind van de periode dat deze versie van het informatieobject geldig is in de registratie.";
+      mim:herkomst "NEN3610:2022"
+    ], [
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:integer;
+      sh:path sor:versie;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "versie";
+      rdfs:label "versie";
+      mim:indicatieMaterieleHistorie false
+    ], [
+      mim:identificerend "false";
+      skos:altLabel "eindGeldigheid";
+      dcterms:subject <http://definities.geostandaarden.nl/nen3610/id/begrip/EindGeldigheid>;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:dateTime;
+      mim:herkomstDefinitie "NEN3610:2022";
+      sh:path sor:eindGeldigheid;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211117";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "eindGeldigheid";
+      rdfs:label "eindGeldigheid";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Eind van de periode waarop deze versie van het informatieobject geldig is in de registratie werkelijkheid.";
+      mim:herkomst "NEN3610:2022"
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      skos:altLabel "beginGeldigheid";
+      dcterms:subject <http://definities.geostandaarden.nl/nen3610/id/begrip/BeginGeldigheid>;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:dateTime;
+      mim:herkomstDefinitie "NEN3610:2022";
+      sh:path sor:beginGeldigheid;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211117";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "beginGeldigheid";
+      rdfs:label "beginGeldigheid";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Start van de periode waarop deze versie van het informatieobejct geldig is in de registratie werkelijkheid.";
+      mim:herkomst "NEN3610:2022"
+    ] .
+
+sor-sh:Gebouw a sh:NodeShape;
+  dcterms:subject <https://begrippen.geostandaarden.nl/sor-high5/nl/page/gebouw>;
+  mim:datumOpname "20211117";
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  skos:altLabel "Gebouw";
+  sh:targetClass sor:Gebouw;
+  mim:herkomstDefinitie "Gebaseerd op definitie “pand” in artikel 1 Wet basisregistratie adressen en gebouwen en de INSPIRE richtlijn";
+  rdfs:comment "Overdekte en geheel of grotendeels met wanden omsloten constructief zelfstandige eenheid bedoeld voor het in een afgeschermde omgeving onderbrengen van mensen, dieren of voorwerpen of voor de productie van goederen.";
+  sh:name "Gebouw";
+  mim:indicatieAbstractObject false;
+  mim:equivalent mim:Objecttype;
+  mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+  mim:populatie "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.";
+  rdfs:label "Gebouw";
+  sh:property [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:status;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20201201";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "status";
+      rdfs:label "status";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Fase van de levenscyclus waarin een gebouw zich bevindt.";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:class sor:Statusreëel
+    ], [
+      mim:identificerend "false";
+      sh:class gml:Surface, gsp:Geometry;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "IMGeo 2.2";
+      sh:path sor:geometrie2dgrondvlak;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20201201";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "geometrie2dGrondvlak";
+      rdfs:label "geometrie2dGrondvlak";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Geometrische grondvlakrepresentatie van een gebouw.";
+      mim:herkomst "IMGeo 2.2"
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:type;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20201201";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "type";
+      rdfs:label "type";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Categorisering van een gebouw op basis van het constructief beoogde gebruik.";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:class sor:TypeGebouw
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      sh:class gml:Surface, gsp:Geometry;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:geometrie;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20201201";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "geometrie";
+      rdfs:label "geometrie";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Geometrische omtrekrepresentatie van een gebouw.";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/"
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      skos:altLabel "oorspronkelijkBouwjaar";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:gYear;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:oorspronkelijkBouwjaar;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20201201";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "oorspronkelijkBouwjaar";
+      rdfs:label "oorspronkelijkBouwjaar";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Aanduiding van het jaar waarin een gebouw oorspronkelijk als bouwkundig gereed is of zal worden opgeleverd.";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/"
+    ] .
+
+sor:StatusFunctioneel a owl:Class, rdfs:Class;
+  rdfs:subClassOf sor:Begrip .
+
+sor:identificatie a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "identificatie" .
+
+sor:maaktOnderdeelUitVan a owl:ObjectProperty, rdf:Property;
+  rdfs:label "maaktOnderdeelUitVan" .
+
+sor-sh:Gebruiksdoel a sh:NodeShape;
+  mim:equivalent mim:Referentielijst;
+  sh:targetClass sor:Gebruiksdoel .
+
+sor:bronhouder a owl:ObjectProperty, rdf:Property;
+  rdfs:label "bronhouder" .
+
+sor:RegistratiegegevensObjectBasisregistratie a owl:Class, rdfs:Class;
+  rdfs:comment "Eigenschappen over herkomst en tijdlijn van de gegevens uit de basisregistratie op basis waarvan een SOR informatieobject tot stand is gekomen.";
+  rdfs:label "RegistratiegegevensObjectBasisregistratie";
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element." .
+
+sor:Gebruiksdoel a owl:Class, rdfs:Class;
+  rdfs:subClassOf sor:Begrip .
+
+sor-sh:TypeGebouwcomponent a sh:NodeShape;
+  mim:equivalent mim:Referentielijst;
+  sh:targetClass sor:TypeGebouwcomponent .
+
+sor-sh:Registratiegegevens a sh:NodeShape;
+  sh:name "Registratiegegevens";
+  sh:targetClass sor:Registratiegegevens;
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  rdfs:comment "Eigenschappen over herkomst en tijdlijn van de gegevens in de registratie.";
+  rdfs:label "Registratiegegevens";
+  sh:property [
+      sh:name "afgeleidVan";
+      sh:path sor:afgeleidVan;
+      mim:herkomst "DiSGeo High5-3a";
+      mim:toelichting "Een inhoudelijke toelichting op de gegevensgroep.";
+      rdfs:label "afgeleidVan";
+      sh:nodeKind sh:BlankNode;
+      mim:indicatieMaterieleHistorie false;
+      sh:minCount 1;
+      sh:class sor:RegistratiegegevensObjectBasisregistratie
+    ], [
+      mim:identificerend "false";
+      skos:altLabel "eindGeldigheid";
+      dcterms:subject <http://definities.geostandaarden.nl/nen3610/id/begrip/EindGeldigheid>;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:dateTime;
+      mim:herkomstDefinitie "NEN3610:2022";
+      sh:path sor:eindGeldigheid;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211117";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "eindGeldigheid";
+      rdfs:label "eindGeldigheid";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Eind van de periode waarop deze versie van het informatieobject geldig is in de registratie werkelijkheid.";
+      mim:herkomst "NEN3610:2022"
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      skos:altLabel "beginGeldigheid";
+      dcterms:subject <http://definities.geostandaarden.nl/nen3610/id/begrip/BeginGeldigheid>;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:dateTime;
+      mim:herkomstDefinitie "NEN3610:2022";
+      sh:path sor:beginGeldigheid;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211117";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "beginGeldigheid";
+      rdfs:label "beginGeldigheid";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Start van de periode waarop deze versie van het informatieobejct geldig is in de registratie werkelijkheid.";
+      mim:herkomst "NEN3610:2022"
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      skos:altLabel "tijdstipRegistratie";
+      dcterms:subject <http://definities.geostandaarden.nl/nen3610/id/begrip/TijdstipRegistratie>;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:dateTime;
+      mim:herkomstDefinitie "NEN3610:2022";
+      sh:path sor:tijdstipRegistratie;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211117";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "tijdstipRegistratie";
+      rdfs:label "tijdstipRegistratie";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Tijdstip waarop deze versie van het informatieobject beschikbaar was via deze dienst.";
+      mim:herkomst "NEN3610:2022"
+    ], [
+      mim:identificerend "false";
+      skos:altLabel "eindRegistratie";
+      dcterms:subject <http://definities.geostandaarden.nl/nen3610/id/begrip/EindRegistratie>;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:dateTime;
+      mim:herkomstDefinitie "NEN3610:2022";
+      sh:path sor:eindRegistratie;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211117";
+      sh:maxCount 1;
+      mim:toelichting "De periode is tot aan dit tijdstip. Wanneer deze waarde niet is ingevuld is de versie nog geldig.";
+      sh:name "eindRegistratie";
+      rdfs:label "eindRegistratie";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Eind van de periode dat deze versie van het informatieobject beschikbaar was via deze dienst.";
+      mim:herkomst "NEN3610:2022"
+    ] .
+
+sor:TypeGebouwcomponent a owl:Class, rdfs:Class;
+  rdfs:subClassOf sor:Begrip .
+
+sor-sh:Gebouwcomponent a sh:NodeShape;
+  mim:datumOpname "20211118";
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  sh:targetClass sor:Gebouwcomponent;
+  mim:herkomstDefinitie "IMGeo 2.2";
+  rdfs:comment "Component aan de buitenzijde van een gebouw, die het aanzicht van het gebouw mede bepaalt";
+  sh:name "Gebouwcomponent";
+  mim:indicatieAbstractObject false;
+  mim:equivalent mim:Objecttype;
+  mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+  mim:populatie "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.";
+  rdfs:label "Gebouwcomponent";
+  sh:property [
+      rdfs:label "isOnderdeelVan";
+      mim:indicatieMaterieleHistorie false;
+      sh:path sor:isOnderdeelVan;
+      mim:indicatieFormeleHistorie false;
+      mim:herkomstDefinitie "Eisen aan inhoud Samenhangende Objectgegevens";
+      sh:minCount 1;
+      mim:herkomst "Eisen aan inhoud Samenhangende Objectgegevens";
+      sh:maxCount 2;
+      mim:authentiek "Basisgegeven";
+      sh:nodeKind sh:IRI;
+      mim:indicatieAfleidbaar false;
+      sh:name "isOnderdeelVan";
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:class sor:Gebouw
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:geometrie;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211118";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "geometrie";
+      rdfs:label "geometrie";
+      mim:indicatieMaterieleHistorie false;
+      rdfs:comment "Geometrische representatie van een gebouwcomponent.";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:xone (_:PuntOfLijnOfVlakGM_LineString _:PuntOfLijnOfVlakGM_Point _:PuntOfLijnOfVlakGM_Surface)
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:type;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211118";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "type";
+      rdfs:label "type";
+      mim:indicatieMaterieleHistorie false;
+      rdfs:comment "Categorisering van een gebouwcomponent op basis van het constructief beoogde gebruik.";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:class sor:TypeGebouwcomponent
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:status;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211118";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "status";
+      rdfs:label "status";
+      mim:indicatieMaterieleHistorie false;
+      rdfs:comment "Fase van de levenscyclus waarin een gebouwcomponent zich bevindt";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:class sor:Statusreëel
+    ] .
+
+sor:brondocument a owl:ObjectProperty, rdf:Property;
+  rdfs:label "brondocument" .
+
+sor-sh:TypeGebouw a sh:NodeShape;
+  mim:equivalent mim:Referentielijst;
+  sh:targetClass sor:TypeGebouw .
+
+sor:Registratiegegevens a owl:Class, rdfs:Class;
+  rdfs:comment "Eigenschappen over herkomst en tijdlijn van de gegevens in de registratie.";
+  rdfs:label "Registratiegegevens";
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element." .
+
+sor-sh:ObjectBasisregistratie a sh:NodeShape;
+  sh:name "ObjectBasisregistratie";
+  sh:targetClass sor:ObjectBasisregistratie;
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  rdfs:label "ObjectBasisregistratie";
+  sh:property [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:string;
+      mim:herkomstDefinitie "NEN3610";
+      sh:path sor:identificatie;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20210901";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "identificatie";
+      rdfs:label "identificatie";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Unieke aanduiding van een Geo-object.";
+      mim:herkomst "SOR"
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:string;
+      mim:herkomstDefinitie "NEN3610";
+      sh:path sor:domein;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20210901";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "domein";
+      rdfs:label "domein";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Unieke verwijzing naar een registratie van objecten.";
+      mim:herkomst "SOR"
+    ] .
+
+sor:TypeGebouw a owl:Class, rdfs:Class;
+  rdfs:subClassOf sor:Begrip .
+
+sor:status a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "status" .
+
+sor-sh:Statusreëel a sh:NodeShape;
+  mim:equivalent mim:Referentielijst;
+  sh:targetClass sor:Statusreëel .
+
+sor:afgeleidVan a owl:ObjectProperty, rdf:Property;
+  rdfs:label "afgeleidVan" .
+
+sor:Statusreëel a owl:Class, rdfs:Class;
+  rdfs:subClassOf sor:Begrip .
+
+sor:ObjectBasisregistratie a owl:Class, rdfs:Class;
+  rdfs:label "ObjectBasisregistratie";
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element." .
+
+sor-sh:OpenBouwwerk a sh:NodeShape;
+  dcterms:subject <https://begrippen.geostandaarden.nl/sor-high5/nl/page/openbouwwerk>;
+  mim:datumOpname "20211118";
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  sh:targetClass sor:OpenBouwwerk;
+  mim:herkomstDefinitie "Gebaseerd op definities “open loods” en “overkapping” uit de gegevenscatalogus BGT";
+  rdfs:comment "Afzonderlijk staande overdekking rustend op een constructie met kolommen met één of meerdere open gevels bedoeld voor het beschutten of stallen van mensen, dieren, objecten en/of voer- en vaartuigen";
+  sh:name "Open bouwwerk";
+  mim:indicatieAbstractObject false;
+  mim:equivalent mim:Objecttype;
+  mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+  mim:populatie "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.";
+  rdfs:label "Open bouwwerk";
+  sh:property [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:status;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211118";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "status";
+      rdfs:label "status";
+      mim:indicatieMaterieleHistorie false;
+      rdfs:comment "Fase van de levenscyclus waarin een open bouwwerk zich bevindt";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:class sor:Statusreëel
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      sh:class gml:Surface, gsp:Geometry;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:geometrie;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211118";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "geometrie";
+      rdfs:label "geometrie";
+      mim:indicatieMaterieleHistorie false;
+      rdfs:comment "Geometrische representatie van een open bouwwerk";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/"
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:type;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "type";
+      rdfs:label "type";
+      mim:indicatieMaterieleHistorie false;
+      rdfs:comment "Soort open bouwwerk";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:class sor:TypeOpenBouwwerk
+    ] .
+
+sor:oorspronkelijkBouwjaar a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "oorspronkelijkBouwjaar" .
+
+sor-sh:Installatie a sh:NodeShape;
+  dcterms:subject <https://begrippen.geostandaarden.nl/sor-high5/nl/page/installatie>;
+  mim:datumOpname "20211118";
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  sh:targetClass sor:Installatie;
+  mim:herkomstDefinitie "Gebaseerd op installatie in IMGeo 2.2";
+  rdfs:comment "Constructie die een technisch samenhangend systeem betreft dat een bepaald doel dient.";
+  sh:name "Installatie";
+  mim:indicatieAbstractObject false;
+  mim:equivalent mim:Objecttype;
+  mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+  mim:populatie "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.";
+  rdfs:label "Installatie";
+  sh:property [
+      rdfs:label "isOnderdeelVan";
+      mim:indicatieMaterieleHistorie false;
+      sh:path sor:isOnderdeelVan;
+      mim:indicatieFormeleHistorie false;
+      mim:herkomstDefinitie "Eisen aan inhoud Samenhangende Objectgegevens";
+      sh:minCount 1;
+      mim:herkomst "Eisen aan inhoud Samenhangende Objectgegevens";
+      sh:maxCount 1;
+      mim:authentiek "Basisgegeven";
+      sh:nodeKind sh:IRI;
+      mim:indicatieAfleidbaar false;
+      sh:name "isOnderdeelVan";
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:class sor:Gebouw
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:geometrie;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211118";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "geometrie";
+      rdfs:label "geometrie";
+      mim:indicatieMaterieleHistorie false;
+      rdfs:comment "Geometrische representatie van de installatie";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:xone (_:PuntOfLijnOfVlakGM_LineString _:PuntOfLijnOfVlakGM_Point _:PuntOfLijnOfVlakGM_Surface)
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:status;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211118";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "status";
+      rdfs:label "status";
+      mim:indicatieMaterieleHistorie false;
+      rdfs:comment "Fase van de levenscyclus waarin een installatie zich bevindt";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:class sor:Statusreëel
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:type;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20211118";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "type";
+      rdfs:label "type";
+      mim:indicatieMaterieleHistorie false;
+      rdfs:comment "Aanduiding van het soort installatie";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:class sor:TypeInstallatie
+    ] .
+
+_:PuntOfLijnOfVlakGM_Point sh:class gml:Point .
+
+_:PuntOfLijnOfVlakGM_LineString sh:class gml:LineString .
+
+_:PuntOfLijnOfVlakGM_Surface sh:class gml:Surface .
+
+sor:type a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "type" .
+
+sor-sh:Verblijfsobject a sh:NodeShape;
+  dcterms:subject <https://begrippen.geostandaarden.nl/sor-high5/nl/page/verblijfsobject>;
+  mim:datumOpname "20201201";
+  mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+  sh:targetClass sor:Verblijfsobject;
+  mim:herkomstDefinitie "Artikel 1 Wet basisregistratie adressen en gebouwen.";
+  rdfs:comment "Kleinste binnen één of meer gebouwen gelegen eenheid van gebruik die ontsloten wordt via een eigen afsluitbare toegang vanaf de openbare weg, een erf of een gedeelde verkeersruimte, en die onderwerp kan zijn van goederenrechtelijke rechtshandelingen en in functioneel opzicht zelfstandig is.";
+  sh:name "Verblijfsobject";
+  mim:indicatieAbstractObject false;
+  mim:equivalent mim:Objecttype;
+  mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+  mim:populatie "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.";
+  rdfs:label "Verblijfsobject";
+  sh:property [
+      rdfs:label "maaktOnderdeelUitVan";
+      mim:indicatieMaterieleHistorie false;
+      sh:path sor:maaktOnderdeelUitVan;
+      mim:indicatieFormeleHistorie false;
+      skos:altLabel "hoortBij";
+      mim:herkomstDefinitie "BAG";
+      sh:minCount 1;
+      mim:herkomst "BAG";
+      mim:authentiek "Authentiek";
+      sh:nodeKind sh:IRI;
+      mim:indicatieAfleidbaar false;
+      sh:name "maaktOnderdeelUitVan";
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:class sor:Gebouw
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      dcterms:subject <https://begrippen.geostandaarden.nl/sor-high5/nl/page/gebruiksdoel>;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "BAG";
+      sh:path sor:gebruiksdoel;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20201201";
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "gebruiksdoel";
+      rdfs:label "gebruiksdoel";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Categorisering van de gebruiksdoelen van een verblijfsobject zoals in de vergunning is opgenomen of bij constatering is vastgesteld";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:class sor:Gebruiksdoel
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      sh:datatype xsd:integer;
+      mim:herkomstDefinitie "BAG";
+      sh:path sor:gebruiksoppervlakte;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20201201";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "gebruiksoppervlakte";
+      rdfs:label "gebruiksoppervlakte";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Gebruiksoppervlakte van een verblijfsobject";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/"
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:status;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20210901";
+      sh:maxCount 1;
+      mim:toelichting "Een inhoudelijke toelichting op de toepassing van het informatie-element.";
+      sh:name "status";
+      rdfs:label "status";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Fase van de levenscyclus waarin een verblijfsobject zich bevindt";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:class sor:StatusFunctioneel
+    ], [
+      sh:minCount 1;
+      mim:identificerend "false";
+      sh:class gml:Surface, gsp:Geometry;
+      mim:indicatieFormeleHistorie false;
+      mim:indicatieAfleidbaar false;
+      mim:herkomstDefinitie "https://docs.geostandaarden.nl/disgeo/emso/";
+      sh:path sor:geometrie;
+      mim:patroon "De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.";
+      mim:datumOpname "20201201";
+      sh:maxCount 1;
+      mim:toelichting "Dit betreft een 2,5D geometrie. Een 2,5D geometrie is een uitbreiding op 2D geometrie door aan elke vastgelegde coördinaat een absolute hoogte (z-waarde) toe te voegen. Een 2,5D geometrie wordt in absolute zin in een drie dimensionale ruimte vastgelegd (dus met x,y en z coördinaten voor elk vastgelegd punt in een geometrie).";
+      sh:name "geometrie";
+      rdfs:label "geometrie";
+      mim:indicatieMaterieleHistorie false;
+      mim:authentiek "Authentiek";
+      rdfs:comment "Geometrische representatie van een verblijfsobject";
+      mim:herkomst "https://docs.geostandaarden.nl/disgeo/emso/"
+    ] .
+
+sor:geometrie a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "geometrie" .
+
+sor:geometrie2dgrondvlak a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "geometrie2dGrondvlak" .
+
+sor:gebruiksdoel a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "gebruiksdoel" .
+
+sor:gebruiksoppervlakte a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "gebruiksoppervlakte" .
+
+sor:documentdatum a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "documentdatum" .
+
+sor:documentnummer a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "documentnummer" .
+
+sor:oin a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "oin" .
+
+sor:beginGeldigheid a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "beginGeldigheid" .
+
+sor:eindGeldigheid a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "eindGeldigheid" .
+
+sor:tijdstipRegistratie a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "tijdstipRegistratie" .
+
+sor:eindRegistratie a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "eindRegistratie" .
+
+sor:versie a owl:DatatypeProperty, rdf:Property;
+  rdfs:label "versie" .

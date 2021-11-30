@@ -1,0 +1,1652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mim:Informatiemodel xmlns:mim="http://www.geostandaarden.nl/mim/informatiemodel/v1"
+                     xmlns:mim-ext="http://www.geostandaarden.nl/mim-ext/informatiemodel/v1"
+                     xmlns:mim-ref="http://www.geostandaarden.nl/mim-ref/informatiemodel/v1"
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <mim:naam>MIMCM-IMSOR-0.1.0-0-20211129-20211130-144841</mim:naam>
+   <mim:definitie/>
+   <mim:herkomst/>
+   <mim:informatiedomein/>
+   <mim:informatiemodeltype/>
+   <mim:relatiemodelleringstype>Relatiesoort leidend</mim:relatiemodelleringstype>
+   <mim:mIMVersie/>
+   <mim:bevat>
+      <mim:Domein id="domein-informatieproduct-gebouw-d17316e12">
+         <mim:naam>Informatieproduct Gebouw</mim:naam>
+         <mim:bevat__datatype>
+            <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-begrip-d17316e1976">Begrip</mim-ref:_DatatypeRef>
+            <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-gebruiksdoel-d17316e2056">Gebruiksdoel</mim-ref:_DatatypeRef>
+            <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-enumeratie-indicatie-d17316e1942">Indicatie</mim-ref:_DatatypeRef>
+            <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-statusfunctioneel-d17316e2040">StatusFunctioneel</mim-ref:_DatatypeRef>
+            <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-statusreel-d17316e2104">StatusReëel</mim-ref:_DatatypeRef>
+            <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-typegebouw-d17316e2088">TypeGebouw</mim-ref:_DatatypeRef>
+            <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-typegebouwcomponent-d17316e2072">TypeGebouwcomponent</mim-ref:_DatatypeRef>
+            <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-typeinstallatie-d17316e1966">TypeInstallatie</mim-ref:_DatatypeRef>
+            <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-typeopenbouwwerk-d17316e2024">TypeOpenBouwwerk</mim-ref:_DatatypeRef>
+         </mim:bevat__datatype>
+         <mim:bevat__objecttype>
+            <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-gebouw-d17316e242">Gebouw</mim-ref:ObjecttypeRef>
+            <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-gebouwcomponent-d17316e464">Gebouwcomponent</mim-ref:ObjecttypeRef>
+            <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-geoobject-d17316e115">Geo-object</mim-ref:ObjecttypeRef>
+            <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-installatie-d17316e779">Installatie</mim-ref:ObjecttypeRef>
+            <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-open-bouwwerk-d17316e641">Open bouwwerk</mim-ref:ObjecttypeRef>
+            <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-verblijfsobject-d17316e958">Verblijfsobject</mim-ref:ObjecttypeRef>
+         </mim:bevat__objecttype>
+         <mim:bevat__gegevensgroeptype>
+            <mim-ref:GegevensgroeptypeRef xlink:href="#informatieproduct-gebouw-gegevensgroeptype-brondocument-d17316e1182">Brondocument</mim-ref:GegevensgroeptypeRef>
+            <mim-ref:GegevensgroeptypeRef xlink:href="#informatieproduct-gebouw-gegevensgroeptype-objectbasisregistratie-d17316e1856">ObjectBasisregistratie</mim-ref:GegevensgroeptypeRef>
+            <mim-ref:GegevensgroeptypeRef xlink:href="#informatieproduct-gebouw-gegevensgroeptype-overheidsorganisatie-d17316e1278">Overheidsorganisatie</mim-ref:GegevensgroeptypeRef>
+            <mim-ref:GegevensgroeptypeRef xlink:href="#informatieproduct-gebouw-gegevensgroeptype-registratiegegevens-d17316e1653">Registratiegegevens</mim-ref:GegevensgroeptypeRef>
+            <mim-ref:GegevensgroeptypeRef xlink:href="#informatieproduct-gebouw-gegevensgroeptype-registratiegegevensobjectbasisregistratie-d17316e1365">RegistratiegegevensObjectBasisregistratie</mim-ref:GegevensgroeptypeRef>
+         </mim:bevat__gegevensgroeptype>
+         <mim:bevat__keuze>
+            <mim-ref:Keuze__DatatypenRef xlink:href="#informatieproduct-gebouw-keuze__datatypen-puntoflijnofvlak-d17316e2120">PuntOfLijnOfVlak</mim-ref:Keuze__DatatypenRef>
+         </mim:bevat__keuze>
+         <mim-ext:kenmerken>
+            <mim-ext:kenmerk naam="Release">20211129</mim-ext:kenmerk>
+         </mim-ext:kenmerken>
+      </mim:Domein>
+      <mim:View id="view-datatypes-d17316e64">
+         <mim:naam>Datatypes</mim:naam>
+         <mim:locatie/>
+         <mim:definitie/>
+         <mim:herkomst/>
+      </mim:View>
+   </mim:bevat>
+   <mim:maaktGebruikVan>
+      <mim:Extern id="OUTSIDE-1">
+         <mim:naam>GML</mim:naam>
+         <mim:locatie/>
+         <mim:definitie/>
+         <mim:herkomst/>
+         <mim:bevat/>
+      </mim:Extern>
+      <mim:Extern id="OUTSIDE-2">
+         <mim:naam>GMLSF</mim:naam>
+         <mim:locatie/>
+         <mim:definitie/>
+         <mim:herkomst/>
+         <mim:bevat/>
+      </mim:Extern>
+      <mim:Extern id="OUTSIDE-1">
+         <mim:naam>MIM11</mim:naam>
+         <mim:locatie/>
+         <mim:definitie/>
+         <mim:herkomst/>
+         <mim:bevat>
+            <mim-ref:InterfaceRef xlink:href="#mim11-interface-date-d17316e2293">Date</mim-ref:InterfaceRef>
+            <mim-ref:InterfaceRef xlink:href="#mim11-interface-day-d17316e2296">Day</mim-ref:InterfaceRef>
+            <mim-ref:InterfaceRef xlink:href="#mim11-interface-year-d17316e2299">Year</mim-ref:InterfaceRef>
+            <mim-ref:InterfaceRef xlink:href="#mim11-interface-decimal-d17316e2302">Decimal</mim-ref:InterfaceRef>
+            <mim-ref:InterfaceRef xlink:href="#mim11-interface-datetime-d17316e2305">DateTime</mim-ref:InterfaceRef>
+            <mim-ref:InterfaceRef xlink:href="#mim11-interface-month-d17316e2309">Month</mim-ref:InterfaceRef>
+            <mim-ref:InterfaceRef xlink:href="#mim11-interface-real-d17316e2312">Real</mim-ref:InterfaceRef>
+            <mim-ref:InterfaceRef xlink:href="#mim11-interface-characterstring-d17316e2315">CharacterString</mim-ref:InterfaceRef>
+            <mim-ref:InterfaceRef xlink:href="#mim11-interface-uri-d17316e2318">URI</mim-ref:InterfaceRef>
+            <mim-ref:InterfaceRef xlink:href="#mim11-interface-integer-d17316e2321">Integer</mim-ref:InterfaceRef>
+            <mim-ref:InterfaceRef xlink:href="#mim11-interface-boolean-d17316e2324">Boolean</mim-ref:InterfaceRef>
+         </mim:bevat>
+      </mim:Extern>
+   </mim:maaktGebruikVan>
+   <mim:components>
+      <mim:Objecttype id="informatieproduct-gebouw-objecttype-geoobject-d17316e115">
+         <mim:naam>Geo-object</mim:naam>
+         <mim:begrip>https://begrippen.geostandaarden.nl/sor-high5/nl/page/object</mim:begrip>
+         <mim:herkomst>NEN3610:2022</mim:herkomst>
+         <mim:definitie>Een onderdeel van de (tastbare of denkbare) werkelijkheid.</mim:definitie>
+         <mim:herkomstDefinitie>Gebaseerd op de definitie in MIM 1.1 en in de Nederlandse Conceptenbibliotheek</mim:herkomstDefinitie>
+         <mim:datumOpname>20210115</mim:datumOpname>
+         <mim:uniekeAanduiding/>
+         <mim:populatie>Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.</mim:populatie>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:indicatieAbstractObject>true</mim:indicatieAbstractObject>
+         <mim:gebruikt__attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>domein</mim:naam>
+               <mim:herkomst>NEN3610:2022</mim:herkomst>
+               <mim:definitie>Unieke verwijzing naar een registratie van objecten.</mim:definitie>
+               <mim:herkomstDefinitie>NEN3610</mim:herkomstDefinitie>
+               <mim:datumOpname>20210901</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-characterstring-d17316e2163">CharacterString</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>identificatie</mim:naam>
+               <mim:herkomst>NEN3610:2022</mim:herkomst>
+               <mim:definitie>De functionele identificatie van een Geo-object, zoals bedoeld in NEN3610.</mim:definitie>
+               <mim:herkomstDefinitie>NEN3610</mim:herkomstDefinitie>
+               <mim:datumOpname>20210901</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>true</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-characterstring-d17316e2163">CharacterString</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+         </mim:gebruikt__attribuutsoort>
+         <mim:gebruikt__gegevensgroep>
+            <mim:Gegevensgroep>
+               <mim:naam>geregistreerdMet</mim:naam>
+               <mim:alias>registratiegegevens</mim:alias>
+               <mim:definitie>Attribuut voor herkomst en tijdlijn van de gegevens in de registratie.</mim:definitie>
+               <mim:toelichting>Een inhoudelijke toelichting op de gegevensgroep.</mim:toelichting>
+               <mim:herkomst>NEN3610:2022</mim:herkomst>
+               <mim:herkomstDefinitie/>
+               <mim:datumOpname>20211118</mim:datumOpname>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek/>
+               <mim:heeft>
+                  <mim-ref:GegevensgroeptypeRef xlink:href="#informatieproduct-gebouw-gegevensgroeptype-registratiegegevens-d17316e1653">Registratiegegevens</mim-ref:GegevensgroeptypeRef>
+               </mim:heeft>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Gegevensgroep>
+         </mim:gebruikt__gegevensgroep>
+      </mim:Objecttype>
+      <mim:Objecttype id="informatieproduct-gebouw-objecttype-gebouw-d17316e242">
+         <mim:naam>Gebouw</mim:naam>
+         <mim:alias>Gebouw</mim:alias>
+         <mim:begrip>https://begrippen.geostandaarden.nl/sor-high5/nl/page/gebouw</mim:begrip>
+         <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+         <mim:definitie>Overdekte en geheel of grotendeels met wanden omsloten constructief zelfstandige eenheid bedoeld voor het in een afgeschermde omgeving onderbrengen van mensen, dieren of voorwerpen of voor de productie van goederen.</mim:definitie>
+         <mim:herkomstDefinitie>Gebaseerd op definitie “pand” in artikel 1 Wet basisregistratie adressen en gebouwen en de INSPIRE richtlijn</mim:herkomstDefinitie>
+         <mim:datumOpname>20211117</mim:datumOpname>
+         <mim:uniekeAanduiding/>
+         <mim:populatie>Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.</mim:populatie>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+         <mim:supertype>
+            <mim:Generalisatie>
+               <mim:datumOpname/>
+               <mim:verwijstNaarGenerieke>
+                  <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-geoobject-d17316e115">Geo-object</mim-ref:ObjecttypeRef>
+               </mim:verwijstNaarGenerieke>
+            </mim:Generalisatie>
+         </mim:supertype>
+         <mim:gebruikt__attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>status</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Fase van de levenscyclus waarin een gebouw zich bevindt.</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20201201</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-statusreel-d17316e2104">StatusReëel</mim-ref:_DatatypeRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>oorspronkelijkBouwjaar</mim:naam>
+               <mim:alias>oorspronkelijkBouwjaar</mim:alias>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Aanduiding van het jaar waarin een gebouw oorspronkelijk als bouwkundig gereed is of zal worden opgeleverd.</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20201201</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-year-d17316e2256">Year</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>type</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Categorisering van een gebouw op basis van het constructief beoogde gebruik.</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20201201</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>true</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>true</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-typegebouw-d17316e2088">TypeGebouw</mim-ref:_DatatypeRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>geometrie</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Geometrische omtrekrepresentatie van een gebouw.</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20201201</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-gmsurface-d17316e2271">GM_Surface</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>geometrie2dGrondvlak</mim:naam>
+               <mim:herkomst>IMGeo 2.2</mim:herkomst>
+               <mim:definitie>Geometrische grondvlakrepresentatie van een gebouw.</mim:definitie>
+               <mim:herkomstDefinitie>IMGeo 2.2</mim:herkomstDefinitie>
+               <mim:datumOpname>20201201</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>0..1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-gmsurface-d17316e2271">GM_Surface</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+         </mim:gebruikt__attribuutsoort>
+      </mim:Objecttype>
+      <mim:Objecttype id="informatieproduct-gebouw-objecttype-gebouwcomponent-d17316e464">
+         <mim:naam>Gebouwcomponent</mim:naam>
+         <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+         <mim:definitie>Component aan de buitenzijde van een gebouw, die het aanzicht van het gebouw mede bepaalt</mim:definitie>
+         <mim:herkomstDefinitie>IMGeo 2.2</mim:herkomstDefinitie>
+         <mim:datumOpname>20211118</mim:datumOpname>
+         <mim:uniekeAanduiding/>
+         <mim:populatie>Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.</mim:populatie>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+         <mim:supertype>
+            <mim:Generalisatie>
+               <mim:datumOpname/>
+               <mim:verwijstNaarGenerieke>
+                  <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-geoobject-d17316e115">Geo-object</mim-ref:ObjecttypeRef>
+               </mim:verwijstNaarGenerieke>
+            </mim:Generalisatie>
+         </mim:supertype>
+         <mim:gebruikt__attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>status</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Fase van de levenscyclus waarin een gebouwcomponent zich bevindt</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20211118</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek/>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-statusreel-d17316e2104">StatusReëel</mim-ref:_DatatypeRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>type</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Categorisering van een gebouwcomponent op basis van het constructief beoogde gebruik.</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20211118</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek/>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-typegebouwcomponent-d17316e2072">TypeGebouwcomponent</mim-ref:_DatatypeRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>geometrie</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Geometrische representatie van een gebouwcomponent.</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20211118</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek/>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__keuze>
+                  <mim-ref:Keuze__DatatypenRef xlink:href="#informatieproduct-gebouw-keuze__datatypen-puntoflijnofvlak-d17316e2120">PuntOfLijnOfVlak</mim-ref:Keuze__DatatypenRef>
+               </mim:heeft__keuze>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+         </mim:gebruikt__attribuutsoort>
+         <mim:bezit>
+            <mim:Relatiesoort>
+               <mim:naam>isOnderdeelVan</mim:naam>
+               <mim:uniDirectioneel>true</mim:uniDirectioneel>
+               <mim:typeAggregatie>Geen</mim:typeAggregatie>
+               <mim:kardinaliteit>1..2</mim:kardinaliteit>
+               <mim:herkomst>Eisen aan inhoud Samenhangende Objectgegevens</mim:herkomst>
+               <mim:definitie/>
+               <mim:herkomstDefinitie>Eisen aan inhoud Samenhangende Objectgegevens</mim:herkomstDefinitie>
+               <mim:datumOpname/>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:authentiek>Basisgegeven</mim:authentiek>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:verwijstNaar__objecttype>
+                  <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-gebouw-d17316e242">Gebouw</mim-ref:ObjecttypeRef>
+                  <mim:_Relatierol>
+                     <mim:id>Doel</mim:id>
+                  </mim:_Relatierol>
+               </mim:verwijstNaar__objecttype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">200</mim-ext:kenmerk>
+                  <mim-ext:kenmerk name="kardinaliteitBron">1</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Relatiesoort>
+         </mim:bezit>
+      </mim:Objecttype>
+      <mim:Objecttype id="informatieproduct-gebouw-objecttype-open-bouwwerk-d17316e641">
+         <mim:naam>Open bouwwerk</mim:naam>
+         <mim:begrip>https://begrippen.geostandaarden.nl/sor-high5/nl/page/openbouwwerk</mim:begrip>
+         <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+         <mim:definitie>Afzonderlijk staande overdekking rustend op een constructie met kolommen met één of meerdere open gevels bedoeld voor het beschutten of stallen van mensen, dieren, objecten en/of voer- en vaartuigen</mim:definitie>
+         <mim:herkomstDefinitie>Gebaseerd op definities “open loods” en “overkapping” uit de gegevenscatalogus BGT</mim:herkomstDefinitie>
+         <mim:datumOpname>20211118</mim:datumOpname>
+         <mim:uniekeAanduiding/>
+         <mim:populatie>Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.</mim:populatie>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+         <mim:supertype>
+            <mim:Generalisatie>
+               <mim:datumOpname/>
+               <mim:verwijstNaarGenerieke>
+                  <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-geoobject-d17316e115">Geo-object</mim-ref:ObjecttypeRef>
+               </mim:verwijstNaarGenerieke>
+            </mim:Generalisatie>
+         </mim:supertype>
+         <mim:gebruikt__attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>status</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Fase van de levenscyclus waarin een open bouwwerk zich bevindt</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20211118</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek/>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-statusreel-d17316e2104">StatusReëel</mim-ref:_DatatypeRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>type</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Soort open bouwwerk</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname/>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek/>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-typeopenbouwwerk-d17316e2024">TypeOpenBouwwerk</mim-ref:_DatatypeRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>geometrie</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Geometrische representatie van een open bouwwerk</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20211118</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek/>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-gmsurface-d17316e2271">GM_Surface</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+         </mim:gebruikt__attribuutsoort>
+      </mim:Objecttype>
+      <mim:Objecttype id="informatieproduct-gebouw-objecttype-installatie-d17316e779">
+         <mim:naam>Installatie</mim:naam>
+         <mim:begrip>https://begrippen.geostandaarden.nl/sor-high5/nl/page/installatie</mim:begrip>
+         <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+         <mim:definitie>Constructie die een technisch samenhangend systeem betreft dat een bepaald doel dient.</mim:definitie>
+         <mim:herkomstDefinitie>Gebaseerd op installatie in IMGeo 2.2</mim:herkomstDefinitie>
+         <mim:datumOpname>20211118</mim:datumOpname>
+         <mim:uniekeAanduiding/>
+         <mim:populatie>Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.</mim:populatie>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+         <mim:supertype>
+            <mim:Generalisatie>
+               <mim:datumOpname/>
+               <mim:verwijstNaarGenerieke>
+                  <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-geoobject-d17316e115">Geo-object</mim-ref:ObjecttypeRef>
+               </mim:verwijstNaarGenerieke>
+            </mim:Generalisatie>
+         </mim:supertype>
+         <mim:gebruikt__attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>status</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Fase van de levenscyclus waarin een installatie zich bevindt</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20211118</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek/>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-statusreel-d17316e2104">StatusReëel</mim-ref:_DatatypeRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>type</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Aanduiding van het soort installatie</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20211118</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek/>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-typeinstallatie-d17316e1966">TypeInstallatie</mim-ref:_DatatypeRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>geometrie</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Geometrische representatie van de installatie</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20211118</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek/>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__keuze>
+                  <mim-ref:Keuze__DatatypenRef xlink:href="#informatieproduct-gebouw-keuze__datatypen-puntoflijnofvlak-d17316e2120">PuntOfLijnOfVlak</mim-ref:Keuze__DatatypenRef>
+               </mim:heeft__keuze>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+         </mim:gebruikt__attribuutsoort>
+         <mim:bezit>
+            <mim:Relatiesoort>
+               <mim:naam>isOnderdeelVan</mim:naam>
+               <mim:uniDirectioneel>true</mim:uniDirectioneel>
+               <mim:typeAggregatie>Geen</mim:typeAggregatie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:herkomst>Eisen aan inhoud Samenhangende Objectgegevens</mim:herkomst>
+               <mim:definitie/>
+               <mim:herkomstDefinitie>Eisen aan inhoud Samenhangende Objectgegevens</mim:herkomstDefinitie>
+               <mim:datumOpname/>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:authentiek>Basisgegeven</mim:authentiek>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:verwijstNaar__objecttype>
+                  <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-gebouw-d17316e242">Gebouw</mim-ref:ObjecttypeRef>
+                  <mim:_Relatierol>
+                     <mim:id>Doel</mim:id>
+                  </mim:_Relatierol>
+               </mim:verwijstNaar__objecttype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">200</mim-ext:kenmerk>
+                  <mim-ext:kenmerk name="kardinaliteitBron">0..*</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Relatiesoort>
+         </mim:bezit>
+      </mim:Objecttype>
+      <mim:Objecttype id="informatieproduct-gebouw-objecttype-verblijfsobject-d17316e958">
+         <mim:naam>Verblijfsobject</mim:naam>
+         <mim:begrip>https://begrippen.geostandaarden.nl/sor-high5/nl/page/verblijfsobject</mim:begrip>
+         <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+         <mim:definitie>Kleinste binnen één of meer gebouwen gelegen eenheid van gebruik die ontsloten wordt via een eigen afsluitbare toegang vanaf de openbare weg, een erf of een gedeelde verkeersruimte, en die onderwerp kan zijn van goederenrechtelijke rechtshandelingen en in functioneel opzicht zelfstandig is.</mim:definitie>
+         <mim:herkomstDefinitie>Artikel 1 Wet basisregistratie adressen en gebouwen.</mim:herkomstDefinitie>
+         <mim:datumOpname>20201201</mim:datumOpname>
+         <mim:uniekeAanduiding/>
+         <mim:populatie>Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)-registratie voorhanden zijn.</mim:populatie>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+         <mim:supertype>
+            <mim:Generalisatie>
+               <mim:datumOpname/>
+               <mim:verwijstNaarGenerieke>
+                  <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-geoobject-d17316e115">Geo-object</mim-ref:ObjecttypeRef>
+               </mim:verwijstNaarGenerieke>
+            </mim:Generalisatie>
+         </mim:supertype>
+         <mim:gebruikt__attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>status</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Fase van de levenscyclus waarin een verblijfsobject zich bevindt</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20210901</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-statusfunctioneel-d17316e2040">StatusFunctioneel</mim-ref:_DatatypeRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>gebruiksdoel</mim:naam>
+               <mim:begrip>https://begrippen.geostandaarden.nl/sor-high5/nl/page/gebruiksdoel</mim:begrip>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Categorisering van de gebruiksdoelen van een verblijfsobject zoals in de vergunning is opgenomen of bij constatering is vastgesteld</mim:definitie>
+               <mim:herkomstDefinitie>BAG</mim:herkomstDefinitie>
+               <mim:datumOpname>20201201</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1..*</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-gebruiksdoel-d17316e2056">Gebruiksdoel</mim-ref:_DatatypeRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>gebruiksoppervlakte</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Gebruiksoppervlakte van een verblijfsobject</mim:definitie>
+               <mim:herkomstDefinitie>BAG</mim:herkomstDefinitie>
+               <mim:datumOpname>20201201</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-integer-d17316e2188">Integer</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>geometrie</mim:naam>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Geometrische representatie van een verblijfsobject</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20201201</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Dit betreft een 2,5D geometrie. Een 2,5D geometrie is een uitbreiding op 2D geometrie door aan elke vastgelegde coördinaat een absolute hoogte (z-waarde) toe te voegen. Een 2,5D geometrie wordt in absolute zin in een drie dimensionale ruimte vastgelegd (dus met x,y en z coördinaten voor elk vastgelegd punt in een geometrie).</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-gmsurface-d17316e2271">GM_Surface</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+         </mim:gebruikt__attribuutsoort>
+         <mim:bezit>
+            <mim:Relatiesoort>
+               <mim:naam>maaktOnderdeelUitVan</mim:naam>
+               <mim:alias>hoortBij</mim:alias>
+               <mim:uniDirectioneel>true</mim:uniDirectioneel>
+               <mim:typeAggregatie>Geen</mim:typeAggregatie>
+               <mim:kardinaliteit>1..*</mim:kardinaliteit>
+               <mim:herkomst>BAG</mim:herkomst>
+               <mim:definitie/>
+               <mim:herkomstDefinitie>BAG</mim:herkomstDefinitie>
+               <mim:datumOpname/>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:verwijstNaar__objecttype>
+                  <mim-ref:ObjecttypeRef xlink:href="#informatieproduct-gebouw-objecttype-gebouw-d17316e242">Gebouw</mim-ref:ObjecttypeRef>
+                  <mim:_Relatierol>
+                     <mim:id>Doel</mim:id>
+                  </mim:_Relatierol>
+               </mim:verwijstNaar__objecttype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">200</mim-ext:kenmerk>
+                  <mim-ext:kenmerk name="kardinaliteitBron">0..*</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Relatiesoort>
+         </mim:bezit>
+      </mim:Objecttype>
+      <mim:Gegevensgroeptype id="informatieproduct-gebouw-gegevensgroeptype-brondocument-d17316e1182">
+         <mim:naam>Brondocument</mim:naam>
+         <mim:definitie>Elke wijziging van de gegevens in de BAG is gebaseerd op een brondocument. Ook bij constatering van een object of de correctie van gegevens is de bronhouder verplicht een brondocument op te stellen. Een vergunning wordt alleen als brondocument in de BAG geregistreerd als de inhoud ervan leidt tot wijzigingen in de registratie.</mim:definitie>
+         <mim:herkomstDefinitie>BAG</mim:herkomstDefinitie>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:datumOpname>20040201</mim:datumOpname>
+         <mim:gebruikt__attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>documentdatum</mim:naam>
+               <mim:alias>documentdatum</mim:alias>
+               <mim:begrip>http://bag.basisregistraties.overheid.nl/id/begrip/Documentdatum</mim:begrip>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>De datum waarop het brondocument is vastgesteld op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een object heeft plaatsgevonden.</mim:definitie>
+               <mim:herkomstDefinitie>BAG</mim:herkomstDefinitie>
+               <mim:datumOpname>20040201</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-date-d17316e2169">Date</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>documentnummer</mim:naam>
+               <mim:alias>documentnummer</mim:alias>
+               <mim:begrip>http://bag.basisregistraties.overheid.nl/id/begrip/Documentnummer</mim:begrip>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>De unieke aanduiding van het brondocument op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een woonplaats heef plaatsgevonden binnen een gemeente.</mim:definitie>
+               <mim:herkomstDefinitie>BAG</mim:herkomstDefinitie>
+               <mim:datumOpname>20040201</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-characterstring-d17316e2163">CharacterString</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+         </mim:gebruikt__attribuutsoort>
+      </mim:Gegevensgroeptype>
+      <mim:Gegevensgroeptype id="informatieproduct-gebouw-gegevensgroeptype-overheidsorganisatie-d17316e1278">
+         <mim:naam>Overheidsorganisatie</mim:naam>
+         <mim:definitie/>
+         <mim:herkomstDefinitie/>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:datumOpname/>
+         <mim:gebruikt__attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>code</mim:naam>
+               <mim:alias>code</mim:alias>
+               <mim:herkomst>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomst>
+               <mim:definitie>Unieke aanduiding van een Overheidsorganisatie.</mim:definitie>
+               <mim:herkomstDefinitie>https://docs.geostandaarden.nl/disgeo/emso/</mim:herkomstDefinitie>
+               <mim:datumOpname>20211117</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-characterstring-d17316e2163">CharacterString</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>oin</mim:naam>
+               <mim:alias>oin</mim:alias>
+               <mim:herkomst/>
+               <mim:definitie>Een uniek nummer dat Logius kan toekennen aan organisaties om zich te kunnen identificeren, authentiseren en of autoriseren bij digitaal berichtenverkeer binnen en met de overheid.</mim:definitie>
+               <mim:herkomstDefinitie/>
+               <mim:datumOpname>20211117</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>0..1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-characterstring-d17316e2163">CharacterString</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+         </mim:gebruikt__attribuutsoort>
+      </mim:Gegevensgroeptype>
+      <mim:Gegevensgroeptype id="informatieproduct-gebouw-gegevensgroeptype-registratiegegevensobjectbasisregistratie-d17316e1365">
+         <mim:naam>RegistratiegegevensObjectBasisregistratie</mim:naam>
+         <mim:definitie>Eigenschappen over herkomst en tijdlijn van de gegevens uit de basisregistratie op basis waarvan een SOR informatieobject tot stand is gekomen.</mim:definitie>
+         <mim:herkomstDefinitie/>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:datumOpname/>
+         <mim:gebruikt__attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>beginGeldigheid</mim:naam>
+               <mim:alias>beginGeldigheid</mim:alias>
+               <mim:begrip>http://definities.geostandaarden.nl/nen3610/id/begrip/BeginGeldigheid</mim:begrip>
+               <mim:herkomst>NEN3610:2022</mim:herkomst>
+               <mim:definitie>Start van de periode waarop deze versie van het informatieobejct geldig is in de registratie werkelijkheid.</mim:definitie>
+               <mim:herkomstDefinitie>NEN3610:2022</mim:herkomstDefinitie>
+               <mim:datumOpname>20211117</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-datetime-d17316e2179">DateTime</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>eindGeldigheid</mim:naam>
+               <mim:alias>eindGeldigheid</mim:alias>
+               <mim:begrip>http://definities.geostandaarden.nl/nen3610/id/begrip/EindGeldigheid</mim:begrip>
+               <mim:herkomst>NEN3610:2022</mim:herkomst>
+               <mim:definitie>Eind van de periode waarop deze versie van het informatieobject geldig is in de registratie werkelijkheid.</mim:definitie>
+               <mim:herkomstDefinitie>NEN3610:2022</mim:herkomstDefinitie>
+               <mim:datumOpname>20211117</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>0..1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-datetime-d17316e2179">DateTime</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>tijdstipRegistratie</mim:naam>
+               <mim:alias>tijdstipRegistratie</mim:alias>
+               <mim:begrip>http://definities.geostandaarden.nl/nen3610/id/begrip/TijdstipRegistratie</mim:begrip>
+               <mim:herkomst>NEN3610:2022</mim:herkomst>
+               <mim:definitie>Tijdstip waarop deze versie van het informatieobject is opgenomen in de registratie.</mim:definitie>
+               <mim:herkomstDefinitie>NEN3610:2022</mim:herkomstDefinitie>
+               <mim:datumOpname>20211117</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-datetime-d17316e2179">DateTime</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>eindRegistratie</mim:naam>
+               <mim:alias>eindRegistratie</mim:alias>
+               <mim:begrip>http://definities.geostandaarden.nl/nen3610/id/begrip/EindRegistratie</mim:begrip>
+               <mim:herkomst>NEN3610:2022</mim:herkomst>
+               <mim:definitie>Eind van de periode dat deze versie van het informatieobject geldig is in de registratie.</mim:definitie>
+               <mim:herkomstDefinitie>NEN3610:2022</mim:herkomstDefinitie>
+               <mim:datumOpname>20211117</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>0..1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>De periode is tot aan dit tijdstip. Wanneer deze waarde niet is ingevuld is de versie nog geldig.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>true</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-datetime-d17316e2179">DateTime</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>versie</mim:naam>
+               <mim:herkomst/>
+               <mim:definitie/>
+               <mim:herkomstDefinitie/>
+               <mim:datumOpname/>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>0..1</mim:kardinaliteit>
+               <mim:authentiek/>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-integer-d17316e2188">Integer</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+         </mim:gebruikt__attribuutsoort>
+         <mim:gebruikt__gegevensgroep>
+            <mim:Gegevensgroep>
+               <mim:naam>beschrijft</mim:naam>
+               <mim:definitie/>
+               <mim:toelichting>Een inhoudelijke toelichting op de gegevensgroep.</mim:toelichting>
+               <mim:herkomst/>
+               <mim:herkomstDefinitie/>
+               <mim:datumOpname/>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek/>
+               <mim:heeft>
+                  <mim-ref:GegevensgroeptypeRef xlink:href="#informatieproduct-gebouw-gegevensgroeptype-objectbasisregistratie-d17316e1856">ObjectBasisregistratie</mim-ref:GegevensgroeptypeRef>
+               </mim:heeft>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Gegevensgroep>
+            <mim:Gegevensgroep>
+               <mim:naam>bronhouder</mim:naam>
+               <mim:alias>bronhouder</mim:alias>
+               <mim:definitie>Verwijzing naar de bronhouder ten tijde van het muteren van het informatieobject.</mim:definitie>
+               <mim:toelichting>Een inhoudelijke toelichting op de gegevensgroep.</mim:toelichting>
+               <mim:herkomst/>
+               <mim:herkomstDefinitie/>
+               <mim:datumOpname/>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>0..1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:heeft>
+                  <mim-ref:GegevensgroeptypeRef xlink:href="#informatieproduct-gebouw-gegevensgroeptype-overheidsorganisatie-d17316e1278">Overheidsorganisatie</mim-ref:GegevensgroeptypeRef>
+               </mim:heeft>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Gegevensgroep>
+            <mim:Gegevensgroep>
+               <mim:naam>brondocument</mim:naam>
+               <mim:alias>brondocument</mim:alias>
+               <mim:definitie/>
+               <mim:toelichting>Een inhoudelijke toelichting op de gegevensgroep.</mim:toelichting>
+               <mim:herkomst/>
+               <mim:herkomstDefinitie/>
+               <mim:datumOpname/>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>0..1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:heeft>
+                  <mim-ref:GegevensgroeptypeRef xlink:href="#informatieproduct-gebouw-gegevensgroeptype-brondocument-d17316e1182">Brondocument</mim-ref:GegevensgroeptypeRef>
+               </mim:heeft>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Gegevensgroep>
+         </mim:gebruikt__gegevensgroep>
+      </mim:Gegevensgroeptype>
+      <mim:Gegevensgroeptype id="informatieproduct-gebouw-gegevensgroeptype-registratiegegevens-d17316e1653">
+         <mim:naam>Registratiegegevens</mim:naam>
+         <mim:definitie>Eigenschappen over herkomst en tijdlijn van de gegevens in de registratie.</mim:definitie>
+         <mim:herkomstDefinitie/>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:datumOpname/>
+         <mim:gebruikt__attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>beginGeldigheid</mim:naam>
+               <mim:alias>beginGeldigheid</mim:alias>
+               <mim:begrip>http://definities.geostandaarden.nl/nen3610/id/begrip/BeginGeldigheid</mim:begrip>
+               <mim:herkomst>NEN3610:2022</mim:herkomst>
+               <mim:definitie>Start van de periode waarop deze versie van het informatieobejct geldig is in de registratie werkelijkheid.</mim:definitie>
+               <mim:herkomstDefinitie>NEN3610:2022</mim:herkomstDefinitie>
+               <mim:datumOpname>20211117</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-datetime-d17316e2179">DateTime</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>eindGeldigheid</mim:naam>
+               <mim:alias>eindGeldigheid</mim:alias>
+               <mim:begrip>http://definities.geostandaarden.nl/nen3610/id/begrip/EindGeldigheid</mim:begrip>
+               <mim:herkomst>NEN3610:2022</mim:herkomst>
+               <mim:definitie>Eind van de periode waarop deze versie van het informatieobject geldig is in de registratie werkelijkheid.</mim:definitie>
+               <mim:herkomstDefinitie>NEN3610:2022</mim:herkomstDefinitie>
+               <mim:datumOpname>20211117</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>0..1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-datetime-d17316e2179">DateTime</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>tijdstipRegistratie</mim:naam>
+               <mim:alias>tijdstipRegistratie</mim:alias>
+               <mim:begrip>http://definities.geostandaarden.nl/nen3610/id/begrip/TijdstipRegistratie</mim:begrip>
+               <mim:herkomst>NEN3610:2022</mim:herkomst>
+               <mim:definitie>Tijdstip waarop deze versie van het informatieobject beschikbaar was via deze dienst.</mim:definitie>
+               <mim:herkomstDefinitie>NEN3610:2022</mim:herkomstDefinitie>
+               <mim:datumOpname>20211117</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-datetime-d17316e2179">DateTime</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>eindRegistratie</mim:naam>
+               <mim:alias>eindRegistratie</mim:alias>
+               <mim:begrip>http://definities.geostandaarden.nl/nen3610/id/begrip/EindRegistratie</mim:begrip>
+               <mim:herkomst>NEN3610:2022</mim:herkomst>
+               <mim:definitie>Eind van de periode dat deze versie van het informatieobject beschikbaar was via deze dienst.</mim:definitie>
+               <mim:herkomstDefinitie>NEN3610:2022</mim:herkomstDefinitie>
+               <mim:datumOpname>20211117</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>0..1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>De periode is tot aan dit tijdstip. Wanneer deze waarde niet is ingevuld is de versie nog geldig.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>true</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-datetime-d17316e2179">DateTime</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+         </mim:gebruikt__attribuutsoort>
+         <mim:gebruikt__gegevensgroep>
+            <mim:Gegevensgroep>
+               <mim:naam>afgeleidVan</mim:naam>
+               <mim:definitie/>
+               <mim:toelichting>Een inhoudelijke toelichting op de gegevensgroep.</mim:toelichting>
+               <mim:herkomst>DiSGeo High5-3a</mim:herkomst>
+               <mim:herkomstDefinitie/>
+               <mim:datumOpname/>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1..*</mim:kardinaliteit>
+               <mim:authentiek/>
+               <mim:heeft>
+                  <mim-ref:GegevensgroeptypeRef xlink:href="#informatieproduct-gebouw-gegevensgroeptype-registratiegegevensobjectbasisregistratie-d17316e1365">RegistratiegegevensObjectBasisregistratie</mim-ref:GegevensgroeptypeRef>
+               </mim:heeft>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Gegevensgroep>
+         </mim:gebruikt__gegevensgroep>
+      </mim:Gegevensgroeptype>
+      <mim:Gegevensgroeptype id="informatieproduct-gebouw-gegevensgroeptype-objectbasisregistratie-d17316e1856">
+         <mim:naam>ObjectBasisregistratie</mim:naam>
+         <mim:definitie/>
+         <mim:herkomstDefinitie/>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:datumOpname/>
+         <mim:gebruikt__attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>domein</mim:naam>
+               <mim:herkomst>SOR</mim:herkomst>
+               <mim:definitie>Unieke verwijzing naar een registratie van objecten.</mim:definitie>
+               <mim:herkomstDefinitie>NEN3610</mim:herkomstDefinitie>
+               <mim:datumOpname>20210901</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-characterstring-d17316e2163">CharacterString</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+            <mim:Attribuutsoort>
+               <mim:naam>identificatie</mim:naam>
+               <mim:herkomst>SOR</mim:herkomst>
+               <mim:definitie>Unieke aanduiding van een Geo-object.</mim:definitie>
+               <mim:herkomstDefinitie>NEN3610</mim:herkomstDefinitie>
+               <mim:datumOpname>20210901</mim:datumOpname>
+               <mim:patroon>De verzameling van waarden die gegevens van dit attribuutsoort kunnen hebben, dat wil zeggen het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:indicatieMateriLeHistorie>false</mim:indicatieMateriLeHistorie>
+               <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:authentiek>Authentiek</mim:authentiek>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+               <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+               <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:heeft__datatype>
+                  <mim-ref:InterfaceRef xlink:href="#interface-characterstring-d17316e2163">CharacterString</mim-ref:InterfaceRef>
+               </mim:heeft__datatype>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Attribuutsoort>
+         </mim:gebruikt__attribuutsoort>
+      </mim:Gegevensgroeptype>
+      <mim:Enumeratie id="informatieproduct-gebouw-enumeratie-indicatie-d17316e1942">
+         <mim:naam>Indicatie</mim:naam>
+         <mim:definitie>Lijst met waarden voor Indicatie.</mim:definitie>
+         <mim:bevat>
+            <mim:Enumeratiewaarde>
+               <mim:naam>ja</mim:naam>
+               <mim:definitie/>
+               <mim:code>ja</mim:code>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Enumeratiewaarde>
+            <mim:Enumeratiewaarde>
+               <mim:naam>nee</mim:naam>
+               <mim:definitie/>
+               <mim:code>nee</mim:code>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Enumeratiewaarde>
+         </mim:bevat>
+      </mim:Enumeratie>
+      <mim:Referentielijst id="informatieproduct-gebouw-referentielijst-typeinstallatie-d17316e1966">
+         <mim:naam>TypeInstallatie</mim:naam>
+         <mim:herkomst/>
+         <mim:definitie/>
+         <mim:datumOpname/>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:locatie/>
+         <mim:bevat/>
+      </mim:Referentielijst>
+      <mim:Referentielijst id="informatieproduct-gebouw-referentielijst-begrip-d17316e1976">
+         <mim:naam>Begrip</mim:naam>
+         <mim:herkomst/>
+         <mim:definitie/>
+         <mim:datumOpname/>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:locatie/>
+         <mim:bevat>
+            <mim:ReferentieElement>
+               <mim:naam>code</mim:naam>
+               <mim:definitie/>
+               <mim:datumOpname/>
+               <mim:patroon>De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben oftewel het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:identificerend>false</mim:identificerend>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:heeft>
+                  <mim-ref:InterfaceRef xlink:href="#interface-characterstring-d17316e2163">CharacterString</mim-ref:InterfaceRef>
+               </mim:heeft>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:ReferentieElement>
+            <mim:ReferentieElement>
+               <mim:naam>identificatie</mim:naam>
+               <mim:definitie/>
+               <mim:datumOpname/>
+               <mim:patroon>De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben oftewel het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:identificerend>true</mim:identificerend>
+               <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+               <mim:heeft>
+                  <mim-ref:InterfaceRef xlink:href="#interface-uri-d17316e2191">URI</mim-ref:InterfaceRef>
+               </mim:heeft>
+               <mim-ext:kenmerken>
+                  <mim-ext:kenmerk naam="positie">100</mim-ext:kenmerk>
+               </mim-ext:kenmerken>
+            </mim:ReferentieElement>
+         </mim:bevat>
+      </mim:Referentielijst>
+      <mim:Referentielijst id="informatieproduct-gebouw-referentielijst-typeopenbouwwerk-d17316e2024">
+         <mim:supertype>
+            <mim:Generalisatie>
+               <mim:datumOpname/>
+               <mim:supertype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-begrip-d17316e1976">Begrip</mim-ref:_DatatypeRef>
+               </mim:supertype>
+            </mim:Generalisatie>
+         </mim:supertype>
+         <mim:naam>TypeOpenBouwwerk</mim:naam>
+         <mim:herkomst/>
+         <mim:definitie/>
+         <mim:datumOpname/>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:locatie/>
+         <mim:bevat/>
+      </mim:Referentielijst>
+      <mim:Referentielijst id="informatieproduct-gebouw-referentielijst-statusfunctioneel-d17316e2040">
+         <mim:supertype>
+            <mim:Generalisatie>
+               <mim:datumOpname/>
+               <mim:supertype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-begrip-d17316e1976">Begrip</mim-ref:_DatatypeRef>
+               </mim:supertype>
+            </mim:Generalisatie>
+         </mim:supertype>
+         <mim:naam>StatusFunctioneel</mim:naam>
+         <mim:herkomst/>
+         <mim:definitie/>
+         <mim:datumOpname/>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:locatie/>
+         <mim:bevat/>
+      </mim:Referentielijst>
+      <mim:Referentielijst id="informatieproduct-gebouw-referentielijst-gebruiksdoel-d17316e2056">
+         <mim:supertype>
+            <mim:Generalisatie>
+               <mim:datumOpname/>
+               <mim:supertype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-begrip-d17316e1976">Begrip</mim-ref:_DatatypeRef>
+               </mim:supertype>
+            </mim:Generalisatie>
+         </mim:supertype>
+         <mim:naam>Gebruiksdoel</mim:naam>
+         <mim:herkomst/>
+         <mim:definitie/>
+         <mim:datumOpname/>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:locatie/>
+         <mim:bevat/>
+      </mim:Referentielijst>
+      <mim:Referentielijst id="informatieproduct-gebouw-referentielijst-typegebouwcomponent-d17316e2072">
+         <mim:supertype>
+            <mim:Generalisatie>
+               <mim:datumOpname/>
+               <mim:supertype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-begrip-d17316e1976">Begrip</mim-ref:_DatatypeRef>
+               </mim:supertype>
+            </mim:Generalisatie>
+         </mim:supertype>
+         <mim:naam>TypeGebouwcomponent</mim:naam>
+         <mim:herkomst/>
+         <mim:definitie/>
+         <mim:datumOpname/>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:locatie/>
+         <mim:bevat/>
+      </mim:Referentielijst>
+      <mim:Referentielijst id="informatieproduct-gebouw-referentielijst-typegebouw-d17316e2088">
+         <mim:supertype>
+            <mim:Generalisatie>
+               <mim:datumOpname/>
+               <mim:supertype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-begrip-d17316e1976">Begrip</mim-ref:_DatatypeRef>
+               </mim:supertype>
+            </mim:Generalisatie>
+         </mim:supertype>
+         <mim:naam>TypeGebouw</mim:naam>
+         <mim:herkomst/>
+         <mim:definitie/>
+         <mim:datumOpname/>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:locatie/>
+         <mim:bevat/>
+      </mim:Referentielijst>
+      <mim:Referentielijst id="informatieproduct-gebouw-referentielijst-statusreel-d17316e2104">
+         <mim:supertype>
+            <mim:Generalisatie>
+               <mim:datumOpname/>
+               <mim:supertype>
+                  <mim-ref:_DatatypeRef xlink:href="#informatieproduct-gebouw-referentielijst-begrip-d17316e1976">Begrip</mim-ref:_DatatypeRef>
+               </mim:supertype>
+            </mim:Generalisatie>
+         </mim:supertype>
+         <mim:naam>StatusReëel</mim:naam>
+         <mim:herkomst/>
+         <mim:definitie/>
+         <mim:datumOpname/>
+         <mim:toelichting>Een inhoudelijke toelichting op de toepassing van het informatie-element.</mim:toelichting>
+         <mim:locatie/>
+         <mim:bevat/>
+      </mim:Referentielijst>
+      <mim:Keuze__Datatypen id="informatieproduct-gebouw-keuze__datatypen-puntoflijnofvlak-d17316e2120">
+         <mim:naam>PuntOfLijnOfVlak</mim:naam>
+         <mim:herkomst>Informatieproduct Gebouw</mim:herkomst>
+         <mim:definitie>Keuze tussen puntgeomerie, lijngeometrie of vlakgeometrie.</mim:definitie>
+         <mim:datumOpname/>
+         <mim:bevat__datatype>
+            <mim-ref:InterfaceRef xlink:href="#interface-gmpoint-d17316e2265">GM_Point</mim-ref:InterfaceRef>
+            <mim-ref:InterfaceRef xlink:href="#interface-gmlinestring-d17316e2250">GM_LineString</mim-ref:InterfaceRef>
+            <mim-ref:InterfaceRef xlink:href="#interface-gmsurface-d17316e2271">GM_Surface</mim-ref:InterfaceRef>
+         </mim:bevat__datatype>
+      </mim:Keuze__Datatypen>
+      <mim:Interface id="interface-gmabstracefeaturecollectiontype-d17316e2135">
+         <mim:naam>GM_AbstraceFeatureCollectionType</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-binary-d17316e2139">
+         <mim:naam>Binary</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmcurve-d17316e2142">
+         <mim:naam>GM_Curve</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-month-d17316e2145">
+         <mim:naam>Month</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-time-d17316e2148">
+         <mim:naam>Time</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-genericname-d17316e2151">
+         <mim:naam>GenericName</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmpointarray-d17316e2154">
+         <mim:naam>GM_PointArray</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmpolygon-d17316e2157">
+         <mim:naam>GM_Polygon</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmmultisurface-d17316e2160">
+         <mim:naam>GM_MultiSurface</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-characterstring-d17316e2163">
+         <mim:naam>CharacterString</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmarcstring-d17316e2166">
+         <mim:naam>GM_ArcString</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-date-d17316e2169">
+         <mim:naam>Date</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-measure-d17316e2173">
+         <mim:naam>Measure</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-doublelist-d17316e2176">
+         <mim:naam>DoubleList</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-datetime-d17316e2179">
+         <mim:naam>DateTime</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmgeometry-d17316e2182">
+         <mim:naam>GM_Geometry</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmsolid-d17316e2185">
+         <mim:naam>GM_Solid</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-integer-d17316e2188">
+         <mim:naam>Integer</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-uri-d17316e2191">
+         <mim:naam>URI</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-decimal-d17316e2194">
+         <mim:naam>Decimal</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-boolean-d17316e2197">
+         <mim:naam>Boolean</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmsentinel-d17316e2200">
+         <mim:naam>GM_SENTINEL</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmcompositepoint-d17316e2203">
+         <mim:naam>GM_CompositePoint</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmmultiprimitive-d17316e2207">
+         <mim:naam>GM_MultiPrimitive</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-scopedname-d17316e2210">
+         <mim:naam>ScopedName</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmaggregate-d17316e2213">
+         <mim:naam>GM_Aggregate</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmprimitive-d17316e2216">
+         <mim:naam>GM_Primitive</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmabstractgmltype-d17316e2219">
+         <mim:naam>GM_AbstractGMLType</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmabstractfeaturemembertype-d17316e2222">
+         <mim:naam>GM_AbstractFeatureMemberType</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmorientablesurface-d17316e2225">
+         <mim:naam>GM_OrientableSurface</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmabstractfeaturetype-d17316e2228">
+         <mim:naam>GM_AbstractFeatureType</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmmultipoint-d17316e2231">
+         <mim:naam>GM_MultiPoint</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmcomplex-d17316e2234">
+         <mim:naam>GM_Complex</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmabstractfeaturecollection-d17316e2237">
+         <mim:naam>GM_AbstractFeatureCollection</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmmulticurve-d17316e2241">
+         <mim:naam>GM_MultiCurve</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-day-d17316e2244">
+         <mim:naam>Day</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmabstractfeaturemember-d17316e2247">
+         <mim:naam>GM_AbstractFeatureMember</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmlinestring-d17316e2250">
+         <mim:naam>GM_LineString</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmabstractfeature-d17316e2253">
+         <mim:naam>GM_AbstractFeature</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-year-d17316e2256">
+         <mim:naam>Year</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmmultigeometry-d17316e2259">
+         <mim:naam>GM_MultiGeometry</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmorientablecurve-d17316e2262">
+         <mim:naam>GM_OrientableCurve</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmpoint-d17316e2265">
+         <mim:naam>GM_Point</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmposition-d17316e2268">
+         <mim:naam>GM_Position</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmsurface-d17316e2271">
+         <mim:naam>GM_Surface</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmmultisolid-d17316e2275">
+         <mim:naam>GM_MultiSolid</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmobject-d17316e2278">
+         <mim:naam>GM_Object</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-url-d17316e2281">
+         <mim:naam>URL</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-tmperiod-d17316e2284">
+         <mim:naam>TM_Period</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-gmabstractgml-d17316e2287">
+         <mim:naam>GM_AbstractGML</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="interface-real-d17316e2290">
+         <mim:naam>Real</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="mim11-interface-date-d17316e2293">
+         <mim:naam>Date</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="mim11-interface-day-d17316e2296">
+         <mim:naam>Day</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="mim11-interface-year-d17316e2299">
+         <mim:naam>Year</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="mim11-interface-decimal-d17316e2302">
+         <mim:naam>Decimal</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="mim11-interface-datetime-d17316e2305">
+         <mim:naam>DateTime</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="mim11-interface-month-d17316e2309">
+         <mim:naam>Month</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="mim11-interface-real-d17316e2312">
+         <mim:naam>Real</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="mim11-interface-characterstring-d17316e2315">
+         <mim:naam>CharacterString</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="mim11-interface-uri-d17316e2318">
+         <mim:naam>URI</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="mim11-interface-integer-d17316e2321">
+         <mim:naam>Integer</mim:naam>
+      </mim:Interface>
+      <mim:Interface id="mim11-interface-boolean-d17316e2324">
+         <mim:naam>Boolean</mim:naam>
+      </mim:Interface>
+   </mim:components>
+   <mim-ext:kenmerken>
+      <mim-ext:kenmerk naam="Afkorting">IMSOR</mim-ext:kenmerk>
+      <mim-ext:kenmerk naam="Imvertor">model</mim-ext:kenmerk>
+      <mim-ext:kenmerk naam="Release">20211129</mim-ext:kenmerk>
+   </mim-ext:kenmerken>
+</mim:Informatiemodel>
