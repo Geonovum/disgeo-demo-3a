@@ -76,9 +76,9 @@ De BGT kent de volgende gegevens:
 | tijdstip registratie        | tijdstip registratie in de BGT                 | beginGeldigheid             |   
 | eind registratie            | eind registratie in de BGT                     | eindGeldigheid              | 
 | publicatiedatum LV          | tijdstip registratie in de LVBGT               | tijdstip registratie        | 
-| publicatiedatum LV          | vertaal specificatie                           | eind registratie            | 
+| publicatiedatum LV          | zie vertaal specificatie iets verderop         | eind registratie            | 
 
-Beeindigde objecten: vertaal specificatie. 
+Beeindigde objecten: zie vertaal specificatie iets verderop. 
 
 Versies van objecten met bijzondere tijdstippen erin: niet aanwezig. 
 
