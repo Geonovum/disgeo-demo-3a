@@ -30,8 +30,8 @@ Deze component heeft nodig:
  * Een van bovenstaande 4 items (vermoedelijk b)
  * Vertaalregels, deze bestaan uit: 
    * Directe eigenschappen, te vinden in [](#gebouwen-van-bron-naar-sor)
-   * Historie BAG, te vinden hier TODO Lennart
-   * Historie BGT, te vinden hier TODO wie?
+   * Historie BAG, te vinden hier: tijdslijnen_vertaling.md
+   * Historie BGT, te vinden hier: tijdslijnen_vertaling.md
    * Metadata, te vinden hier TODO wie? 
 
 Hiervan wordt een GraphQL schema gemaakt t.b.v. een (interne) API.
