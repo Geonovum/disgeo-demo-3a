@@ -76,6 +76,7 @@ Beeindigde objecten: vertaal specificatie.
 Versies van objecten met bijzondere tijdstippen erin: niet aanwezig. 
 
 **Tijdslijn geldigheid**
+
 Gewenst gegeven: _beginGeldigheid_ van een voorkomen van object 
 Zie: IMGeo-Object tijdstipRegistratie (8.1.4)
 Bv. voorkomen 1, IMGeo-Object tijdstipRegistratie bij bronhouder is 2-1-2021 (ingewonnen op 1-1, maar geregistreerd op 2-1)
@@ -87,6 +88,7 @@ Bv. voorkomen 1, IMGeo-Object eindRegistratie (8.1.5) bij bronhouder is 2-3-2021
 Dit wordt in IM Gebouw, voorkomen 1, eindGeldigheid is 2-3-2021 
 
 **Tijdslijn registratie bij LV (t.b.v. tijdreizen)**
+
 Gewenst gegeven: _tijdstipRegistratie_ in LVBGT van een voorkomen van object 
 Zie: IMGeo-Object LV-Publicatiedatum (8.1.6)
 Bv. voorkomen 1, LVBGT, Publicatiedatum 3-1-2021
@@ -97,7 +99,9 @@ Zie: IMGeo-Object LV-Publicatiedatum (8.1.6) van het opvolgende voorkomen.
 Bv. voorkomen **2**, Publicatiedatum 3-3-2021 
 Dit wordt in IM Gebouw, voorkomen **1**, eindRegistratieLV is 3-3-2021 
 
+
 **Vertaal specificatie eindRegistratie** 
+
 Elke versie van een object heeft in IM Gebouw een eind registratie (eind registratie in de LV). 
 
 Er is echter geen PublicatieDatumEind in de LVBGT, dus deze eindRegistratie kan je niet 1 op 1 mappen, maar moet je afleiden van het _opvolgende_ objectversie en daarvan de LV-Publicatiedatum. 
@@ -108,23 +112,28 @@ Als er geen opvolgende versie bestaat: dan is toch wel een eindRegistratie. Zie 
 
 Je kan kiezen: leidt dit af tijdens bevraging, of registreer dit bij het inladen. We willen leren wat handiger is.  
 
+
 **Vertaal specificatie beeindigde objecten** 
+
 Als een object beëindigd is in de BGT dan is er na dit moment geen versie van het object meer. De BGT gebruikt hier geen nieuwe versie met een eindstatus, en dit is wel de bedoeling in IM Gebouw. In IM Gebouw is er dus wel een versie van het object, met een eindstatus. Deze extra versie met een eindstatus kan je niet mappen, maar moet je afleiden. 
 
 ALS een versie uit de BGT een gevulde _objectEindtijd_ (8.1.2) heeft dan is deze versie de _laatste versie_ uit de (LV)BGT. 
-Maak een nieuwe versie van het object, met:   
-•	Alle gegevens hetzelfde als het laatste versie uit de (LV)BGT, die een gevulde objectEindRegistratie heeft. 
-•	Geef deze als beginGeldigheid: de eindGeldigheid van het laatste versie uit de (LV)BGT (die een objectEindtijd heeft). 
-•	Geef deze als eindGeldigheid: leeg
-•	Geef deze als beginRegistratie (BH): de eindRegistratie van het laatste versie uit de (LV)BGT (die een objectEindtijd heeft) 
-•	Geef deze als eindRegistratie (BH): leeg 
-•	Geef deze als beginRegistratie (LV): publicatiedatum van het voorliggende voorkomen. 
-•	Geef deze als eindRegistratie (LV): leeg 
-•	Pas  de vertaalspecificatie voor IM Gebouw 'status' toe 
+Maak een nieuwe versie van het object, met:
+
+- Alle gegevens hetzelfde als het laatste versie uit de (LV)BGT, die een gevulde objectEindRegistratie heeft. 
+- Geef deze als beginGeldigheid: de eindGeldigheid van het laatste versie uit de (LV)BGT (die een objectEindtijd heeft). 
+- Geef deze als eindGeldigheid: leeg
+- Geef deze als beginRegistratie (BH): de eindRegistratie van het laatste versie uit de (LV)BGT (die een objectEindtijd heeft) 
+- Geef deze als eindRegistratie (BH): leeg 
+- Geef deze als beginRegistratie (LV): publicatiedatum van het voorliggende voorkomen. 
+- Geef deze als eindRegistratie (LV): leeg 
+- Pas de vertaalspecificatie voor IM Gebouw 'status' toe 
 
 Je kan kiezen: leidt dit af tijdens bevraging, of registreer dit bij het inladen. We willen leren wat handiger is.  
 
+
 **Tijdslijn registratie bij de bronhouder**
+
 Zit niet in de registratie gegevens van IM Gebouw, wanneer we IM Gebouw samenstellen vanuit de LVBGT. 
 
 Mogelijk komen deze gegevens wel in de API response om de controleren of de herleidbaarheid van de gegevens klopt. 
