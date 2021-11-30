@@ -1,8 +1,10 @@
 ### Specificatie van de vertaling van historie
 
 BAG, BGT en IM Gebouw volgen alle NEN3610:2011 of 2021 en NEN3610 komt overeen met de SOR. 
+
 We onderscheiden de tijdslijn Geldigheid, de tijdslijn Registratie bij de bronhouder en de tijdslijn Registratie bij de LV. 
-Dit houden we bij per voorkomen van een object. 
+Dit houden we bij per versie van een object. 
+
 Deze gegevens willen we voor BGT gegevens afleiden uit de BGT en voor de BAG uit de BAG. Onderstaand is de mapping beschreven. 
 
 - Tijdreizen met de geldigOp parameter werkt altijd op de tijdslijn Geldigheid 
