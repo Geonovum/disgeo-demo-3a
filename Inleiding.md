@@ -25,7 +25,7 @@ Een interessante invalshoek is een mogelijke samenhang met het [IGO traject van 
 
 In het eerste deel van deze High-5 hebben we ons puur gericht op het maken van een semantisch model. Dit is uitgevoerd tijdens tweemaal een aantal aaneensluitende dagen in augustus en oktober 2021. Deze High-5 krijgt in januari 2022 een vervolg waarin we dit model implementeren in een proefomgeving. We willen dan beproeven in welke mate (60/40 / 70/30 / 80/20) het SOR resultaat haalbaar is op basis van de huidige basisregistraties, en willen daarbij ontdekken op welke punten data-integratie bij de bronnen wel nodig is.
 
-![Modelleertaak](modelleertaak-overzicht.png)
+![Modelleertaak](media/modelleertaak-overzicht.png)
 
 Zoals op de afbeelding te zien is, hebben we gewerkt aan het informatiemodel voor de Samenhangende Objectenregistratie - beperkt tot het deel over gebouwen. Input hierbij waren de eisen aan de DiSGeo inhoud [[EMSO]], de door het modelleerteam opgestelde modelleerprincipes en de uitwerking die er al was voor enkele generieke onderwerpen. Daarnaast zijn er, kijkend naar het IMSOR informatiemodel én de huidige basisregistraties en de data daarin, transponeringsregels opgesteld. Tenslotte is er gekeken naar de aansluiting van een externe databron op het SOR Gebouw. 
 
