@@ -141,7 +141,7 @@ var respecConfig =
     {
       name:       "Bart-Jan de Leuw",
       company:    "CGI",
-      companyURL: "https://www.cgi.com"
+      companyURL: "https://www.https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties.com"
     }, 
   ],
   //-- shortName is verplicht! (komt in de URL: kies logische naam) --------------------
