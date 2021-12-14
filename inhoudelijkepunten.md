@@ -19,7 +19,7 @@ De verschillende aspecten van transponering zijn tijdens deze High-5 bekeken. Zi
 
 ### Identificaties
 
-Op dit moment is er geen eenduidige identificatie van een SOR object. Als het SOR object niet één op één in een basisregistratie is geregistreerd, heeft het in elke basisregistratie waar het voorkomt een eigen identificatie. Een SOR Gebouw heeft bijvoorbeerd een BAG identificatie, een BGT identificatie en een BRT identificatie. Deze identificaties zijn van belang omdat ze de herkomst van het object duiden. We kunnen echter niet drie attributen genaamd `identificatie` opnemen, dan zou er een naamgevingsconflict ontstaan. Naast deze bronidentificaties is het wellicht ook van belang om een SOR identificatie in te voeren. Hierbij  speelt de UOI mogelijk een rol.
+Op dit moment is er geen eenduidige identificatie van een SOR object. Als het SOR object niet één op één in een basisregistratie is geregistreerd, heeft het in elke basisregistratie waar het voorkomt een eigen identificatie. Een SOR Gebouw heeft bijvoorbeeld een BAG identificatie, een BGT identificatie en een BRT identificatie. Deze identificaties zijn van belang omdat ze de herkomst van het object duiden. We kunnen echter niet drie attributen genaamd `identificatie` opnemen, dan zou er een naamgevingsconflict ontstaan. Naast deze bronidentificaties is het wellicht ook van belang om een SOR identificatie in te voeren. Hierbij  speelt de UOI mogelijk een rol.
 
 Identificatie van objecten speelt een rol bij de behandeling van historie en tijdreizen, waar we uitgebreider op ingaan in [](#modelleren-van-historie-en-beantwoorden-van-tijdreisvragen).
 

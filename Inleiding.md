@@ -28,7 +28,7 @@ In deze High-5 hebben we ons puur gericht op het maken van een semantisch model.
 
 ### Hoe doen we dat?
 
-We maken op basis van de eisen aan de DiSGeo inhoud een beknopt informatiemodel, voor een afgebakend onderwerp. We hanteren hierbij de door Geonovum, in samenwerking met de expertgroep DisGeo informatiemodel, opgestelde modelleerprincipes (nog in concept) en eerste concept-modelleringen van generieke zaken zoals historie, metadata en levensduur. Het informatiemodel is inclusief:
+We maken op basis van de eisen aan de DiSGeo inhoud een beknopt informatiemodel, voor een afgebakend onderwerp. We hanteren hierbij de door Geonovum, in samenwerking met de expertgroep DisGeo informatiemodel, opgestelde [DisGeo modelleerprincipes](https://geonovum.github.io/disgeo-imsor/modelleerprincipes/) en eerste concept-modelleringen van generieke zaken zoals historie, metadata en levensduur. Het informatiemodel is inclusief:
 
 1. Begrippenkader (SKOS)
 2. Informatiemodel conform MIM 1.1 (UML)
