@@ -53,12 +53,12 @@ Er zijn verschillende modelleerpatronen waaraan gedacht kan worden. Deze patrone
 
 Algemeen kunnen we wel de volgende voorwaarden stellen voor een samenhangend stelsel van informatie gekoppeld aan de SOR:
 - Maak goed duidelijk wat de herkomst van het gegeven is qua bron - uit de SOR of uit een externe bron, bijvoorbeeld het energie domein;
-- Wanneer je wilt meedoen in het samenhangde stelsel zal jouw dataset moeten voldoen aan dezelde logische aspecten als de SOR
+- Wanneer je wilt meedoen in het samenhangende stelsel zal jouw dataset moeten voldoen aan dezelde logische aspecten als de SOR
   - voor tijdreizen is dezelfde uitdrukking van tijdlijnen nodig
   - voor het kunnen koppelen of platslaan van identificatie is dezelfde manier van identificeren nodig
 
 Dat levert de volgende voordelen op:
-- Afnemers kunnen via de ontsluiting van het samenhangde stelsel informatie uit verschillende datasets in combinatie met de SOR informatie opvragen, zonder dat ze deze combinatie zelf moeten maen.
+- Afnemers kunnen via de ontsluiting van het samenhangende stelsel informatie uit verschillende datasets in combinatie met de SOR informatie opvragen, zonder dat ze deze combinatie zelf moeten maen.
 - Een afnemer hoeft niet de bronnen apart te bevragen en zelf de software te ontwikkelen;
 - De bron-beheerder en de SOR-beheerder kunnen er samen voor zorgen dat het informatieproduct functioneel helemaal goed/juist is, afnemers hoeven dit niet te doen. 
 
