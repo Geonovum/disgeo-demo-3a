@@ -54,7 +54,7 @@ Er zijn verschillende modelleerpatronen waaraan gedacht kan worden. Deze patrone
 Algemeen kunnen we wel de volgende voorwaarden stellen voor een samenhangend stelsel van informatie gekoppeld aan de SOR:
 - Maak goed duidelijk wat de herkomst van het gegeven is qua bron - uit de SOR of uit een externe bron, bijvoorbeeld het energie domein;
 - Wanneer je wilt meedoen in het samenhangde stelsel zal jouw dataset moeten voldoen aan dezelde logische aspecten als de SOR
-  - voor tijdreizen is dezelfde uitdrukking van tijdslijnen nodig
+  - voor tijdreizen is dezelfde uitdrukking van tijdlijnen nodig
   - voor het kunnen koppelen of platslaan van identificatie is dezelfde manier van identificeren nodig
 
 Dat levert de volgende voordelen op:
@@ -64,7 +64,7 @@ Dat levert de volgende voordelen op:
 
 Daarbij spelen de volgende implicaties: 
 - De verantwoordelijkheid van het meeleveren van gegevens komt bij de informatieproductleverancier te liggen (in overleg met de SOR);
-- De eisen aan gegevens voor basisregistraties gaan ook gelden voor de informatievoorziening die het informatieproduct levert, zoals de beschrijving en de standaarden die hiervoor gelden, de historie tijdslijnen en tijdreis mogelijkheden. 
+- De eisen aan gegevens voor basisregistraties gaan ook gelden voor de informatievoorziening die het informatieproduct levert, zoals de beschrijving en de standaarden die hiervoor gelden, de historie tijdlijnen en tijdreis mogelijkheden. 
 
 #### Voorbeeldcasus
 
