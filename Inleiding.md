@@ -19,12 +19,15 @@ Het informatiemodel van de SOR moet daarom een samenhangend gegevensmodel zijn. 
 
 ### Wat is in deze high-5 onderzocht
 
-Het doel:
-te beproeven of het mogelijk is de basisregistraties in samenhang te bevragen, waarbij deze samenhang nog niet in de data (in de vorm van relaties tussen instanties) aanwezig is, en zonder de onderliggende registraties of de data die daarin staan aan te passen. De samenhang wordt gerealiseerd door een samenhangende, integrale semantische laag die ervoor zorgt dat vragen over registraties heen kunnen worden gesteld en beantwoord.
+**Het doel:** te beproeven of het mogelijk is de basisregistraties in samenhang te bevragen, waarbij deze samenhang nog niet in de data (in de vorm van relaties tussen instanties) aanwezig is, en zonder de onderliggende registraties of de data die daarin staan aan te passen. De samenhang wordt gerealiseerd door een samenhangende, integrale semantische laag die ervoor zorgt dat vragen over registraties heen kunnen worden gesteld en beantwoord.
 
 Een interessante invalshoek is een mogelijke samenhang met het [IGO traject van DisGeo](https://labs.kadaster.nl/cases/integralegebruiksoplossing). Een belangrijk inhoudelijk verschil tussen deze High-5 en het IGO-traject is dat men in het IGO kijkt naar integraal gebruik op basis van de beschikbare bronnen, en daarbij uit gaat van de bestaande gegevensstructuren. In het kader van de SOR kijken we primair gebruiksgericht, uitgaande van een samenhangend gegevensmodel; en van daar uit naar de databronnen. 
 
-In deze High-5 hebben we ons puur gericht op het maken van een semantisch model. Deze High-5 krijgt in het najaar van 2021 een vervolg waarin we dit model implementeren in een proefomgeving. We willen dan beproeven in welke mate (60/40 / 70/30 / 80/20) het SOR resultaat haalbaar is op basis van de huidige basisregistraties, en willen daarbij ontdekken op welke punten data-integratie bij de bronnen wel nodig is.
+In het eerste deel van deze High-5 hebben we ons puur gericht op het maken van een semantisch model. Dit is uitgevoerd tijdens tweemaal een aantal aaneensluitende dagen in augustus en oktober 2021. Deze High-5 krijgt in januari 2022 een vervolg waarin we dit model implementeren in een proefomgeving. We willen dan beproeven in welke mate (60/40 / 70/30 / 80/20) het SOR resultaat haalbaar is op basis van de huidige basisregistraties, en willen daarbij ontdekken op welke punten data-integratie bij de bronnen wel nodig is.
+
+![Modelleertaak](modelleertaak-overzicht.png)
+
+Zoals op de afbeelding te zien is, hebben we gewerkt aan het informatiemodel voor de Samenhangende Objectenregistratie - beperkt tot het deel over gebouwen. Input hierbij waren de eisen aan de DiSGeo inhoud [[EMSO]], de door het modelleerteam opgestelde modelleerprincipes en de uitwerking die er al was voor enkele generieke onderwerpen. Daarnaast zijn er, kijkend naar het IMSOR informatiemodel én de huidige basisregistraties en de data daarin, transponeringsregels opgesteld. Tenslotte is er gekeken naar de aansluiting van een externe databron op het SOR Gebouw. 
 
 ### Hoe doen we dat?
 
