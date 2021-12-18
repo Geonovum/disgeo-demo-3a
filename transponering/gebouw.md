@@ -9,7 +9,7 @@ In scope voor deze High5 zijn de SOR objecttypen uit [[EMSO]] [paragraaf 5.3](ht
 - `Installatie`
 - `Verblijfsobject`
 
-Niet in scope uit EMSO 5.3:
+Niet in scope uit EMSO paragraaf 5.3:
 - `Bouwlaag`, dit is een nieuw objecttype
 - `Ruimte`, dit is een nieuw objecttype
 - `Toegangsdeur`, dit is een ('grotendeels') nieuw objecttype

@@ -4,7 +4,7 @@
 
 Om te komen tot een samenhangend Gebouw in de SOR, moet data gecombineerd worden uit de BAG, BGT, WOZ en BRT. Om te weten welke data hoe gecombineerd moet worden, is een informatieanalyse nodig en veel kennis van de huidige basisregistraties. Op basis van deze informatieanalyse moeten vertaalregels gespecificeerd worden. De vertaalregels kunnen vervolgens worden gebruikt in de omzetting van data uit de huidige basisregistraties naar de SOR. In een slimme architectuur kunnen deze regels een plek krijgen in de 'semantische laag' die ervoor zorgt dat de data uit de huidige basisregistraties in samenhang kunnen worden benaderd. De vertaalregels vertellen dan precies hoe de data uit de basisregistraties moeten worden omgezet naar data conform het IMSOR model. 
 
-Tijdens deze High-5 hebben we een eerste (zeer kleinschaling!) begin gemaakt met het opstellen van zulke vertaalspecificaties, vooral om te beproeven waar we bij dit werk allemaal tegenaan lopen. 
+Tijdens deze High-5 hebben we een eerste (zeer kleinschalig!) begin gemaakt met het opstellen van zulke vertaalspecificaties, vooral om te beproeven waar we bij dit werk allemaal tegenaan lopen. 
 
 We hebben voor de SOR objecttypen `Gebouw`, `Gebouwzone` en `Gebouwlaag` een eerste aanzet tot een mapping gemaakt. Hierbij bleek dat je in zo'n mapping twee soorten gevallen tegenkomt: 
 - Het gegeven is aanwezig in een bronregistratie en moet worden _vertaald_ naar een gegeven in de SOR (en hierbij heb je dan nog allerlei gradaties van eenvoudige naar complexe mappings). Bijvoorbeeld: het gegeven `bouwlaag` van WOZ deelobject kan worden vertaald naar `bouwlaagnummer` van SOR Gebouwzone.
