@@ -4,8 +4,10 @@ In het kader van Doorontwikkeling in Samenhang van de Geo-basisregistraties (DiS
 
 De stapsgewijze ontwikkeling van het informatiemodel voor de SOR wordt zo opgezet dat de gegevensspecificaties uit de betrokken basisregistraties (BAG, BGT, BRT en deels de WOZ) op basis van [de eisen aan het model](https://docs.geostandaarden.nl/disgeo/emso/), behoudens bepaalde daarin geformuleerde wijzigingen, zo optimaal mogelijk een plek kunnen vinden in de nieuwe omgeving waardoor de aanvullende inspanning voor betrokkenen uit het werkveld in de bijhouding zo klein mogelijk wordt gehouden. 
 
-![semantische laag](media/semantische-laag.png)
-
+<figure id="semantische-laag">
+  <img src="media/semantische-laag.png" alt="Samenhang">
+  <figcaption>Semantische laag en basisregistraties</figcaption>
+</figure>
 
 In dit kader is er ook ruimte om in inspirerende onderzoeksweken (High-5's) specifieke onderwerpen te onderzoeken en daaruit lessen te trekken die in het vervolg van de informatiemodellering kunnen worden toegepast.
 
@@ -25,7 +27,10 @@ Een interessante invalshoek is een mogelijke samenhang met het [IGO traject van 
 
 In het eerste deel van deze High-5 hebben we ons puur gericht op het maken van een semantisch model. Dit is uitgevoerd tijdens tweemaal een aantal aaneensluitende dagen in augustus en november 2021. Deze High-5 krijgt in januari 2022 een vervolg waarin we dit model implementeren in een proefomgeving. We willen dan beproeven in welke mate (60/40 / 70/30 / 80/20) het SOR resultaat haalbaar is op basis van de huidige basisregistraties, en willen daarbij ontdekken op welke punten data-integratie bij de bronnen wel nodig is.
 
-![Modelleertaak](media/modelleertaak-overzicht.png)
+<figure id="modelleertaak-overzicht">
+  <img src="media/modelleertaak-overzicht.png" alt="Samenhang">
+  <figcaption>Semantisch modelleerwerk</figcaption>
+</figure>
 
 Zoals op de afbeelding te zien is, hebben we gewerkt aan het informatiemodel voor de Samenhangende Objectenregistratie - beperkt tot het deel over gebouwen. Input hierbij waren de eisen aan de DiSGeo inhoud [[EMSO]], de door het modelleerteam opgestelde modelleerprincipes [[MODPR]] en de uitwerking die er al was voor enkele generieke onderwerpen [[GENDOC]]. Daarnaast zijn er, kijkend naar het IMSOR informatiemodel én de huidige basisregistraties en de data daarin, transponeringsregels opgesteld. Tenslotte is er gekeken naar de aansluiting van een externe databron op het SOR Gebouw. 
 
@@ -41,10 +46,12 @@ We passen Model Driven Architecture (MDA) toe. Uit het informatiemodel leiden we
 - een RDF model i.e. een samenhangend semantisch model van het gekozen afgebakende onderwerp
 - OAS 3 API’s
 
-![samenhang](media/samenhang.png)
+<figure id="samenhang">
+  <img src="media/samenhang.png" alt="Samenhang">
+  <figcaption>Model driven architecture</figcaption>
+</figure>
 
 ### Hoofdvragen
-
 
 1. “Object centraal modelleren”: Hoe doe je dit waarbij de gegevens van dit object uit verschillende registraties komen met verschillende contexten (definities, historie, …)
 2. Hoe druk je de semantische integratielaag uit als context boven de verschillende registraties, waarin de gegevens zijn zoals ze zijn, en waarvan de integratielaag onafhankelijk is? Is de semantische integratielaag (met data centraal over meerdere registraties) de representatie van de samenhang in gegevenscatalogi?

@@ -1,7 +1,9 @@
 ## Gegevens koppelen tussen een SOR Gebouw en een andere informatiebron  
 
-
-![voorbeeld-informatie](media/voorbeeld-informatie.png)
+<figure id="voorbeeld-informatie">
+  <img src="media/voorbeeld-informatie.png" alt="voorbeeld-informatie"/>
+  <figcaption>Informatie over een gebouw uit verschillende bronnen</caption>
+</figure>
 
 Dit betreft use cases waarin een informatiebron (niet de SOR zelf) wilt koppelen met een object in de SOR, zoals een informatiebron met energiegegevens.  
 
