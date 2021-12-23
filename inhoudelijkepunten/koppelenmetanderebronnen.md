@@ -96,6 +96,7 @@ Om aan te duiden dat deze relatie verwijst naar een extern informatiemodel gebru
   <figcaption>Relatie met SOR object meegemodelleerd in (externe) dataset</figcaption>
 </figure>
 
+<aside class="example">
 **Instantiedata voorbeeld in JSON:**
 
 **_Extern:_**
@@ -143,6 +144,8 @@ Om aan te duiden dat deze relatie verwijst naar een extern informatiemodel gebru
 }
 ```
 
+</aside>
+
 **Implicaties**
 - Je beheert de relatie bij de andere objectinformatie
 
@@ -159,6 +162,7 @@ Deze linkset kan onderdeel zijn van dezelfde dataset die je wilt koppelen aan de
   <figcaption>Relatie met SOR object meegemodelleerd in (externe) apart beheerde "linkset"</figcaption>
 </figure>
 
+<aside class="example">
 **Instantiedata voorbeeld in JSON:**
 
 **_Extern:_**
@@ -215,6 +219,8 @@ Deze linkset kan onderdeel zijn van dezelfde dataset die je wilt koppelen aan de
 }
 ```
 
+</aside>
+
 Ook hier maken we gebruik van objectstructuur plus identificatie om informatie "over elkaar heen te leggen" en in samenhang te presenteren.
 
 <aside class="note">
@@ -246,6 +252,8 @@ Bij het gebruik van een koppelklasse is het niet mogelijk om informatie "over el
   <img src="media/koppelen-relateren-koppelklasse.drawio.png" alt="koppelen-relateren-koppelklasse">
   <figcaption>Relatie met SOR object als instantie van een koppelklasse in (externe) dataset</figcaption>
 </figure>
+
+<aside class="example">
 
 **Instantiedata voorbeeld in JSON:**
 
@@ -307,6 +315,8 @@ Bij het gebruik van een koppelklasse is het niet mogelijk om informatie "over el
 }
 ```
 
+</aside>
+
 **Implicaties:**
 - De SOR en je eigen objecten worden niet geraakt, op geen enkele manier, maar er is wel een koppeling. 
 - Je kan de historie van de koppeling los beheren.
@@ -330,6 +340,8 @@ Hier breiden we een SOR objecttype in een externe dataset uit door deze op infor
   <img src="media/koppelen-uitbreiden-specialiseren.drawio.png" alt="koppelen-uitbreiden-specialiseren">
   <figcaption>Specialiseer het SOR object in (externe) dataset en gebruik de SOR identificatie</figcaption>
 </figure>
+
+<aside class="example">
 
 **Instantiedata voorbeeld in JSON:**
 
@@ -364,6 +376,8 @@ Hier breiden we een SOR objecttype in een externe dataset uit door deze op infor
 }
 ```
 
+</aside>
+
 **Implicaties**:
 - Het is direct duidelijk dat alle definities en afbakeningen van de SOR ook gelden voor de extensie (de specialisatie is je eigen object, het SOR Gebouw is de generalisatie).
 - Hergebruik van de identificatie maakt het gemakkelijk om de externe (uitbreiding van ) gegevens te combineren met de SOR gegevens.
@@ -381,6 +395,8 @@ Het is niet altijd mogelijk om dezelfde identificatie als de SOR te gebruiken. M
   <img src="media/koppelen-uitbreiden-gelijkstellen.drawio.png" alt="koppelen-uitbreiden-gelijkstellen">
   <figcaption>Gebruik eigen identificatie voor (extern) object en stel dat object gelijk aan SOR object</figcaption>
 </figure>
+
+<aside class="example">
 
 **Instantiedata voorbeeld in JSON:**
 
@@ -418,6 +434,8 @@ Het is niet altijd mogelijk om dezelfde identificatie als de SOR te gebruiken. M
   "capaciteit": 550
 }
 ```
+
+</aside>
 
 **Implicaties**:
 - Je kunt jouw objectinformatie samenvoegen met objectinformatie uit de SOR zonder de identificatie her te gebruiken.
