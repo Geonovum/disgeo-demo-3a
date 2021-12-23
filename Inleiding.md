@@ -11,27 +11,27 @@ In dit kader is er ook ruimte om in inspirerende onderzoeksweken (High-5's) spec
 
 ### Waar komen we vandaan?
 
-Alvorens dieper in de materie te duiken is het belangrijk om de context te begrijpen waarbinnen de huidige ontwikkelingen plaatsvinden. Bij het registreren van gegevens ontstaat er momenteel een tweedeling: aan de ene zijde het object waarnaar de registraties verwijzen, aan de andere zijde de registratieketens. Momenteel staan deze registratieketens centraal. Echter zijn er verschillen tussen ketenprocessen - in semantiek, actualiteit, etc. Om toch de ketenprocessen op elkaar af te stemmen worden onderlinge relaties gelegd via applicatiekoppelingen. In de praktijk is er echter toch behoefte aan een betere afstemming. Verschillende werkprocessen kunnen dan ondersteund worden vanaf het moment dat er een verandering plaatsvindt aan een object. 
+Alvorens dieper in de materie te duiken is het belangrijk om de context te begrijpen waarbinnen de huidige ontwikkelingen plaatsvinden. Bij het registreren van gegevens ontstaat er momenteel een tweedeling: aan de ene zijde het object waarnaar de registraties verwijzen, aan de andere zijde de registratieketens. Momenteel staan deze registratieketens centraal. Echter zijn er verschillen tussen ketenprocessen - in semantiek, actualiteit, etc. Om de ketenprocessen op elkaar af te stemmen worden onderlinge relaties gelegd via applicatiekoppelingen. In de praktijk is er echter toch behoefte aan een betere afstemming. Verschillende werkprocessen kunnen dan ondersteund worden vanaf het moment dat er een verandering plaatsvindt aan een object. 
 
 Dit houdt in dat het straks mogelijk moet zijn om gegevens te kunnen aanpassen of bekijken per object: we gaan van losse registraties naar samenhangende gegevensobjecten. Op deze manier worden gebruikers niet belast met de manier waarop organisaties de data verwerkt hebben voor hun interne processen. 
 
-Het informatiemodel van de SOR moet daarom een samenhangend gegevensmodel zijn. Dit heeft gevolgen voor de wijze van modelleren; in plaats van een model waarin de gegevens centraal staan, gaan we toe naar *object-centraal modelleren*. Iets dat we in deze high 5 onderzoeken. 
+Het informatiemodel van de SOR moet daarom een samenhangend gegevensmodel zijn. Dit heeft gevolgen voor de wijze van modelleren; in plaats van een model waarin de gegevens centraal staan, gaan we toe naar *object-centraal modelleren*. Iets dat we in deze High-5 onderzoeken. 
 
-### Wat is in deze high-5 onderzocht
+### Wat is in deze High-5 onderzocht
 
 **Het doel:** te beproeven of het mogelijk is de basisregistraties in samenhang te bevragen, waarbij deze samenhang nog niet in de data (in de vorm van relaties tussen instanties) aanwezig is, en zonder de onderliggende registraties of de data die daarin staan aan te passen. De samenhang wordt gerealiseerd door een samenhangende, integrale semantische laag die ervoor zorgt dat vragen over registraties heen kunnen worden gesteld en beantwoord.
 
 Een interessante invalshoek is een mogelijke samenhang met het [IGO traject van DisGeo](https://labs.kadaster.nl/cases/integralegebruiksoplossing). Een belangrijk inhoudelijk verschil tussen deze High-5 en het IGO-traject is dat men in het IGO kijkt naar integraal gebruik op basis van de beschikbare bronnen, en daarbij uit gaat van de bestaande gegevensstructuren. In het kader van de SOR kijken we primair gebruiksgericht, uitgaande van een samenhangend gegevensmodel; en van daar uit naar de databronnen. 
 
-In het eerste deel van deze High-5 hebben we ons puur gericht op het maken van een semantisch model. Dit is uitgevoerd tijdens tweemaal een aantal aaneensluitende dagen in augustus en oktober 2021. Deze High-5 krijgt in januari 2022 een vervolg waarin we dit model implementeren in een proefomgeving. We willen dan beproeven in welke mate (60/40 / 70/30 / 80/20) het SOR resultaat haalbaar is op basis van de huidige basisregistraties, en willen daarbij ontdekken op welke punten data-integratie bij de bronnen wel nodig is.
+In het eerste deel van deze High-5 hebben we ons puur gericht op het maken van een semantisch model. Dit is uitgevoerd tijdens tweemaal een aantal aaneensluitende dagen in augustus en november 2021. Deze High-5 krijgt in januari 2022 een vervolg waarin we dit model implementeren in een proefomgeving. We willen dan beproeven in welke mate (60/40 / 70/30 / 80/20) het SOR resultaat haalbaar is op basis van de huidige basisregistraties, en willen daarbij ontdekken op welke punten data-integratie bij de bronnen wel nodig is.
 
 ![Modelleertaak](media/modelleertaak-overzicht.png)
 
-Zoals op de afbeelding te zien is, hebben we gewerkt aan het informatiemodel voor de Samenhangende Objectenregistratie - beperkt tot het deel over gebouwen. Input hierbij waren de eisen aan de DiSGeo inhoud [[EMSO]], de door het modelleerteam opgestelde modelleerprincipes en de uitwerking die er al was voor enkele generieke onderwerpen. Daarnaast zijn er, kijkend naar het IMSOR informatiemodel én de huidige basisregistraties en de data daarin, transponeringsregels opgesteld. Tenslotte is er gekeken naar de aansluiting van een externe databron op het SOR Gebouw. 
+Zoals op de afbeelding te zien is, hebben we gewerkt aan het informatiemodel voor de Samenhangende Objectenregistratie - beperkt tot het deel over gebouwen. Input hierbij waren de eisen aan de DiSGeo inhoud [[EMSO]], de door het modelleerteam opgestelde modelleerprincipes [[MODPR]] en de uitwerking die er al was voor enkele generieke onderwerpen [[GENDOC]]. Daarnaast zijn er, kijkend naar het IMSOR informatiemodel én de huidige basisregistraties en de data daarin, transponeringsregels opgesteld. Tenslotte is er gekeken naar de aansluiting van een externe databron op het SOR Gebouw. 
 
 ### Hoe doen we dat?
 
-We maken op basis van de eisen aan de DiSGeo inhoud een beknopt informatiemodel, voor een afgebakend onderwerp. We hanteren hierbij de door Geonovum, in samenwerking met de expertgroep DisGeo informatiemodel, opgestelde [DisGeo modelleerprincipes](https://geonovum.github.io/disgeo-imsor/modelleerprincipes/) en eerste concept-modelleringen van generieke zaken zoals historie, metadata en levensduur. Het informatiemodel is inclusief:
+We maken op basis van de eisen aan de DiSGeo inhoud een beknopt informatiemodel, voor een afgebakend onderwerp. We hanteren hierbij zoals gezegd de door Geonovum, in samenwerking met de expertgroep DisGeo informatiemodel, opgestelde DisGeo modelleerprincipes en eerste concept-modelleringen van generieke zaken zoals historie, metadata en levensduur. Het informatiemodel is inclusief:
 
 1. Begrippenkader (SKOS)
 2. Informatiemodel conform MIM 1.1 (UML)
@@ -77,7 +77,7 @@ Daarnaast zijn in het kader van gebruik twee beleidsthema's geselecteerd die in 
 
 In 2019 en 2020 zijn twee High-5's uitgevoerd in het kader van DiSGeo. 
 
-1. [DiSGeo Demo 1 - Geodata in samenhang mbv huidige techniek bovenop APIs](https://docs.geostandaarden.nl/disgeo/dll/) (eind 2019). Deze is ontwikkeld door Netage en Geonovum in opdracht van BZK. 
+1. [DiSGeo Demo 1 - Geodata in samenhang mbv huidige techniek bovenop APIs](https://docs.geostandaarden.nl/disgeo/dll/) (eind 2019). Deze is ontwikkeld door [Netage](https://netage.nl) en Geonovum in opdracht van BZK. 
 
 *Uitgangspunt*: Maak een demonstrator over geodata in samenhang met behulp van huidige techniek bovenop API's.  
 

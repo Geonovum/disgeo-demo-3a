@@ -201,13 +201,28 @@ var respecConfig =
         publisher:  "Publisher-4",
         company:    "Companynaam",
     },
-    MIM: {
+    "MIM": {
       title: "MIM - Metamodel Informatie Modellering",
       href: "https://docs.geostandaarden.nl/mim/mim/",
       status: "Definitief",
       publisher: "Geonovum",
       date: "2020-10-23"
     },
+    "MODPR":
+      {
+        title:      "Modelleerprincipes samenhangende objectenregistratie",
+        href:       "https://geonovum.github.io/disgeo-imsor/modelleerprincipes/",
+        status:     "levend document",
+        publisher:  "Geonovum",
+    },
+    "GENDOC":
+    {
+      title:      "Overzicht generieke onderwerpen voor DisGeo informatiemodellering",
+      href:       "https://geonovum.github.io/disgeo-imsor/documentatie/",
+      status:     "levend document",
+      publisher:  "Geonovum",
+
+    }
   },
   postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
 

@@ -63,4 +63,4 @@ Tijdens het modelleerwerk in deze High-5 hebben we met verschilllende van dit so
 ### Publicatievorm(en) van het informatiemodel
 Omdat er op deze High-5 een vervolg komt waarin het informatiemodel wordt geimplementeerd in software, is het belangrijk dat het informatiemodel wordt opgeleverd in een voor ontwikkelaars bruikbare vorm. 
 
-Hoe we dit doen is beschreven in TODO paragraafverwijzing opnemen [...](). 
+Hoe we dit doen is beschreven in [](#benodigdheden-ten-behoeve-van-api-s). 
