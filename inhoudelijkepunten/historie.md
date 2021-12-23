@@ -15,7 +15,7 @@ Deze tijdreisvragen zijn (ook) los aan de basisregistraties te stellen. In deze 
 <aside class="note">
 Met *Historie* wordt bedoeld de tijdlijn geldigheid en de tijdlijn registratie.  
 
-In scope zijn versies van objecten en de geldige levenscyclus van een object. Buiten scope van deze uitwerking: levensduur van het object. </aside>
+In scope zijn versies van informatieobjecten en de geldige levenscyclus van een object. Buiten scope van deze uitwerking: levensduur van het object. </aside>
 
 ### Uitgangspunten 
 
@@ -26,25 +26,21 @@ In scope zijn versies van objecten en de geldige levenscyclus van een object. Bu
 - De uitwerking is in lijn met de SOR en met hoe de basisregistraties nu werken (de data die beschikbaar is of beschikbaar gemaakt zou kunnen worden).
 
 Dit betekent voor dit inhoudelijke punt: 
-- We stellen het object centraal - d.w.z. we willen gegevens over het gebouw in de werkelijkheid leveren, en we doen dit door de registratiegegevens over dit object te leveren.
-- We geven de tijdlijnen per set gegevens over een object aan. Dit heet ook wel een versie van een object. Afnemers willen gegevens van/over een object weten en wanneer deze, dit setje, geldig is en beschikaar is gekomen zodat ze het (hadden kunnen) weten. 
+- We stellen het object centraal - d.w.z. we willen gegevens over het gebouw in de werkelijkheid leveren, en we doen dit door de registratiegegevens over het informatieobject te scheiden van de informatie over het object.
+- We geven de tijdlijnen per set gegevens over een object aan. Dit heet ook wel een versie van een informatieobject. Afnemers willen gegevens van/over een object weten en wanneer deze, dit setje, geldig is en beschikaar is gekomen zodat ze het (hadden kunnen) weten. 
 
 ### Uitdaging en bijzondere punten
 
-De uitdaging is om data uit de onderliggende basisregistraties uit te leveren maar dan geuniformeerd. D.w.z. dat historie wordt bijgehouden in of over versies van objecten. Een versie is een setje gegevens over een object, zoals deze gedurende een bepaalde periode onveranderd zijn, en over die set gegevens wordt de tijdlijn geldigheid en de tijdlijn registratie bijgehouden en uitgeleverd. 
+De uitdaging is om data uit de onderliggende basisregistraties uit te leveren maar dan geuniformeerd. D.w.z. dat historie wordt bijgehouden in of over versies van informatieobjecten. Een versie is een setje gegevens over een object, zoals deze gedurende een bepaalde periode onveranderd zijn, en over die set gegevens wordt de tijdlijn geldigheid en de tijdlijn registratie bijgehouden en uitgeleverd. 
 
 De uit te werken bijzondere punten voor historie en tijdreizen zijn:
 
 0. Definities van de tijdlijn geldigheid en de tijdlijn registratie.
-1. Als we het object centraal stellen, hoe gaan we dan om met objecten uit 2 of meer basisregistraties die we in elkaar schuiven, in het bijzonder met meerdere identificaties.
+1. Als we het object centraal stellen, hoe gaan we dan om met informatieobjecten over hetzelfde object uit 2 of meer basisregistraties die we in elkaar schuiven, in het bijzonder met meerdere identificaties.
 2. Niet elke geo-basisregistratie kent nu beide tijdlijnen. Maar informatie over wanneer gegevens geldig en beschikbaar/geregistreerd zijn is wel beschikbaar. 
 3. Niet elke geo-basisregistratie heeft voor de tijdlijn geldigheid hetzelfde dataype, sommige gebruiken een datum, sommige een datumtijd of een timestamp. Hoe gaan we hiermee om? 
-4. Mutatieverschillen, met name t.a.v. beëindigen van objecten, wat bv. de BGT doet met een einddatum geldigheid en de BAG met een eindstatus. 
-5. Hoe schuif je versies van objecten uit verschillende basisregistraties in elkaar; wat is het algoritme?
-
-<aside class="issue">
-bij punt 1 – Hier worden toch zaken door elkaar gehaald? Het object wat centraal staat is het object in de werkelijkheid, en dat kan in meerdere registraties gerepresenteerd worden als een informatieobject maar hier worden dat objecten genoemd. Dat moeten we dan anders formuleren. Graag de rest van de tekst (dit hoofdstuk) daar ook op checken.
-</aside>
+4. Mutatieverschillen, met name t.a.v. het einde van levenscycli van objecten, wat bv. de BGT doet met een einddatum geldigheid en de BAG met een eindstatus. 
+5. Hoe schuif je versies van informatieobjecten uit verschillende basisregistraties in elkaar; wat is het algoritme?
 
 **Ad 0. definities van tijdlijn geldigheid en tijdlijn registratie** 
 
@@ -52,12 +48,12 @@ Zie [[NEN3610-2021-ontw]] historie.
 
 Merk op: 
 - Elke Landelijke Voorziening (LV) die een verzameling is van een basisregistratie heeft een eigen tijdlijn van verwerking in de LV. We onderkennen dus tijdstipRegistratie bij de bronhouder en tijdstipRegistratie bij de LV.
-- Van elk gegeven houden we het registratietijdstip bij. Dit geldt ook voor wanneer een beginGeldigheid of eindGeldigheid is geregisteerd in een basisregistratie en in een LV. Elke versie van een object heeft een begin geldigheid, en het tijdstip van de registratie van een versie van een object geeft (ook) aan wanneer deze begin geldigheid is geregistreerd. Evenzo geldt dit voor de einde geldigheid, het tijdstip waarop eind geldigheid geregistreerd wordt moet bekend zijn en eind registratie geeft (ook) aan wanneer deze eind geldigheid is geregistreerd. 
+- Van elk gegeven houden we het registratietijdstip bij. Dit geldt ook voor wanneer een beginGeldigheid of eindGeldigheid is geregisteerd in een basisregistratie en in een LV. Elke versie van een informatieobject heeft een begin geldigheid, en het tijdstip van de registratie van een versie van een informatieobject geeft (ook) aan wanneer deze begin geldigheid is geregistreerd. Evenzo geldt dit voor de einde geldigheid, het tijdstip waarop eind geldigheid geregistreerd wordt moet bekend zijn en eind registratie geeft (ook) aan wanneer deze eind geldigheid is geregistreerd. 
 
-**Ad 1. in elkaar schuiven van versies van objecten uit meerdere basisregistraties of bronnen**
+**Ad 1. in elkaar schuiven van versies van informatieobjecten uit meerdere basisregistraties of bronnen**
 
 Een SOR object kan en mag meerdere identificaties hebben. Het voordeel hiervan is dat de link naar de basisregistratie(s) bekend is. 
-- Wanneer een SOR object meerdere identificaties heeft, dan betekent dit dat je elk afzonderlijk kan gebruiken als identificatie, en dat de objecten uit de onderliggende basisregistraties over hetzelfde SOR object en hetzelfde object in de werkelijkheid gaan. 
+- Wanneer een SOR object meerdere identificaties heeft, dan betekent dit dat je elk afzonderlijk kan gebruiken als identificatie, en dat de informatieobjecten uit de onderliggende basisregistraties over hetzelfde SOR object en hetzelfde object in de werkelijkheid gaan. 
 
 **Ad 2. niet elke geo-basisregistratie kent nu beide tijdlijnen**  
 
@@ -81,22 +77,22 @@ Aanname is dat de BGT dit kan en doet.
 
 **Ad 3. Niet elke geo-basisregistratie heeft voor de tijdlijn geldigheid hetzelfde dataype**
 
-Vertrekpunt van de SOR is dat een afnemer een vraag stelt: welke gegevens zijn er geldig op een bepaalde datum, veelal vandaag. Een gewone afnemer gaat niet zo snel een timestamp opgeven in deze vraag. Voor basisregistraties worden besluiten ook genomen op dagbasis. Het is wel zo dat als er twee versies van een object op dezelfde dag geldig zijn/worden dat de laatste van de twee het antwoord is op de vraag: "wat is er vandaag geldig". 
+Vertrekpunt van de SOR is dat een afnemer een vraag stelt: welke gegevens zijn er geldig op een bepaalde datum, veelal vandaag. Een gewone afnemer gaat niet zo snel een timestamp opgeven in deze vraag. Voor basisregistraties worden besluiten ook genomen op dagbasis. Het is wel zo dat als er twee versies van een informatieobject op dezelfde dag geldig zijn/worden dat de laatste van de twee het antwoord is op de vraag: "wat is er vandaag geldig". 
 
 Voor wat betreft het datatype voor geldig op en het datatype voor begin en einde geldigheid, is hier een keuze te maken voor de SOR. 
 
 Optie a) We gebruiken altijd een `DatumTijd` voor geldigheid. In basisregistraties die alleen een datum kennen, gebruiken we die datum en dan `00:00:00`. 
 - Voor de geldigOp parameter wordt altijd een `DatumTijd` gebruikt. 
-- Bij meerdere versies van een object op een dag vinden we bij deze geldigOp altijd de laatste de meest actuele voor die dag. We gebruiken dus niet `00:00:01` en `00:00:02` enz. Hier zijn we data aan het bijverzinnen.
+- Bij meerdere versies van een informatieobject op een dag vinden we bij deze geldigOp altijd de laatste de meest actuele voor die dag. We gebruiken dus niet `00:00:01` en `00:00:02` enz. Hier zijn we data aan het bijverzinnen.
 
 Optie b) We volgen bij de tijdlijn geldigheid de definitie van de basisregistratie. Daarom: gebruik een keuze tussen datatypes. 
 - Voor de geldigOp parameter wordt altijd een datum gebruikt. 
-- Bij meerdere versies van een object op een dag vinden we bij deze geldigOp altijd de laatste de meest actuele voor die dag, mits dit verantwoord kan bij elke basisregistratie. Dit kan als de betekenis van meerdere versies op een dag is, dat de laatste vigerend is vanaf het moment dat die versie is ontstaan.  
+- Bij meerdere versies van een informatieobject op een dag vinden we bij deze geldigOp altijd de laatste de meest actuele voor die dag, mits dit verantwoord kan bij elke basisregistratie. Dit kan als de betekenis van meerdere versies op een dag is, dat de laatste vigerend is vanaf het moment dat die versie is ontstaan.  
 
 Optie c) We gebruiken altijd een `Datum`. Immers, besluiten voor basisregistraties gaan in op een datum.
 We willen ernaar toegroeien dat de tijdlijn geldigheid altijd een datum is. Dit is nu al te implementeren, mits ofwel de basisregistratie ofwel de SOR view erop goed omgaat met meerdere versies op 1 dag. 
 - Voor de geldigOp parameter wordt altijd een datum gebruikt. 
-- Bij meerdere versies van een object op een dag vinden we bij deze geldigOp altijd de laatste de meest actuele voor die dag. 
+- Bij meerdere versies van een informatieobject op een dag vinden we bij deze geldigOp altijd de laatste de meest actuele voor die dag. 
 - De implicatie van deze optie is dat een basisregistratie om moet kunnen gaan met wanneer er meerdere versies op 1 dag geldig zijn en deze kan onderscheiden van elkaar. 
 
 Advies: gezien het groeipad willen we onderzoeken of c) mogelijk is. 
@@ -105,9 +101,9 @@ KEUZE: C
 
 **Ad 4. Mutatieverschillen**
 
-Wanneer een object wordt beëindigd en de basisregistratie geen eindstatus kent, dient een basisregistratie te zorgen voor ofwel de registratie, ofwel het afleiden, van een extra versie met wel een eindstatus. Het is aan de basisregistratie om te kiezen of er wel of niet een versie met een eindstatus wordt geregistreerd of dat deze wordt afgeleid. 
+Wanneer de levenscyclus van een object eindigd en de basisregistratie geen eindstatus kent, dient een basisregistratie te zorgen voor ofwel de registratie, ofwel het afleiden, van een extra versie met wel een eindstatus. Het is aan de basisregistratie om te kiezen of er wel of niet een versie met een eindstatus wordt geregistreerd of dat deze wordt afgeleid. 
 
-**Ad. 5 Hoe schuif je versies van objecten uit verschillende basisregistraties in elkaar**
+**Ad. 5 Hoe schuif je versies van informatieobjecten uit verschillende basisregistraties in elkaar**
 
 Onderstaande een verkenning, die uitgaat van alle genoemde keuzes in de voorliggende tekst. 
 
@@ -126,9 +122,9 @@ SOR:
 
 ```
 Stel vraag aan basisregistratie 1: geldigOp t4. 
-Antwoord: versie 1. gebruik deze gegevens voor het SOR object.
+Antwoord: versie 1. gebruik deze gegevens voor het SOR informatieobject.
 Stel vraag aan basisregistratie 2: geldigOp t4. 
-Antwoord: versie 1. gebruik deze gegevens voor het SOR object.
+Antwoord: versie 1. gebruik deze gegevens voor het SOR informatieobject.
 ```
 
 Maar hoe doen we het met de tijdlijnen?
@@ -140,23 +136,23 @@ Optie 0: lever de losse antwoorden uit de losse basisregistraties ook los door, 
 (niet in elkaar geschoven). 
 ```
 
-Optie 1: laat elke basisregistratie heel duidelijk terugkomen in het SOR object
+Optie 1: laat elke basisregistratie heel duidelijk terugkomen in het SOR informatieobject
 - Geef van elk gegeven uit basisregistratie 1 aan: herkomst basisregistratie1, en de historie metagegevens zijn: begin geldigheid t1 -   
 - Geef van elk gegeven uit basisregistratie 2 aan: herkomst basisregistratie2, en de historie metagegevens zijn: begin geldigheid t3 -   
 
 Bv. een gegevensgroep voor gegevens uit basisregistratie 1 + de metagegevens voor historie uit basisregistratie 1 en voor basisregistratie 2 analoog. 
 
 ```
---> 1 versie in basisregistratie 1 en 1 versie in basisregistratie 2 = 1 versie van het SOR object, 
+--> 1 versie in basisregistratie 1 en 1 versie in basisregistratie 2 = 1 versie van het SOR informatieobject, 
     bestaande uit de delen die elk afzonderlijk tijdlijnen hebben. 
 ```
 
-Optie 2: plaats alle kenmerken in het SOR object en bereken voor elk setje gegevens eigen tijdlijnen.
+Optie 2: plaats alle kenmerken in het SOR informatieobject en bereken voor elk setje gegevens eigen tijdlijnen.
 
 Introduceer nieuwe versies voor elke periode.
 
 ```
---> 1 versie in basisregistratie 1 en 1 versie in basisregistratie 2 = 2 versies van het SOR object, 
+--> 1 versie in basisregistratie 1 en 1 versie in basisregistratie 2 = 2 versies van het SOR informatieobject, 
     met elk afzonderlijk tijdlijnen. 
 ```
 
@@ -368,7 +364,7 @@ Fictief voorbeeld uit de WOZ
 
 #### Insteek 'versies': stel de tijdreis vraag aan elke basisregistratie en voeg de antwoorden samen
 
-De tijdreisvraag aan een SOR Gebouw kent maar 1 geldigOp en 1 beschikbaarOp. Stel deze tijdreisvraag aan de basisregistraties die gebruikt worden om het SOR Gebouw samen te stellen. Elk basisregistratie zal als antwoord éém versie van een object opleveren - met een setje gegevens erin - en deze versie kent een tijdlijn geldigheid en een tijdlijn registratie. De tijdlijn van registratie komt doorgaans overeen met het moment van beschikbaarstelling en als dit zo is, dan kunnen de gegevens, maar ook de tijdlijnen, samengevoegd worden.   
+De tijdreisvraag aan een SOR Gebouw kent maar 1 geldigOp en 1 beschikbaarOp. Stel deze tijdreisvraag aan de basisregistraties die gebruikt worden om het SOR Gebouw samen te stellen. Elk basisregistratie zal als antwoord éém versie van een informatieobject opleveren - met een setje gegevens erin - en deze versie kent een tijdlijn geldigheid en een tijdlijn registratie. De tijdlijn van registratie komt doorgaans overeen met het moment van beschikbaarstelling en als dit zo is, dan kunnen de gegevens, maar ook de tijdlijnen, samengevoegd worden.   
 
 Oftewel, doe een tijdreis op de BAG en de WOZ en breng de gegevens samen in een SOR Gebouw.
 
@@ -378,7 +374,7 @@ Korte formulering: welke gegevens zijn geldig op 'datum geldigOp' en beschikbaar
 
 ##### Vertaal specificatie
 
-We ontvangen van de onderliggende basisregistraties één versie van een object, die geldig en beschikbaar is op de gevraagde tijdreis. Dat wil zeggen, data die op de gevraagde beschikbaarOp aanwezig was in de registratie. We ontvangen géén data die naderhand is geregistreerd; hieronder vallen ook later ingevulde data zoals 'einde geldigheid', 'eind registratie' en 'tijdstip inactief'. 
+We ontvangen van de onderliggende basisregistraties één versie van een informatieobject, die geldig en beschikbaar is op de gevraagde tijdreis. Dat wil zeggen, data die op de gevraagde beschikbaarOp aanwezig was in de registratie. We ontvangen géén data die naderhand is geregistreerd; hieronder vallen ook later ingevulde data zoals 'einde geldigheid', 'eind registratie' en 'tijdstip inactief'. 
 
 1) Als een gegeven er is, neem deze op in SOR Gebouw. 
 
@@ -390,7 +386,7 @@ We ontvangen van de onderliggende basisregistraties één versie van een object,
 - Tijdstip Registratie (TR):    je krijgt er twee, één van BAG, één van WOZ, kies de TR die hoort bij de geselecteerde BG. 
 - Eind     Registratie (ER):    je krijgt er twee, één van BAG, één van WOZ, kies de ER die hoort bij de geselecteerde EG. 
 
-4) Neem de identificaties van de onderliggende objecten en overige data die erbij hoort over in de (optionele) 'herkomst data'. 
+4) Neem de identificaties van de objecten uit onderliggende informatieobject en overige data die erbij hoort over in de (optionele) 'herkomst data'. 
 
 <aside class="note">Ad. 3. Als een basisregistratie de data niet kan leveren zoals bedoeld in de voorgaande opmerking, filter data die destijds leeg was er dan uit. 
 </aside>
