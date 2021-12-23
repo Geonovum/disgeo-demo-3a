@@ -2,7 +2,7 @@
 
 ### Benodigde BAG en BGT objecten
 
-In scope voor deze High5 zijn de SOR objecttypen uit [[EMSO]] [paragraaf 5.3](https://docs.geostandaarden.nl/disgeo/emso/#gebouw), voor zover deze te vormen zijn uit alleen BAG en BGT data. Bovendien is het objecttype `Installatie` in scope vanwege de koppeling met energiegegevens. De lijst met gebruikte SOR objecttypen is:
+In scope voor deze High5 zijn de SOR objecttypen uit [[EMSO]] [paragraaf 5.3](https://docs.geostandaarden.nl/disgeo/emso/#gebouw), voor zover deze te vormen zijn uit alleen BAG en BGT data. Bovendien is het objecttype `Installatie` in scope vanwege de beoogde koppeling met energiegegevens. De lijst met gebruikte SOR objecttypen is:
 - `Gebouw`
 - `Gebouwcomponent`
 - `Open bouwwerk`
@@ -22,19 +22,23 @@ BAG:
 
 BGT: 
 - `Pand`
-- `OverigBouwwerk` type=`Bunker`|`Schuur`|`Open loods`|`Overkapping`
-- `Gebouwinstallatie`type=`Bordes`|`Luifel`|`Toegangstrap`
-- `Kunstwerkdeel` type=`Perron`
-
-De volledige set transponeringsregels staat in de paragrafen hieronder **TODO**. 
+- `OverigBouwwerk` type= `Bunker` | `Schuur` | `Open loods` | `Overkapping`
+- `Gebouwinstallatie` type= `Bordes` | `Luifel` | `Toegangstrap`
+- `Kunstwerkdeel` type= `Perron`
 
 ### Vertaalspecificatie
 
-In het [[EMSO]] document, dat de inhoudelijke eisen aan de SOR beschrijft, is geen sprake meer van 'panden'; in plaats daarvan wordt het objecttype `Gebouw` geïntroduceerd. Meeste BAG/BGT panden kunnen één op één worden omgezet naar SOR Gebouw. In een aantal gevallen zullen BAG/BGT panden worden omgezet naar SOR Open bouwwerken. Daarnaast kan een aantal typen BGT `OverigBouwwerk` gemapt worden naar SOR `Gebouw`(typen `Bunker` of `Schuur`) en naar SOR `Open bouwwerk` (typen `Open loods` of `Overkapping`). Andere typen BGT `OverigBouwwerk` zijn ook weer terug te vinden in SOR `Installatie`. Een volledig overzicht van de verhouding tussen deze objecttypen en eigenschappen in de bronregistraties en de SOR kan [hier](https://github.com/Geonovum/disgeo-demo-3a/blob/main/transponering/mapping-deel-Gebouw-en-VBO.xlsx) gevonden worden. 
+In het [[EMSO]] document, dat de inhoudelijke eisen aan de SOR beschrijft, is geen sprake meer van 'panden'; in plaats daarvan wordt het objecttype `Gebouw` geïntroduceerd. Meeste BAG/BGT panden kunnen één op één worden omgezet naar SOR Gebouw. In een aantal gevallen zullen BAG/BGT panden worden omgezet naar SOR Open bouwwerken. Daarnaast kan een aantal typen BGT `OverigBouwwerk` gemapt worden naar SOR `Gebouw`(typen `Bunker` of `Schuur`) en naar SOR `Open bouwwerk` (typen `Open loods` of `Overkapping`). Andere typen BGT `OverigBouwwerk` zijn ook weer terug te vinden in SOR `Installatie`. 
 
-### Vertaalspecificatie: eerste verkenning
+Het volledige overzicht van de verhouding tussen deze objecttypen en eigenschappen in de bronregistraties en de SOR is beschreven in de [mapping van Gebouw en Verblijfsobject](https://github.com/Geonovum/disgeo-demo-3a/blob/main/transponering/mapping-deel-Gebouw-en-VBO.xlsx) (excel). 
 
-Voor het vaststellen van de scope voor deze High5 is een preliminaire analyse uitgevoerd, deze heeft betrekking op de mapping naar SOR `Gebouw` en `Gebouwzone`. Hoewel het hier niet om een complete vertaalspecificatie gaat, wordt de vertaling naar deze objecttypes wel in hoofdlijnen beschreven voor elk eigenschap opgenomen in de SOR. Hierbij is ook rekening gehouden met gegevens die mogelijk afkomstig zijn uit andere registraties (zoals de BRT of WOZ). De analyse wordt hieronder gepresenteerd, in de vorm van tabellen. Een van de hoofdconclusies was dat de reatie tussen de typering van gebouwen in de SOR en de gebruiksdoelen, functies en typen van gebouwen in de BAG, WOZ en de BRT complex blijkt te zijn. Dat betekent ook dat het mogelijk nog heel lastig wordt om de geharmoniseerde SOR gebouwen, met name wat betreft de WOZ data, te vormen op basis van de huidige basisregistraties. In ieder geval is voor het maken van de juiste vertaalspecificaties veel inhoudelijke kennis van het WOZ informatiemodel en de WOZ data nodig.
+### Eerste verkenning van de vertaalspecificatie
+
+De hieronder volgende tekst en tabellen zijn eerdere versies van de vertaalspecificaties. Ze zijn opgenomen omdat de bij de verkenning opgetekende overwegingen relevant kunnen zijn. Kijk voor de meest recente inzichten in de [mapping van Gebouw en Verblijfsobject](https://github.com/Geonovum/disgeo-demo-3a/blob/main/transponering/mapping-deel-Gebouw-en-VBO.xlsx) (excel). 
+
+In een eerdere fase, voordat de scope voor deze High5 was vastgesteld, is een eerste analyse uitgevoerd van de vertaling van objecten uit BGT, BRT, BAG en WOZ naar SOR. Hierbij is vooral gekeken naar de SOR objecttypen  `Gebouw` en `Gebouwzone`. Hoewel het hier niet om een complete vertaalspecificatie gaat, wordt de vertaling naar deze objecttypes wel in hoofdlijnen beschreven voor elk eigenschap opgenomen in de SOR. Hierbij is ook rekening gehouden met gegevens die mogelijk afkomstig zijn uit andere registraties (zoals de BRT of WOZ). De analyse wordt hieronder gepresenteerd, in de vorm van tabellen. 
+
+Een van de hoofdconclusies was dat de relatie tussen de typering van gebouwen in de SOR en de gebruiksdoelen, functies en typen van gebouwen in de BAG, WOZ en de BRT complex blijkt te zijn. Dat betekent ook dat het mogelijk nog heel lastig wordt om de geharmoniseerde SOR gebouwen, met name wat betreft de WOZ data, te vormen op basis van de huidige basisregistraties. In ieder geval is voor het maken van de juiste vertaalspecificaties veel inhoudelijke kennis van het WOZ informatiemodel en de WOZ data nodig.
 
 #### Vertaling naar SOR-Gebouw 
  
