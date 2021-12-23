@@ -42,6 +42,10 @@ De uit te werken bijzondere punten voor historie en tijdreizen zijn:
 4. Mutatieverschillen, met name t.a.v. beëindigen van objecten, wat bv. de BGT doet met een einddatum geldigheid en de BAG met een eindstatus. 
 5. Hoe schuif je versies van objecten uit verschillende basisregistraties in elkaar; wat is het algoritme?
 
+<aside class="issue">
+bij punt 1 – Hier worden toch zaken door elkaar gehaald? Het object wat centraal staat is het object in de werkelijkheid, en dat kan in meerdere registraties gerepresenteerd worden als een informatieobject maar hier worden dat objecten genoemd. Dat moeten we dan anders formuleren. Graag de rest van de tekst (dit hoofdstuk) daar ook op checken.
+</aside>
+
 **Ad 0. definities van tijdlijn geldigheid en tijdlijn registratie** 
 
 Zie [[NEN3610-2021-ontw]] historie. 

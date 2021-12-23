@@ -19,17 +19,17 @@ De verschillende aspecten van transponering zijn tijdens deze High-5 bekeken. Zi
 
 ### Identificaties
 
-Op dit moment is er geen eenduidige identificatie van een SOR object. Als het SOR object niet één op één in een basisregistratie is geregistreerd, heeft het in elke basisregistratie waar het voorkomt een eigen identificatie. Een SOR Gebouw heeft bijvoorbeeld een BAG identificatie, een BGT identificatie en een BRT identificatie. Deze identificaties zijn van belang omdat ze de herkomst van het object duiden. We kunnen echter niet drie attributen genaamd `identificatie` opnemen, dan zou er een naamgevingsconflict ontstaan. Naast deze bronidentificaties is het wellicht ook van belang om een SOR identificatie in te voeren. Hierbij  speelt de UOI mogelijk een rol.
+Op dit moment is er geen unieke, eenduidige identificatie van een SOR object. Als het SOR object niet één op één in een basisregistratie is geregistreerd, heeft het in elke basisregistratie waar het voorkomt een eigen identificatie. Een SOR Gebouw heeft bijvoorbeeld een BAG identificatie, een BGT identificatie en een BRT identificatie. Deze identificaties zijn van belang omdat ze de herkomst van het object duiden. We kunnen echter niet drie attributen genaamd `identificatie` opnemen, dan zou er een naamgevingsconflict ontstaan. Naast deze bronidentificaties is het wellicht ook van belang om een SOR identificatie in te voeren. Hierbij  speelt de UOI mogelijk een rol. Zie hiervoor het rapport [UOI verkenning](https://www.geonovum.nl/themas/unieke-object-identificatie).
 
 Identificatie van objecten speelt een rol bij de behandeling van historie en tijdreizen, waar we uitgebreider op ingaan in [](#modelleren-van-historie-en-beantwoorden-van-tijdreisvragen).
 
 ### Kwaliteit 
 
-Een ander groot onderwerp dat aandacht vraagt binnen de SOR is de kwaliteit van gegevens, en het bevestigen hiervan door een bronhouder. Het is hierbij niet de bedoeling om kwaliteitscontroles te modelleren, we doen dit alleen als er op inhoud bepaalde regels gelden voor gegevens of een combinatie van gegevens. Het gaat onder andere om metadata die iets over kwaliteit van gegevens zegt, zoals bronverwijzing, in onderzoek, en controlegegevens.
+Een ander groot onderwerp dat aandacht vraagt binnen de SOR is de kwaliteit van gegevens, en het bevestigen hiervan door een bronhouder. Het is hierbij niet de bedoeling om kwaliteitscontroles te modelleren, we doen dit alleen als er op inhoud bepaalde regels gelden voor gegevens of een combinatie van gegevens. Het gaat onder andere om metadata die iets over kwaliteit van gegevens zegt, zoals nauwkeurigheid, bronverwijzing, het al dan niet in onderzoek zijn, en controlegegevens.
 
 Als gegevens in samenhang een bepaalde consistentie behoren te hebben, kunnen er regels worden opgesteld die gaan over een bepaalde combinatie van gegevens. Dit geldt bijvoorbeeld bij functie en gebruiksdoel van een gebouw. Bepaalde functies van een gebouw zijn benoemd in de WOZ - geconstateerde functies - en in de BAG - vergunde functies. Wanneer deze niet in samenspraak met elkaar zijn, is het van belang om dit te weten. Dit is WOZ en BAG kennis, die een afnemer (meestal) niet heeft. Wanneer een verblijfsobject als gebruiksdoel kantoorfunctie heeft en de WOZ constateert dat het gebruikt wordt voor wonen, dan is het feitelijke gebruik niet legitiem. Dit zou bijvoorbeeld kunnen worden uitgewerkt voor het thema wonen. 
 
-Dit onderwerp is niet in zijn totaliteit uitgebreid aan de orde geweest, maar zou voor de volgende High-5, als we met gegevens gaan werken, wellicht geschikt zijn. Deeluitwerkingen zijn hier beschreven: 
+Dit onderwerp is niet in zijn totaliteit uitgebreid aan de orde geweest. Deeluitwerkingen zijn hier beschreven: 
 - [](#modelleerpatronen-voor-metadata)
 
 ### Op gelijke wijze modelleren van generieke gegevens
@@ -45,9 +45,9 @@ De inhoudelijke eisen aan de SOR [[EMSO]] vragen in sommige gevallen om het afle
 
 Het gaat bijvoorbeeld om:
 - Relateren van gebouwcomponent aan gebouw
-- Relateren van BRT gebouw aan gebouwblok (geometrisch afleiden) 
+- Relateren van BRT gebouw aan gebouwblok
 
-Dit onderwerp is niet uitgebreid aan de orde geweest, maar zou voor de volgende High-5, als we met gegevens gaan werken, wellicht geschikt zijn.
+Dit onderwerp is niet uitgebreid aan de orde geweest. In [](#vertaalspecificatie) zijn relaties tussen objecten niet meegenomen. Een aantal van zulke relaties is wel beschreven in de eerdere iteratie van Gebouw en Gebouwzone vertaalspecificaties (zie [](#vertaling-naar-sor-gebouw) en [](#vertaling-naar-sor-gebouwzone)). 
  
 ### Gegevens uit andere bronnen
 
@@ -58,7 +58,7 @@ Het koppelen van externe gegevens is nader beschreven in [](#gegevens-koppelen-t
 ### Van functionele eisen aan inhoud naar informatiemodel
 Bij het maken van het informatiemodel voor SOR Gebouw, op basis van de eisen aan de inhoud zoals beschreven in [[EMSO]], lopen we mogelijk tegen semantische dilemma's aan. Hoewel de eisen aan de inhoud zo goed als mogelijk beschreven zijn, is het onvermijdelijk dat we op problematische zaken stuiten als we daadwerkelijk gaan modelleren: dan moeten we immers echt gaan zorgen dat alle details kloppen. Inconsistenties in definities zijn dan bijvoorbeeld problemen die opgelost moeten worden. 
 
-Tijdens het modelleerwerk in deze High-5 hebben we met verschilllende van dit soort problemen te maken gehad. Deze zijn beschreven in TODO paragraafverwijzing opnemen [...](). 
+Tijdens het modelleerwerk in deze High-5 hebben we met verschilllende van dit soort problemen te maken gehad. Deze zijn samengevat in [](#lessons-learned). Detailopmerkingen staan in de [mapping tabel](transponering/mapping-deel-Gebouw-en-VBO.xlsx) (excel). 
 
 ### Publicatievorm(en) van het informatiemodel
 Omdat er op deze High-5 een vervolg komt waarin het informatiemodel wordt geimplementeerd in software, is het belangrijk dat het informatiemodel wordt opgeleverd in een voor ontwikkelaars bruikbare vorm. 

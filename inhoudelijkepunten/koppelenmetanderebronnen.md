@@ -7,7 +7,9 @@ Dit betreft use cases waarin een informatiebron (niet de SOR zelf) wilt koppelen
 
 De bronnen waaruit de SOR wordt samengesteld zijn andere bronnen dan waar de energiegegevens worden bijgehouden. Wat in ieder geval niet de bedoeling is, is het overnemen en opslaan van de data uit deze bronnen naar de SOR. In plaats daarvan beogen we een federatief stelsel, waarin de verschillende bronnen worden bevraagd en de data uit deze bronnen in samenhang geleverd kunnen worden aan afnemers. De informatiebron met energiegegevens kan gecombineerd worden met de informatiebron SOR (of een basisregistratie). 
 
-In dit geval gaat het niet om het aanbrengen van samenhang tussen gegevens van de basisregistraties onder de SOR, maar van het aanbrengen van samenhang tussen gegevens *uit andere bronnen* met de data van de SOR. Anders gezegd, de SOR kent de energiegegevens niet, maar de energiegegevens kent wel een SOR object (of basisregistratie object) en door een koppeling hiertussen te leggen zijn beide informatiebronnen integraal te bevragen en kunnen gegevens bij elkaar gebracht worden. 
+In dit geval gaat het niet om het aanbrengen van samenhang tussen gegevens van de basisregistraties onder de SOR. Daarover hebben we in een eerdere High 5 al veel gezegd onder de noemer [Governance op het snijvlak](https://geonovum.github.io/disgeo-demo/#governance-op-het-snijvlak).
+
+We hebben het hier over het aanbrengen van samenhang tussen gegevens *uit andere bronnen* met de data van de SOR. Anders gezegd, de SOR kent de energiegegevens niet, maar de energiegegevens kent wel een SOR object (of basisregistratie object) en door een koppeling hiertussen te leggen zijn beide informatiebronnen integraal te bevragen en kunnen gegevens bij elkaar gebracht worden. 
 
 We noemen de niet-SOR bronnen in onderstaande tekst: andere bronnen. 
 

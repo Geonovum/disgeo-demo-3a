@@ -16,7 +16,7 @@ Hoewel niet eenvoudig, is het wel zeer interessant om in een latere fase naar de
 ### Is de WOZ in scope? 
 We hebben de WOZ in de eerste dagen van deze High-5 wel meegenomen. Op basis van onze bevindingen hebben we echter besloten om de WOZ voorlopig, in de hierop volgende implementatie-High-5, buiten scope te plaatsen. Het  informatiemodel SOR-Gebouw dat we hebben geproduceerd bevat dan ook geen objecttypen en kenmerken die uit de WOZ moeten worden afgeleid. 
 
-Uit onze eerste exercities om een transponering op te stellen voor SOR gebouw in relatie tot BAG, BGT en WOZ, bleek met name de WOZ relatie een lastige te zijn. Meer hierover staat met name in [](#gebouw-vertaalspecificatie) en [](#gebouwzone-vertaalspecificatie).
+Uit onze eerste exercities om een transponering op te stellen voor SOR gebouw in relatie tot BAG, BGT en WOZ, bleek met name de WOZ relatie een lastige te zijn. Meer hierover staat met name in [](#vertaling-naar-sor-gebouw) en [](#vertaling-naar-sor-gebouwzone).
 
 ### Wat is de relatie van energielabels met de SOR?
 Het energielabel is typisch een gegeven van buiten de SOR; het moet mogelijk zijn voor een externe partij om dit te koppelen aan een SOR object en in samenhang te bevragen. Daarmee is het energielabel in scope van deze High-5. Het is een mooie use case om externe gegevens aan de SOR te koppelen.
