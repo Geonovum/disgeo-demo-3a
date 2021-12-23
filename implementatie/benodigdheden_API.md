@@ -33,7 +33,9 @@ Deze component heeft nodig:
  * Vertaalregels, deze bestaan uit: 
    * Directe eigenschappen, te vinden in [](#gebouwen-van-bron-naar-sor)
    * Historie BAG en BGT, te vinden in [](#specificatie-van-de-vertaling-van-historie) 
-   * Metadata [ontbreekt]
+   * Metadata 
+
+<aside class="issue">Vertaalregels voor metadata ontbreken nog.</aside>
 
 Hiervan wordt een GraphQL schema gemaakt t.b.v. een (interne) API.
 
