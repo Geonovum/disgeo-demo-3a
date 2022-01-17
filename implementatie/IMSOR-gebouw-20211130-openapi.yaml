@@ -1,0 +1,602 @@
+openapi: 3.0.0
+info:
+  title: IMSOR
+  description: IMSOR components/schema
+  version: 0.1.0
+paths:
+  /:
+    get:
+      description: a path
+      responses:
+        200:
+          description: okay
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: pong
+components:
+  schemas:
+    GeoObject:
+      title: Geo-object
+      description: Een onderdeel van de (tastbare of denkbare) werkelijkheid.
+      type: object
+      required:
+      - domein
+      - identificatie
+      - geregistreerdMet
+      properties:
+        domein:
+          title: domein
+          description: Unieke verwijzing naar een registratie van objecten.
+          type: string 
+        identificatie:
+          title: identificatie
+          description: De functionele identificatie van een Geo-object, zoals bedoeld
+            in NEN3610.
+          type: string
+        geregistreerdMet:
+          title: geregistreerdMet
+          description: Attribuut voor herkomst en tijdlijn van de gegevens in de registratie.
+          $ref: '#/components/schemas/Registratiegegevens'
+    Gebouw:
+      title: Gebouw
+      description: Overdekte en geheel of grotendeels met wanden omsloten constructief
+        zelfstandige eenheid bedoeld voor het in een afgeschermde omgeving onderbrengen
+        van mensen, dieren of voorwerpen of voor de productie van goederen.
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/GeoObject'
+      - required:
+        - status
+        - oorspronkelijkBouwjaar
+        - type
+        - geometrie
+        properties:
+          status:
+            title: status
+            description: Fase van de levenscyclus waarin een gebouw zich bevindt.
+            $ref: '#/components/schemas/StatusReeel'
+          oorspronkelijkBouwjaar:
+            title: oorspronkelijkBouwjaar
+            description: Aanduiding van het jaar waarin een gebouw oorspronkelijk
+              als bouwkundig gereed is of zal worden opgeleverd.
+            type: integer
+          type:
+            title: type
+            description: Categorisering van een gebouw op basis van het constructief
+              beoogde gebruik.
+            $ref: '#/components/schemas/TypeGebouw'
+          geometrie:
+            title: geometrie
+            description: Geometrische omtrekrepresentatie van een gebouw.
+            $ref: '#/components/schemas/polygonGeoJSON'
+          geometrie2dGrondvlak:
+            title: geometrie2dGrondvlak
+            description: Geometrische grondvlakrepresentatie van een gebouw.
+            type: array
+            items:
+              $ref: '#/components/schemas/polygonGeoJSON'
+            minItems: 0
+    Gebouwcomponent:
+      title: Gebouwcomponent
+      description: Component aan de buitenzijde van een gebouw, die het aanzicht van
+        het gebouw mede bepaalt
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/GeoObject'
+      - required:
+        - status
+        - type
+        - geometrie
+        - isOnderdeelVan
+        properties:
+          status:
+            title: status
+            description: Fase van de levenscyclus waarin een gebouwcomponent zich
+              bevindt
+            $ref: '#/components/schemas/StatusReeel'
+          type:
+            title: type
+            description: Categorisering van een gebouwcomponent op basis van het constructief
+              beoogde gebruik.
+            $ref: '#/components/schemas/TypeGebouwcomponent'
+          geometrie:
+            title: geometrie
+            description: Geometrische representatie van een gebouwcomponent.
+            $ref: '#/components/schemas/PuntOfLijnOfVlak'
+          isOnderdeelVan:
+            title: isOnderdeelVan
+            type: array
+            items:
+              $ref: '#/components/schemas/Gebouw'
+            minItems: 1
+            maxItems: 2
+    OpenBouwwerk:
+      title: Open bouwwerk
+      description: Afzonderlijk staande overdekking rustend op een constructie met
+        kolommen met één of meerdere open gevels bedoeld voor het beschutten of
+        stallen van mensen, dieren, objecten en/of voer- en vaartuigen
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/GeoObject'
+      - required:
+        - status
+        - type
+        - geometrie
+        properties:
+          status:
+            title: status
+            description: Fase van de levenscyclus waarin een open bouwwerk zich bevindt
+            $ref: '#/components/schemas/StatusReeel'
+          type:
+            title: type
+            description: Soort open bouwwerk
+            $ref: '#/components/schemas/TypeOpenBouwwerk'
+          geometrie:
+            title: geometrie
+            description: Geometrische representatie van een open bouwwerk
+            $ref: '#/components/schemas/polygonGeoJSON'
+    Installatie:
+      title: Installatie
+      description: Constructie die een technisch samenhangend systeem betreft dat
+        een bepaald doel dient.
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/GeoObject'
+      - required:
+        - status
+        - type
+        - geometrie
+        - isOnderdeelVan
+        properties:
+          status:
+            title: status
+            description: Fase van de levenscyclus waarin een installatie zich bevindt
+            $ref: '#/components/schemas/StatusReeel'
+          type:
+            title: type
+            description: Aanduiding van het soort installatie
+            $ref: '#/components/schemas/TypeInstallatie'
+          geometrie:
+            title: geometrie
+            description: Geometrische representatie van de installatie
+            $ref: '#/components/schemas/PuntOfLijnOfVlak'
+          isOnderdeelVan:
+            title: isOnderdeelVan
+            $ref: '#/components/schemas/Gebouw'
+    Verblijfsobject:
+      title: Verblijfsobject
+      description: Kleinste binnen één of meer gebouwen gelegen eenheid van gebruik
+        die ontsloten wordt via een eigen afsluitbare toegang vanaf de openbare weg,
+        een erf of een gedeelde verkeersruimte, en die onderwerp kan zijn van goederenrechtelijke
+        rechtshandelingen en in functioneel opzicht zelfstandig is.
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/GeoObject'
+      - required:
+        - status
+        - gebruiksdoel
+        - gebruiksoppervlakte
+        - geometrie
+        - maaktOnderdeelUitVan
+        properties:
+          status:
+            title: status
+            description: Fase van de levenscyclus waarin een verblijfsobject zich
+              bevindt
+            $ref: '#/components/schemas/StatusFunctioneel'
+          gebruiksdoel:
+            title: gebruiksdoel
+            description: Categorisering van de gebruiksdoelen van een verblijfsobject
+              zoals in de vergunning is opgenomen of bij constatering is vastgesteld
+            type: array
+            items:
+              $ref: '#/components/schemas/Gebruiksdoel'
+            minItems: 1
+          gebruiksoppervlakte:
+            title: gebruiksoppervlakte
+            description: Gebruiksoppervlakte van een verblijfsobject
+            type: integer 
+          geometrie:
+            title: geometrie
+            description: Geometrische representatie van een verblijfsobject
+            $ref: '#/components/schemas/polygonGeoJSON'
+          maaktOnderdeelUitVan:
+            title: maaktOnderdeelUitVan
+            type: array
+            items:
+              $ref: '#/components/schemas/Gebouw'
+            minItems: 1
+    TypeInstallatie:
+      title: TypeInstallatie
+    Begrip:
+      title: Begrip
+      type: object
+      required:
+      - code
+      - identificatie
+      properties:
+        code:
+          title: code
+          type: string
+        identificatie:
+          title: identificatie
+          type: string
+    TypeOpenBouwwerk:
+      title: TypeOpenBouwwerk
+      type: string 
+    StatusFunctioneel:
+      title: StatusFunctioneel
+      type: string 
+    Gebruiksdoel:
+      title: Gebruiksdoel
+      type: string 
+    TypeGebouwcomponent:
+      title: TypeGebouwcomponent
+      type: string 
+    TypeGebouw:
+      title: TypeGebouw
+      type: string 
+    StatusReeel:
+      title: StatusReëel
+      type: string 
+    Brondocument:
+      title: Brondocument
+      description: Elke wijziging van de gegevens in de BAG is gebaseerd op een brondocument.
+        Ook bij constatering van een object of de correctie van gegevens is de bronhouder
+        verplicht een brondocument op te stellen.; Een vergunning wordt alleen als
+        brondocument in de BAG geregistreerd als de inhoud ervan leidt tot wijzigingen
+        in de registratie.
+      type: object
+      required:
+      - documentdatum
+      - documentnummer
+      properties:
+        documentdatum:
+          title: documentdatum
+          description: De datum waarop het brondocument is vastgesteld op basis waarvan
+            een opname, mutatie of een verwijdering van gegevens ten aanzien van een
+            object heeft plaatsgevonden.
+          type: string
+          format: date 
+        documentnummer:
+          title: documentnummer
+          description: De unieke aanduiding van het brondocument op basis waarvan
+            een opname, mutatie of een verwijdering van gegevens ten aanzien van een
+            woonplaats heef plaatsgevonden binnen een gemeente.
+          type: string 
+    PuntOfLijnOfVlak:
+      title: PuntOfLijnOfVlak
+      description: Keuze tussen puntgeomerie, lijngeometrie of vlakgeometrie.
+      oneOf:
+      - $ref: '#/components/schemas/pointGeoJSON'
+      - $ref: '#/components/schemas/linestringGeoJSON'
+      - $ref: '#/components/schemas/polygonGeoJSON' 
+    Overheidsorganisatie:
+      title: Overheidsorganisatie
+      type: object
+      required:
+      - code
+      properties:
+        code:
+          title: code
+          description: Unieke aanduiding van een Overheidsorganisatie.
+          type: string 
+        oin:
+          title: oin
+          description: Een uniek nummer dat Logius kan toekennen aan organisaties
+            om zich te kunnen identificeren, authentiseren en of autoriseren bij digitaal
+            berichtenverkeer binnen en met de overheid.
+          type: array
+          items:
+            type: string 
+          minItems: 0
+    RegistratiegegevensObjectBasisregistratie:
+      title: RegistratiegegevensObjectBasisregistratie
+      description: Eigenschappen over herkomst en tijdlijn van de gegevens uit de
+        basisregistratie op basis waarvan een SOR informatieobject tot stand is gekomen.
+      type: object
+      required:
+      - beginGeldigheid
+      - beschrijft
+      - tijdstipRegistratie
+      properties:
+        beginGeldigheid:
+          title: beginGeldigheid
+          description: Start van de periode waarop deze versie van het informatieobejct
+            geldig is in de registratie werkelijkheid.
+          type: string 
+          format: date
+        beschrijft:
+          title: beschrijft
+          $ref: '#/components/schemas/ObjectBasisregistratie'
+        eindGeldigheid:
+          title: eindGeldigheid
+          description: Eind van de periode waarop deze versie van het informatieobject
+            geldig is in de registratie werkelijkheid.
+          type: string 
+          format: date
+          minItems: 0
+        tijdstipRegistratie:
+          title: tijdstipRegistratie
+          description: Tijdstip waarop deze versie van het informatieobject is opgenomen
+            in de registratie.
+          type: string 
+          format: datetime
+        eindRegistratie:
+          title: eindRegistratie
+          description: Eind van de periode dat deze versie van het informatieobject
+            geldig is in de registratie.
+          type: string 
+          format: datetime
+        bronhouder:
+          title: bronhouder
+          description: Verwijzing naar de bronhouder ten tijde van het muteren van
+            het informatieobject.
+          type: array
+          items:
+            $ref: '#/components/schemas/Overheidsorganisatie'
+          minItems: 0
+        brondocument:
+          title: brondocument
+          type: array
+          items:
+            $ref: '#/components/schemas/Brondocument'
+          minItems: 0
+        versie:
+          title: versie
+          type: integer
+          minItems: 0
+    Registratiegegevens:
+      title: Registratiegegevens
+      description: Eigenschappen over herkomst en tijdlijn van de gegevens in de registratie.
+      type: object
+      required:
+      - afgeleidVan
+      - beginGeldigheid
+      - tijdstipRegistratie
+      properties:
+        afgeleidVan:
+          title: afgeleidVan
+          type: array
+          items:
+            $ref: '#/components/schemas/RegistratiegegevensObjectBasisregistratie'
+          minItems: 1
+        beginGeldigheid:
+          title: beginGeldigheid
+          description: Start van de periode waarop deze versie van het informatieobejct
+            geldig is in de registratie werkelijkheid.
+          type: string 
+          format: date
+        eindGeldigheid:
+          title: eindGeldigheid
+          description: Eind van de periode waarop deze versie van het informatieobject
+            geldig is in de registratie werkelijkheid.
+          type: string 
+          format: date
+          minItems: 0
+        tijdstipRegistratie:
+          title: tijdstipRegistratie
+          description: Tijdstip waarop deze versie van het informatieobject beschikbaar
+            was via deze dienst.
+          type: string 
+          format: datetime
+        eindRegistratie:
+          title: eindRegistratie
+          description: Eind van de periode dat deze versie van het informatieobject
+            beschikbaar was via deze dienst.
+          type: string 
+          format: datetime
+    Indicatie:
+      title: Indicatie
+      description: Lijst met waarden voor Indicatie.
+      enum:
+      - ja
+      - nee
+    ObjectBasisregistratie:
+      title: ObjectBasisregistratie
+      type: object
+      required:
+      - brIdentificatie
+      - domein
+      properties:
+        brIdentificatie:
+          title: brIdentificatie
+          description: Unieke aanduiding van een Geo-object.
+          type: string  
+        domein:
+          title: domein
+          description: Unieke verwijzing naar een registratie van objecten.
+          type: string 
+    geometryGeoJSON:
+      oneOf:
+        - $ref: '#/components/schemas/pointGeoJSON'
+        - $ref: '#/components/schemas/multipointGeoJSON'
+        - $ref: '#/components/schemas/linestringGeoJSON'
+        - $ref: '#/components/schemas/multilinestringGeoJSON'
+        - $ref: '#/components/schemas/polygonGeoJSON'
+        - $ref: '#/components/schemas/multipolygonGeoJSON'
+        - $ref: '#/components/schemas/geometrycollectionGeoJSON'
+    geometrycollectionGeoJSON:
+      properties:
+        geometries:
+          items:
+            $ref: '#/components/schemas/geometryGeoJSON'
+          type: array
+        type:
+          enum:
+            - GeometryCollection
+          type: string
+      required:
+        - type
+        - geometries
+      type: object
+    landingPage:
+      properties:
+        description:
+          example: Access to data about buildings in the city of Bonn via a Web API that conforms to the OGC API Features specification.
+          type: string
+        links:
+          items:
+            $ref: '#/components/schemas/link'
+          type: array
+        title:
+          example: Buildings in Bonn
+          type: string
+      required:
+        - links
+      type: object
+    linestringGeoJSON:
+      properties:
+        coordinates:
+          items:
+            items:
+              type: number
+            minItems: 2
+            type: array
+          minItems: 2
+          type: array
+        type:
+          enum:
+            - LineString
+          type: string
+      required:
+        - type
+        - coordinates
+      type: object
+    link:
+      properties:
+        href:
+          example: http://data.example.com/buildings/123
+          type: string
+        hreflang:
+          example: en
+          type: string
+        length:
+          type: integer
+        rel:
+          example: alternate
+          type: string
+        title:
+          example: Trierer Strasse 70, 53115 Bonn
+          type: string
+        type:
+          example: application/geo+json
+          type: string
+      required:
+        - href
+      type: object
+    multilinestringGeoJSON:
+      properties:
+        coordinates:
+          items:
+            items:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            minItems: 2
+            type: array
+          type: array
+        type:
+          enum:
+            - MultiLineString
+          type: string
+      required:
+        - type
+        - coordinates
+      type: object
+    multipointGeoJSON:
+      properties:
+        coordinates:
+          items:
+            items:
+              type: number
+            minItems: 2
+            type: array
+          type: array
+        type:
+          enum:
+            - MultiPoint
+          type: string
+      required:
+        - type
+        - coordinates
+      type: object
+    multipolygonGeoJSON:
+      properties:
+        coordinates:
+          items:
+            items:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 4
+              type: array
+            type: array
+          type: array
+        type:
+          enum:
+            - MultiPolygon
+          type: string
+      required:
+        - type
+        - coordinates
+      type: object
+    numberMatched:
+      description: |-
+        The number of features of the feature type that match the selection
+        parameters like `bbox`.
+      example: 127
+      minimum: 0
+      type: integer
+    numberReturned:
+      description: |-
+        The number of features in the feature collection.
+
+        A server may omit this information in a response, if the information
+        about the number of features is not known or difficult to compute.
+
+        If the value is provided, the value shall be identical to the number
+        of items in the "features" array.
+      example: 10
+      minimum: 0
+      type: integer
+    pointGeoJSON:
+      properties:
+        coordinates:
+          items:
+            type: number
+          minItems: 2
+          type: array
+        type:
+          enum:
+            - Point
+          type: string
+      required:
+        - type
+        - coordinates
+      type: object
+    polygonGeoJSON:
+      properties:
+        coordinates:
+          items:
+            items:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            minItems: 4
+            type: array
+          type: array
+        type:
+          enum:
+            - Polygon
+          type: string
+      required:
+        - type
+        - coordinates
+      type: object
