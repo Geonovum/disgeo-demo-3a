@@ -2,19 +2,23 @@
 
 <aside class="note">Voorlopig in dit hoofdstuk de beschrijving van de implementatiedagen van januari 2022. Later bekijken we hoe we dit integreren met het lessons learned document, of misschien toch een apart lessons learned dcocument voor de implementatie maken.</aside>
 
+## Onderzoeksvragen
+In deze fase implementeren we het gemaakte SOR Gebouw MVP model en de transponeringsregels. We willen de volgende vragen beantwoorden: 
+- Is het SOR Gebouw model MVP te implementeren; waar loop je tegenaan
+- Zijn de transponeringsregels te implementeren; waar loop je tegenaan
+
 ## Opzet
 
-<figure>
-    <img src="../media/2022-architectuur.png" id="2022-architectuur" alt="Architectuur van de implementatie"/>
+<figure id="2022-architectuur">
+    <img src="media/2022-architectuur.png" alt="Architectuur van de implementatie"/>
     <figcaption>Architectuur van de implementatie</figcaption>
 </figure>
 
 De onderste laag van deze architectuur, ontsluiting bij de bron, is in de voorbereiding al gerealiseerd. In deze High 5 realiseren we de bovenste laag, Services, met daarin: 
 - Een Lookup API SOR Gebouw, conform het informatiemodel uit [](#imsor-gebouw-0). Deze API ondersteunt het gehele informatiemodel en regelt de orchestratie van BAG en BGT naar SOR. De REST API, OGC Features API en SPARQL Endpoint worden hier bovenop gebouwd.
-- Een REST API die vragen over gebouwen ondersteunt en JSON + JSON-LD teruggeeft.
-- Een OGC API Features die ruimtelijke vragen ondersteunt en GeoJSON teruggeeft, plus een client GIS viewer.
-- Een SPARQL endpoint bovenop een knowledge graph.
-
+- Een REST API die vragen over gebouwen ondersteunt en JSON + JSON-LD teruggeeft. Gebruik van REST tooling om te laten zien dat het werkt.
+- Een [OGC API Features](https://ogcapi.ogc.org/features/) (part 1) API die ruimtelijke vragen ondersteunt en GeoJSON teruggeeft, plus een client GIS viewer om te laten zien dat het werkt.
+- Een SPARQL endpoint bovenop een knowledge graph plus een data story om te laten zien dat het werkt.
 
 Als proefgebied is voor Swifterbant (gemeente Dronten) gekozen. 
 
