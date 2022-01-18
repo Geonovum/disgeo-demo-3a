@@ -60,4 +60,7 @@ Onze eerste uitdaging was: welke van deze aanpakken kunnen we het beste als uitg
 - De SOR is gespecificeerd vanuit het gewenste einddoel en SOR objecten zijn daardoor vaak een combinatie van meerdere bronobjecten, zodat er niet één enkel bronobject als uitganspunt genomen kan worden;
 - De pull / cherry picking aanpak leent zich meer voor een geleidelijk ontwikkelproces waarbij er steeds meer gegevens aan de SOR objecten kunnen worden toegevoegd, ongeacht uit welke bronregistratie ze komen.
 
+### OGC API Features
+OGC API Features: Part 1 schrijft als coördinaatreferentiesysteem WGS 84 longitude/latitude voor (i.e. http://www.opengis.net/def/crs/OGC/1.3/CRS84). De Lookup API serveert standaard de gegevens in het coördinaatreferentiesysteem van de bron, zijnde RD. 
 
+Om dit op te lossen wordt in de Lookup API de optie geïmplementeerd om de gegevens in plaats van in RD, in ETRS 89 op te vragen. Tussen ETRS 89 en WGS 84 zit maar een kleine afwijking, en een hoge nauwkeurigheid is in dit geval niet belangrijk, dus we kunnen WGS 84 gelijkstellen aan ETRS 89, zoals beschreven in de [Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie](https://docs.geostandaarden.nl/crs/cv-hr-crs-20211125/#transformatie-tussen-etrs89-en-itrs-wgs-84). De ETRS 89 coördinaten kunnen in de OGC API Features opgenomen worden in de GeoJSON output als zijnde WGS 84. 
