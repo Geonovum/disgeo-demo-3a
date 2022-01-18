@@ -1,6 +1,6 @@
 ## Benodigdheden ten behoeve van API's
 
-Dit hoofdstuk beschrijft een opsomming van de benodigheden om API's te maken. 
+Dit hoofdstuk beschrijft een opsomming van de benodigheden om API's te maken voor afnemers/gebruikers, met name voor developers.  
 
 We onderscheiden voor de High-5's de volgende externe API's: 
 
