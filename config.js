@@ -222,8 +222,24 @@ var respecConfig =
       status:     "levend document",
       publisher:  "Geonovum",
 
+    },
+    "ARCH":
+    {
+      title:      "DiS Geo: Architectuurbeschrijving Voorzieningen Samenhangende Objectenregistratie",
+      href:       "https://docs.geostandaarden.nl/disgeo/arch/",
+      status:     "Versie ter vaststelling",
+      publisher:  "Geonovum",
+    },
+    "CRS":
+    {
+      title:      "Handreiking Gebruik coördinaatreferentiesystemen bij uitwisseling en visualisatie van geo-informatie",
+      href:       "https://docs.geostandaarden.nl/crs/cv-hr-crs-20211125/#transformatie-tussen-etrs89-en-itrs-wgs-84",
+      status:     "Consultatieversie",
+      publisher:  "Geonovum",
+
     }
   },
+
   postProcess:[custGHPG],   //-- Optioneel voor een multi document repository
 
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
