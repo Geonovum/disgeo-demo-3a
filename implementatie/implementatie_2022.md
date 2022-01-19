@@ -44,16 +44,21 @@ We introduceren nu geen SOR identificatie maar gebruiken hiervoor de identificat
 
 Er zijn ook SOR gebouwen die geen BAG id hebben, namelijk de BGT `OverigBouwwerk` objecten van het type `Bunker` en `Schuur`. Voor deze SOR gebouwen wordt het BGT id overgenomen. 
 
-#### Ontbrekend bouwjaar
-Voor bunkers en schuren uit de BGT, die geen corresponderend BAG pand hebben maar wel SOR Gebouw zijn, lopen we tegen het issue aan dat er geen bouwjaar bekend is. Dit gegeven moet dus optioneel of voidable worden in het informatiemodel. In MIM termen betekent voidable: we gebruiken dan `mogelijk geen waarde = ja` in het informatiemodel. 
+#### Ontbrekende gegevens voor bunkers en schuren
+Voor bunkers en schuren uit de BGT, die geen corresponderend BAG pand hebben maar wel SOR Gebouw zijn, lopen we tegen het issue aan dat er geen bouwjaar bekend is en dat er geen BAG geometrie is. Deze gegevens moeten dus optioneel of voidable worden in het informatiemodel. In MIM termen betekent voidable: we gebruiken dan `mogelijk geen waarde = ja` in het informatiemodel. 
 
-Als we het attribuut `bouwjaar` voidable maken, is het wel verplicht, maar is het toegestaan om een nilwaarde op te nemen en een reden van het ontbreken van het gegeven op te nemen. 
+Als we de attributen `bouwjaar` en `geometrie` voidable maken, zijn ze wel verplicht, maar is het toegestaan om een nilwaarde op te nemen en een reden van het ontbreken van het gegeven op te nemen. 
 
-Als we het attribuut `bouwjaar` optioneel maken, wordt het in zijn geheel weg gelaten bij bunkers en schuren. 
+Als we deze attributen optioneel maken, worden ze in hun geheel weg gelaten bij bunkers en schuren. 
 
-Semantisch is de eerste optie correcter (want ook BGT schuren en bunkers hebben een bouwjaar, we hebben alleen nooit in de BGT geregistreerd wat het bouwjaar is). Het is de vraag wat handiger is. 
+Semantisch is de eerste optie correcter (want ook BGT schuren en bunkers hebben een bouwjaar en een omtrekgeometrie, we hebben deze alleen nooit ergens geregistreerd). Het is de vraag wat handiger is. 
 
 ###  Bevindingen rondom de transponering
+
+#### Toevoegen Open Bouwwerk
+Omdat we voor de SOR gebouwen al moesten putten uit de BGT `OverigBouwwerk` objecten om daar de schuren en bunkers uit te halen, bleek het heel weinig werk te zijn om ook SOR `Open Bouwwerk` op te nemen. Deze objecten zijn namelijk geabseerd op een ander BGT `OverigBouwwerk` type (`Open loods` en `Overkapping`). 
+
+`Open Bouwwerk` is toegevoegd aan de Lookup API SOR en daarna ook aan de REST API en de URI Dereferencing service. Dat was heel gemakkelijk om te doen. Als je eenmaal een query hebt voor een objecttype, is het eenvoudig om hier verder op voort te bouwen. Dit wijst op een zekere flexibiliteit in het systeem. Positief!
 
 #### Mapping specificatie
 We maken een declaratieve, machineleesbare specificatie van de mapping tussen BAG/BGT en SOR. De hele intelligentie van de transponering plaatsen we zo buiten de logica van de APIs. De Lookup API  hoeft alleen de mapping uit te voeren en kan daardoor generiek blijven. De vertaalspecificaties moeten twee kanten op werken voor een functionerende API: om gegevens in de bron(nen) te kunnen vinden gegeven een zoekvraag; en om gegevens te kunnen leveren in de doelstructuur (SOR model). 
@@ -112,7 +117,7 @@ Uiteraard wordt, zodra er meer tijd is, zo'n bulkbevragingsvoorziening wel gerea
 Deze bevindingen gaan over de Lookup APIs die zowel in de onderste als de bovenste laag (de SOR laag) voorkomen. 
 
 #### Gestandaardiseerd GraphQL profiel
-De Lookup API SOR, Lookup API BGT en Lookup API BAG hebben om diverse redenen een GraphQL endpoint. GraphQL is een low level standaard waarmee je alle kanten op kunt, en er is nog geen gestandaardiseerd profiel voor, dat beschrijft hoe je bijvoorbeeld omgaat met naamgeving, filteren, paginering, sortering etc. zoals de API Design Rules (uit de NL API strategie) dat doen voor REST APIs. Dit heeft als consequentie voor de afnemende APIs dat er specifieke code moeten worden geschreven om de data te verkrijgen en om te vormen (wellicht is bv. het uitfilteren van attributen en 'plat slaan' van geneste structuur nodig). Ter vergelijking: voor een OGC API Features is dit bijvoorbeeld niet nodig als de data al in een Postgres database of een Geopackage bestand zit in de juiste structuur. 
+De Lookup API SOR, Lookup API BGT en Lookup API BAG hebben om diverse redenen een GraphQL endpoint. GraphQL is een low level standaard waarmee je alle kanten op kunt, en er is nog geen gestandaardiseerd profiel voor, dat beschrijft hoe je bijvoorbeeld omgaat met naamgeving, filteren, paginering, sortering etc. zoals de API Design Rules (uit de NL API strategie) dat doen voor REST APIs. Dit heeft als consequentie voor de afnemende APIs dat er specifieke code moeten worden geschreven om de data te verkrijgen en om te vormen (wellicht is bv. het uitfilteren van attributen en 'plat slaan' van geneste structuur nodig). Ter vergelijking: voor een OGC API Features is dit bijvoorbeeld niet nodig als de data al in een Postgres database of een Geopackage bestand zit in de juiste structuur. De ETL stappen zijn dan al gedaan; in de huidige situatie wordt er in feite nog ETL gedaan IN de API op het laatste moment.
 
 Het schrijven van deze specifieke code is meer werk ten opzichte van het gebruik van een standaard GIS opslagmethode en blijkt bovendien ook wat lastiger dan verwacht. Je krijgt ook een beheerslast: als er in de Lookup API gegevens bij komen, moet er in de specifieke code ook weer iets aangepast worden met betrekking tot het wel of niet doorleveren van die gegevens. Met andere woorden: er is een mapping nodig van de Lookup API naar de afnemende APIs, die beheerd moet worden. 
 
