@@ -16,7 +16,7 @@ De input die hiervoor gebruikt kan worden:
 1. Informatiemodel in ReSpec (html), te vinden in [](#imsor-gebouw-0). 
 2. [Informatiemodel in een mim-export formaat](https://github.com/Geonovum/disgeo-demo-3a/blob/main/implementatie/imsor-gebouw-high5-20211130.xml) (in wording, nog niet officieel), in XML.
 3. [Informatiemodel in een RDF formaat](https://github.com/Geonovum/disgeo-demo-3a/blob/main/implementatie/imsor-gebouw-high5-20211130.ttl) (RDFS/OWL/SHACL)
-4. JSON schema van het informatiemodel - voor 1 en 2 
+4. [YAML/JSON schema van het informatiemodel](https://github.com/Geonovum/disgeo-demo-3a/blob/main/implementatie/IMSOR-gebouw-20211130-openapi.yaml)  
 
 <aside class="issue">Het JSON Schema ontbreekt nog.</aside>
 
