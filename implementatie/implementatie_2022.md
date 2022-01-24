@@ -73,6 +73,8 @@ We brengen in deze taal de mogelijkheid aan om functies aan te roepen zodat inge
 
 <aside class="issue">Het zou leuk zijn om een naam te hebben voor deze mapping spec taal...</aside>
 
+[TODO] toevoegen bevinding van LD team dat zij ook graag de mapping willen kunnen lezen en uitvoeren. Dit hoeft niet per se centraal op 1 plek te zitten. Zie aantekeningen. 
+
 #### Query planning
 Om de transponering te kunnen uitvoeren moet je ook de orchestratie logica vastleggen: de kennis over in welke gegevensbron je welke gegevens kan vinden en in welke volgorde je het beste de bronnen kan raadplegen als je er meerdere nodig hebt (wat in de SOR natuurlijk vaak zo is). 
 
@@ -125,7 +127,9 @@ Hetzelfde geldt bij de Lookup API SOR die bevragingen doet bij de Lookup API BGT
 
 Hier lopen we in feite tegen hetzelfde probleem aan als bij de [eerste High 5 demonstrator](https://docs.geostandaarden.nl/disgeo/dll/#api-versus-knowledge-graph) die werd gebouwd bovenop bestaande, APIs die niet aan een gestandaardiseerd profiel voldeden. De laag met de semantiek en orchestratie zou niet te beheren zijn, concludeerden we toen. 
 
-Het goede nieuws is dat we denken dat dit te beheersen is, mits er gestandaardiseerd wordt. Dit brengt de hoeveelheid specifieke code aanzienlijk terug. Een belangrijke bevinding van deze High-5 is dus dat er een gestandaardiseerd GraphQL profiel nodig is, dat in ieder geval in de context van de SOR architectuur, voor de samenhangende registraties, wordt gehanteerd.
+We denken wel dat dit deels te beheersen is, mits er gestandaardiseerd wordt. Dit brengt de hoeveelheid specifieke code aanzienlijk terug. Een belangrijke bevinding van deze High-5 is dus dat er een gestandaardiseerd GraphQL profiel nodig is, dat in ieder geval in de context van de SOR architectuur, voor de samenhangende registraties, wordt gehanteerd.
+
+Het is niet gelukt om de OGC API Features op de LookUP API aan te sluiten zonder hard codeerwerk. Het lijkt erop dat een profiel/standaard kan helpen, maar zelfs als dat er is kan er nog hard codeerwerk nodig zijn. Op zich is dit niet heel veel werk maar het zegt wel iets en het betekent dat er mogelijk programmeerwerk nodig is bij latere wijzigingen in APIs. Dit is niet wenselijk want het maakt de oplossing beduidend minder flexibel. 
 
 #### Batch bevraging
 Als een gebruiker aan de SOR API een collectie van objecten opvraagt, moet de Lookup API SOR daarvoor eerst naar de BAG, en vervolgens naar de BGT met een set BAG ids om de aanvullende BGT gegevens erbij te vinden. In die tweede stap wordt nu per id een individuele zoekvraag gesteld. Het zou handig zijn om die te kunnen bundelen in een batch bevraging.
