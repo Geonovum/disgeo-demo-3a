@@ -1,6 +1,6 @@
 # Implementatiefase
 
-<aside class="note">Voorlopig in dit hoofdstuk de beschrijving van de implementatiedagen van januari 2022. Om dit goed te integreren met de tekst uit de eerdere high 5 dagen voegen we een leeswijzer toe. </aside>
+Dit hoofdstuk bevat de beschrijving van de opzet, resultaten en inzichten van de laatste experimenteersessie uit deze High-5 reeks, de implementatiedagen van januari 2022. 
 
 ## Onderzoeksvragen
 In deze fase implementeren we het gemaakte SOR Gebouw MVP model en de transponeringsregels. We willen de volgende vragen beantwoorden: 

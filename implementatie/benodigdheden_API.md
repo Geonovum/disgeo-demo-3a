@@ -1,6 +1,6 @@
 ## Benodigdheden ten behoeve van API's
 
-Dit hoofdstuk beschrijft een opsomming van de benodigheden om API's te maken voor afnemers/gebruikers, met name voor developers.  
+Dit hoofdstuk beschrijft een opsomming van de benodigdheden om API's te maken voor afnemers/gebruikers, met name voor developers.  
 
 We onderscheiden voor de High-5's de volgende externe API's: 
 
@@ -17,8 +17,6 @@ De input die hiervoor gebruikt kan worden:
 2. [Informatiemodel in een mim-export formaat](https://github.com/Geonovum/disgeo-demo-3a/blob/main/implementatie/imsor-gebouw-high5-20211130.xml) (in wording, nog niet officieel), in XML.
 3. [Informatiemodel in een RDF formaat](https://github.com/Geonovum/disgeo-demo-3a/blob/main/implementatie/imsor-gebouw-high5-20211130.ttl) (RDFS/OWL/SHACL)
 4. [YAML/JSON schema van het informatiemodel](https://github.com/Geonovum/disgeo-demo-3a/blob/main/implementatie/IMSOR-gebouw-20211130-openapi.yaml)  
-
-<aside class="issue">Het JSON Schema ontbreekt nog.</aside>
 
 ### Interne API's 
 

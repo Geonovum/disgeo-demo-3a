@@ -1,5 +1,5 @@
 ## Verkenning van inhoudelijke punten
-Tijdens de High-5 is gezamenlijk verkend welke inhoudelijke punten, betreffende het realiseren van de SOR inhoud op basis van de inhoud van de huidige basisregistraties, relevant zijn. Niet al deze punten zijn uitgebreid aan de orde geweest. We beschrijven hieronder de besproken punten en geven aan welke nader zijn uitgewerkt in de volgende hoofdstukken. 
+Tijdens de High-5 dagen in augustus 2021 is gezamenlijk verkend welke inhoudelijke punten, betreffende het realiseren van de SOR inhoud op basis van de inhoud van de huidige basisregistraties, relevant zijn. Niet al deze punten zijn uitgebreid aan de orde geweest. We beschrijven hieronder de besproken punten en geven aan welke nader zijn uitgewerkt in de volgende hoofdstukken. 
 
 ### Transponering
 

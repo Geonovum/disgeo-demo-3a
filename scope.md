@@ -1,6 +1,6 @@
 ## Scope van de High-5
 
-Tijdens de eerste uren van de High-5 hebben we gezamenlijk de scope besproken aan de hand van enkele scope-bepalende vragen. 
+Tijdens de eerste uren van de eerste High-5 dagen in augustus 2021 hebben we gezamenlijk de scope besproken aan de hand van enkele scope-bepalende vragen. 
 
 ### Wat is ons startpunt?
 Het inhoudelijke startpunt voor ons modelleerwerk is het DiS Geo: Eisen aan model samenhangende objectenregistratie document [[EMSO]]. De laatste inzichten van de DisGeo werkgroep Inhoud - Gebouwen zijn daarin beschreven. Voor ons van belang in dat document is ook het hoofdstuk Transitie / transponering, waarin beschreven is wat de relatie is tussen SOR inhoud en de huidige registraties. Hoewel de informatiemodellen van de huidige basisregistraties niet ons startpunt zijn, kijken we er wel naar, om te zien hoe deze zich verhouden tot het gewenste SOR model en wat er aan eventuele afleidingsregels nodig is.
