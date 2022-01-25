@@ -25,14 +25,14 @@ Het informatiemodel van de SOR moet daarom een samenhangend gegevensmodel zijn. 
 
 Een interessante invalshoek is een mogelijke samenhang met het [IGO traject van DisGeo](https://labs.kadaster.nl/cases/integralegebruiksoplossing). Een belangrijk inhoudelijk verschil tussen deze High-5 en het IGO-traject is dat men in het IGO kijkt naar integraal gebruik op basis van de beschikbare bronnen, en daarbij uit gaat van de bestaande gegevensstructuren. In het kader van de SOR kijken we primair gebruiksgericht, uitgaande van een samenhangend gegevensmodel; en van daar uit naar de databronnen. 
 
-In het eerste deel van deze High-5 hebben we ons puur gericht op het maken van een semantisch model. Dit is uitgevoerd tijdens tweemaal een aantal aaneensluitende dagen in augustus en november 2021. Deze High-5 krijgt in januari 2022 een vervolg waarin we dit model implementeren in een proefomgeving. We willen dan beproeven in welke mate (60/40 / 70/30 / 80/20) het SOR resultaat haalbaar is op basis van de huidige basisregistraties, en willen daarbij ontdekken op welke punten data-integratie bij de bronnen wel nodig is.
+Deze High-5 is in 3 tijdsperioden uitgevoerd. Gedurende de eerste periode, in augustus 2021, is onderzoekenderwijs een overkoepelend informatiemodel "Gebouwen" ontwikkeld. In de tweede periode, in november 2021, is het "Gebouwen" model verder uitgewerkt en zijn er transponeringsregels geformuleerd die beschrijven hoe je gegevens uit de huidige basisregistraties kunt omzetten naar dit informatiemodel. In de derde periode, in januari 2022, zijn dit informatiemodel en de transponeringsregels geïmplementeerd in een softwareomgeving om te beproeven waar je dan tegenaan loopt. De insteek hierbij was om te ervaren in welke mate (60/40 / 70/30 / 80/20) het SOR resultaat haalbaar is op basis van de huidige basisregistraties, en te ontdekken op welke punten data-integratie bij de bronnen wél nodig is.
 
 <figure id="modelleertaak-overzicht">
   <img src="media/modelleertaak-overzicht.png" alt="Samenhang">
   <figcaption>Semantisch modelleerwerk</figcaption>
 </figure>
 
-Zoals op de afbeelding te zien is, hebben we gewerkt aan het informatiemodel voor de Samenhangende Objectenregistratie - beperkt tot het deel over gebouwen. Input hierbij waren de eisen aan de DiSGeo inhoud [[EMSO]], de door het modelleerteam opgestelde modelleerprincipes [[MODPR]] en de uitwerking die er al was voor enkele generieke onderwerpen [[GENDOC]]. Daarnaast zijn er, kijkend naar het IMSOR informatiemodel én de huidige basisregistraties en de data daarin, transponeringsregels opgesteld. Tenslotte is er gekeken naar de aansluiting van een externe databron op het SOR Gebouw. 
+Zoals op de afbeelding te zien is, hebben we gewerkt aan het informatiemodel voor de Samenhangende Objectenregistratie - beperkt tot het deel over gebouwen. Input hierbij waren de eisen aan de DiSGeo inhoud [[EMSO]], de door het modelleerteam opgestelde modelleerprincipes [[MODPR]] en de uitwerking die er al was voor enkele generieke onderwerpen [[GENDOC]]. Daarna zijn er, kijkend naar het IMSOR informatiemodel én de huidige basisregistraties en de data daarin, transponeringsregels opgesteld. Ook is er gekeken naar de aansluiting van een externe databron op het SOR Gebouw. Informatiemodel en transponeringsregels zijn vervolgens toegepast in de samenhangende laag die op basis van de transponeringsregels de orchestratie tussen de afnemende APIs en de bronregistraties verzorgt. Een drietal APIs voor afnemers zijn tenslotte daar bovenop gerealiseerd.
 
 ### Hoe doen we dat?
 
@@ -74,11 +74,13 @@ Wel benoemd, maar nog niet aan toegekomen:
 
 ### Onderzoeksgebied: Gebouwen
 
-Voor deze High-5 is gekozen voor een afgebakend onderzoeksgebied. We richten ons op het onderdeel [Gebouwen](https://docs.geostandaarden.nl/disgeo/emso/#gebouw) van de SOR omdat dit onderwerp raakt aan meerdere basisregistraties.
+Voor deze High-5 is gekozen voor een afgebakend onderzoeksgebied. We richten ons op het onderdeel [Gebouwen](https://docs.geostandaarden.nl/disgeo/emso/#gebouw) van de SOR omdat dit onderwerp raakt aan meerdere basisregistraties. Tijdens de High-5 is de scope binnen het onderwerp Gebouwen nog verder vernauwd. 
 
 Daarnaast zijn in het kader van gebruik twee beleidsthema's geselecteerd die in samenhang hiermee bevraagd worden:
 - Energielabels
-- Energieafgiftepunten 
+- Energieafgiftepunten
+
+Aan deze beleidsthema's zijn we in het implementatiedeel van de High-5 niet meer toe gekomen.
 
 ### Eerdere DiSGeo-high-5's 
 
@@ -104,3 +106,15 @@ In 2019 en 2020 zijn twee High-5's uitgevoerd in het kader van DiSGeo.
     - Linked Data is geschikt (onmisbaar) om de DisGeo ambities met betrekking tot het in samenhang bevragen van de basisregistraties te realiseren;
     - Zowel als directe toegangslaag, en als basis voor API's en viewers;
     - Er zijn geen grote technische belemmeringen gevonden.
+
+### Leeswijzer
+
+Dit document is behoorlijk omvangrijk en beschrijft in feite het verloop en de resultaten van drie experimenteersessies, die op verschillende momenten in de tijd plaatsvonden maar toch één inhoudelijk samenhangende High-5 vormen. Het geheel van deze drie experimenteersessies wordt in dit document beschreven. 
+
+De eerste twee experimenteersessies draaiden beide om de semantische modellering en de transponering van oud naar nieuw en hebben we daarom als één geheel beschreven. De derde sessie, waarin de software implementatie plaats vond, hebben we apart beschreven.
+
+Het document valt daarom in verschillende delen uiteen: 
+- Hoofdstuk [](#inleiding) (dit hoofdstuk): de integrale inleiding over de gehele High-5 activiteit (het geheel van drie sessies).
+- Hoofdstuk 2 t/m 12: beschrijven de semantische modellering en transponering en alles wat daarbij kwam kijken.
+- Hoofdstuk 13 t/m 15: beschrijven de benodigdheden voor implementatie en de implementatie zelf.
+- Hoofdstuk [](#lessons-learned): beschrijft de opgedane inzichten en aanbevelingen (lessons learned). Dit hoofstuk is opgedeeld in een paragraaf die de lessen over de semantische modellering en transponering beschrijft, en een paragraaf die de implementatielessen beschrijft.
