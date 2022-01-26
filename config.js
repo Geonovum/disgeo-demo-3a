@@ -237,6 +237,12 @@ var respecConfig =
       status:     "Consultatieversie",
       publisher:  "Geonovum",
 
+    }, 
+    "ADR": {
+      title: "API Design Rules (Nederlandse API Strategie IIa)",
+      href: "https://publicatie.centrumvoorstandaarden.nl/api/adr/",
+      status:     "Definitief",
+      publisher:  "Geonovum",
     }
   },
 

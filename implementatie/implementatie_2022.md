@@ -14,7 +14,7 @@ In deze fase implementeren we het gemaakte SOR Gebouw MVP model en de transponer
     <figcaption>Architectuur van de implementatie</figcaption>
 </figure>
 
-De onderste laag van deze architectuur, ontsluiting bij de bron, is in de voorbereiding al gerealiseerd. In deze High 5 realiseren we de bovenste laag, Services, met daarin: 
+De onderste laag van deze architectuur, ontsluiting bij de bron, is in de voorbereiding al gerealiseerd door het Kadaster. In deze High-5 realiseren we de bovenste laag, Services, met daarin: 
 - Een Lookup API SOR Gebouw, conform het informatiemodel uit [](#imsor-gebouw-0). Deze API ondersteunt het gehele informatiemodel en regelt de orchestratie van BAG en BGT naar SOR. De REST API, URI Dereferencing service, en OGC Features API worden hier bovenop gebouwd. Het SPARQL Endpoint maakt gebruik van de URI Dereferencing service.
 - Een REST API die vragen over gebouwen ondersteunt en JSON teruggeeft. Deze API ondersteunt collecties met paginering, en heeft een endpoint voor individuele bevraging. Heeft ook CRS negotiation; de default is ETRS 89. Levert HAL JSON, compliant met NL API strategie. Geen JSON-LD (die zit wel in de URI dereferencing service). We maken gebruik van REST tooling om te laten zien dat het werkt. 
 - Een URI Dereferencing service die op basis van de URI identifier van een object de gegevens teruggeeft als RDF.
@@ -23,11 +23,90 @@ De onderste laag van deze architectuur, ontsluiting bij de bron, is in de voorbe
 
 Als proefgebied is voor Swifterbant (gemeente Dronten) gekozen. 
 
-<aside class="note">We beginnen met het objecttype Gebouw. Waarschijnlijk komen we niet aan de andere objecttypen die in scope zijn (Gebouwcomponent, Verblijfsobject, Open Bouwwerk en Installatie) toe. We hadden de andere objecttypen vooral om de energielabels en energieafgiftepunten te kunnen koppelen.</aside>
+## Scope beperking
+We zijn in de implementatiefase begonnen met een hele bescheiden scope met daarin alleen het objecttype `Gebouw`. Op dag 2 hebben we `Open Bouwwerk` hieraan toegevoegd en op dag 3 `Gebouwcomponent`. 
+
+Aan `Verblijfsobject` en `Installatie` zijn we niet toe gekomen. 
 
 ## Resultaten
 
-[TODO] Links / screenshots toevoegen van alles wat gemaakt is. 
+De meeste implementatie-onderdelen zijn gerealiseerd in een ontwikkelomgeving van het Kadaster en helaas op dit moment niet publiek beschikbaar. Wellicht gaat nog gekeken worden of dit (tijdelijk) toch mogelijk is. 
+
+Het Linked Data gedeelte is wel openbaar. 
+
+### Orchestratielaag en Lookup API SOR
+
+De orchestratielaag is het intelligente hart van de architectuur: wat we aan het begin van deze High-5 serie de 'semantische laag' noemden. De orchestratielaag regelt de aggregatie van één of meerdere onderliggende services. Deze services kunnen fysiek bij verschillende organisaties worden gehost zodat een federatief systeem mogelijk is. Als gebruiker van de Lookup API hoef je geen kennis te hebben van de onderliggende systemen, in dit geval de BAG en de BGT. 
+
+De Lookup API is onderdeel van deze orchestratielaag en zorgt voor ontkoppeling tussen onderliggende systemen en de uiteindelijke raadpleegvoorzieningen. Het resultaat van een zoekvraag door een gebruiker wordt door deze Lookup API samengevoegd uit antwoorden van de onderliggende systemen en met behulp van de transponeringsregels gemapped naar het IMSOR model. 
+
+Deze architectuur met transponering en orchestratie in het hart resulteert in een “virtuele” basisregistratie. Alles gebeurt on the fly, er is geen tussentijdse opslag. 
+
+De Lookup API heeft een [[GraphQL]] interface. Dit is een goed passende API stijl voor orchestratie, omdat het anders dan een gewone REST API, die een soort veelgestelde vragen voorziening is, een hoge mate van flexibiliteit biedt voor afnemers. Je kan zelf je vragen samenstellen en bepalen welke gegevens je in het resultaat wilt hebben. Ook is het mogelijk om delen van zoekvragen parallel te verwerken. 
+
+<figure id="graphql-screenshot">
+  <img src="media/2022-graphql-screenshot.png" alt="GraphQL screenshot">
+  <figcaption>GraphQL query en resultaat</figcaption>
+</figure>
+
+### Transponeringsregels
+
+De transponeringsregels die zijn opgesteld door inhoudelijke experts in de eerste en tweede High-5 sessie, zijn in de implementatiefase omgezet naar machineleesbare regel. Ze beschrijven de vertaling van brondatamodellen naar het doelmodel: het model van het samenhangende SOR gebouw. Deze transponeringsregels moet je zien als een soort configuratie. De orchestratielaag, de Lookup API is intelligent genoeg om deze regels te lezen, interpreteren en uitvoeren. De semantiek is zo gescheiden van de orchestratieprogrammatuur. 
+
+De transponering is voor `Gebouw`, `Open Bouwwerk`, en `Gebouw component` gerealiseerd. Voor de meeste attributen van deze objecttypen is een regel opgesteld die beschrijft waarmee het moet worden gevuld uit de bronregistraties. Een aantal attributen is om verschillende redenen niet getransponeerd. Het overzicht staat hieronder. 
+
+Het attribuut `status` dat in alle objecten voorkomt was een uitdaging om te transponeren. De SOR heeft een [nieuwe onderverdeling van levenscycli](https://docs.geostandaarden.nl/disgeo/emso/#levensfasen). Die hebben we als basis genomen, waardoor we gebruik konden maken van het [begrippenkader van de SOR](https://begrippen.geostandaarden.nl/sor-high5/nl/) (de experimentele variant voor de High-5). Het begrippenkader is uitgedrukt in SKOS [[skos-primer]], en dit biedt mogelijkheden om semantische relaties te leggen tussen begrippenkaders. Wat we dus gedaan hebben is de status begrippen uit het SOR begrippenkader verbinden met de overeenkomstige begrippen van BAG en BGT (die ook gepubliceerde begrippenkaders hebben) door middel van mapping relaties. 
+
+De orchestratielaag kon deze relaties tussen begrippen gebruiken voor de transponering en de Lookup API kan daardoor gegeven een SOR status een BAG status vinden of gegeven een BAG status een SOR status teruggeven.
+
+#### Gebouw transponering
+
+Alle BAG `Pand` objecten worden getransponeerd naar SOR `Gebouw`. Enkele attributen van BGT `Pand` worden erbij gezocht. BGT OVerigBouwwerk met `type` = `Schuur` of `Bunker` worden ook getransponeerd naar SOR Gebouw.
+
+Attribuut | Realisatie | Toelichting
+----------|------------|------------
+`type`    | [x]        | Deels geïmplementeerd vanwege scope. Veel typen moeten uit BRT of WOZ komen. Bij alle BAG panden is `nil` ingevuld. Bij overig bouwwerken uit de BGT is het type, `Schuur` of `Bunker` daarvandaan overgenomen.
+`aard`    | [ ]        | Buiten scope: BRT/WOZ
+`geometrie omtrek`     | [x] | Uit BAG
+`geometrie grondvlak`  | [x] | Uit BGT
+`naam`    | [ ]        | Buiten scope: BRT
+`oorspronkelijkBouwjaar` | [x] | Uit BAG
+`relatieveHoogteligging` | [x] | Uit BGT. Niet in EMSO aangemerkt als inhoud SOR, maar voor deze beproeving wel interessant om mee te nemen. Zolang we geen 3D hebben... 
+`status`  | [x]        | Uit BAG/BGT
+
+#### Open Bouwwerk transponering
+
+Dit objecttype komt uit de BGT en wordt als het gaat om een `OverigBouwwwerk` met attribuut `type` = `Open loods` of `Overkapping` getransponeerd naar SOR `Gebouw`. 
+
+Attribuut  | Realisatie | Toelichting
+-----------|------------|------------
+`type`     | [x]        | Uit BGT
+`geometrie`| [x]        | Uit BGT
+`isOnderdeelVan` | []   | geen mapping gespecificeerd. Dit gegeven zit niet in de brondata, er moet een afleidingsregel voor gemaakt worden.
+`relatieveHoogteligging` | [x] | Uit BGT. Niet in EMSO aangemerkt als inhoud SOR, maar voor deze beproeving wel interessant om mee te nemen. Zolang we geen 3D hebben... 
+`status`   | [x]        | Uit BGT
+
+#### Gebouwcomponent transponering
+De volgende objecten worden getransponeerd naar SOR `Gebouwcomponent`: 
+- Alle BGT `Gebouwinstallatie` objecten  met attribuut `type` = `Bordes`, `Luifel`, of `Toegangstrap`. 
+- Alle BGT `Kunstwerkdeel` objecten met attribuut `type` = `Perron` worden getransponeerd naar Gebouwcomponent.
+
+Attribuut  | Realisatie | Toelichting
+-----------|------------|------------
+`type`     | [x]        | Uit BGT
+`geometrie`| [x]        | Uit BGT
+`isOnderdeelVan` | []   | geen mapping gespecificeerd. Dit gegeven zit niet in de brondata, er moet een afleidingsregel voor gemaakt worden.
+`relatieveHoogteligging` | [x] | Uit BGT. Niet in EMSO aangemerkt als inhoud SOR, maar voor deze beproeving wel interessant om mee te nemen. Zolang we geen 3D hebben... 
+`status`   | [x]        | Uit BGT
+
+### REST API
+De REST API is een API conform de Nederlandse API strategie [[ADR]]. 
+
+### OGC API Features
+
+### URI Dereferencing Service
+
+### SPARQL endpoint
 
 ## Bevindingen
 
@@ -43,6 +122,13 @@ De bevindingen zijn gegroepeerd op onderwerp.
 We introduceren nu geen SOR identificatie maar gebruiken hiervoor de identificatie uit de bestaande bronregistraties. Omdat er zowel BAG als BGT panden zijn, die samen in een Gebouw object moeten gevat worden, moest er gekozen worden welke identificatie leidend is. Dit is voor ons het BAG ID geworden. 
 
 Er zijn ook SOR gebouwen die geen BAG id hebben, namelijk de BGT `OverigBouwwerk` objecten van het type `Bunker` en `Schuur`. Voor deze SOR gebouwen wordt het BGT id overgenomen. 
+
+<aside class="issue">Bij Orchestratie uitdagingen in de webinar is gezegd: 
+
+> Identificatie bevat geen type details
+
+Nagaan wat hiermee werd bedoeld. Klinkt als een bevinding. 
+</aside>
 
 #### Ontbrekende gegevens voor bunkers en schuren
 Voor bunkers en schuren uit de BGT, die geen corresponderend BAG pand hebben maar wel SOR Gebouw zijn, lopen we tegen het issue aan dat er geen bouwjaar bekend is en dat er geen BAG geometrie is. Deze gegevens moeten dus optioneel of voidable worden in het informatiemodel. In MIM termen betekent voidable: we gebruiken dan `mogelijk geen waarde = ja` in het informatiemodel. 
@@ -119,6 +205,12 @@ Uiteraard wordt, zodra er meer tijd is, zo'n bulkbevragingsvoorziening wel gerea
 Deze bevindingen gaan over de Lookup APIs die zowel in de onderste als de bovenste laag (de SOR laag) voorkomen. 
 
 #### Gestandaardiseerd GraphQL profiel
+
+Efficiënte orchestratie vereist uniformiteit in Lookup API’s
+Standaardisatie van interface elementen
+Toegangspatronen t.b.v. orchestratie (o.a. batching)
+Advies: Standaard API profiel voor Lookup API’s
+
 De Lookup API SOR, Lookup API BGT en Lookup API BAG hebben om diverse redenen een GraphQL endpoint. GraphQL is een low level standaard waarmee je alle kanten op kunt, en er is nog geen gestandaardiseerd profiel voor, dat beschrijft hoe je bijvoorbeeld omgaat met naamgeving, filteren, paginering, sortering etc. zoals de API Design Rules (uit de NL API strategie) dat doen voor REST APIs. Dit heeft als consequentie voor de afnemende APIs dat er specifieke code moeten worden geschreven om de data te verkrijgen en om te vormen (wellicht is bv. het uitfilteren van attributen en 'plat slaan' van geneste structuur nodig). Ter vergelijking: voor een OGC API Features is dit bijvoorbeeld niet nodig als de data al in een Postgres database of een Geopackage bestand zit in de juiste structuur. De ETL stappen zijn dan al gedaan; in de huidige situatie wordt er in feite nog ETL gedaan IN de API op het laatste moment.
 
 Het schrijven van deze specifieke code is meer werk ten opzichte van het gebruik van een standaard GIS opslagmethode en blijkt bovendien ook wat lastiger dan verwacht. Je krijgt ook een beheerslast: als er in de Lookup API gegevens bij komen, moet er in de specifieke code ook weer iets aangepast worden met betrekking tot het wel of niet doorleveren van die gegevens. Met andere woorden: er is een mapping nodig van de Lookup API naar de afnemende APIs, die beheerd moet worden. 
@@ -137,7 +229,7 @@ Als een gebruiker aan de SOR API een collectie van objecten opvraagt, moet de Lo
 Dit is vergelijkbaar met de constatering vanuit het SPARQL endpoint dat een bulkbevraging nodig was. Dit geldt dus voor zowel de Lookup API SOR als die van de BAG en BGT in de laag Ontsluiting data.
 
 #### Performance en andere non-functionals
-Performance van de APIs is een belangrijk aspect, dat samenhangt met het eerder genoemnde query planning. Indien mogelijk kunnen we bijvoorbeeld onderdelen van een query tegelijktijdig uitvoeren om zo performance te verbeteren. 
+Performance van de APIs is een belangrijk aspect, dat samenhangt met het eerder genoemde query planning. Indien mogelijk kunnen we bijvoorbeeld onderdelen van een query tegelijktijdig uitvoeren om zo performance te verbeteren. 
 
 Cruciaal is dat elk van de services die data leveren voor de SOR op zich al goede performance moeten hebben, anders kunnen SOR services ook nooit snel worden. 
 
