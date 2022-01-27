@@ -92,4 +92,14 @@ div#remark
   color: darkblue;
 }
 
+#check
+{
+  color: green;
+  font-weight: bold;
+}
 
+#nocheck
+{
+  color: red;
+  font-weight: bold;
+}

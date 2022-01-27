@@ -59,20 +59,33 @@ Het attribuut `status` dat in alle objecten voorkomt was een uitdaging om te tra
 
 De orchestratielaag kon deze relaties tussen begrippen gebruiken voor de transponering en de Lookup API kan daardoor gegeven een SOR status een BAG status vinden of gegeven een BAG status een SOR status teruggeven.
 
+De transponeringsregels zijn in deze fase als onderdeel van de LookUP API gerealiseerd ... 
+<figure id="2022-transponeringsarch1">
+    <img src="media/2022-transponeringsarch1.png" alt="Transponeringsregelsarch1"/>
+    <figcaption>Transponeringsregels als onderdeel van de Lookup API</figcaption>
+</figure>
+
+... maar moeten uiteindelijk een apart onderdeel worden in de orchestratielaag. 
+
+<figure id="2022-transponeringsarch2">
+    <img src="media/2022-transponeringsarch2.png" alt="Transponeringsregelsarch2"/>
+    <figcaption>Transponeringsregels gepositioneerd in de orchestratielaag</figcaption>
+</figure>
+
 #### Gebouw transponering
 
 Alle BAG `Pand` objecten worden getransponeerd naar SOR `Gebouw`. Enkele attributen van BGT `Pand` worden erbij gezocht. BGT OVerigBouwwerk met `type` = `Schuur` of `Bunker` worden ook getransponeerd naar SOR Gebouw.
 
 Attribuut | Realisatie | Toelichting
 ----------|------------|------------
-`type`    | [x]        | Deels geïmplementeerd vanwege scope. Veel typen moeten uit BRT of WOZ komen. Bij alle BAG panden is `nil` ingevuld. Bij overig bouwwerken uit de BGT is het type, `Schuur` of `Bunker` daarvandaan overgenomen.
-`aard`    | [ ]        | Buiten scope: BRT/WOZ
-`geometrie omtrek`     | [x] | Uit BAG
-`geometrie grondvlak`  | [x] | Uit BGT
-`naam`    | [ ]        | Buiten scope: BRT
-`oorspronkelijkBouwjaar` | [x] | Uit BAG
-`relatieveHoogteligging` | [x] | Uit BGT. Niet in EMSO aangemerkt als inhoud SOR, maar voor deze beproeving wel interessant om mee te nemen. Zolang we geen 3D hebben... 
-`status`  | [x]        | Uit BAG/BGT
+`type`    | <span id="check">&#10003;</span> | Deels geïmplementeerd vanwege scope. Veel typen moeten uit BRT of WOZ komen. Bij alle BAG panden is `nil` ingevuld. Bij overig bouwwerken uit de BGT is het type, `Schuur` of `Bunker` daarvandaan overgenomen.
+`aard`    | <span id="nocheck">&#10005;</span>| Buiten scope: BRT/WOZ
+`geometrie omtrek`     | <span id="check">&#10003;</span>| Uit BAG
+`geometrie grondvlak`  | <span id="check">&#10003;</span>| Uit BGT
+`naam`    | <span id="nocheck">&#10005;</span>| Buiten scope: BRT
+`oorspronkelijkBouwjaar` | <span id="check">&#10003;</span>| Uit BAG
+`relatieveHoogteligging` | <span id="check">&#10003;</span>| Uit BGT. Niet in EMSO aangemerkt als inhoud SOR, maar voor deze beproeving wel interessant om mee te nemen. Zolang we geen 3D hebben... 
+`status`  | <span id="check">&#10003;</span>| Uit BAG/BGT
 
 #### Open Bouwwerk transponering
 
@@ -80,11 +93,11 @@ Dit objecttype komt uit de BGT en wordt als het gaat om een `OverigBouwwwerk` me
 
 Attribuut  | Realisatie | Toelichting
 -----------|------------|------------
-`type`     | [x]        | Uit BGT
-`geometrie`| [x]        | Uit BGT
-`isOnderdeelVan` | []   | geen mapping gespecificeerd. Dit gegeven zit niet in de brondata, er moet een afleidingsregel voor gemaakt worden.
-`relatieveHoogteligging` | [x] | Uit BGT. Niet in EMSO aangemerkt als inhoud SOR, maar voor deze beproeving wel interessant om mee te nemen. Zolang we geen 3D hebben... 
-`status`   | [x]        | Uit BGT
+`type`     | <span id="check">&#10003;</span>| Uit BGT
+`geometrie`| <span id="check">&#10003;</span>| Uit BGT
+`isOnderdeelVan` | <span id="nocheck">&#10005;</span>| geen mapping gespecificeerd. Dit gegeven zit niet in de brondata, er moet een afleidingsregel voor gemaakt worden.
+`relatieveHoogteligging` | <span id="check">&#10003;</span>| Uit BGT. Niet in EMSO aangemerkt als inhoud SOR, maar voor deze beproeving wel interessant om mee te nemen. Zolang we geen 3D hebben... 
+`status`   | <span id="check">&#10003;</span>| Uit BGT
 
 #### Gebouwcomponent transponering
 De volgende objecten worden getransponeerd naar SOR `Gebouwcomponent`: 
@@ -93,20 +106,73 @@ De volgende objecten worden getransponeerd naar SOR `Gebouwcomponent`:
 
 Attribuut  | Realisatie | Toelichting
 -----------|------------|------------
-`type`     | [x]        | Uit BGT
-`geometrie`| [x]        | Uit BGT
-`isOnderdeelVan` | []   | geen mapping gespecificeerd. Dit gegeven zit niet in de brondata, er moet een afleidingsregel voor gemaakt worden.
-`relatieveHoogteligging` | [x] | Uit BGT. Niet in EMSO aangemerkt als inhoud SOR, maar voor deze beproeving wel interessant om mee te nemen. Zolang we geen 3D hebben... 
-`status`   | [x]        | Uit BGT
+`type`     | <span id="check">&#10003;</span>| Uit BGT
+`geometrie`| <span id="check">&#10003;</span>| Uit BGT
+`isOnderdeelVan` | <span id="nocheck">&#10005;</span>| geen mapping gespecificeerd. Dit gegeven zit niet in de brondata, er moet een afleidingsregel voor gemaakt worden.
+`relatieveHoogteligging` | <span id="check">&#10003;</span>| Uit BGT. Niet in EMSO aangemerkt als inhoud SOR, maar voor deze beproeving wel interessant om mee te nemen. Zolang we geen 3D hebben... 
+`status`   | <span id="check">&#10003;</span>| Uit BGT
 
 ### REST API
-De REST API is een API conform de Nederlandse API strategie [[ADR]]. 
+De REST API is een API conform de Nederlandse API strategie [[ADR]]. Objectinformatie wordt door deze API geretourneerd in HAL + JSON formaat. De API is bedoeld voor het opvragen van een beperkte set objecten en ondersteunt:
+- paginering
+- geometrie in meerdere coördinatenstelsels (RD, ETRS-89)
+- geo-zoeken conform de API strategie, maar meerdere filters kunnen mogelijk gemaakt worden
 
-### OGC API Features
+De API is geconfigureerd met behulp van het [DotWebStack Framework](https://github.com/dotwebstack/dotwebstack-framework). Er wordt een “On the fly” mapping op de lookup API gedaan. 
+
+[](#2022-RESTAPIendpoints) toont de functionaliteit van de REST API in de vorm van Swagger documentatie. 
+
+<figure id="2022-RESTAPIendpoints">
+    <img src="media/2022-RESTAPIendpoints.png" alt="REST API endpoints"/>
+    <figcaption>De endpoints van de REST API</figcaption>
+</figure>
 
 ### URI Dereferencing Service
+De URI Dereferencing service is een heel eenvoudige maar krachtige component, die op basis van de URI identifier van een object de gegevens teruggeeft als RDF. Dit is een van de kernonderdelen van linked data, ook verwoord in [Spatial Data on the Web Best Practice 1](https://www.w3.org/TR/sdw-bp/#globally-unique-ids): geef je objecten een URI identificatie en zorg dat je informatie over het object teruggeeft als die URI wordt opgevraagd.
 
-### SPARQL endpoint
+Als je via de URI Dereferencing Service de identificerende URI van een object via HTTP opvraagt, krijg je gegevens van dat object terug, inclusief http(s) links naar andere objecten. 
+
+Belangrijk punt is dat de HTTP URI een implementatie-onafhankelijke identificatie is. Via dezelfde URI kun je gegevens in meerdere formaten terug vragen door gebruik te maken van content negotiation. 
+
+Ook bij dit onderdeel geldt: De API is geconfigureerd met behulp van het [DotWebStack Framework](https://github.com/dotwebstack/dotwebstack-framework). Er wordt een “On the fly” mapping op de lookup API gedaan. 
+
+### OGC API Features
+De OGC API Features wordt aangeboden om de SOR te kunnen integreren met gangbare tooling binnen het GIS / Geo domein. OGC API Features [[ogcapi-features]] is de opvolger van WFS maar dan gebaseerd op REST principes. Je kunt er geo-objecten mee opvragen middels een gestandaardiseerde interface, die door GIS tooling wordt ondersteund. In deze High-5 implementeerden we alleen deel 1. 
+
+Er is custom programmeerwerk gedaan om de OGC API Features bovenop een andere API te laten functioneren. Er wordt net als bij de andere componenten een "on the fly" mapping gedaan.
+
+Net als de REST API is de OGC API Features beschreven met Swagger documentatie:
+
+<figure id="2022-oaf-swagger">
+    <img src="media/2022-oaf-swagger.png" alt="OAF Swagger"/>
+    <figcaption>Swagger documentatie van OGC API Features</figcaption>
+</figure>
+
+Het lukte tijdens de High-5 om SOR data via de OGC API Features in te laden in open source GIS pakket [QGIS](https://qgis.org/en/site/). 
+
+<figure id="2022-OAF-qgis">
+    <img src="media/2022-OAF-qgis.png" alt="OAF QGIS"/>
+    <figcaption>SOR data in QGis via de OGC API Features</figcaption>
+</figure>
+
+### Linked Data API
+De Linked Data API biedt toegang tot de SOR conform Linked Data standaarden. Tijdens de High-5 is de Linked Data API verbonden aan de URI Dereferencing Service om de data binnen te halen (dit gebeurt met de snelheid van je internetverbinding) en in de eigen Knowledge Graph op te slaan. Vervolgens kan er in de omgeving van het Kadaster Data Science team van alles mee worden gedaan zoals het integreren met andere datasets. Omdat de data zelfbeschrijvend is en dus in feite 'zegt' dat het geodata is, wordt automatisch een kaartvisualisatie aangeboden voor het bekijken van de data. Op de kaart kun je doorklikken naar een web pagina voor elk object. 
+
+<figure id="2022-kg">
+    <img src="media/2022-kg.png" alt="KG"/>
+    <figcaption>Eén gebouw in de Knowledge graph van de Linked Data API</figcaption>
+</figure>
+
+Tijdens de High-5 zijn een aantal dingen specifiek gerealiseerd met deze data:
+- Gebouwen met verschil in bovenaanzichtgeometrie en maaiveldgeometrie vinden en in 3D visualiseren;
+- Een kaart met daarop gebouwen uit verschillende bouwjaren in verschillende kleuren gevisualiseerd;
+- Integratie met CBS wijk/buurt data en op basis daarvan tonen van nabijheid voorzieningen
+
+
+<figure id="2022-ld-gebouw">
+    <img src="media/2022-ld-gebouw.png" alt="ld gebouw"/>
+    <figcaption>3D visualisatie van een gebouw met verschillende bovenaanzicht- en grondvlakgeometrieën</figcaption>
+</figure>
 
 ## Bevindingen
 

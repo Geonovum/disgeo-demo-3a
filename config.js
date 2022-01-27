@@ -243,6 +243,12 @@ var respecConfig =
       href: "https://publicatie.centrumvoorstandaarden.nl/api/adr/",
       status:     "Definitief",
       publisher:  "Geonovum",
+    }, 
+    "ogcapi-features": {
+      title: "OGC API - Features - Part 1: Core", 
+      href: "http://docs.opengeospatial.org/is/17-069r3/17-069r3.html", 
+      status: "Approved", 
+      publisher: "Open Geospatial Consortium",
     }
   },
 
