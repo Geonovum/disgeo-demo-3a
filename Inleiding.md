@@ -116,5 +116,6 @@ De eerste twee experimenteersessies draaiden beide om de semantische modellering
 Het document valt daarom in verschillende delen uiteen: 
 - Hoofdstuk [](#inleiding) (dit hoofdstuk): de integrale inleiding over de gehele High-5 activiteit (het geheel van drie sessies).
 - Hoofdstuk 2 t/m 12: beschrijven de semantische modellering en transponering en alles wat daarbij kwam kijken.
-- Hoofdstuk 13 t/m 15: beschrijven de benodigdheden voor implementatie en de implementatie zelf.
-- Hoofdstuk [](#lessons-learned): beschrijft de opgedane inzichten en aanbevelingen (lessons learned). Dit hoofstuk is opgedeeld in een paragraaf die de lessen over de semantische modellering en transponering beschrijft, en een paragraaf die de implementatielessen beschrijft.
+- Hoofdstuk [](#lessons-learned-informatiemodellering) beschrijft de de opgedane inzichten en aanbevelingen  over informatiemodellering en over het specificeren van de transponering.
+- Hoofdstuk 14 t/m 16: beschrijven de benodigdheden voor implementatie en de resultaten van de implementatie zelf.
+- Hoofdstuk [](#lessons-learned-over-de-implementatie): beschrijft de opgedane inzichten en aanbevelingen over de implementatie.

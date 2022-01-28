@@ -1,8 +1,8 @@
-## Lessons Learned
+## Lessons Learned informatiemodellering
 
 ### Inzichten: samenvatting
 
-Deze High-5 heeft een  aantal inzichten opgeleverd die hier worden samengevat:
+Deze High-5 heeft een  aantal inzichten opgeleverd over informatiemodellering die hier worden samengevat:
 
 1. Om de geo-basisregistraties in samenhang te kunnen gebruiken, moeten we gegevens uit de huidige basisregistraties combineren. Dit lijkt vaak eenvoudiger dan het is. Zelfs wanneer dezelfde terminologie wordt gebruikt bij het specificeren van modelelementen, zijn er vaak nog **subtiele verschillen in de definities** hiervan. Begrippen zijn soms anders afgebakend – dit geldt dus ook voor data die hierop gebaseerd is. Om deze reden kunnen informatieobjecten/gegevens afkomstig van verschillende registraties niet zomaar over elkaar gelegd worden, ook al worden ze beschreven door dezelfde termen. 
 2. Hoewel het samenvoegen van de registratiemodellen niet direct tot een samenhangend geheel zal leiden, kan hiernaartoe gewerkt worden middels een aantal modelleerprincipes. Deze principes vertalen zich in **modelleerpatronen** voor object centraal modelleren. Verschillende patronen kunnen worden toegepast om vanuit andere registraties naar de SOR te koppelen – hiermee wordt het een stuk gemakkelijker om objecten aan elkaar te relateren. 
