@@ -24,12 +24,12 @@ Voor bunkers en schuren uit de BGT, die geen corresponderend BAG pand hebben maa
 
 Als we de attributen `bouwjaar` en `geometrie` voidable maken, zijn ze wel verplicht, maar is het toegestaan om een nilwaarde op te nemen en een reden van het ontbreken van het gegeven op te nemen. 
 
-We hadden deze attributen ook optioneel kunnen maken: dan worden ze in hun geheel weg gelaten bij bunkers en schuren. 
+De andere optie is om deze attributen optioneel te maken: dan worden ze in hun geheel weg gelaten bij bunkers en schuren. Deze optie is gekozen tijdens de implementatie van de high 5.
 
-Semantisch is de eerste optie correcter (want ook BGT schuren en bunkers hebben een bouwjaar en een omtrekgeometrie, we hebben deze alleen nooit ergens geregistreerd) en ook technisch is dit handiger.
+Wat uiteindelijk de beste modellering is zal nog worden uitgewerkt.
 
 ###  Bevindingen over de transponering
-Hoewel er allerlei uitdagingen zijn is gebleken dat de op transponering gebaseerde architectuur werkt. De data kan bij de bron blijven. We doen geen getransformeerde data opslag maar orchestratie on the fly, en het is toch mogelijk om data af te nemen als stroom uit het stopcontact op verschillende manieren. Het Linked Data endpoint doet wel synchrone opslag, omdat dit voor het exploreren nodig is.
+Hoewel er allerlei uitdagingen zijn, is gebleken dat de op transponering gebaseerde architectuur werkt. De data kan bij de bron blijven. We doen geen getransformeerde data opslag maar orchestratie on the fly, en het is toch mogelijk om data af te nemen als stroom uit het stopcontact op verschillende manieren. Het Linked Data endpoint doet wel synchrone opslag, omdat dit voor het exploreren nodig is.
 
 #### Toevoegen Open Bouwwerk
 Omdat we voor de SOR gebouwen al moesten putten uit de BGT `OverigBouwwerk` objecten om daar de schuren en bunkers uit te halen, bleek het heel weinig werk te zijn om ook SOR `Open Bouwwerk` op te nemen. Deze objecten zijn namelijk gebaseerd op een ander BGT `OverigBouwwerk` type (`Open loods` en `Overkapping`). 
@@ -39,7 +39,9 @@ Omdat we voor de SOR gebouwen al moesten putten uit de BGT `OverigBouwwerk` obje
 Een probleem met de transponering van `Open Bouwwerk` is dat in de BAG zogenaamde "open frontstallen" staan die als `Pand` getypeerd zijn (zie hiervoor de [Praktijkhandreiking BAG](https://imbag.github.io/praktijkhandleiding/trefwoorden/permanente-opening#:~:text=Een%20uitzondering%20hierop%20die%20in,volledig%20door%20wanden%20omsloten%20beschouwd.)), maar die in de SOR `Open Bouwwerk` moeten worden. Deze gevallen konden we nu niet in de transponering meenemen omdat er geen mapping regel voor was. Het is niet duidelijk of dit in de data te herkennen is en of automatisch transponeren überhaupt mogelijk is. 
 
 #### Mapping specificatie
-Het is gelukt om een declaratieve, machineleesbare specificatie van de mapping te maken tussen BAG/BGT en SOR en deze uit te laten voeren door intelligente software. De hele intelligentie van de transponering plaatsen we zo buiten de logica van de APIs. De Lookup API  hoeft alleen de mapping uit te voeren en kan daardoor generiek blijven. De vertaalspecificaties moeten twee kanten op werken voor een functionerende API: om gegevens in de bron(nen) te kunnen vinden gegeven een zoekvraag; en om gegevens te kunnen leveren in de doelstructuur (SOR model). 
+Het is beoogd een declaratieve, machineleesbare specificatie van de mapping te maken tussen BAG/BGT en SOR en deze uit te laten voeren door intelligente software. De hele intelligentie van de transponering kan zo buiten de logica van de APIs geplaatst worden. De Lookup API hoeft alleen de mapping uit te voeren en kan daardoor generiek blijven. De vertaalspecificaties moeten twee kanten op werken voor een functionerende API: om gegevens in de bron(nen) te kunnen vinden gegeven een zoekvraag; en om gegevens te kunnen leveren in de doelstructuur (SOR model). 
+
+Tijdens deze high 5 is een stap gezet richting het declaratief maken van de mapping. Dit moet nog verder uitgewerkt worden.
 
 <aside class="note">
 In een *declaratieve* (programmeer)taal of specificatie beschrijf je alleen *wat* er moet gebeuren, en niet hoe (via welke stappen) dat doel bereikt moet worden. Het is daardoor abstracter en staat los van de implementatie.
@@ -100,13 +102,13 @@ Als een gebruiker aan de SOR API een collectie van objecten opvraagt, moet de Lo
 Dit is vergelijkbaar met de constatering vanuit het SPARQL endpoint dat een bulkbevraging nodig was. Dit geldt dus voor zowel de Lookup API SOR als die van de BAG en BGT in de laag Ontsluiting data.
 
 #### Performance en andere non-functionals
-Performance van de APIs is een belangrijk aspect, dat samenhangt met het eerder genoemde query planning. Cruciaal is dat elk van de services die data leveren voor de SOR op zich al goede performance moeten hebben, anders kunnen SOR services ook nooit snel worden. Non-functional aspecten zijn in deze architectuur extra belangrijk want je bent zo zwak als de zwakste schakel. 
+Performance van de APIs is een belangrijk aspect, dat samenhangt met het eerder genoemde query planning. Cruciaal is dat elk van de services die data leveren voor de SOR op zich al goede performance moeten hebben, anders kunnen georchestreerde SOR services ook nooit snel worden. Non-functional aspecten zijn in deze architectuur extra belangrijk want je bent zo zwak als de zwakste schakel. 
 
 In deze High-5 setting bleken de extra schakels in het netwerk (APIs bovenop APIs) qua performance verwaarloosbaar: elk stapje kost maar enkele milliseconden. Ook de impact van on the fly transponering was heel beperkt, vooral bij eenvoudige omzettingen zoals een gegeven van naam veranderen. Een belangrijke kanttekening is wel dat we natuurlijk niet met grote datavolumes gewerkt hebben. Mocht performance wel een issue worden, dan kan daaraan nog veel gedaan worden, bijvoorbeeld onderdelen van een query tegelijktijdig uitvoeren. 
 
 Bij complexere transponeringsregels die zwaar op de techniek drukken kan een afweging gemaakt worden, of je die via de techniek moet oplossen of, als ze waarde opleveren, in de bron van de basisregistraties.
 
-Ruimtelijke vragen zijn niet per sé een aandachtspunt wat betreft performance. Maar hoge performance loopt wel in het algemeen gevaar als je een vraag stelt waarop een grote selectie aan objecten terugkomt. Hoe ga je die sorteren, pagineren etc. Dat zijn zware operaties. 
+Ruimtelijke vragen zijn niet per sé een aandachtspunt wat betreft performance. Maar hoge performance loopt wel in het algemeen gevaar als je een vraag stelt waarop een grote selectie aan objecten terugkomt. Hoe ga je die sorteren, pagineren etc.? Dat zijn zware operaties.
 
 De DiS Geo architectuurbeschrijving [[ARCH]] noemt een aantal niet-functionele eisen die van belang zijn voor SOR voorzieningen, waaronder performance maar ook andere eisen. Dat deze eisen aan de SOR gesteld worden betekent dat de services die onder de SOR liggen hier ook aan moeten voldoen. Ze moeten allemaal een hoge uptime hebben, goede foutafhandeling hebben, fouten en performance moeten traceerbaar zijn, etc. 
 
@@ -122,7 +124,7 @@ Het realiseren van de REST API verliep zonder bijzondere problemen en kostte nie
 Zoals bij alle van de Lookup API afnemende services was er een on the fly mapping nodig van het graphql endpoint naar de gewenste gegevensstructuur in de REST API.
 
 ### Bevindingen over de URI Dereferencing Service
-Net als de REST API was deze snel te realiseren en waren er geen problemen mee. Een beperking is wel dat je per definitie altijd maar één object tegelijk kan opvragen aan deze service. In sommige situaties is een bulk bevraging handiger. Dat biedt deze service niet. 
+Net als de REST API was deze snel te realiseren en waren er geen problemen mee. Een beperking is wel dat je per definitie altijd maar één object tegelijk kan opvragen aan deze service. In sommige situaties is een bulk bevraging handiger. Dat biedt deze service, vanwege de aard van URI dereferencing, niet.
 
 Heel mooi is dat alle endpoints, dus zowel de REST API, de OGC Features API en de Linked Data API, uiteindelijk naar **dezelfde URI** voor een gegeven object oplossen (dereferencing). Elk object heeft dus een universele URI identificatie die werkt over meerdere technische ontsluitingen heen.
 
