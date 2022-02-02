@@ -70,6 +70,8 @@ De transponeringsregels zijn in deze fase als onderdeel van de LookUP API gereal
     <figcaption>Transponeringsregels gepositioneerd in de orchestratielaag</figcaption>
 </figure>
 
+Een algemene vraag die tijdens deze High-5 nog niet uitgebreid aan de orde is geweest, is _hoe kunnen we verifiëren of de vertaalregels correct zijn geïmplementeerd?_ Daarnaast zijn er altijd gedetailleerde transponeringsvraagstukken waar een oplossing voor gevonden moet worden. Een voorbeeld is _Wat als de bronhouder code van een BGT (pand) object niet hetzelfde is als die van het corresponderende BAG object?_ Dit is een kwaliteitsissue dat bij de transponering mogelijk aan het licht zou kunnen komen en waar een oplossingsrichting voor gekozen moet worden. 
+
 #### Gebouw transponering
 
 Er zijn transponeringsregels geschreven waarmee alle BAG `Pand` objecten worden getransponeerd naar SOR `Gebouw`. Enkele attributen van BGT `Pand` worden erbij gezocht. BGT OVerigBouwwerk met `type` = `Schuur` of `Bunker` worden ook getransponeerd naar SOR Gebouw.
