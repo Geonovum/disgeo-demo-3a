@@ -6,8 +6,8 @@ Het gaat bij deze implementatie om een **verkenning** om te ervaren hoeveel (of 
 
 ## Onderzoeksvragen
 In deze fase implementeren we het gemaakte SOR Gebouw MVP model en de transponeringsregels. We willen de volgende vragen beantwoorden: 
-- Is het SOR Gebouw model MVP te implementeren; waar loop je tegenaan
-- Zijn de transponeringsregels te implementeren; waar loop je tegenaan
+- Is het SOR Gebouw model MVP te implementeren; waar loop je tegenaan?
+- Zijn de transponeringsregels te implementeren; waar loop je tegenaan?
 
 ## Opzet
 
@@ -17,9 +17,9 @@ In deze fase implementeren we het gemaakte SOR Gebouw MVP model en de transponer
 </figure>
 
 De onderste laag van deze architectuur, ontsluiting bij de bron, is in de voorbereiding al gerealiseerd door het Kadaster. In deze High-5 realiseren we de bovenste laag, Services, met daarin afnamevoorzieningen voor verschillende doelgroepen: 
-- Een Lookup API SOR Gebouw, conform het informatiemodel uit [](#imsor-gebouw-0). Deze API ondersteunt het gehele informatiemodel en regelt de orchestratie van BAG en BGT naar SOR. De REST API, URI Dereferencing service, en OGC Features API worden hier bovenop gebouwd. Het SPARQL Endpoint maakt gebruik van de URI Dereferencing service. De Lookup API is geen voorziening voor eindgebruikers.
+- Een Lookup API SOR Gebouw, conform het informatiemodel uit [](#imsor-gebouw-0). Deze API ondersteunt het gehele informatiemodel en regelt de orchestratie van BAG en BGT naar SOR. De REST API, URI Dereferencing service, en OGC Features API worden hier bovenop gebouwd. Het SPARQL Endpoint maakt voor deze High-5 gebruik van de URI Dereferencing service voor het vullen van de onderliggende aspect-database. De Lookup API is geen voorziening voor eindgebruikers.
 - Een REST API voor de grote groep gebruikers die gegevens nodig heeft voor administratieve processen. De REST API ondersteunt vragen over gebouwen en geeft JSON terug. Deze API ondersteunt collecties met paginering, en heeft een endpoint voor individuele bevraging. Heeft ook CRS negotiation; de default is ETRS 89. Levert HAL JSON, compliant met NL API strategie. Geen JSON-LD (die zit wel in de URI dereferencing service). We maken gebruik van REST tooling om te laten zien dat het werkt. 
-- Een URI Dereferencing service die op basis van de URI identifier van een object de gegevens teruggeeft als RDF. Het SPARQL Endpoint maakt gebruik van de URI Dereferencing service; het is in principe geen voorziening voor eindgebruikers.
+- Een URI Dereferencing service die op basis van de URI identifier van een object de gegevens teruggeeft als RDF in gebruikelijke formaten zoals Turtle, JSON-LD en meer.
 - Een [OGC API Features](https://ogcapi.ogc.org/features/) (part 1) API die ruimtelijke vragen ondersteunt en GeoJSON en HTML ondersteunt. Deze API is voornamelijk bedoeld voor de gebruikers die de data willen gebruiken in GIS software. We realiseren een client GIS viewer om te laten zien dat het werkt.
 - Een Linked Data API (SPARQL endpoint) bovenop een knowledge graph plus een data story om te laten zien dat het werkt. Deze voorziening is voor data scientists / business analisten en dergelijken.
 
@@ -51,7 +51,7 @@ De Lookup API heeft een [[GraphQL]] interface. Dit is een goed passende API stij
 
 ### Transponeringsregels
 
-De transponeringsregels die zijn opgesteld door inhoudelijke experts in de eerste en tweede High-5 sessie, zijn in de implementatiefase omgezet naar machineleesbare regel. Ze beschrijven de vertaling van brondatamodellen naar het doelmodel: het model van het samenhangende SOR gebouw. Deze transponeringsregels moet je zien als een soort configuratie. De orchestratielaag, de Lookup API is intelligent genoeg om deze regels te lezen, interpreteren en uitvoeren. De semantiek is zo gescheiden van de orchestratieprogrammatuur. 
+De transponeringsregels die zijn opgesteld door inhoudelijke experts in de eerste en tweede High-5 sessie, zijn in de implementatiefase omgezet naar machineleesbare regels. Ze beschrijven de vertaling van brondatamodellen naar het doelmodel: het model van het samenhangende SOR gebouw. Deze transponeringsregels moet je zien als een soort configuratie. De Lookup API is intelligent genoeg om deze regels te lezen, interpreteren en uitvoeren. De semantiek is zo gescheiden van de orchestratieprogrammatuur. 
 
 De transponering is voor `Gebouw`, `Open Bouwwerk`, en `Gebouw component` gerealiseerd. Voor de meeste attributen van deze objecttypen is een regel opgesteld die beschrijft waarmee het moet worden gevuld uit de bronregistraties. Een aantal attributen is om verschillende redenen niet getransponeerd. Het overzicht staat hieronder. 
 
