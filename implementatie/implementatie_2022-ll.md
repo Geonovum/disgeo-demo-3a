@@ -1,23 +1,11 @@
 
 ## Lessons Learned over de implementatie
 
-Dit hoofdstuk beschrijft welke aspecten van implementatie goed gelukt zijn, wat wel lukte maar met workarounds / moeite, en wat problemen opleverde. 
+Dit hoofdstuk beschrijft welke aspecten van implementatie goed gelukt zijn, wat wel lukte maar met moeite, en wat problemen opleverde en misschien zelfs niet gelukt is. 
 
 De bevindingen zijn gegroepeerd op onderwerp.
 
 ### Bevindingen over het informatiemodel
-
-#### Identificatie van SOR objecten
-We hebben in de eerdere modelleerfase van deze High-5 al besloten om nu geen SOR identificatie te introduceren, maar hiervoor de identificatie uit de bestaande bronregistraties te gebruiken. Omdat er zowel BAG als BGT panden zijn, die samen in een Gebouw object moeten gevat worden, moest er gekozen worden welke identificatie leidend is. Dit is voor ons het BAG ID geworden. 
-
-Er zijn ook SOR gebouwen die geen BAG id hebben, namelijk de BGT `OverigBouwwerk` objecten van het type `Bunker` en `Schuur`. Voor deze SOR gebouwen wordt het BGT id overgenomen. 
-
-<aside class="issue">Bij Orchestratie uitdagingen in de webinar is gezegd: 
-
-> Identificatie bevat geen type details
-
-Nagaan wat hiermee werd bedoeld. Klinkt als een bevinding. 
-</aside>
 
 #### Ontbrekende gegevens voor bunkers en schuren
 Voor bunkers en schuren uit de BGT, die geen corresponderend BAG pand hebben maar wel SOR Gebouw zijn, lopen we tegen het issue aan dat er geen bouwjaar bekend is en dat er geen BAG geometrie is. Deze gegevens moeten dus optioneel of voidable worden in het informatiemodel. In MIM termen betekent voidable: we gebruiken dan `mogelijk geen waarde = ja` in het informatiemodel. 
@@ -30,6 +18,46 @@ Wat uiteindelijk de beste modellering is zal nog worden uitgewerkt.
 
 ###  Bevindingen over de transponering
 Hoewel er allerlei uitdagingen zijn, is gebleken dat de op transponering gebaseerde architectuur werkt. De data kan bij de bron blijven. We doen geen getransformeerde data opslag maar orchestratie on the fly, en het is toch mogelijk om data af te nemen als stroom uit het stopcontact op verschillende manieren. Het Linked Data endpoint doet wel synchrone opslag, omdat dit voor het exploreren nodig is.
+
+#### Transponering Gebouw en gebouwgerelateerde objecttypen
+Over het algemeen bleek: als je eenmaal de transponering van een objecttype gedaan hebt, is de volgende niet zo moeilijk. Transponeren van objecttypen uit de BGT bleek relatief simpel. Deze objecttypen hebben onderling weinig relaties en verschillen niet zo heel veel van elkaar. De objecttypen uit de BAG hebben meer onderlinge relaties en verschillen. 
+
+Een kanttekening hierbij is dat zodra andere gegevensbronnen (BRT, WOZ, enz) binnen beschouwing komen, dit nieuwe uitdagingen kan opleveren. 
+
+De SOR vereist een aantal administratieve relaties tussen objecttypen. Sommige van deze relaties zijn al aanwezig in de huidige bronregistraties, zoals de relatie tussen `Verblijfsobject` en `Gebouw`. Maar de SOR specificeert ook een aantal relaties die nu nog niet administratief worden bijgehouden. Een voorbeeld hiervan is de `hoortBij` relatie tussen `Gebouwcomponent` en `Gebouw`. 
+
+Deze in de bron nog niet aanwezige relaties hebben we tijdens de High-5 buiten beschouwing gelaten. De vraag blijft daarom of het mogelijk is relaties die in de bron niet aanwezig zijn, on the fly in de transponeringslaag te gaan bepalen, bijvoorbeeld door ze geometrisch af te leiden. We weten niet of dit performance issues zou opleveren. In dat geval zou mogelijk een tussentijdse opslag van deze relaties nodig zijn (een linkset). En in het uiterste geval kan het ook nodig zijn dat relaties door de bronhouder moeten worden ingewonnen en beheerd, mogelijk met inzet van AI technologie. 
+
+Op dit punt is vervolgonderzoek nodig. 
+
+#### Transponering van identificatie
+We hebben in de eerdere modelleerfase van deze High-5 al besloten om nu geen SOR identificatie te introduceren, maar hiervoor de identificatie uit de bestaande bronregistraties te gebruiken. Omdat er zowel BAG als BGT panden zijn, die samen in een Gebouw object moeten gevat worden, moest er gekozen worden welke identificatie leidend is. Dit is voor ons het BAG ID geworden. 
+
+Er zijn ook SOR gebouwen die geen BAG id hebben, namelijk de BGT `OverigBouwwerk` objecten van het type `Bunker` en `Schuur`. Voor deze SOR gebouwen wordt het BGT id overgenomen. 
+
+Een probleem met de identificatie was dat het geen type details bevat. Met andere woorden: op het moment dat de Lookup API een verzoek binnenkrijgt de gegevens behorende bij een object identificatie te leveren, deze API niet weet in welke registratie dit object moet worden opgehaald en in welke objecttype-collectie daar moet worden gekeken. Nu hebben we een slimmigheid gebruikt: BGT_identificatie bevat een “.”, en dit feit gebruikte de Lookup API om te bepalen of de zoekvraag naar de BGT of de BAG API moest worden doorgespeeld. Dat is niet bestendig bij uitbreiding van bronnen van Gebouw (BRT) en andere SOR objecten. 
+
+Ook op dit punt is vervolgonderzoek nodig. Is dit probleem bijvoorbeeld op te lossen met een index / linkset oftewel een soort 'wegwijzer' waar de SOR Lookup API kan vinden welke identifier waar gevonden kan worden? Of moeten we wellicht toch een nieuwe SOR identificatie hanteren waaraan dit te zien zou zijn? 
+
+Bij het toekennen van een nieuw SOR ID zouden we dan nog kunnen overwegen om dit een verlenging van een bestaand ID te maken zodat herleiding mogelijk is. De bestaande IDs blijven gebruiken is op zich het gemakkelijkst (hoewel wel wel voor elk SOR objecttype moeten bepalen welk ID we hiervoor kiezen, wat voor uit meerdere bronnen samengestelde objecttypen lastig kan zijn) en hergebruik van bestaande IDs is positief. Maar een nieuw SOR ID introduceren betekent wel nóg een identificatie voor afnemers. 
+
+#### Transponering van historie
+De transponering van historie is deels gelukt. Met name het historiemodel van de BAG is met succes getransponeerd naar de SOR. Het feit dat in BAG 2.0 een versienummer voor objectgegevens is ingevoerd hielp hierbij. 
+
+Het historiemodel van de BGT bleek lastiger. De BGT bevat een beperkt historiemodel met alleen registratietijdstippen, geen geldigheidstijdstippen; het verschilt van dat van de BAG, en houdt geen versienummer bij voor geregistreerde gegevens zoals de BAG dat doet. De ontwikkelaars hadden ook meer parate kennis van de BAG dan de BGT. Het opstellen van transponeringsregels van het BGT historiemodel naar de SOR zou waarschijnlijk zeker enkele dagen onderzoek vergen. Omwille van de tijd hebben we er tijdens de High-5 voor gekozen dit niet te doen. 
+
+Omdat het BAG historiemodel wel was getransponeerd konden we bevestigen of tijdreizen mogelijk was en dit bleek het geval. De Lookup API kan tijdreisvragen beantwoorden op basis van de historie-informatie uit de BAG. In de High-5 gebruiken we dit alleen om het actueel geldige informatieobject op te vragen, maar een zoekvraag naar een historisch tijdstip zou even goed mogelijk zijn. 
+
+Bij het bekijken van extracten uit de BGT ontdekten we bij toeval een eigenaardigheid:  een object met meerdere instanties, waarvan de gegevens volledig hetzelfde waren, maar met twee verschillende LV-publicatie-tijdstippen. Dit soort datakwaliteitsissues kan bij de transponering van gegevens uiteraard voor problemen zorgen. Een uitgangspunt is dan ook dat de datakwaliteit in orde moet zijn. 
+
+Er is meer tijd nodig om dit onderwerp, het transponeren van historie van niet alleen de BAG maar ook de BGT en andere basisregistraties die in de SOR een rol spelen, uit te zoeken. Hierbij is inhoudelijke kennis van het historiemodel in deze basisregistraties onontbeerlijk.
+
+#### Transponering van metadata
+De transponering van overige metadata is grotendeels gelukt. We hebben metadata over de herkomst van objecten meegenomen in de transponering zoals van tevoren beschreven in [](#modelleerpatronen-voor-metadata). Hierdoor kun je aan de SOR data zien uit welke bronobjecten uit de BAG en/of BGT deze is opgebouwd. Bij deze bronobjecten kun je dan ook terugvinden wat het oorspronkelijke brondocument en de bronhouder is, als deze gegevens in de bronregistratie beschikbaar zijn. 
+
+Zie [](#transponering-van-metadata-en-historie) voor het overzicht van de transponeringsregels voor metadata. 
+
+<aside class="note">Het SOR `Gebouw` zelf heeft geen brondocumenten en bronhouder. Dat kan ook niet zomaar, want er is in de huidige situatie formeel geen bronhouder voor SOR objecten. Het is ook niet zonder meer mogelijk om de bronhouder uit de BAG of BGT over te nemen, want bij objecten waarvan gegevens in meerdere basisregistraties beschikbaar zijn, is het mogelijk dat ze meerdere bronhouders hebben!</aside>
 
 #### Toevoegen Open Bouwwerk
 Omdat we voor de SOR gebouwen al moesten putten uit de BGT `OverigBouwwerk` objecten om daar de schuren en bunkers uit te halen, bleek het heel weinig werk te zijn om ook SOR `Open Bouwwerk` op te nemen. Deze objecten zijn namelijk gebaseerd op een ander BGT `OverigBouwwerk` type (`Open loods` en `Overkapping`). 

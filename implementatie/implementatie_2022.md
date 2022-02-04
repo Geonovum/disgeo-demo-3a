@@ -78,6 +78,8 @@ Er zijn transponeringsregels geschreven waarmee alle BAG `Pand` objecten worden 
 
 Attribuut | Realisatie | Toelichting
 ----------|------------|------------
+`domein`     | <span id="check">&#10003;</span>| Standaard vulling
+`identificatie`     | <span id="check">&#10003;</span>| Uit BAG indien mogelijk, anders uit BGT
 `type`    | <span id="check">&#10003;</span> | Deels geïmplementeerd vanwege scope. Veel typen moeten uit BRT of WOZ komen. Bij alle BAG panden is `nil` ingevuld. Bij overig bouwwerken uit de BGT is het type, `Schuur` of `Bunker` daarvandaan overgenomen.
 `aard`    | <span id="nocheck">&#10005;</span>| Buiten scope: BRT/WOZ
 `geometrie omtrek`     | <span id="check">&#10003;</span>| Uit BAG
@@ -93,6 +95,8 @@ Dit objecttype komt uit de BGT en wordt als het gaat om een `OverigBouwwwerk` me
 
 Attribuut  | Realisatie | Toelichting
 -----------|------------|------------
+`domein`     | <span id="check">&#10003;</span>| Standaard vulling
+`identificatie`     | <span id="check">&#10003;</span>| Uit BGT
 `type`     | <span id="check">&#10003;</span>| Uit BGT
 `geometrie`| <span id="check">&#10003;</span>| Uit BGT
 `isOnderdeelVan` | <span id="nocheck">&#10005;</span>| geen mapping gespecificeerd. Dit gegeven zit niet in de brondata, er moet een afleidingsregel voor gemaakt worden.
@@ -106,11 +110,27 @@ De volgende objecten worden getransponeerd naar SOR `Gebouwcomponent`:
 
 Attribuut  | Realisatie | Toelichting
 -----------|------------|------------
+`domein`     | <span id="check">&#10003;</span>| Standaard vulling
+`identificatie`     | <span id="check">&#10003;</span>| Uit BGT
 `type`     | <span id="check">&#10003;</span>| Uit BGT
 `geometrie`| <span id="check">&#10003;</span>| Uit BGT
 `isOnderdeelVan` | <span id="nocheck">&#10005;</span>| geen mapping gespecificeerd. Dit gegeven zit niet in de brondata, er moet een afleidingsregel voor gemaakt worden.
 `relatieveHoogteligging` | <span id="check">&#10003;</span>| Uit BGT. Niet in EMSO aangemerkt als inhoud SOR, maar voor deze beproeving wel interessant om mee te nemen. Zolang we geen 3D hebben... 
 `status`   | <span id="check">&#10003;</span>| Uit BGT
+
+#### Transponering van metadata en historie
+Er zijn alleen transponeringsregels geschreven en toegepast voor de BAG data. De BGT is maar in beperkte mate meegenomen, omdat tijdlijn geldigheid en versie-informatie in de BGT niet aanwezig is en er kwaliteitsissues werden gevonden met BGT tijdstipgegevens. 
+
+Attribuut  | Realisatie | Toelichting
+-----------|------------|------------
+`beginGeldigheid`| <span id="check">&#10003;</span>| Uit BAG indien mogelijk, anders leeg
+`eindGeldigheid` | <span id="check">&#10003;</span>| Uit BAG indien aanwezig, anders leeg
+`tijdstipRegistratie`| <span id="check">&#10003;</span>| Uit BAG indien mogelijk, anders BGT?
+`eindRegistratie`| <span id="check">&#10003;</span>| Uit BAG indien mogelijk, anders leeg
+`versie`         | <span id="check">&#10003;</span>| Uit BAG indien mogelijk, anders leeg
+`beschrijft`     | <span id="check">&#10003;</span>| Domein + identificatie van BAG of BGT object 
+`bronhouder`     | <span id="check">&#10003;</span>| Uit BAG indien mogelijk, anders uit BGT
+`brondocument`   | <span id="check">&#10003;</span>| Uit BAG indien mogelijk, anders leeg
 
 ### REST API
 De gerealiseerde REST API is een API conform de Nederlandse API strategie [[ADR]]. Objectinformatie wordt door deze API geretourneerd in HAL + JSON formaat. De API is bedoeld voor het opvragen van een beperkte set objecten en ondersteunt:
