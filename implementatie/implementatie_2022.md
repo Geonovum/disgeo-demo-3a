@@ -168,8 +168,8 @@ Net als de REST API is de OGC API Features beschreven met Swagger documentatie:
 
 Het lukte tijdens de High-5 om SOR data via de OGC API Features in te laden in open source GIS pakket [QGIS](https://qgis.org/en/site/). 
 
-<figure id="2022-OAF-qgis">
-    <img src="media/2022-OAF-qgis.png" alt="OAF QGIS"/>
+<figure id="2022-oaf-qgis">
+    <img src="media/2022-oaf-qgis.png" alt="OAF QGIS"/>
     <figcaption>SOR data in QGis via de OGC API Features</figcaption>
 </figure>
 
