@@ -33,8 +33,6 @@ Deze component heeft nodig:
    * Historie BAG en BGT, te vinden in [](#specificatie-van-de-vertaling-van-historie) 
    * Metadata 
 
-<aside class="issue">Vertaalregels voor metadata ontbreken nog.</aside>
-
 Hiervan wordt een GraphQL schema gemaakt t.b.v. een (interne) API.
 
 ### Gebruik van de interne API door de externe API's 

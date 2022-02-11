@@ -77,8 +77,6 @@ In een *declaratieve* (programmeer)taal of specificatie beschrijf je alleen *wat
 
 Deze declaratieve, machineleesbare mappingspecificatie sluit aan bij MIM en zit qua opzet dichtbij de taal die we gebruiken voor het informatiemodel. Technisch is het een soort YAML dialect dat machineleesbaar is en herkenbaar voor ontwikkelaars.
 
-<aside class="issue">Het zou leuk zijn om een naam te hebben voor deze mapping spec taal...</aside>
-
 Het Linked Data team gaf tijdens de High-5 aan dat zij ook graag de transformatieregels willen kunnen lezen en uitvoeren. De transformatieregels moeten breder beschikbaar / toepasbaar zijn dan alleen op één plek in de Lookup API (en dus ook implementatie / techniek onafhankelijk). Ze zouden idealiter conceptueel moeten worden vastgelegd op één plek, door of met behulp van inhoudelijk experts, en moeten worden geïmplementeerd in meerdere formaten en zo op meerdere plekken inzetbaar zijn.
 
 Een vervolgstap zou kunnen zijn om samen verder te werken aan een gestandaardiseerde multi-inzetbare transponeringstaal.
