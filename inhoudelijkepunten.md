@@ -58,7 +58,7 @@ Het koppelen van externe gegevens is nader beschreven in [](#gegevens-koppelen-t
 ### Van functionele eisen aan inhoud naar informatiemodel
 Bij het maken van het informatiemodel voor SOR Gebouw, op basis van de eisen aan de inhoud zoals beschreven in [[EMSO]], lopen we mogelijk tegen semantische dilemma's aan. Hoewel de eisen aan de inhoud zo goed als mogelijk beschreven zijn, is het onvermijdelijk dat we op problematische zaken stuiten als we daadwerkelijk gaan modelleren: dan moeten we immers echt gaan zorgen dat alle details kloppen. Inconsistenties in definities zijn dan bijvoorbeeld problemen die opgelost moeten worden. 
 
-Tijdens het modelleerwerk in deze High-5 hebben we met verschilllende van dit soort problemen te maken gehad. Deze zijn samengevat in [](#lessons-learned). Detailopmerkingen staan in de [mapping tabel](https://github.com/Geonovum/disgeo-demo-3a/blob/main/transponering/mapping-deel-Gebouw-en-VBO.xlsx) (excel). 
+Tijdens het modelleerwerk in deze High-5 hebben we met verschillende van dit soort problemen te maken gehad. Deze zijn samengevat in [](#lessons-learned). 
 
 ### Publicatievorm(en) van het informatiemodel
 Omdat er op deze High-5 een vervolg komt waarin het informatiemodel wordt geimplementeerd in software, is het belangrijk dat het informatiemodel wordt opgeleverd in een voor ontwikkelaars bruikbare vorm. 
